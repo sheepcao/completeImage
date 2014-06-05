@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *picture;
+@property (weak, nonatomic) IBOutlet UIButton *answer1;
+@property (weak, nonatomic) IBOutlet UIButton *answer2;
+@property (weak, nonatomic) IBOutlet UIButton *answer3;
+@property (strong, nonatomic) IBOutlet UIButton *empty;
+
 
 @end

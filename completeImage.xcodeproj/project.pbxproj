@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B964AC81940973400D2CCCE /* tomya.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AC51940973400D2CCCE /* tomya.png */; };
+		0B964AC91940973400D2CCCE /* tuya.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AC61940973400D2CCCE /* tuya.png */; };
+		0B964ACA1940973400D2CCCE /* xiangya.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AC71940973400D2CCCE /* xiangya.png */; };
+		0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964ACD1940AF6E00D2CCCE /* AppIcon.png */; };
+		0B964AD21940B1DE00D2CCCE /* tuzi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AD11940B1DE00D2CCCE /* tuzi.png */; };
 		0BE582B8193F25FB00EEAB26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B7193F25FB00EEAB26 /* Foundation.framework */; };
 		0BE582BA193F25FB00EEAB26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */; };
 		0BE582BC193F25FB00EEAB26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582BB193F25FB00EEAB26 /* UIKit.framework */; };
@@ -21,6 +26,9 @@
 		0BE582D9193F25FB00EEAB26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582BB193F25FB00EEAB26 /* UIKit.framework */; };
 		0BE582E1193F25FB00EEAB26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BE582DF193F25FB00EEAB26 /* InfoPlist.strings */; };
 		0BE582E3193F25FB00EEAB26 /* completeImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582E2193F25FB00EEAB26 /* completeImageTests.m */; };
+		0BE582EF193F280B00EEAB26 /* gameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582EE193F280B00EEAB26 /* gameLevel.m */; };
+		0BE582F2193F285200EEAB26 /* answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582F1193F285200EEAB26 /* answer.m */; };
+		0BE582F5193F287300EEAB26 /* uncompleteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582F4193F287300EEAB26 /* uncompleteImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B964AC51940973400D2CCCE /* tomya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomya.png; sourceTree = "<group>"; };
+		0B964AC61940973400D2CCCE /* tuya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuya.png; sourceTree = "<group>"; };
+		0B964AC71940973400D2CCCE /* xiangya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiangya.png; sourceTree = "<group>"; };
+		0B964ACD1940AF6E00D2CCCE /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		0B964AD11940B1DE00D2CCCE /* tuzi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuzi.png; sourceTree = "<group>"; };
 		0BE582B4193F25FB00EEAB26 /* completeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = completeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE582B7193F25FB00EEAB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +66,12 @@
 		0BE582DE193F25FB00EEAB26 /* completeImageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "completeImageTests-Info.plist"; sourceTree = "<group>"; };
 		0BE582E0193F25FB00EEAB26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0BE582E2193F25FB00EEAB26 /* completeImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = completeImageTests.m; sourceTree = "<group>"; };
+		0BE582ED193F280B00EEAB26 /* gameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLevel.h; sourceTree = "<group>"; };
+		0BE582EE193F280B00EEAB26 /* gameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameLevel.m; sourceTree = "<group>"; };
+		0BE582F0193F285200EEAB26 /* answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = answer.h; sourceTree = "<group>"; };
+		0BE582F1193F285200EEAB26 /* answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = answer.m; sourceTree = "<group>"; };
+		0BE582F3193F287300EEAB26 /* uncompleteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uncompleteImage.h; sourceTree = "<group>"; };
+		0BE582F4193F287300EEAB26 /* uncompleteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uncompleteImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +131,7 @@
 		0BE582BD193F25FB00EEAB26 /* completeImage */ = {
 			isa = PBXGroup;
 			children = (
+				0BE582EC193F278300EEAB26 /* modal */,
 				0BE582C6193F25FB00EEAB26 /* AppDelegate.h */,
 				0BE582C7193F25FB00EEAB26 /* AppDelegate.m */,
 				0BE582C9193F25FB00EEAB26 /* Main.storyboard */,
@@ -126,6 +146,11 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B964ACD1940AF6E00D2CCCE /* AppIcon.png */,
+				0B964AD11940B1DE00D2CCCE /* tuzi.png */,
+				0B964AC51940973400D2CCCE /* tomya.png */,
+				0B964AC61940973400D2CCCE /* tuya.png */,
+				0B964AC71940973400D2CCCE /* xiangya.png */,
 				0BE582BF193F25FB00EEAB26 /* completeImage-Info.plist */,
 				0BE582C0193F25FB00EEAB26 /* InfoPlist.strings */,
 				0BE582C3193F25FB00EEAB26 /* main.m */,
@@ -150,6 +175,19 @@
 				0BE582DF193F25FB00EEAB26 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BE582EC193F278300EEAB26 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				0BE582ED193F280B00EEAB26 /* gameLevel.h */,
+				0BE582EE193F280B00EEAB26 /* gameLevel.m */,
+				0BE582F0193F285200EEAB26 /* answer.h */,
+				0BE582F1193F285200EEAB26 /* answer.m */,
+				0BE582F3193F287300EEAB26 /* uncompleteImage.h */,
+				0BE582F4193F287300EEAB26 /* uncompleteImage.m */,
+			);
+			name = modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +237,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "张力";
 				TargetAttributes = {
+					0BE582B3193F25FB00EEAB26 = {
+						DevelopmentTeam = DBBLJY69ER;
+					};
 					0BE582D4193F25FB00EEAB26 = {
 						TestTargetID = 0BE582B3193F25FB00EEAB26;
 					};
@@ -228,9 +269,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
+				0B964ACA1940973400D2CCCE /* xiangya.png in Resources */,
 				0BE582C2193F25FB00EEAB26 /* InfoPlist.strings in Resources */,
+				0B964AC91940973400D2CCCE /* tuya.png in Resources */,
+				0B964AC81940973400D2CCCE /* tomya.png in Resources */,
 				0BE582CB193F25FB00EEAB26 /* Main.storyboard in Resources */,
+				0B964AD21940B1DE00D2CCCE /* tuzi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE582EF193F280B00EEAB26 /* gameLevel.m in Sources */,
 				0BE582CE193F25FB00EEAB26 /* ViewController.m in Sources */,
 				0BE582C8193F25FB00EEAB26 /* AppDelegate.m in Sources */,
+				0BE582F5193F287300EEAB26 /* uncompleteImage.m in Sources */,
+				0BE582F2193F285200EEAB26 /* answer.m in Sources */,
 				0BE582C4193F25FB00EEAB26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "completeImage/completeImage-Prefix.pch";
 				INFOPLIST_FILE = "completeImage/completeImage-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +443,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "completeImage/completeImage-Prefix.pch";
 				INFOPLIST_FILE = "completeImage/completeImage-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +515,7 @@
 				0BE582E8193F25FB00EEAB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0BE582E9193F25FB00EEAB26 /* Build configuration list for PBXNativeTarget "completeImageTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +524,7 @@
 				0BE582EB193F25FB00EEAB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
