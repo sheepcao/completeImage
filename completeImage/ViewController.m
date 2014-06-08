@@ -17,27 +17,64 @@
 
 bool blank[4] = {YES,NO,NO,NO};
 
+int level = 1;
 int correct = 1;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.choices = [[NSArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
+    self.empty = [[UIButton alloc] init];
+    for (int i =0; i<3; i++) {
+        [self setButton:(UIButton *)self.choices[i]];
+    }
+    
+    [self setupWithEmptyPosition:136 :287];
+
+}
+
+-(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
+{
+    
+    
+    NSString *pic = [NSString stringWithFormat:@"pic%d",level];
+    
+    NSString *an1 = [NSString stringWithFormat:@"an1-%d",level];
+    
+    NSString *an2 = [NSString stringWithFormat:@"an2-%d",level];
+    
+    NSString *an3 = [NSString stringWithFormat:@"an3-%d",level];
+    
+    
+    
+    [self setImages:an1:an2 :an3 :pic];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.empty = [[UIButton alloc] initWithFrame:CGRectMake(136, 287, 55, 55)];
-    self.empty.tag = 0;
-    
-
+    [self.empty setFrame:CGRectMake(px, py, 55, 55)];
     [self setButton:self.empty];
-    [self setButton:self.answer1];
-    [self setButton:self.answer2];
-    [self setButton:self.answer3];
-    
-    
+
+    self.empty.tag = 0;
+
+    for (int i =0; i<3; i++) {
+        [((UIButton *)self.choices[i]) setHidden:NO];
+    }
     [self.view addSubview:self.empty];
     
     [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)setImages:(NSString *)first :(NSString *)second :(NSString *)third :(NSString *)guess
+{
+    [self.answer1 setImage:[UIImage imageNamed:first] forState:UIControlStateNormal];
+    [self.answer2 setImage:[UIImage imageNamed:second] forState:UIControlStateNormal];
+    [self.answer3 setImage:[UIImage imageNamed:third] forState:UIControlStateNormal];
+    [self.picture setImage:[UIImage imageNamed:guess]];
+    [self.empty setImage:nil forState:UIControlStateNormal];
+
 
 }
 
@@ -54,24 +91,15 @@ int correct = 1;
 
     
     if (sender.tag == 0) {
-            if (!blank[sender.tag]) {
+            if (self.empty.imageView.image) {
                 [self.empty setImage:nil forState:UIControlStateNormal];
-                if (blank[1] == YES) {
-                    [self.answer1 setHidden:NO];
-                    blank[1] = NO;
-
+                
+                for (int i = 0; i<3; i++) {
+                    if ([((UIButton *) self.choices[i]) isHidden]) {
+                        [((UIButton *) self.choices[i]) setHidden:NO];
+                    }
                 }
-                if (blank[2] == YES) {
-                    [self.answer2 setHidden:NO];
-                    blank[2] = NO;
-
-                }
-                if (blank[3] == YES) {
-                    [self.answer3 setHidden:NO];
-                    blank[3] = NO;
-
-                }
-            
+               
             }
         [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -79,41 +107,15 @@ int correct = 1;
     }else
     {
         
-        for (int i=1; i<4; i++) {
-            if (blank[i] ==YES) {
+        for (int i=0; i<3; i++) {
+            if ([((UIButton *)self.choices[i]) isHidden]) {
                 return;
             }
         }
         
-        if (sender.tag == 1) {
-            if (!blank[sender.tag]) {
-                [self.answer1 setHidden:YES];
-                blank[sender.tag] = YES;
-                [self.empty setImage:self.answer1.imageView.image forState:UIControlStateNormal];
-                blank[0] = NO;
-            }
-        }
-        if (sender.tag == 2) {
-            
-            if (!blank[sender.tag]) {
-                [self.answer2 setHidden:YES];
-                blank[sender.tag] = YES;
-                [self.empty setImage:self.answer2.imageView.image forState:UIControlStateNormal];
-                blank[0] = NO;
-                
-            }
-        }
-        if (sender.tag == 3) {
-            
-            if (!blank[sender.tag]) {
-                [self.answer3 setHidden:YES];
-                blank[sender.tag] = YES;
-                [self.empty setImage:self.answer3.imageView.image forState:UIControlStateNormal];
-                blank[0] = NO;
-                
-            }
-        }
-        
+        [((UIButton *) self.choices[sender.tag-1]) setHidden:YES];
+        [self.empty setImage:((UIButton *) self.choices[sender.tag-1]).imageView.image forState:UIControlStateNormal];
+        self.empty.layer.borderWidth = 0;
 
      
         if (sender.tag == correct ) {
@@ -129,8 +131,6 @@ int correct = 1;
             
             
         }
-
-        
         
     }
     
@@ -141,13 +141,14 @@ int correct = 1;
 -(void)correctAnswer{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"恭喜"
                                                     message:@"你认识兔子了～"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"next"
-                                          otherButtonTitles:nil];
+                                                   delegate:self
+                                          cancelButtonTitle:@"回头看看"
+                                          otherButtonTitles:@"next",nil];
     
     
     [ alert  show];
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+    //self.empty.layer.borderWidth = 1.0f;
 
     
 
@@ -164,6 +165,7 @@ int correct = 1;
     [ alert  show];
     
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+    self.empty.layer.borderWidth = 1.0f;
 
 }
 
@@ -173,5 +175,19 @@ int correct = 1;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma alert delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+
+    if (buttonIndex == 1) {
+        if (level<3) {
+            level++;
+        }
+        [self setupWithEmptyPosition:136 :287];
+
+    }
+}
+
 
 @end

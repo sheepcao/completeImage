@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer1;
 @property (weak, nonatomic) IBOutlet UIButton *answer2;
 @property (weak, nonatomic) IBOutlet UIButton *answer3;
+@property (strong,nonatomic) NSArray *choices;
 @property (strong, nonatomic) IBOutlet UIButton *empty;
 
 

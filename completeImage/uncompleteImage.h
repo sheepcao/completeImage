@@ -18,5 +18,5 @@
 @property (nonatomic , strong) UIButton *emptyIMG;
 
 
--(id)initWithEmpty:(UIImage *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y;
+-(id)initWithEmpty:(NSString *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y;
 @end

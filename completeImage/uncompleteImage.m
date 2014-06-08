@@ -11,9 +11,9 @@
 @implementation uncompleteImage
 
 
-const int EMPTY_AREA_EDGE = 50;
+const int EMPTY_AREA_EDGE = 55;
 
--(id)initWithEmpty:(UIImage *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y
+-(id)initWithEmpty:(NSString *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y
 {
     
     
@@ -23,7 +23,7 @@ const int EMPTY_AREA_EDGE = 50;
         
         positionX = [pos_x floatValue];
         positionY = [pos_y floatValue];
-        [self.uncompleteIMG setImage:fullImage];
+        [self.uncompleteIMG setImage:[UIImage imageNamed:fullImage]];
         self.emptyIMG = [[UIButton alloc] initWithFrame:CGRectMake(positionX, positionY, EMPTY_AREA_EDGE, EMPTY_AREA_EDGE)];
     
 
