@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface uncompleteImage : NSObject
-{
-    double positionX;
-    double positionY;
-}
-
-@property (nonatomic , strong) UIImageView *uncompleteIMG;
-@property (nonatomic , strong) UIButton *emptyIMG;
 
 
--(id)initWithEmpty:(NSString *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y;
+//@property (nonatomic , strong) UIImageView *uncompleteIMG;
+//@property (nonatomic , strong) UIButton *emptyIMG;
+
+@property  NSInteger positionX;
+@property  NSInteger positionY;
+//@property  NSInteger correct;
+
+
+
+-(id)initWithEmptyX:(NSInteger)pos_x Y:(NSInteger)pos_y;
+-(void)setEmptyX:(NSInteger)pos_x Y:(NSInteger)pos_y ;
+
 @end

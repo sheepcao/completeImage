@@ -10,8 +10,12 @@
 
 @interface answer : NSObject
 
-@property (nonatomic , strong) NSArray *choices;
+@property (nonatomic , strong) NSArray *choiceBtn;
+@property (nonatomic , strong) NSString *fst;
+@property (nonatomic , strong) NSString *scd;
+@property (nonatomic , strong) NSString *thd;
 
--(id)initAnswers:(NSString *)first :(NSString *)second :(NSString *)third;
+
+-(id)initAnswers:(NSString *)first :(NSString *)second :(NSString *)third Level:(NSInteger)lv;
 
 @end

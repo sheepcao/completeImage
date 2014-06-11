@@ -15,26 +15,44 @@
 
 @implementation ViewController
 
-bool blank[4] = {YES,NO,NO,NO};
+//bool blank[4] = {YES,NO,NO,NO};
 
 int level = 1;
-int correct = 1;
+int posX[MAXlevel] = {136,213,103};
+int posY[MAXlevel] = {287,232,157};
+
+
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.choices = [[NSArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
+    self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
+   // self.UncpltImages = [[NSMutableArray alloc] initWithCapacity:MAXlevel];
+    
     self.empty = [[UIButton alloc] init];
     for (int i =0; i<3; i++) {
         [self setButton:(UIButton *)self.choices[i]];
     }
     
-    [self setupWithEmptyPosition:136 :287];
+    
+    self.myImg = [[uncompleteImage alloc] initWithEmptyX:posX[level-1] Y:posY[level-1]];
+    [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
+
 
 }
 
+
+/*
+-(void)dataInit
+{
+    self.posX = [NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:136],[NSNumber numberWithInt:236], nil]
+    posY = {287,187};
+    
+}
+
+*/
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
     
@@ -67,11 +85,26 @@ int correct = 1;
     [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)setImages:(NSString *)first :(NSString *)second :(NSString *)third :(NSString *)guess
+-(void)setImages:(NSString *)rightAns :(NSString *)wrong1 :(NSString *)wrong2 :(NSString *)guess
 {
-    [self.answer1 setImage:[UIImage imageNamed:first] forState:UIControlStateNormal];
-    [self.answer2 setImage:[UIImage imageNamed:second] forState:UIControlStateNormal];
-    [self.answer3 setImage:[UIImage imageNamed:third] forState:UIControlStateNormal];
+    unsigned int randomNumber = arc4random();
+    
+    int correctAns = randomNumber%MAXanswer;
+    UIButton *rightBtn = self.choices[correctAns];
+    [rightBtn setImage:[UIImage imageNamed:rightAns] forState:UIControlStateNormal];
+    correct[level-1] = correctAns+1;
+    
+    [self.choices[(correctAns+1)%3] setImage:[UIImage imageNamed:wrong1] forState:UIControlStateNormal];
+    [self.choices[(correctAns+2)%3] setImage:[UIImage imageNamed:wrong2] forState:UIControlStateNormal];
+
+
+    
+    
+    /*
+    [self.answer1 setImage:[UIImage imageNamed:rightAns] forState:UIControlStateNormal];
+    [self.answer2 setImage:[UIImage imageNamed:wrong1] forState:UIControlStateNormal];
+    [self.answer3 setImage:[UIImage imageNamed:wrong2] forState:UIControlStateNormal];
+     */
     [self.picture setImage:[UIImage imageNamed:guess]];
     [self.empty setImage:nil forState:UIControlStateNormal];
 
@@ -118,7 +151,7 @@ int correct = 1;
         self.empty.layer.borderWidth = 0;
 
      
-        if (sender.tag == correct ) {
+        if (sender.tag == correct[level-1] ) {
             
             [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
            
@@ -148,9 +181,6 @@ int correct = 1;
     
     [ alert  show];
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
-    //self.empty.layer.borderWidth = 1.0f;
-
-    
 
 }
 
@@ -161,9 +191,7 @@ int correct = 1;
                                           cancelButtonTitle:@"再看看"
                                           otherButtonTitles:nil];
     
-    
     [ alert  show];
-    
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
     self.empty.layer.borderWidth = 1.0f;
 
@@ -181,10 +209,11 @@ int correct = 1;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 
     if (buttonIndex == 1) {
-        if (level<3) {
+        if (level<MAXlevel) {
             level++;
         }
-        [self setupWithEmptyPosition:136 :287];
+        [self.myImg setEmptyX:posX[level-1] Y:posY[level-1]];
+        [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
 
     }
 }

@@ -13,24 +13,32 @@
 
 const int EMPTY_AREA_EDGE = 55;
 
--(id)initWithEmpty:(NSString *)fullImage :(NSNumber *)pos_x :(NSNumber *)pos_y
+-(id)initWithEmptyX:(NSInteger)pos_x Y:(NSInteger)pos_y
 {
-    
-    
     self = [super init];
     if (self) {
         // Initialization code
         
-        positionX = [pos_x floatValue];
-        positionY = [pos_y floatValue];
-        [self.uncompleteIMG setImage:[UIImage imageNamed:fullImage]];
-        self.emptyIMG = [[UIButton alloc] initWithFrame:CGRectMake(positionX, positionY, EMPTY_AREA_EDGE, EMPTY_AREA_EDGE)];
+        self.positionX = pos_x ;
+        self.positionY = pos_y;
+        //self.correct = correct_num;
+        //[self.uncompleteIMG setImage:[UIImage imageNamed:fullImage]];
+      //  self.emptyIMG = [[UIButton alloc] initWithFrame:CGRectMake(positionX, positionY, EMPTY_AREA_EDGE, EMPTY_AREA_EDGE)];
     
 
     }
     return self;
 
 
+}
+-(void)setEmptyX:(NSInteger)pos_x Y:(NSInteger)pos_y
+{
+    if (self) {
+        self.positionX = pos_x;
+        self.positionY = pos_y;
+        //self.correct = correct_num;
+    }
+   
 }
 
 @end
