@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "uncompleteImage.h"
 
-const int MAXlevel = 3;
+const int MAXlevel = 4;
 const int MAXanswer = 3;
 
 

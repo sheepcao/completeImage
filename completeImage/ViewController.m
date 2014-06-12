@@ -15,11 +15,9 @@
 
 @implementation ViewController
 
-//bool blank[4] = {YES,NO,NO,NO};
-
 int level = 1;
-int posX[MAXlevel] = {136,213,103};
-int posY[MAXlevel] = {287,232,157};
+int posX[MAXlevel] = {136,213,103,227};
+int posY[MAXlevel] = {287,232,157,190};
 
 
 
@@ -29,7 +27,6 @@ int posY[MAXlevel] = {287,232,157};
     [super viewDidLoad];
 
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-   // self.UncpltImages = [[NSMutableArray alloc] initWithCapacity:MAXlevel];
     
     self.empty = [[UIButton alloc] init];
     for (int i =0; i<3; i++) {
@@ -44,15 +41,6 @@ int posY[MAXlevel] = {287,232,157};
 }
 
 
-/*
--(void)dataInit
-{
-    self.posX = [NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:136],[NSNumber numberWithInt:236], nil]
-    posY = {287,187};
-    
-}
-
-*/
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
     
@@ -69,8 +57,6 @@ int posY[MAXlevel] = {287,232,157};
     
     [self setImages:an1:an2 :an3 :pic];
     
-    
-	// Do any additional setup after loading the view, typically from a nib.
     
     [self.empty setFrame:CGRectMake(px, py, 55, 55)];
     [self setButton:self.empty];
@@ -99,12 +85,6 @@ int posY[MAXlevel] = {287,232,157};
 
 
     
-    
-    /*
-    [self.answer1 setImage:[UIImage imageNamed:rightAns] forState:UIControlStateNormal];
-    [self.answer2 setImage:[UIImage imageNamed:wrong1] forState:UIControlStateNormal];
-    [self.answer3 setImage:[UIImage imageNamed:wrong2] forState:UIControlStateNormal];
-     */
     [self.picture setImage:[UIImage imageNamed:guess]];
     [self.empty setImage:nil forState:UIControlStateNormal];
 
@@ -115,7 +95,7 @@ int posY[MAXlevel] = {287,232,157};
 {
     btn.layer.borderWidth = 1.0f;
     btn.layer.borderColor = [UIColor blackColor].CGColor;
-    btn.backgroundColor = [UIColor whiteColor];
+    btn.backgroundColor = [UIColor clearColor];
     [btn addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
 }
 
