@@ -16,8 +16,8 @@
 @implementation ViewController
 
 int level = 1;
-int posX[MAXlevel] = {136,213,103,227};
-int posY[MAXlevel] = {287,232,157,190};
+int posX[MAXlevel] = {136,213,103,227,70};
+int posY[MAXlevel] = {287,232,157,190,180};
 
 
 
@@ -133,7 +133,7 @@ int posY[MAXlevel] = {287,232,157,190};
      
         if (sender.tag == correct[level-1] ) {
             
-            [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
            
             
         }
@@ -151,7 +151,10 @@ int posY[MAXlevel] = {287,232,157,190};
     
 }
 
--(void)correctAnswer{
+-(void)animationOver
+{
+    [self.empty setHidden:NO];
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"恭喜"
                                                     message:@"你认识兔子了～"
                                                    delegate:self
@@ -161,8 +164,33 @@ int posY[MAXlevel] = {287,232,157,190};
     
     [ alert  show];
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)correctAnswer{
+    
+    NSMutableArray  *arrayM=[NSMutableArray array];
+    for (int i=1; i<5; i++) {
+        [arrayM addObject:[UIImage imageNamed:[NSString stringWithFormat:@"5p%d.png",i]]];
+    }
+    
+    [self.empty setHidden:YES];
+
+    //设置动画数组
+    [self.picture setAnimationImages:arrayM];
+    //设置动画播放次数
+    [self.picture setAnimationRepeatCount:2];
+    //设置动画播放时间
+    [self.picture setAnimationDuration:4*0.15];
+    //开始动画
+    [self.picture startAnimating];
+    
+    [self performSelector:@selector(animationOver) withObject:nil afterDelay:2*self.picture.animationDuration];
+    
 
 }
+
+
+
 
 -(void)wrongAnswer{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sorry！"
