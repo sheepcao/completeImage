@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "uncompleteImage.h"
+#import "teachingView.h"
 
 const int MAXlevel = 5;
 const int MAXanswer = 3;
@@ -23,6 +24,7 @@ const int MAXanswer = 3;
 @property (weak, nonatomic) IBOutlet UIButton *answer3;
 @property (strong,nonatomic) NSMutableArray *choices;
 @property (strong, nonatomic) IBOutlet UIButton *empty;
+@property (strong, nonatomic) teachingView *teachView;
 
 
 @property (strong,nonatomic) uncompleteImage *myImg;
