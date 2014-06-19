@@ -16,8 +16,9 @@
 @implementation ViewController
 
 int level = 1;
-int posX[MAXlevel] = {136,213,103,227,70};
-int posY[MAXlevel] = {287,232,157,190,180};
+int posX[MAXlevel] = {136,213,103,227,70,220};
+int posY[MAXlevel] = {287,232,157,190,180,300};
+bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
 NSArray *wordsEN;
@@ -26,11 +27,13 @@ NSMutableArray  *arrayM;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.picture.layer.borderWidth = 1.0;
+    
 
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange";
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
@@ -43,6 +46,17 @@ NSMutableArray  *arrayM;
     [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
 
     self.teachView = [[teachingView alloc] initWithWordsAndSound:wordsCN[0] english:wordsEN[0] soundCN:wordsCN[0] soundEN:wordsEN[0]];
+    
+    if (!haveFixed[level-1]) {
+        
+        [self.nextButton setEnabled:NO];
+
+    }else
+    {
+        [self.nextButton setEnabled:YES];
+
+    }
+
 
 }
 
@@ -76,6 +90,16 @@ NSMutableArray  *arrayM;
     
     [self.teachView removeFromSuperview];
     [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if (!haveFixed[level-1]) {
+        
+        [self.nextButton setEnabled:NO];
+        
+    }else
+    {
+        [self.nextButton setEnabled:YES];
+        
+    }
 }
 
 -(void)setImages:(NSString *)rightAns :(NSString *)wrong1 :(NSString *)wrong2 :(NSString *)guess
@@ -119,6 +143,7 @@ NSMutableArray  *arrayM;
                         [((UIButton *) self.choices[i]) setHidden:NO];
                     }
                 }
+                [self.wrongLabel removeFromSuperview];
                
             }
         [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
@@ -149,7 +174,7 @@ NSMutableArray  *arrayM;
         else
         {
             
-            [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
             
             
         }
@@ -163,7 +188,10 @@ NSMutableArray  *arrayM;
 -(void)animationOver
 {
     [self.empty setHidden:NO];
+    haveFixed[level-1] = YES;
+    [self.nextButton setEnabled:YES];
     
+    /*
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"恭喜"
                                                     message:@"你认识兔子了～"
                                                    delegate:self
@@ -172,6 +200,7 @@ NSMutableArray  *arrayM;
     
     
     [ alert  show];
+     */
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -179,12 +208,14 @@ NSMutableArray  *arrayM;
 {
     AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
 
+
 }
 
 -(void)correctAnswer{
     
+    [self.nextButton setEnabled:NO];
 
-    self.teachView.frame = CGRectMake(35, 363, 250, 75);
+    self.teachView.frame = CGRectMake(60, 72, 200, 90);
     [self.view addSubview:self.teachView];
     AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
@@ -215,6 +246,8 @@ NSMutableArray  *arrayM;
         [self.picture startAnimating];
 
     }
+    
+    
 
     
 
@@ -224,9 +257,27 @@ NSMutableArray  *arrayM;
 }
 
 
+-(void)choiceBack
+{
+    if (self.empty.imageView.image) {
+        [self.empty setImage:nil forState:UIControlStateNormal];
+        
+        for (int i = 0; i<3; i++) {
+            if ([((UIButton *) self.choices[i]) isHidden]) {
+                [((UIButton *) self.choices[i]) setHidden:NO];
+            }
+        }
+        
+        [self.wrongLabel removeFromSuperview];
+        
+    }
+    [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
+    
 
+}
 
 -(void)wrongAnswer{
+    /*
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sorry！"
                                                     message:@"是这样么？再想想！"
                                                    delegate:nil
@@ -234,6 +285,15 @@ NSMutableArray  *arrayM;
                                           otherButtonTitles:nil];
     
     [ alert  show];
+     */
+    self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 72, 200, 90)];
+    [self.wrongLabel setText:@"错误"];
+    self.wrongLabel.backgroundColor = [UIColor grayColor];
+    self.wrongLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.wrongLabel];
+    
+    //5秒后按钮自动退回
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(choiceBack) userInfo:nil repeats:NO];
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
     self.empty.layer.borderWidth = 1.0f;
 
@@ -262,4 +322,39 @@ NSMutableArray  *arrayM;
 }
 
 
+- (IBAction)priorLevel {
+    
+    
+    
+    if (level>1) {
+        level--;
+        
+        [self.myImg setEmptyX:posX[level-1] Y:posY[level-1]];
+        [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
+        [self.teachView setWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
+        
+
+    }else if(level ==1)
+    {
+        return;
+    }
+}
+
+- (IBAction)nextLevel {
+    if (haveFixed[level-1]) {
+        
+        if (level<MAXlevel) {
+            level++;
+            
+            [self.myImg setEmptyX:posX[level-1] Y:posY[level-1]];
+            [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
+            [self.teachView setWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
+            
+        }
+        else if(level == MAXlevel)
+        {
+            return;
+        }
+    }
+}
 @end

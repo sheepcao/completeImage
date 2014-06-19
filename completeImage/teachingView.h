@@ -10,11 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 
-@interface teachingView : UIView{
-
-    SystemSoundID soundCN;
-    SystemSoundID soundEN;
-}
+@interface teachingView : UIView
 
 @property (nonatomic,strong) UIButton *answerCN;
 @property (nonatomic,strong) UIButton *answerEN;

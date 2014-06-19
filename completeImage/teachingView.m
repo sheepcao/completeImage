@@ -11,6 +11,8 @@
 @implementation teachingView
 
 
+SystemSoundID soundCN;
+SystemSoundID soundEN;
 
 - (id)initWithFrame:(CGRect)frame
 {
