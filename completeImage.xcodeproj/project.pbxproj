@@ -40,6 +40,11 @@
 		0B964ACA1940973400D2CCCE /* an3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AC71940973400D2CCCE /* an3-1.png */; };
 		0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964ACD1940AF6E00D2CCCE /* AppIcon.png */; };
 		0B964AD21940B1DE00D2CCCE /* pic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AD11940B1DE00D2CCCE /* pic1.png */; };
+		0BA79F691956839700ACA06B /* gameLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA79F671956839700ACA06B /* gameLevelController.m */; };
+		0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F681956839700ACA06B /* gameLevelController.xib */; };
+		0BA79F6D19572AD900ACA06B /* flowerPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F6C19572AD900ACA06B /* flowerPhoto.png */; };
+		0BA79F711957358100ACA06B /* sharePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */; };
+		0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F701957358100ACA06B /* sharePhotoViewController.xib */; };
 		0BDBD805194EC8BB00643495 /* teachingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDBD804194EC8BB00643495 /* teachingView.m */; };
 		0BE582B8193F25FB00EEAB26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B7193F25FB00EEAB26 /* Foundation.framework */; };
 		0BE582BA193F25FB00EEAB26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */; };
@@ -117,6 +122,13 @@
 		0B964AC71940973400D2CCCE /* an3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-1.png"; sourceTree = "<group>"; };
 		0B964ACD1940AF6E00D2CCCE /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		0B964AD11940B1DE00D2CCCE /* pic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic1.png; sourceTree = "<group>"; };
+		0BA79F661956839700ACA06B /* gameLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLevelController.h; sourceTree = "<group>"; };
+		0BA79F671956839700ACA06B /* gameLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameLevelController.m; sourceTree = "<group>"; };
+		0BA79F681956839700ACA06B /* gameLevelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameLevelController.xib; sourceTree = "<group>"; };
+		0BA79F6C19572AD900ACA06B /* flowerPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerPhoto.png; sourceTree = "<group>"; };
+		0BA79F6E1957358100ACA06B /* sharePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sharePhotoViewController.h; sourceTree = "<group>"; };
+		0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sharePhotoViewController.m; sourceTree = "<group>"; };
+		0BA79F701957358100ACA06B /* sharePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sharePhotoViewController.xib; sourceTree = "<group>"; };
 		0BDBD803194EC8BB00643495 /* teachingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teachingView.h; sourceTree = "<group>"; };
 		0BDBD804194EC8BB00643495 /* teachingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teachingView.m; sourceTree = "<group>"; };
 		0BE582B4193F25FB00EEAB26 /* completeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = completeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,10 +240,16 @@
 				0BDBD802194EC86300643495 /* view */,
 				0BE582EC193F278300EEAB26 /* modal */,
 				0BE582C6193F25FB00EEAB26 /* AppDelegate.h */,
+				0BA79F661956839700ACA06B /* gameLevelController.h */,
+				0BA79F671956839700ACA06B /* gameLevelController.m */,
+				0BA79F681956839700ACA06B /* gameLevelController.xib */,
 				0BE582C7193F25FB00EEAB26 /* AppDelegate.m */,
 				0BE582C9193F25FB00EEAB26 /* Main.storyboard */,
 				0BE582CC193F25FB00EEAB26 /* ViewController.h */,
 				0BE582CD193F25FB00EEAB26 /* ViewController.m */,
+				0BA79F6E1957358100ACA06B /* sharePhotoViewController.h */,
+				0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */,
+				0BA79F701957358100ACA06B /* sharePhotoViewController.xib */,
 				0BE582CF193F25FB00EEAB26 /* Images.xcassets */,
 				0BE582BE193F25FB00EEAB26 /* Supporting Files */,
 			);
@@ -241,6 +259,7 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0BA79F6C19572AD900ACA06B /* flowerPhoto.png */,
 				0BEA4666194F2CEE00557A4F /* pig.wav */,
 				0BEA4667194F2CEE00557A4F /* 猪.wav */,
 				0BEA4674194F443500557A4F /* 兔子.wav */,
@@ -409,6 +428,7 @@
 				0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
 				0B09B4C5195261C200C2E529 /* an3-6.png in Resources */,
+				0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */,
 				0B6A6131194979C800804F15 /* an2-4.png in Resources */,
 				0BEA4677194F44A400557A4F /* rabbit.wav in Resources */,
 				0B09B4C3195261C200C2E529 /* pic6.png in Resources */,
@@ -427,6 +447,7 @@
 				0B040303194893FC0068CD3E /* an2-3.png in Resources */,
 				0BEA4670194F403B00557A4F /* level4-4.png in Resources */,
 				0BE582C2193F25FB00EEAB26 /* InfoPlist.strings in Resources */,
+				0BA79F6D19572AD900ACA06B /* flowerPhoto.png in Resources */,
 				0B6A613E194AA05B00804F15 /* an3-5.png in Resources */,
 				0B6A6147194AA79000804F15 /* level5-3.png in Resources */,
 				0BF48757194463D700460598 /* an2-2.png in Resources */,
@@ -436,6 +457,7 @@
 				0B1BE5571953384300F30D8E /* cat.wav in Resources */,
 				0B6A613B194A9EF000804F15 /* an1-5.png in Resources */,
 				0BF48756194463D700460598 /* an1-2.png in Resources */,
+				0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */,
 				0B04030B194895B80068CD3E /* pic3.png in Resources */,
 				0B6A6138194A9EF000804F15 /* pic5.png in Resources */,
 				0B964AC91940973400D2CCCE /* an1-1.png in Resources */,
@@ -475,9 +497,11 @@
 				0BE582EF193F280B00EEAB26 /* gameLevel.m in Sources */,
 				0BE582CE193F25FB00EEAB26 /* ViewController.m in Sources */,
 				0BE582C8193F25FB00EEAB26 /* AppDelegate.m in Sources */,
+				0BA79F711957358100ACA06B /* sharePhotoViewController.m in Sources */,
 				0BE582F5193F287300EEAB26 /* uncompleteImage.m in Sources */,
 				0BE582F2193F285200EEAB26 /* answer.m in Sources */,
 				0BDBD805194EC8BB00643495 /* teachingView.m in Sources */,
+				0BA79F691956839700ACA06B /* gameLevelController.m in Sources */,
 				0BE582C4193F25FB00EEAB26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
