@@ -11,8 +11,8 @@
 
 @interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *frontImage;
-@property (weak, nonatomic) IBOutlet UIImageView *backImage;
+@property (strong, nonatomic)  UIImageView *frontImage;
+@property (strong, nonatomic)  UIImageView *backImage;
 @property (weak, nonatomic)  NSString *frontImageName;
 
 

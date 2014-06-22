@@ -10,6 +10,8 @@
 
 @interface sharePhotoViewController ()
 
+@property (nonatomic ,strong)UIView *shareView ;
+
 @end
 
 @implementation sharePhotoViewController
@@ -27,10 +29,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (self.backImage.image) {
-        [self.view sendSubviewToBack:self.backImage];
+    
+    self.shareView = [[UIView alloc] initWithFrame:CGRectMake(26, 46, 268, 476)];
+    self.shareView.backgroundColor = [UIColor clearColor];
+    
+    self.frontImage = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 0, 268, 476)];
+    self.backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 268, 476)];
+    [self.frontImage setClipsToBounds:YES];
+    [self.backImage setClipsToBounds:YES];
 
-    }
+    self.frontImage.backgroundColor = [UIColor clearColor];
+    self.backImage.backgroundColor = [UIColor clearColor];
+    
+    [self.shareView addSubview:self.backImage];
+    [self.shareView addSubview:self.frontImage];
+
+
+    [self.view addSubview:self.shareView];
+
+
+
+ 
     [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
     
     
@@ -52,16 +71,21 @@
 
 - (IBAction)saveImage:(id)sender {
     
+
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
+
+    [self.shareView sendSubviewToBack:self.backImage];
+    
+    UIGraphicsBeginImageContext(self.shareView.frame.size);
     
     
     //获取图像
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [self.shareView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *imageShare = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     UIImageWriteToSavedPhotosAlbum(imageShare, nil, nil,nil);
+
 
 
 }
