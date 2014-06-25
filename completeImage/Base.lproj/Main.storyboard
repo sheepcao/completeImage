@@ -16,16 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePi-gc-hnf">
-                                <rect key="frame" x="51" y="107" width="85" height="48"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePi-gc-hnf">
+                                <rect key="frame" x="17" y="90" width="70" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84662979009999995" green="0.32975022809999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="动物">
+                                <state key="normal" title="11" backgroundImage="pic4.png">
                                     <color key="titleColor" red="0.93165488139999997" green="0.72354014600000005" blue="0.54373859489999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="animalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iqh-iZ-uP0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVv-h8-5fk">
+                                <rect key="frame" x="168" y="101" width="70" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pic5.png">
+                                    <color key="titleColor" red="0.93165488139999997" green="0.72354014600000005" blue="0.54373859489999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9fs-3a-y4N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fK4-Q0-OLH">
+                                <rect key="frame" x="37" y="217" width="70" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pic2.png">
+                                    <color key="titleColor" red="0.93165488139999997" green="0.72354014600000005" blue="0.54373859489999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IUE-c4-WgH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mue-lT-Gp8">
+                                <rect key="frame" x="132" y="217" width="70" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pic6.png">
+                                    <color key="titleColor" red="0.93165488139999997" green="0.72354014600000005" blue="0.54373859489999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F73-8D-dze"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msb-fE-NXp">
+                                <rect key="frame" x="80" y="333" width="70" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pic7.png">
+                                    <color key="titleColor" red="0.93165488139999997" green="0.72354014600000005" blue="0.54373859489999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7kl-wY-v8O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz5-VX-52l">
@@ -47,6 +90,13 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="pic2.png" width="400" height="250"/>
+        <image name="pic4.png" width="300" height="300"/>
+        <image name="pic5.png" width="300" height="300"/>
+        <image name="pic6.png" width="1024" height="1024"/>
+        <image name="pic7.png" width="1024" height="942"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

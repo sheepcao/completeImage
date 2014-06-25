@@ -11,9 +11,11 @@
 #import "sharePhotoViewController.h"
 
 
+const int bigLevel = 5;
 
 @interface ViewController : UIViewController
 - (IBAction)animalBtn:(id)sender;
 - (IBAction)takePhoto:(id)sender;
+
 
 @end

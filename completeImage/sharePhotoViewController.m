@@ -30,11 +30,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.shareView = [[UIView alloc] initWithFrame:CGRectMake(26, 46, 268, 476)];
+    self.shareView = [[UIView alloc] initWithFrame:CGRectMake(0, 65, 320, 430)];
     self.shareView.backgroundColor = [UIColor clearColor];
     
-    self.frontImage = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 0, 268, 476)];
-    self.backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 268, 476)];
+    self.frontImage = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 0, 320, 430)];
+    self.backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 430)];
     [self.frontImage setClipsToBounds:YES];
     [self.backImage setClipsToBounds:YES];
 
@@ -93,16 +93,16 @@
 - (IBAction)photograph:(id)sender {
     
     
-    self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 55, 320 , 480)];
+    self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 65, 320, 430)];
     [self.SharePhotoView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
+    UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 430)];
     [backImage setImage:[UIImage imageNamed:@"flowerPhoto"]];
     
     UIButton *aBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect] ;
     [aBtn setTitle:@"start" forState:UIControlStateNormal];
     [aBtn setFrame:CGRectMake(0, 0, 100, 80)];
     
-    [self.SharePhotoView addSubview:aBtn];
+   // [self.SharePhotoView addSubview:aBtn];
     [self.SharePhotoView addSubview:backImage];
     
     

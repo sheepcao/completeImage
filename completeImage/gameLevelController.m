@@ -14,9 +14,8 @@
 
 @implementation gameLevelController
 
-int level = 1;
-int posX[MAXlevel] = {136,213,103,227,70,220};
-int posY[MAXlevel] = {287,232,157,190,180,300};
+int posX[MAXlevel] = {136,213,103,227,70,220,200,88};
+int posY[MAXlevel] = {287,232,157,190,180,300,282,206};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -30,9 +29,9 @@ NSMutableArray  *arrayM;
     
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken";
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
@@ -44,7 +43,7 @@ NSMutableArray  *arrayM;
     self.myImg = [[uncompleteImage alloc] initWithEmptyX:posX[level-1] Y:posY[level-1]];
     [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
     
-    self.teachView = [[teachingView alloc] initWithWordsAndSound:wordsCN[0] english:wordsEN[0] soundCN:wordsCN[0] soundEN:wordsEN[0]];
+    self.teachView = [[teachingView alloc] initWithWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
     
     if (!haveFixed[level-1]) {
         
@@ -204,7 +203,7 @@ NSMutableArray  *arrayM;
     
     [self.nextButton setEnabled:NO];
     
-    self.teachView.frame = CGRectMake(60, 72, 200, 90);
+    self.teachView.frame = CGRectMake(60, 72, 200, 100);
     [self.view addSubview:self.teachView];
     AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
@@ -275,7 +274,7 @@ NSMutableArray  *arrayM;
      
      [ alert  show];
      */
-    self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 72, 200, 90)];
+    self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 72, 200, 100)];
     [self.wrongLabel setText:@"错误"];
     self.wrongLabel.backgroundColor = [UIColor grayColor];
     self.wrongLabel.textAlignment = NSTextAlignmentCenter;
@@ -347,6 +346,22 @@ NSMutableArray  *arrayM;
             return;
         }
     }
+}
+
+- (IBAction)backToLevel {
+    
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+
+- (IBAction)share {
+    
+    
+    sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
+    myShare.frontImageName = @"flowerPhoto";
+    
+    myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:myShare animated:YES completion:Nil ];
+
 }
 
 @end

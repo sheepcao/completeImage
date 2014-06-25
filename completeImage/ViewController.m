@@ -11,18 +11,41 @@
 @interface ViewController ()
 
 @property (nonatomic ,strong)gameLevelController *game;
-
+//@property (nonatomic ,strong) NSArray *levelLock;
 @end
 
 @implementation ViewController
 
+bool levelLock[bigLevel] = {YES};
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    level =4;
+    
+    
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];
+    UIImageView *homeBackground = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    homeBackground.image = [UIImage imageNamed:@"level"];
+    
+    for (int i = 0; i <(level/10)+1; i++) {
+        levelLock[i] = NO;
+    }
+    
+    for (int i=bigLevel; i>(level/10)+1; i--) {
+        
+     
+        UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:i];
+        [levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
+        ((UIButton *)[self.view viewWithTag:i]).imageView.alpha = 0.2;
+    }
+
+    
+    [self.view addSubview:homeBackground];
+    [self.view sendSubviewToBack:homeBackground];
 
 }
 

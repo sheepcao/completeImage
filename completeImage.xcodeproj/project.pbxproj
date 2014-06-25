@@ -15,6 +15,15 @@
 		0B09B4C3195261C200C2E529 /* pic6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B09B4BF195261C200C2E529 /* pic6.png */; };
 		0B09B4C4195261C200C2E529 /* an2-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B09B4C0195261C200C2E529 /* an2-6.png */; };
 		0B09B4C5195261C200C2E529 /* an3-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B09B4C1195261C200C2E529 /* an3-6.png */; };
+		0B0E82F1195873260030F71F /* an3-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82E8195873260030F71F /* an3-7.png */; };
+		0B0E82F2195873260030F71F /* an2-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82E9195873260030F71F /* an2-7.png */; };
+		0B0E82F3195873260030F71F /* an1-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EA195873260030F71F /* an1-7.png */; };
+		0B0E82F4195873260030F71F /* level7-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EB195873260030F71F /* level7-5.png */; };
+		0B0E82F5195873260030F71F /* level7-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EC195873260030F71F /* level7-4.png */; };
+		0B0E82F6195873260030F71F /* level7-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82ED195873260030F71F /* level7-3.png */; };
+		0B0E82F7195873260030F71F /* level7-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EE195873260030F71F /* level7-2.png */; };
+		0B0E82F8195873260030F71F /* level7-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EF195873260030F71F /* level7-1.png */; };
+		0B0E82F9195873260030F71F /* pic7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82F0195873260030F71F /* pic7.png */; };
 		0B1BE54B195336ED00F30D8E /* orange.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE549195336ED00F30D8E /* orange.wav */; };
 		0B1BE54C195336ED00F30D8E /* 橘子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE54A195336ED00F30D8E /* 橘子.wav */; };
 		0B1BE54E195337C500F30D8E /* 鳄鱼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE54D195337C500F30D8E /* 鳄鱼.wav */; };
@@ -42,10 +51,17 @@
 		0B964AD21940B1DE00D2CCCE /* pic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964AD11940B1DE00D2CCCE /* pic1.png */; };
 		0BA79F691956839700ACA06B /* gameLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA79F671956839700ACA06B /* gameLevelController.m */; };
 		0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F681956839700ACA06B /* gameLevelController.xib */; };
-		0BA79F6D19572AD900ACA06B /* flowerPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F6C19572AD900ACA06B /* flowerPhoto.png */; };
 		0BA79F711957358100ACA06B /* sharePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */; };
 		0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F701957358100ACA06B /* sharePhotoViewController.xib */; };
+		0BB4A1731957CC03009FE5BE /* flowerPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB4A1721957CC03009FE5BE /* flowerPhoto.png */; };
 		0BDBD805194EC8BB00643495 /* teachingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDBD804194EC8BB00643495 /* teachingView.m */; };
+		0BE2896A195A5D1100E412D5 /* pic8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28966195A5D1100E412D5 /* pic8.png */; };
+		0BE2896B195A5D1100E412D5 /* an2-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28967195A5D1100E412D5 /* an2-8.png */; };
+		0BE2896C195A5D1100E412D5 /* an1-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28968195A5D1100E412D5 /* an1-8.png */; };
+		0BE2896D195A5D1100E412D5 /* an3-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28969195A5D1100E412D5 /* an3-8.png */; };
+		0BE2896F195B0B9E00E412D5 /* level.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE2896E195B0B9E00E412D5 /* level.png */; };
+		0BE28971195B0EF100E412D5 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28970195B0EF100E412D5 /* lock.png */; };
+		0BE28973195B0FAF00E412D5 /* suozi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28972195B0FAF00E412D5 /* suozi.png */; };
 		0BE582B8193F25FB00EEAB26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B7193F25FB00EEAB26 /* Foundation.framework */; };
 		0BE582BA193F25FB00EEAB26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */; };
 		0BE582BC193F25FB00EEAB26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582BB193F25FB00EEAB26 /* UIKit.framework */; };
@@ -97,6 +113,15 @@
 		0B09B4BF195261C200C2E529 /* pic6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic6.png; sourceTree = "<group>"; };
 		0B09B4C0195261C200C2E529 /* an2-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-6.png"; sourceTree = "<group>"; };
 		0B09B4C1195261C200C2E529 /* an3-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-6.png"; sourceTree = "<group>"; };
+		0B0E82E8195873260030F71F /* an3-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-7.png"; sourceTree = "<group>"; };
+		0B0E82E9195873260030F71F /* an2-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-7.png"; sourceTree = "<group>"; };
+		0B0E82EA195873260030F71F /* an1-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-7.png"; sourceTree = "<group>"; };
+		0B0E82EB195873260030F71F /* level7-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-5.png"; sourceTree = "<group>"; };
+		0B0E82EC195873260030F71F /* level7-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-4.png"; sourceTree = "<group>"; };
+		0B0E82ED195873260030F71F /* level7-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-3.png"; sourceTree = "<group>"; };
+		0B0E82EE195873260030F71F /* level7-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-2.png"; sourceTree = "<group>"; };
+		0B0E82EF195873260030F71F /* level7-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-1.png"; sourceTree = "<group>"; };
+		0B0E82F0195873260030F71F /* pic7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic7.png; sourceTree = "<group>"; };
 		0B1BE549195336ED00F30D8E /* orange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = orange.wav; sourceTree = "<group>"; };
 		0B1BE54A195336ED00F30D8E /* 橘子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "橘子.wav"; sourceTree = "<group>"; };
 		0B1BE54D195337C500F30D8E /* 鳄鱼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鳄鱼.wav"; sourceTree = "<group>"; };
@@ -125,12 +150,20 @@
 		0BA79F661956839700ACA06B /* gameLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLevelController.h; sourceTree = "<group>"; };
 		0BA79F671956839700ACA06B /* gameLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameLevelController.m; sourceTree = "<group>"; };
 		0BA79F681956839700ACA06B /* gameLevelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = gameLevelController.xib; sourceTree = "<group>"; };
-		0BA79F6C19572AD900ACA06B /* flowerPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerPhoto.png; sourceTree = "<group>"; };
 		0BA79F6E1957358100ACA06B /* sharePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sharePhotoViewController.h; sourceTree = "<group>"; };
 		0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sharePhotoViewController.m; sourceTree = "<group>"; };
 		0BA79F701957358100ACA06B /* sharePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sharePhotoViewController.xib; sourceTree = "<group>"; };
+		0BB4A1721957CC03009FE5BE /* flowerPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flowerPhoto.png; sourceTree = "<group>"; };
 		0BDBD803194EC8BB00643495 /* teachingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teachingView.h; sourceTree = "<group>"; };
 		0BDBD804194EC8BB00643495 /* teachingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teachingView.m; sourceTree = "<group>"; };
+		0BE28966195A5D1100E412D5 /* pic8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic8.png; sourceTree = "<group>"; };
+		0BE28967195A5D1100E412D5 /* an2-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-8.png"; sourceTree = "<group>"; };
+		0BE28968195A5D1100E412D5 /* an1-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-8.png"; sourceTree = "<group>"; };
+		0BE28969195A5D1100E412D5 /* an3-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-8.png"; sourceTree = "<group>"; };
+		0BE2896E195B0B9E00E412D5 /* level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level.png; sourceTree = "<group>"; };
+		0BE28970195B0EF100E412D5 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		0BE28972195B0FAF00E412D5 /* suozi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suozi.png; sourceTree = "<group>"; };
+		0BE28974195B259000E412D5 /* globalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalVar.h; sourceTree = "<group>"; };
 		0BE582B4193F25FB00EEAB26 /* completeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = completeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE582B7193F25FB00EEAB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -259,7 +292,10 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0BA79F6C19572AD900ACA06B /* flowerPhoto.png */,
+				0BB4A1721957CC03009FE5BE /* flowerPhoto.png */,
+				0BE28972195B0FAF00E412D5 /* suozi.png */,
+				0BE28970195B0EF100E412D5 /* lock.png */,
+				0BE2896E195B0B9E00E412D5 /* level.png */,
 				0BEA4666194F2CEE00557A4F /* pig.wav */,
 				0BEA4667194F2CEE00557A4F /* 猪.wav */,
 				0BEA4674194F443500557A4F /* 兔子.wav */,
@@ -306,6 +342,19 @@
 				0BEA466C194F403B00557A4F /* level4-3.png */,
 				0BEA466D194F403B00557A4F /* level4-2.png */,
 				0BEA466E194F403B00557A4F /* level4-1.png */,
+				0B0E82E8195873260030F71F /* an3-7.png */,
+				0B0E82E9195873260030F71F /* an2-7.png */,
+				0B0E82EA195873260030F71F /* an1-7.png */,
+				0B0E82EB195873260030F71F /* level7-5.png */,
+				0B0E82EC195873260030F71F /* level7-4.png */,
+				0B0E82ED195873260030F71F /* level7-3.png */,
+				0B0E82EE195873260030F71F /* level7-2.png */,
+				0B0E82EF195873260030F71F /* level7-1.png */,
+				0B0E82F0195873260030F71F /* pic7.png */,
+				0BE28966195A5D1100E412D5 /* pic8.png */,
+				0BE28967195A5D1100E412D5 /* an2-8.png */,
+				0BE28968195A5D1100E412D5 /* an1-8.png */,
+				0BE28969195A5D1100E412D5 /* an3-8.png */,
 				0BE582BF193F25FB00EEAB26 /* completeImage-Info.plist */,
 				0BE582C0193F25FB00EEAB26 /* InfoPlist.strings */,
 				0BE582C3193F25FB00EEAB26 /* main.m */,
@@ -341,6 +390,7 @@
 				0BE582F1193F285200EEAB26 /* answer.m */,
 				0BE582F3193F287300EEAB26 /* uncompleteImage.h */,
 				0BE582F4193F287300EEAB26 /* uncompleteImage.m */,
+				0BE28974195B259000E412D5 /* globalVar.h */,
 			);
 			name = modal;
 			sourceTree = "<group>";
@@ -426,6 +476,7 @@
 			files = (
 				0BEA466F194F403B00557A4F /* level4-5.png in Resources */,
 				0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */,
+				0B0E82F3195873260030F71F /* an1-7.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
 				0B09B4C5195261C200C2E529 /* an3-6.png in Resources */,
 				0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */,
@@ -434,32 +485,44 @@
 				0B09B4C3195261C200C2E529 /* pic6.png in Resources */,
 				0B6A6130194979C800804F15 /* an1-4.png in Resources */,
 				0BF487511944631A00460598 /* pic2.png in Resources */,
+				0BE28971195B0EF100E412D5 /* lock.png in Resources */,
+				0BE2896B195A5D1100E412D5 /* an2-8.png in Resources */,
 				0BEA4675194F443500557A4F /* 兔子.wav in Resources */,
 				0BEA4669194F2CEE00557A4F /* 猪.wav in Resources */,
 				0B1BE5581953384300F30D8E /* 猫.wav in Resources */,
+				0BE2896D195A5D1100E412D5 /* an3-8.png in Resources */,
 				0B964ACA1940973400D2CCCE /* an3-1.png in Resources */,
+				0B0E82F1195873260030F71F /* an3-7.png in Resources */,
+				0B0E82F4195873260030F71F /* level7-5.png in Resources */,
+				0BE2896A195A5D1100E412D5 /* pic8.png in Resources */,
 				0B040304194893FC0068CD3E /* an3-3.png in Resources */,
 				0B04030A194895B80068CD3E /* an1-3.png in Resources */,
 				0BEA4673194F403B00557A4F /* level4-1.png in Resources */,
+				0B0E82F8195873260030F71F /* level7-1.png in Resources */,
 				0B6A6146194AA79000804F15 /* level5-4.png in Resources */,
 				0B09B4C2195261C200C2E529 /* an1-6.png in Resources */,
 				0B1BE54C195336ED00F30D8E /* 橘子.wav in Resources */,
 				0B040303194893FC0068CD3E /* an2-3.png in Resources */,
 				0BEA4670194F403B00557A4F /* level4-4.png in Resources */,
+				0BE28973195B0FAF00E412D5 /* suozi.png in Resources */,
 				0BE582C2193F25FB00EEAB26 /* InfoPlist.strings in Resources */,
-				0BA79F6D19572AD900ACA06B /* flowerPhoto.png in Resources */,
+				0B0E82F7195873260030F71F /* level7-2.png in Resources */,
 				0B6A613E194AA05B00804F15 /* an3-5.png in Resources */,
+				0BE2896F195B0B9E00E412D5 /* level.png in Resources */,
 				0B6A6147194AA79000804F15 /* level5-3.png in Resources */,
 				0BF48757194463D700460598 /* an2-2.png in Resources */,
+				0BE2896C195A5D1100E412D5 /* an1-8.png in Resources */,
 				0B1BE554195337DF00F30D8E /* 羽毛球.wav in Resources */,
 				0B6A6133194979C800804F15 /* pic4.png in Resources */,
 				0B1BE54B195336ED00F30D8E /* orange.wav in Resources */,
 				0B1BE5571953384300F30D8E /* cat.wav in Resources */,
+				0B0E82F9195873260030F71F /* pic7.png in Resources */,
 				0B6A613B194A9EF000804F15 /* an1-5.png in Resources */,
 				0BF48756194463D700460598 /* an1-2.png in Resources */,
 				0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */,
 				0B04030B194895B80068CD3E /* pic3.png in Resources */,
 				0B6A6138194A9EF000804F15 /* pic5.png in Resources */,
+				0B0E82F5195873260030F71F /* level7-4.png in Resources */,
 				0B964AC91940973400D2CCCE /* an1-1.png in Resources */,
 				0BEA4671194F403B00557A4F /* level4-3.png in Resources */,
 				0B6A6149194AA79000804F15 /* level5-1.png in Resources */,
@@ -468,9 +531,12 @@
 				0B6A6132194979C800804F15 /* an3-4.png in Resources */,
 				0B964AC81940973400D2CCCE /* an2-1.png in Resources */,
 				0BEA4672194F403B00557A4F /* level4-2.png in Resources */,
+				0BB4A1731957CC03009FE5BE /* flowerPhoto.png in Resources */,
 				0BF48755194463D700460598 /* an3-2.png in Resources */,
 				0B1BE552195337D600F30D8E /* aligator.wav in Resources */,
+				0B0E82F2195873260030F71F /* an2-7.png in Resources */,
 				0B1BE54E195337C500F30D8E /* 鳄鱼.wav in Resources */,
+				0B0E82F6195873260030F71F /* level7-3.png in Resources */,
 				0BE582CB193F25FB00EEAB26 /* Main.storyboard in Resources */,
 				0B6A6148194AA79000804F15 /* level5-2.png in Resources */,
 				0B964AD21940B1DE00D2CCCE /* pic1.png in Resources */,

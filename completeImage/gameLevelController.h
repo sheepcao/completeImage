@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "uncompleteImage.h"
 #import "teachingView.h"
+#import "sharePhotoViewController.h"
+#import "globalVar.h"
 
-static const int MAXlevel = 6;
+static const int MAXlevel = 8;
 static const int MAXanswer = 3;
 
 
@@ -32,6 +34,7 @@ static const int MAXanswer = 3;
 
 - (IBAction)priorLevel;
 - (IBAction)nextLevel;
-
+- (IBAction)backToLevel;
+- (IBAction)share;
 
 @end
