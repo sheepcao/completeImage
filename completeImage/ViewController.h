@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "gameLevelController.h"
 #import "sharePhotoViewController.h"
+#import "CustomIOS7AlertView.h"
+
 
 
 const int bigLevel = 5;
 
 @interface ViewController : UIViewController
-- (IBAction)animalBtn:(id)sender;
+
+@property (strong, nonatomic) CustomIOS7AlertView *lockedAlert;
+- (IBAction)animalBtn:(UIButton *)sender;
 - (IBAction)takePhoto:(id)sender;
 
 

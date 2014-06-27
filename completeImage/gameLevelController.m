@@ -14,8 +14,8 @@
 
 @implementation gameLevelController
 
-int posX[MAXlevel] = {136,213,103,227,70,220,200,88};
-int posY[MAXlevel] = {287,232,157,190,180,300,282,206};
+double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92};
+double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -25,13 +25,19 @@ NSMutableArray  *arrayM;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    for (int i=0; i<level-1; i++) {
+        haveFixed[i]= YES;
+    }
+    
+
     self.picture.layer.borderWidth = 1.0;
     
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus";
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
@@ -227,9 +233,9 @@ NSMutableArray  *arrayM;
         //设置动画数组
         [self.picture setAnimationImages:arrayM];
         //设置动画播放次数
-        [self.picture setAnimationRepeatCount:2];
+        [self.picture setAnimationRepeatCount:1];
         //设置动画播放时间
-        [self.picture setAnimationDuration:5*0.2];
+        [self.picture setAnimationDuration:5*0.3];
         //开始动画
         [self.picture startAnimating];
         
@@ -351,6 +357,7 @@ NSMutableArray  *arrayM;
 - (IBAction)backToLevel {
     
     [self dismissViewControllerAnimated:YES completion:Nil];
+    
 }
 
 - (IBAction)share {

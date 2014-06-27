@@ -32,6 +32,19 @@
 		0B1BE554195337DF00F30D8E /* 羽毛球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE553195337DF00F30D8E /* 羽毛球.wav */; };
 		0B1BE5571953384300F30D8E /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE5551953384300F30D8E /* cat.wav */; };
 		0B1BE5581953384300F30D8E /* 猫.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE5561953384300F30D8E /* 猫.wav */; };
+		0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */; };
+		0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CF195C4F9D0093A863 /* tagAlert.png */; };
+		0B4EF0DA195DB2C90093A863 /* an3-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D1195DB2C90093A863 /* an3-9.png */; };
+		0B4EF0DB195DB2C90093A863 /* an2-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D2195DB2C90093A863 /* an2-9.png */; };
+		0B4EF0DC195DB2C90093A863 /* an1-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D3195DB2C90093A863 /* an1-9.png */; };
+		0B4EF0DD195DB2C90093A863 /* pic9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D4195DB2C90093A863 /* pic9.png */; };
+		0B4EF0DE195DB2C90093A863 /* level9-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D5195DB2C90093A863 /* level9-5.png */; };
+		0B4EF0DF195DB2C90093A863 /* level9-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D6195DB2C90093A863 /* level9-4.png */; };
+		0B4EF0E0195DB2C90093A863 /* level9-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D7195DB2C90093A863 /* level9-3.png */; };
+		0B4EF0E1195DB2C90093A863 /* level9-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D8195DB2C90093A863 /* level9-2.png */; };
+		0B4EF0E2195DB2C90093A863 /* level9-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0D9195DB2C90093A863 /* level9-1.png */; };
+		0B4EF0E5195DB4210093A863 /* 荷花.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0E3195DB4210093A863 /* 荷花.wav */; };
+		0B4EF0E6195DB4210093A863 /* lotus.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0E4195DB4210093A863 /* lotus.wav */; };
 		0B6A6130194979C800804F15 /* an1-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6A612C194979C800804F15 /* an1-4.png */; };
 		0B6A6131194979C800804F15 /* an2-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6A612D194979C800804F15 /* an2-4.png */; };
 		0B6A6132194979C800804F15 /* an3-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6A612E194979C800804F15 /* an3-4.png */; };
@@ -130,6 +143,20 @@
 		0B1BE553195337DF00F30D8E /* 羽毛球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "羽毛球.wav"; sourceTree = "<group>"; };
 		0B1BE5551953384300F30D8E /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
 		0B1BE5561953384300F30D8E /* 猫.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "猫.wav"; sourceTree = "<group>"; };
+		0B4EF0CC195C4E1A0093A863 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		0B4EF0CF195C4F9D0093A863 /* tagAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tagAlert.png; sourceTree = "<group>"; };
+		0B4EF0D1195DB2C90093A863 /* an3-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-9.png"; sourceTree = "<group>"; };
+		0B4EF0D2195DB2C90093A863 /* an2-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-9.png"; sourceTree = "<group>"; };
+		0B4EF0D3195DB2C90093A863 /* an1-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-9.png"; sourceTree = "<group>"; };
+		0B4EF0D4195DB2C90093A863 /* pic9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic9.png; sourceTree = "<group>"; };
+		0B4EF0D5195DB2C90093A863 /* level9-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-5.png"; sourceTree = "<group>"; };
+		0B4EF0D6195DB2C90093A863 /* level9-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-4.png"; sourceTree = "<group>"; };
+		0B4EF0D7195DB2C90093A863 /* level9-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-3.png"; sourceTree = "<group>"; };
+		0B4EF0D8195DB2C90093A863 /* level9-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-2.png"; sourceTree = "<group>"; };
+		0B4EF0D9195DB2C90093A863 /* level9-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level9-1.png"; sourceTree = "<group>"; };
+		0B4EF0E3195DB4210093A863 /* 荷花.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "荷花.wav"; sourceTree = "<group>"; };
+		0B4EF0E4195DB4210093A863 /* lotus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lotus.wav; sourceTree = "<group>"; };
 		0B6A612C194979C800804F15 /* an1-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-4.png"; sourceTree = "<group>"; };
 		0B6A612D194979C800804F15 /* an2-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-4.png"; sourceTree = "<group>"; };
 		0B6A612E194979C800804F15 /* an3-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-4.png"; sourceTree = "<group>"; };
@@ -228,6 +255,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4EF0CB195C4E1A0093A863 /* CustomIOS7AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EF0CC195C4E1A0093A863 /* CustomIOS7AlertView.h */,
+				0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */,
+			);
+			path = CustomIOS7AlertView;
+			sourceTree = "<group>";
+		};
 		0BDBD802194EC86300643495 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +306,7 @@
 		0BE582BD193F25FB00EEAB26 /* completeImage */ = {
 			isa = PBXGroup;
 			children = (
+				0B4EF0CB195C4E1A0093A863 /* CustomIOS7AlertView */,
 				0BDBD802194EC86300643495 /* view */,
 				0BE582EC193F278300EEAB26 /* modal */,
 				0BE582C6193F25FB00EEAB26 /* AppDelegate.h */,
@@ -292,6 +329,7 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B4EF0CF195C4F9D0093A863 /* tagAlert.png */,
 				0BB4A1721957CC03009FE5BE /* flowerPhoto.png */,
 				0BE28972195B0FAF00E412D5 /* suozi.png */,
 				0BE28970195B0EF100E412D5 /* lock.png */,
@@ -308,6 +346,8 @@
 				0B1BE54F195337D000F30D8E /* badminton.wav */,
 				0B1BE5551953384300F30D8E /* cat.wav */,
 				0B1BE5561953384300F30D8E /* 猫.wav */,
+				0B4EF0E3195DB4210093A863 /* 荷花.wav */,
+				0B4EF0E4195DB4210093A863 /* lotus.wav */,
 				0B964ACD1940AF6E00D2CCCE /* AppIcon.png */,
 				0B964AD11940B1DE00D2CCCE /* pic1.png */,
 				0BF48752194463D700460598 /* an3-2.png */,
@@ -355,6 +395,15 @@
 				0BE28967195A5D1100E412D5 /* an2-8.png */,
 				0BE28968195A5D1100E412D5 /* an1-8.png */,
 				0BE28969195A5D1100E412D5 /* an3-8.png */,
+				0B4EF0D1195DB2C90093A863 /* an3-9.png */,
+				0B4EF0D2195DB2C90093A863 /* an2-9.png */,
+				0B4EF0D3195DB2C90093A863 /* an1-9.png */,
+				0B4EF0D4195DB2C90093A863 /* pic9.png */,
+				0B4EF0D5195DB2C90093A863 /* level9-5.png */,
+				0B4EF0D6195DB2C90093A863 /* level9-4.png */,
+				0B4EF0D7195DB2C90093A863 /* level9-3.png */,
+				0B4EF0D8195DB2C90093A863 /* level9-2.png */,
+				0B4EF0D9195DB2C90093A863 /* level9-1.png */,
 				0BE582BF193F25FB00EEAB26 /* completeImage-Info.plist */,
 				0BE582C0193F25FB00EEAB26 /* InfoPlist.strings */,
 				0BE582C3193F25FB00EEAB26 /* main.m */,
@@ -474,8 +523,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4EF0E0195DB2C90093A863 /* level9-3.png in Resources */,
 				0BEA466F194F403B00557A4F /* level4-5.png in Resources */,
 				0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */,
+				0B4EF0DC195DB2C90093A863 /* an1-9.png in Resources */,
 				0B0E82F3195873260030F71F /* an1-7.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
 				0B09B4C5195261C200C2E529 /* an3-6.png in Resources */,
@@ -484,21 +535,29 @@
 				0BEA4677194F44A400557A4F /* rabbit.wav in Resources */,
 				0B09B4C3195261C200C2E529 /* pic6.png in Resources */,
 				0B6A6130194979C800804F15 /* an1-4.png in Resources */,
+				0B4EF0E6195DB4210093A863 /* lotus.wav in Resources */,
+				0B4EF0E5195DB4210093A863 /* 荷花.wav in Resources */,
+				0B4EF0DD195DB2C90093A863 /* pic9.png in Resources */,
 				0BF487511944631A00460598 /* pic2.png in Resources */,
 				0BE28971195B0EF100E412D5 /* lock.png in Resources */,
 				0BE2896B195A5D1100E412D5 /* an2-8.png in Resources */,
+				0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */,
 				0BEA4675194F443500557A4F /* 兔子.wav in Resources */,
 				0BEA4669194F2CEE00557A4F /* 猪.wav in Resources */,
 				0B1BE5581953384300F30D8E /* 猫.wav in Resources */,
+				0B4EF0E2195DB2C90093A863 /* level9-1.png in Resources */,
 				0BE2896D195A5D1100E412D5 /* an3-8.png in Resources */,
+				0B4EF0DF195DB2C90093A863 /* level9-4.png in Resources */,
 				0B964ACA1940973400D2CCCE /* an3-1.png in Resources */,
 				0B0E82F1195873260030F71F /* an3-7.png in Resources */,
+				0B4EF0E1195DB2C90093A863 /* level9-2.png in Resources */,
 				0B0E82F4195873260030F71F /* level7-5.png in Resources */,
 				0BE2896A195A5D1100E412D5 /* pic8.png in Resources */,
 				0B040304194893FC0068CD3E /* an3-3.png in Resources */,
 				0B04030A194895B80068CD3E /* an1-3.png in Resources */,
 				0BEA4673194F403B00557A4F /* level4-1.png in Resources */,
 				0B0E82F8195873260030F71F /* level7-1.png in Resources */,
+				0B4EF0DE195DB2C90093A863 /* level9-5.png in Resources */,
 				0B6A6146194AA79000804F15 /* level5-4.png in Resources */,
 				0B09B4C2195261C200C2E529 /* an1-6.png in Resources */,
 				0B1BE54C195336ED00F30D8E /* 橘子.wav in Resources */,
@@ -521,6 +580,7 @@
 				0BF48756194463D700460598 /* an1-2.png in Resources */,
 				0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */,
 				0B04030B194895B80068CD3E /* pic3.png in Resources */,
+				0B4EF0DA195DB2C90093A863 /* an3-9.png in Resources */,
 				0B6A6138194A9EF000804F15 /* pic5.png in Resources */,
 				0B0E82F5195873260030F71F /* level7-4.png in Resources */,
 				0B964AC91940973400D2CCCE /* an1-1.png in Resources */,
@@ -533,6 +593,7 @@
 				0BEA4672194F403B00557A4F /* level4-2.png in Resources */,
 				0BB4A1731957CC03009FE5BE /* flowerPhoto.png in Resources */,
 				0BF48755194463D700460598 /* an3-2.png in Resources */,
+				0B4EF0DB195DB2C90093A863 /* an2-9.png in Resources */,
 				0B1BE552195337D600F30D8E /* aligator.wav in Resources */,
 				0B0E82F2195873260030F71F /* an2-7.png in Resources */,
 				0B1BE54E195337C500F30D8E /* 鳄鱼.wav in Resources */,
@@ -568,6 +629,7 @@
 				0BE582F2193F285200EEAB26 /* answer.m in Sources */,
 				0BDBD805194EC8BB00643495 /* teachingView.m in Sources */,
 				0BA79F691956839700ACA06B /* gameLevelController.m in Sources */,
+				0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */,
 				0BE582C4193F25FB00EEAB26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

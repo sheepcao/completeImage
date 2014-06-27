@@ -11,19 +11,19 @@
 @interface ViewController ()
 
 @property (nonatomic ,strong)gameLevelController *game;
-//@property (nonatomic ,strong) NSArray *levelLock;
+@property (nonatomic ,strong) UIButton *lockedInAlert;
 @end
 
 @implementation ViewController
 
-bool levelLock[bigLevel] = {YES};
+bool levelLock[bigLevel];
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    level =4;
+    level =8;
     
     
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];
@@ -31,17 +31,11 @@ bool levelLock[bigLevel] = {YES};
     
     homeBackground.image = [UIImage imageNamed:@"level"];
     
-    for (int i = 0; i <(level/10)+1; i++) {
+    for (int i = 0; i <bigLevel; i++) {
         levelLock[i] = NO;
     }
     
-    for (int i=bigLevel; i>(level/10)+1; i--) {
-        
-     
-        UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:i];
-        [levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
-        ((UIButton *)[self.view viewWithTag:i]).imageView.alpha = 0.2;
-    }
+
 
     
     [self.view addSubview:homeBackground];
@@ -49,13 +43,82 @@ bool levelLock[bigLevel] = {YES};
 
 }
 
-- (IBAction)animalBtn:(id)sender {
+- (void)viewDidAppear:(BOOL)animated
+{
+    for (int i=bigLevel-1; i>(level/10); i--) {
+        
+        
+        levelLock[i] = YES;
+        
+        
+        UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
+        [levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
+        [levelEntrance setImage:[[ UIImage alloc] init] forState:UIControlStateSelected];
+        
+        ((UIButton *)[self.view viewWithTag:i+1]).imageView.alpha = 0.2;
+        
+        
+    }
+}
+
+
+- (IBAction)animalBtn:(UIButton *)sender {
     
-    self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:self.game animated:YES completion:Nil ];
+    if (levelLock[sender.tag-1]) {
+
+        [self setupAlert];
+        
+        
+    }else{
+        
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
  
 }
 
+-(void)setupAlert
+{
+    
+    UIView *tmpCustomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 , 300, 211)];
+    
+    UIImageView *imageInTag = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 211)];
+    imageInTag.image = [UIImage imageNamed:@"tagAlert.png"];
+
+    [tmpCustomView addSubview:imageInTag];
+    [tmpCustomView sendSubviewToBack:imageInTag];
+    
+    self.lockedInAlert = [[UIButton alloc] initWithFrame:CGRectMake(100, 140, 100, 40)];
+    [self.lockedInAlert setTitle:@"前往当前进度" forState:UIControlStateNormal];
+    self.lockedInAlert.titleLabel.font = [UIFont systemFontOfSize:14.0];
+    self.lockedInAlert.titleLabel.textColor = [UIColor redColor];
+
+
+    self.lockedInAlert.backgroundColor = [UIColor greenColor];
+    [self.lockedInAlert addTarget:self action:@selector(goToLevelNow) forControlEvents:UIControlEventTouchUpInside];
+    [tmpCustomView addSubview:self.lockedInAlert];
+    
+    CustomIOS7AlertView *alert = [[CustomIOS7AlertView alloc] init];
+    [alert setButtonTitles:[NSMutableArray arrayWithObjects:nil]];
+    
+    [alert setContainerView:tmpCustomView];
+    
+    self.lockedAlert = alert;
+    [alert show];
+    
+
+
+}
+
+-(void)goToLevelNow
+{
+    
+    [self.lockedAlert close];
+    
+    self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:self.game animated:YES completion:Nil ];
+    
+}
 - (IBAction)takePhoto:(id)sender {
     
     
