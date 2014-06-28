@@ -24,6 +24,16 @@
 		0B0E82F7195873260030F71F /* level7-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EE195873260030F71F /* level7-2.png */; };
 		0B0E82F8195873260030F71F /* level7-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82EF195873260030F71F /* level7-1.png */; };
 		0B0E82F9195873260030F71F /* pic7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E82F0195873260030F71F /* pic7.png */; };
+		0B106CDB195E63D3003023C1 /* level.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CDA195E63D3003023C1 /* level.png */; };
+		0B106CDD195E63E8003023C1 /* suozi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CDC195E63E8003023C1 /* suozi.png */; };
+		0B106CE5195E6470003023C1 /* sport.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CDF195E6470003023C1 /* sport.png */; };
+		0B106CE6195E6470003023C1 /* animal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE0195E6470003023C1 /* animal.png */; };
+		0B106CE7195E6470003023C1 /* plant.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE1195E6470003023C1 /* plant.png */; };
+		0B106CE8195E6470003023C1 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE2195E6470003023C1 /* food.png */; };
+		0B106CE9195E6470003023C1 /* livingGood.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE3195E6470003023C1 /* livingGood.png */; };
+		0B106CEA195E6470003023C1 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE4195E6470003023C1 /* more.png */; };
+		0B106CED195ECDE0003023C1 /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CEB195ECDE0003023C1 /* dog.wav */; };
+		0B106CEE195ECDE0003023C1 /* 狗.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CEC195ECDE0003023C1 /* 狗.wav */; };
 		0B1BE54B195336ED00F30D8E /* orange.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE549195336ED00F30D8E /* orange.wav */; };
 		0B1BE54C195336ED00F30D8E /* 橘子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE54A195336ED00F30D8E /* 橘子.wav */; };
 		0B1BE54E195337C500F30D8E /* 鳄鱼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B1BE54D195337C500F30D8E /* 鳄鱼.wav */; };
@@ -72,9 +82,6 @@
 		0BE2896B195A5D1100E412D5 /* an2-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28967195A5D1100E412D5 /* an2-8.png */; };
 		0BE2896C195A5D1100E412D5 /* an1-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28968195A5D1100E412D5 /* an1-8.png */; };
 		0BE2896D195A5D1100E412D5 /* an3-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28969195A5D1100E412D5 /* an3-8.png */; };
-		0BE2896F195B0B9E00E412D5 /* level.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE2896E195B0B9E00E412D5 /* level.png */; };
-		0BE28971195B0EF100E412D5 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28970195B0EF100E412D5 /* lock.png */; };
-		0BE28973195B0FAF00E412D5 /* suozi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BE28972195B0FAF00E412D5 /* suozi.png */; };
 		0BE582B8193F25FB00EEAB26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B7193F25FB00EEAB26 /* Foundation.framework */; };
 		0BE582BA193F25FB00EEAB26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */; };
 		0BE582BC193F25FB00EEAB26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE582BB193F25FB00EEAB26 /* UIKit.framework */; };
@@ -135,6 +142,16 @@
 		0B0E82EE195873260030F71F /* level7-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-2.png"; sourceTree = "<group>"; };
 		0B0E82EF195873260030F71F /* level7-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-1.png"; sourceTree = "<group>"; };
 		0B0E82F0195873260030F71F /* pic7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic7.png; sourceTree = "<group>"; };
+		0B106CDA195E63D3003023C1 /* level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level.png; sourceTree = "<group>"; };
+		0B106CDC195E63E8003023C1 /* suozi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suozi.png; sourceTree = "<group>"; };
+		0B106CDF195E6470003023C1 /* sport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sport.png; sourceTree = "<group>"; };
+		0B106CE0195E6470003023C1 /* animal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal.png; sourceTree = "<group>"; };
+		0B106CE1195E6470003023C1 /* plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plant.png; sourceTree = "<group>"; };
+		0B106CE2195E6470003023C1 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		0B106CE3195E6470003023C1 /* livingGood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = livingGood.png; sourceTree = "<group>"; };
+		0B106CE4195E6470003023C1 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		0B106CEB195ECDE0003023C1 /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
+		0B106CEC195ECDE0003023C1 /* 狗.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "狗.wav"; sourceTree = "<group>"; };
 		0B1BE549195336ED00F30D8E /* orange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = orange.wav; sourceTree = "<group>"; };
 		0B1BE54A195336ED00F30D8E /* 橘子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "橘子.wav"; sourceTree = "<group>"; };
 		0B1BE54D195337C500F30D8E /* 鳄鱼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鳄鱼.wav"; sourceTree = "<group>"; };
@@ -187,9 +204,6 @@
 		0BE28967195A5D1100E412D5 /* an2-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-8.png"; sourceTree = "<group>"; };
 		0BE28968195A5D1100E412D5 /* an1-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-8.png"; sourceTree = "<group>"; };
 		0BE28969195A5D1100E412D5 /* an3-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-8.png"; sourceTree = "<group>"; };
-		0BE2896E195B0B9E00E412D5 /* level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level.png; sourceTree = "<group>"; };
-		0BE28970195B0EF100E412D5 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
-		0BE28972195B0FAF00E412D5 /* suozi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suozi.png; sourceTree = "<group>"; };
 		0BE28974195B259000E412D5 /* globalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalVar.h; sourceTree = "<group>"; };
 		0BE582B4193F25FB00EEAB26 /* completeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = completeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE582B7193F25FB00EEAB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -255,6 +269,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B106CDE195E645A003023C1 /* selectLevel */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EF0CF195C4F9D0093A863 /* tagAlert.png */,
+				0B106CDA195E63D3003023C1 /* level.png */,
+				0B106CDC195E63E8003023C1 /* suozi.png */,
+				0B106CDF195E6470003023C1 /* sport.png */,
+				0B106CE0195E6470003023C1 /* animal.png */,
+				0B106CE1195E6470003023C1 /* plant.png */,
+				0B106CE2195E6470003023C1 /* food.png */,
+				0B106CE3195E6470003023C1 /* livingGood.png */,
+				0B106CE4195E6470003023C1 /* more.png */,
+			);
+			name = selectLevel;
+			sourceTree = "<group>";
+		};
 		0B4EF0CB195C4E1A0093A863 /* CustomIOS7AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,10 +340,10 @@
 				0BDBD802194EC86300643495 /* view */,
 				0BE582EC193F278300EEAB26 /* modal */,
 				0BE582C6193F25FB00EEAB26 /* AppDelegate.h */,
+				0BE582C7193F25FB00EEAB26 /* AppDelegate.m */,
 				0BA79F661956839700ACA06B /* gameLevelController.h */,
 				0BA79F671956839700ACA06B /* gameLevelController.m */,
 				0BA79F681956839700ACA06B /* gameLevelController.xib */,
-				0BE582C7193F25FB00EEAB26 /* AppDelegate.m */,
 				0BE582C9193F25FB00EEAB26 /* Main.storyboard */,
 				0BE582CC193F25FB00EEAB26 /* ViewController.h */,
 				0BE582CD193F25FB00EEAB26 /* ViewController.m */,
@@ -329,11 +359,8 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B4EF0CF195C4F9D0093A863 /* tagAlert.png */,
+				0B106CDE195E645A003023C1 /* selectLevel */,
 				0BB4A1721957CC03009FE5BE /* flowerPhoto.png */,
-				0BE28972195B0FAF00E412D5 /* suozi.png */,
-				0BE28970195B0EF100E412D5 /* lock.png */,
-				0BE2896E195B0B9E00E412D5 /* level.png */,
 				0BEA4666194F2CEE00557A4F /* pig.wav */,
 				0BEA4667194F2CEE00557A4F /* 猪.wav */,
 				0BEA4674194F443500557A4F /* 兔子.wav */,
@@ -346,6 +373,8 @@
 				0B1BE54F195337D000F30D8E /* badminton.wav */,
 				0B1BE5551953384300F30D8E /* cat.wav */,
 				0B1BE5561953384300F30D8E /* 猫.wav */,
+				0B106CEB195ECDE0003023C1 /* dog.wav */,
+				0B106CEC195ECDE0003023C1 /* 狗.wav */,
 				0B4EF0E3195DB4210093A863 /* 荷花.wav */,
 				0B4EF0E4195DB4210093A863 /* lotus.wav */,
 				0B964ACD1940AF6E00D2CCCE /* AppIcon.png */,
@@ -524,11 +553,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EF0E0195DB2C90093A863 /* level9-3.png in Resources */,
+				0B106CE7195E6470003023C1 /* plant.png in Resources */,
 				0BEA466F194F403B00557A4F /* level4-5.png in Resources */,
 				0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */,
 				0B4EF0DC195DB2C90093A863 /* an1-9.png in Resources */,
 				0B0E82F3195873260030F71F /* an1-7.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
+				0B106CE8195E6470003023C1 /* food.png in Resources */,
 				0B09B4C5195261C200C2E529 /* an3-6.png in Resources */,
 				0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */,
 				0B6A6131194979C800804F15 /* an2-4.png in Resources */,
@@ -537,9 +568,9 @@
 				0B6A6130194979C800804F15 /* an1-4.png in Resources */,
 				0B4EF0E6195DB4210093A863 /* lotus.wav in Resources */,
 				0B4EF0E5195DB4210093A863 /* 荷花.wav in Resources */,
+				0B106CE6195E6470003023C1 /* animal.png in Resources */,
 				0B4EF0DD195DB2C90093A863 /* pic9.png in Resources */,
 				0BF487511944631A00460598 /* pic2.png in Resources */,
-				0BE28971195B0EF100E412D5 /* lock.png in Resources */,
 				0BE2896B195A5D1100E412D5 /* an2-8.png in Resources */,
 				0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */,
 				0BEA4675194F443500557A4F /* 兔子.wav in Resources */,
@@ -559,15 +590,15 @@
 				0B0E82F8195873260030F71F /* level7-1.png in Resources */,
 				0B4EF0DE195DB2C90093A863 /* level9-5.png in Resources */,
 				0B6A6146194AA79000804F15 /* level5-4.png in Resources */,
+				0B106CDB195E63D3003023C1 /* level.png in Resources */,
 				0B09B4C2195261C200C2E529 /* an1-6.png in Resources */,
 				0B1BE54C195336ED00F30D8E /* 橘子.wav in Resources */,
 				0B040303194893FC0068CD3E /* an2-3.png in Resources */,
 				0BEA4670194F403B00557A4F /* level4-4.png in Resources */,
-				0BE28973195B0FAF00E412D5 /* suozi.png in Resources */,
+				0B106CED195ECDE0003023C1 /* dog.wav in Resources */,
 				0BE582C2193F25FB00EEAB26 /* InfoPlist.strings in Resources */,
 				0B0E82F7195873260030F71F /* level7-2.png in Resources */,
 				0B6A613E194AA05B00804F15 /* an3-5.png in Resources */,
-				0BE2896F195B0B9E00E412D5 /* level.png in Resources */,
 				0B6A6147194AA79000804F15 /* level5-3.png in Resources */,
 				0BF48757194463D700460598 /* an2-2.png in Resources */,
 				0BE2896C195A5D1100E412D5 /* an1-8.png in Resources */,
@@ -577,9 +608,14 @@
 				0B1BE5571953384300F30D8E /* cat.wav in Resources */,
 				0B0E82F9195873260030F71F /* pic7.png in Resources */,
 				0B6A613B194A9EF000804F15 /* an1-5.png in Resources */,
+				0B106CE9195E6470003023C1 /* livingGood.png in Resources */,
+				0B106CE5195E6470003023C1 /* sport.png in Resources */,
 				0BF48756194463D700460598 /* an1-2.png in Resources */,
+				0B106CDD195E63E8003023C1 /* suozi.png in Resources */,
+				0B106CEE195ECDE0003023C1 /* 狗.wav in Resources */,
 				0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */,
 				0B04030B194895B80068CD3E /* pic3.png in Resources */,
+				0B106CEA195E6470003023C1 /* more.png in Resources */,
 				0B4EF0DA195DB2C90093A863 /* an3-9.png in Resources */,
 				0B6A6138194A9EF000804F15 /* pic5.png in Resources */,
 				0B0E82F5195873260030F71F /* level7-4.png in Resources */,

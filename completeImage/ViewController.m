@@ -18,14 +18,21 @@
 
 bool levelLock[bigLevel];
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
-    level =8;
+    levelTop = [[ud objectForKey:@"saveLevel"] intValue];
+    level = levelTop;
     
+    if (level<1 ||level>50) {
+        level =1;
+    }
     
+   
+
+
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];
     UIImageView *homeBackground = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     
@@ -45,24 +52,38 @@ bool levelLock[bigLevel];
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    for (int i=bigLevel-1; i>(level/10); i--) {
+    if ( levelTop < level) {
+        levelTop = level;
+    }
+
+    
+    for (int i=bigLevel-1; i>(levelTop/10); i--) {
         
         
         levelLock[i] = YES;
         
         
         UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
-        [levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
+        UIImageView *lockImg = [[UIImageView alloc] initWithFrame:CGRectMake(levelEntrance.frame.size.width-19, levelEntrance.frame.size.height-15, 17, 17)];
+        [lockImg setImage:[UIImage imageNamed:@"suozi"]];
+        [levelEntrance addSubview:lockImg];
+        [levelEntrance bringSubviewToFront:lockImg];
+        
+       
+        
+        /*[levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
         [levelEntrance setImage:[[ UIImage alloc] init] forState:UIControlStateSelected];
         
         ((UIButton *)[self.view viewWithTag:i+1]).imageView.alpha = 0.2;
-        
+        */
         
     }
 }
 
 
 - (IBAction)animalBtn:(UIButton *)sender {
+    
+    level = 1;
     
     if (levelLock[sender.tag-1]) {
 
@@ -112,7 +133,8 @@ bool levelLock[bigLevel];
 
 -(void)goToLevelNow
 {
-    
+    level = levelTop;
+
     [self.lockedAlert close];
     
     self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -130,6 +152,98 @@ bool levelLock[bigLevel];
     
     
        
+}
+
+- (IBAction)sportBtn:(UIButton *)sender {
+    
+    
+    
+    if (levelLock[sender.tag-1]) {
+        
+        [self setupAlert];
+        
+        
+    }else{
+        level = 11;
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
+    
+
+}
+
+- (IBAction)livingGoodBtn:(UIButton *)sender {
+    
+    
+    
+    if (levelLock[sender.tag-1]) {
+        
+        [self setupAlert];
+        
+        
+    }else{
+        level = 21;
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
+    
+
+}
+
+- (IBAction)plantBtn:(UIButton *)sender {
+    
+   
+    
+    if (levelLock[sender.tag-1]) {
+        
+        [self setupAlert];
+        
+        
+    }else{
+         level = 31;
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
+    
+
+}
+
+
+
+- (IBAction)foodBtn:(UIButton *)sender {
+    
+    
+    
+    if (levelLock[sender.tag-1]) {
+        
+        [self setupAlert];
+        
+        
+    }else{
+        level = 41;
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
+    
+
+}
+
+- (IBAction)moreBtn:(UIButton *)sender {
+    
+    
+    
+    if (levelLock[sender.tag-1]) {
+        
+        [self setupAlert];
+        
+        
+    }else{
+        level = 51;
+        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:self.game animated:YES completion:Nil ];
+    }
+    
+
 }
 
 

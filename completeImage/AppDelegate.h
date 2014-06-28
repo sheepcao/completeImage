@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "globalVar.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -38,8 +38,8 @@ SystemSoundID soundEN;
 
     if (self) {
         self.backgroundColor = [UIColor lightGrayColor];
-        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(30, 11, 60, 52)];
-        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(160, 11, 60, 52)];
+        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(50, 4, 100, 42)];
+        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(50, 54, 100, 42)];
         [self.answerCN setTitle:chinese forState:UIControlStateNormal];
         [self.answerEN setTitle:eng forState:UIControlStateNormal];
         

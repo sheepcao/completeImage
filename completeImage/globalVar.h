@@ -10,6 +10,8 @@
 #define completeImage_globalVar_h
 
 int level ;
+NSNumber *levelSaved;
+int levelTop;
 
 
 #endif

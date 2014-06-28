@@ -16,6 +16,7 @@
 
 double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92};
 double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91};
+double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -26,7 +27,7 @@ NSMutableArray  *arrayM;
 {
     [super viewDidLoad];
     
-    for (int i=0; i<level-1; i++) {
+    for (int i=0; i<levelTop-1; i++) {
         haveFixed[i]= YES;
     }
     
@@ -41,6 +42,13 @@ NSMutableArray  *arrayM;
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
+
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     for (int i =0; i<3; i++) {
         [self setButton:(UIButton *)self.choices[i]];
     }
@@ -60,8 +68,6 @@ NSMutableArray  *arrayM;
         [self.nextButton setEnabled:YES];
         
     }
-    
-    
 }
 
 
@@ -210,9 +216,12 @@ NSMutableArray  *arrayM;
     [self.nextButton setEnabled:NO];
     
     self.teachView.frame = CGRectMake(60, 72, 200, 100);
+    [self.teachView.answerCN addTarget:self action:@selector(chineseTap) forControlEvents:UIControlEventTouchUpInside];
+    [self.teachView.answerEN addTarget:self action:@selector(englishTap) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.teachView];
+    
     AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
     
     [self.empty setHidden:YES];
     
@@ -235,17 +244,18 @@ NSMutableArray  *arrayM;
         //设置动画播放次数
         [self.picture setAnimationRepeatCount:1];
         //设置动画播放时间
-        [self.picture setAnimationDuration:5*0.3];
+        [self.picture setAnimationDuration:5*animationSpeed[level-1]];
         //开始动画
         [self.picture startAnimating];
         
+        
     }
     
+    double timeInterval =(1.5*self.picture.animationDuration > 3.5)?(1.5*self.picture.animationDuration):3.5;
+   
+    [self performSelector:@selector(animationOver) withObject:nil afterDelay:timeInterval];
     
     
-    
-    
-    [self performSelector:@selector(animationOver) withObject:nil afterDelay:2*self.picture.animationDuration];
     
     
 }
@@ -368,6 +378,18 @@ NSMutableArray  *arrayM;
     
     myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:myShare animated:YES completion:Nil ];
+
+}
+
+-(void)chineseTap
+{
+    AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
+
+}
+
+-(void)englishTap
+{
+    AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
 
 }
 
