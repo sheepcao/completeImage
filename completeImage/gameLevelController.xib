@@ -11,6 +11,7 @@
                 <outlet property="answer3" destination="9N4-Qj-IWs" id="iS9-Be-LtN"/>
                 <outlet property="nextButton" destination="WNi-8j-2YR" id="B2u-MI-NHY"/>
                 <outlet property="picture" destination="e6a-hj-4IY" id="vhY-Gr-EpI"/>
+                <outlet property="shareBtn" destination="dwA-YO-eL5" id="9Ng-Kh-onk"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

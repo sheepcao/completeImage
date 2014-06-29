@@ -12,6 +12,7 @@
 int level ;
 NSNumber *levelSaved;
 int levelTop;
-
+NSMutableArray *haveShared;
+NSString *haveSharedString;
 
 #endif

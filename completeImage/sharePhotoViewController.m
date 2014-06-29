@@ -44,6 +44,11 @@
     [self.shareView addSubview:self.backImage];
     [self.shareView addSubview:self.frontImage];
 
+    self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(60, 25, 40, 30)];
+    [self.saveImage setTitle:@"保存" forState:UIControlStateNormal];
+    
+    self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(220, 25, 40, 30)];
+    [self.saveImage setTitle:@"分享" forState:UIControlStateNormal];
 
     [self.view addSubview:self.shareView];
 
@@ -54,6 +59,16 @@
     
     
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    //拍摄完后的界面
+    if (self.backImage.image) {
+        
+        
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {

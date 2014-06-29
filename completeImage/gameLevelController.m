@@ -14,9 +14,9 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92};
-double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91};
-double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26};
+double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,210,200};
+double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,255,282};
+double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.2,0.2};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -36,19 +36,23 @@ NSMutableArray  *arrayM;
     
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,猪,狗";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,pig,dog";
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
 
+    [self.shareBtn setHidden:YES];
     
+
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    self.view.backgroundColor = [UIColor colorWithPatternImage:self.backgroundImg];
+    
     for (int i =0; i<3; i++) {
         [self setButton:(UIButton *)self.choices[i]];
     }
@@ -68,6 +72,8 @@ NSMutableArray  *arrayM;
         [self.nextButton setEnabled:YES];
         
     }
+    
+
 }
 
 
@@ -101,6 +107,8 @@ NSMutableArray  *arrayM;
     [self.teachView removeFromSuperview];
     [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    [self.shareBtn setHidden:YES];
     if (!haveFixed[level-1]) {
         
         [self.nextButton setEnabled:NO];
@@ -108,8 +116,12 @@ NSMutableArray  *arrayM;
     }else
     {
         [self.nextButton setEnabled:YES];
+        if (level %10 ==0) {
+            [self.shareBtn setHidden:NO];
+        }
         
     }
+ 
 }
 
 -(void)setImages:(NSString *)rightAns :(NSString *)wrong1 :(NSString *)wrong2 :(NSString *)guess
@@ -347,6 +359,20 @@ NSMutableArray  *arrayM;
 
 
 - (IBAction)nextLevel {
+    
+    NSLog(@"%@",haveShared);
+    if (level%10==0 && [haveShared[level/11] isEqualToString:@"0"])
+    {
+        
+        sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
+        myShare.frontImageName = @"flowerPhoto";
+        
+        myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:myShare animated:YES completion:Nil ];
+        
+    }
+
+    
     if (haveFixed[level-1]) {
         
         if (level<MAXlevel) {
@@ -356,10 +382,11 @@ NSMutableArray  *arrayM;
             [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
             [self.teachView setWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
             
-        }
-        else if(level == MAXlevel)
+        }else if(level == MAXlevel )
         {
+            
             return;
+            
         }
     }
 }

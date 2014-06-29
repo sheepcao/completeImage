@@ -12,7 +12,7 @@
 #import "sharePhotoViewController.h"
 #import "globalVar.h"
 
-static const int MAXlevel = 9;
+static const int MAXlevel = 11;
 static const int MAXanswer = 3;
 
 
@@ -20,6 +20,8 @@ static const int MAXanswer = 3;
 {
     int correct[MAXlevel];
 }
+
+@property (strong, nonatomic) UIImage *backgroundImg;
 @property (weak, nonatomic) IBOutlet UIImageView *picture;
 @property (weak, nonatomic) IBOutlet UIButton *answer1;
 @property (weak, nonatomic) IBOutlet UIButton *answer2;
@@ -27,6 +29,7 @@ static const int MAXanswer = 3;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (strong,nonatomic) NSMutableArray *choices;
 @property (strong, nonatomic) IBOutlet UIButton *empty;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (strong, nonatomic) teachingView *teachView;
 @property (strong, nonatomic) UILabel *wrongLabel;
 @property (strong,nonatomic) uncompleteImage *myImg;

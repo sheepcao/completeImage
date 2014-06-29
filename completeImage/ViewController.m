@@ -26,6 +26,19 @@ bool levelLock[bigLevel];
     levelTop = [[ud objectForKey:@"saveLevel"] intValue];
     level = levelTop;
     
+    if([ud objectForKey:@"saveShareState"]){
+        haveShared = [NSMutableArray arrayWithArray:[[ud objectForKey:@"saveShareState"] componentsSeparatedByString:@","]];
+    }else
+    {
+        haveShared = [[NSMutableArray alloc] init];
+        for (int i = 0; i<bigLevel; i++) {
+            haveShared[i] = @"0";
+
+        }
+    }
+
+    NSLog(@"%@",haveShared);
+    
     if (level<1 ||level>50) {
         level =1;
     }
@@ -70,12 +83,7 @@ bool levelLock[bigLevel];
         [levelEntrance bringSubviewToFront:lockImg];
         
        
-        
-        /*[levelEntrance setImage:[ UIImage imageNamed:@"suozi"] forState:UIControlStateNormal];
-        [levelEntrance setImage:[[ UIImage alloc] init] forState:UIControlStateSelected];
-        
-        ((UIButton *)[self.view viewWithTag:i+1]).imageView.alpha = 0.2;
-        */
+   
         
     }
 }
@@ -92,6 +100,8 @@ bool levelLock[bigLevel];
         
     }else{
         
+        self.game.backgroundImg = [UIImage imageNamed:@"植物背景6"];
+
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }
@@ -141,6 +151,8 @@ bool levelLock[bigLevel];
     [self presentViewController:self.game animated:YES completion:Nil ];
     
 }
+/*
+ 
 - (IBAction)takePhoto:(id)sender {
     
     
@@ -153,6 +165,7 @@ bool levelLock[bigLevel];
     
        
 }
+ */
 
 - (IBAction)sportBtn:(UIButton *)sender {
     
@@ -201,6 +214,7 @@ bool levelLock[bigLevel];
         
     }else{
          level = 31;
+        self.game.backgroundImg = [UIImage imageNamed:@"plantBackground"];
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }
