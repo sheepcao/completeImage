@@ -16,6 +16,11 @@
 
 @implementation sharePhotoViewController
 
+double takePhotoX[6] = {80,213,103,227,70,220};
+double takePhotoY[6] = {220,213,103,227,70,220};
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -46,11 +51,37 @@
 
     self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(60, 25, 40, 30)];
     [self.saveImage setTitle:@"保存" forState:UIControlStateNormal];
+    self.saveImage.backgroundColor = [UIColor lightGrayColor];
+    [self.saveImage addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
+
     
-    self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(220, 25, 40, 30)];
-    [self.saveImage setTitle:@"分享" forState:UIControlStateNormal];
+    self.share = [[UIButton alloc] initWithFrame:CGRectMake(220, 25, 40, 30)];
+    [self.share setTitle:@"分享" forState:UIControlStateNormal];
+    self.share.backgroundColor = [UIColor lightGrayColor];
+
+    if (level%10 == 0) {
+        
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(takePhotoX[(level/10)-1],takePhotoY[(level/10)-1], 140, 80)];
+        [self.photograph setTitle:@"拍摄" forState:UIControlStateNormal];
+        self.photograph.backgroundColor = [UIColor lightGrayColor];
+
+
+    }else if(level %11 ==0)
+    {
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(takePhotoX[(level/11)-1],takePhotoY[(level/11)-1], 140, 80)];
+        [self.photograph setTitle:@"拍摄" forState:UIControlStateNormal];
+        self.photograph.backgroundColor = [UIColor lightGrayColor];
+    }
+    [self.photograph addTarget:self action:@selector(photograph:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:self.shareView];
+    
+    [self.view addSubview:self.photograph];
+    [self.photograph setHidden:NO];
+    [self.view addSubview:self.saveImage];
+    [self.saveImage setHidden:YES];
+    [self.view addSubview:self.share];
+    [self.share setHidden:YES];
 
 
 
@@ -64,8 +95,17 @@
 {
     //拍摄完后的界面
     if (self.backImage.image) {
+        [self.photograph setHidden:YES];
+        [self.share setHidden:NO];
+        [self.saveImage setHidden:NO];
+
         
-        
+    }else//未拍摄时的界面
+    {
+        [self.photograph setHidden:NO];
+        [self.share setHidden:YES];
+        [self.saveImage setHidden:YES];
+
     }
 }
 

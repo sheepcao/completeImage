@@ -35,15 +35,16 @@ bool levelLock[bigLevel];
             haveShared[i] = @"0";
 
         }
+        NSLog(@"%@",haveShared);
+
     }
 
-    NSLog(@"%@",haveShared);
     
     if (level<1 ||level>50) {
         level =1;
     }
     
-   
+    NSLog(@"%@",haveShared);
 
 
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];

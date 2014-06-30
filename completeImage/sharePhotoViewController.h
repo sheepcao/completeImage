@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "sharePhotoViewController.h"
+#import "globalVar.h"
 
 @interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 

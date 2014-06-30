@@ -360,7 +360,6 @@ NSMutableArray  *arrayM;
 
 - (IBAction)nextLevel {
     
-    NSLog(@"%@",haveShared);
     if (level%10==0 && [haveShared[level/11] isEqualToString:@"0"])
     {
         

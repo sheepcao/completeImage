@@ -30,8 +30,10 @@
     
     levelSaved =[NSNumber numberWithInt:levelTop];
     haveSharedString = [NSString stringWithFormat:@"%d",[haveShared[0] intValue]];
+   
+    //增减大关卡时，修改循环次数
     for (int i = 1; i<6; i++) {
-        [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%d",[haveShared[i] intValue]]];
+       haveSharedString = [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%d",[haveShared[i] intValue]]];
     }
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
@@ -61,9 +63,10 @@
     levelTop = levelTop<level?level:levelTop;
     
     levelSaved =[NSNumber numberWithInt:levelTop];
-    haveSharedString = [NSString stringWithFormat:@"%@",haveShared[0]];
+    haveSharedString = [NSString stringWithFormat:@"%d",[haveShared[0] intValue]];
+    //增减大关卡时，修改循环次数
     for (int i = 1; i<6; i++) {
-        [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%@",haveShared[i]]];
+        haveSharedString = [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%d",[haveShared[i] intValue]]];
     }
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
