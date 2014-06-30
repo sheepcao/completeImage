@@ -16,8 +16,8 @@
 
 @implementation sharePhotoViewController
 
-double takePhotoX[6] = {80,213,103,227,70,220};
-double takePhotoY[6] = {220,213,103,227,70,220};
+//double takePhotoX[6] = {80,213,103,227,70,220};
+//double takePhotoY[6] = {220,213,103,227,70,220};
 
 
 
@@ -48,28 +48,28 @@ double takePhotoY[6] = {220,213,103,227,70,220};
     
     [self.shareView addSubview:self.backImage];
     [self.shareView addSubview:self.frontImage];
-
+/*
     self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(60, 25, 40, 30)];
     [self.saveImage setTitle:@"保存" forState:UIControlStateNormal];
     self.saveImage.backgroundColor = [UIColor lightGrayColor];
     [self.saveImage addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
-
+*/
     
-    self.share = [[UIButton alloc] initWithFrame:CGRectMake(220, 25, 40, 30)];
-    [self.share setTitle:@"分享" forState:UIControlStateNormal];
+    self.share = [[UIButton alloc] initWithFrame:CGRectMake(110, 515, 100, 30)];
+    [self.share setTitle:@"分享并保存" forState:UIControlStateNormal];
     self.share.backgroundColor = [UIColor lightGrayColor];
 
     if (level%10 == 0) {
         
-        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(takePhotoX[(level/10)-1],takePhotoY[(level/10)-1], 140, 80)];
-        [self.photograph setTitle:@"拍摄" forState:UIControlStateNormal];
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(110, 515, 100, 30)];
+        [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
         self.photograph.backgroundColor = [UIColor lightGrayColor];
 
 
     }else if(level %11 ==0)
     {
-        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(takePhotoX[(level/11)-1],takePhotoY[(level/11)-1], 140, 80)];
-        [self.photograph setTitle:@"拍摄" forState:UIControlStateNormal];
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(110, 515, 100, 30)];
+        [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
         self.photograph.backgroundColor = [UIColor lightGrayColor];
     }
     [self.photograph addTarget:self action:@selector(photograph:) forControlEvents:UIControlEventTouchUpInside];
@@ -78,8 +78,8 @@ double takePhotoY[6] = {220,213,103,227,70,220};
     
     [self.view addSubview:self.photograph];
     [self.photograph setHidden:NO];
-    [self.view addSubview:self.saveImage];
-    [self.saveImage setHidden:YES];
+   // [self.view addSubview:self.saveImage];
+   // [self.saveImage setHidden:YES];
     [self.view addSubview:self.share];
     [self.share setHidden:YES];
 
@@ -97,14 +97,14 @@ double takePhotoY[6] = {220,213,103,227,70,220};
     if (self.backImage.image) {
         [self.photograph setHidden:YES];
         [self.share setHidden:NO];
-        [self.saveImage setHidden:NO];
+       // [self.saveImage setHidden:NO];
 
         
     }else//未拍摄时的界面
     {
         [self.photograph setHidden:NO];
         [self.share setHidden:YES];
-        [self.saveImage setHidden:YES];
+     //   [self.saveImage setHidden:YES];
 
     }
 }
@@ -147,16 +147,18 @@ double takePhotoY[6] = {220,213,103,227,70,220};
 
 - (IBAction)photograph:(id)sender {
     
+  //  [UIApplication sharedApplication].statusBarHidden = YES;
+
     
     self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 65, 320, 430)];
     [self.SharePhotoView setBackgroundColor:[UIColor clearColor]];
     UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 430)];
     [backImage setImage:[UIImage imageNamed:@"flowerPhoto"]];
-    
+    /*
     UIButton *aBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect] ;
     [aBtn setTitle:@"start" forState:UIControlStateNormal];
     [aBtn setFrame:CGRectMake(0, 0, 100, 80)];
-    
+    */
    // [self.SharePhotoView addSubview:aBtn];
     [self.SharePhotoView addSubview:backImage];
     
@@ -171,6 +173,8 @@ double takePhotoY[6] = {220,213,103,227,70,220};
     picker.allowsEditing = YES;
     picker.sourceType = sourceType;
     picker.cameraOverlayView = self.SharePhotoView;
+   // picker.view.frame = CGRectMake(0,20, 320, 348);
+    
     [self presentViewController:picker animated:YES completion:Nil];
     
 
@@ -187,8 +191,11 @@ double takePhotoY[6] = {220,213,103,227,70,220};
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
 
+
     self.backImage.image = image;
-    
+   // [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+
     
 }
+
 @end
