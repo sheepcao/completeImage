@@ -14,6 +14,8 @@
 
 static const int MAXlevel = 11;
 static const int MAXanswer = 3;
+static const int bigLevel = 6;
+bool levelLock[bigLevel];
 
 
 @interface gameLevelController : UIViewController

@@ -48,6 +48,7 @@
     
     [self.shareView addSubview:self.backImage];
     [self.shareView addSubview:self.frontImage];
+
 /*
     self.saveImage = [[UIButton alloc] initWithFrame:CGRectMake(60, 25, 40, 30)];
     [self.saveImage setTitle:@"保存" forState:UIControlStateNormal];
@@ -59,12 +60,10 @@
     [self.share setTitle:@"分享并保存" forState:UIControlStateNormal];
     self.share.backgroundColor = [UIColor lightGrayColor];
 
-    if (level%10 == 0) {
-        
-        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(110, 515, 100, 30)];
-        [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
-        self.photograph.backgroundColor = [UIColor lightGrayColor];
-
+    self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(110, 515, 100, 30)];
+    [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
+    self.photograph.backgroundColor = [UIColor lightGrayColor];
+/*
 
     }else if(level %11 ==0)
     {
@@ -72,6 +71,7 @@
         [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
         self.photograph.backgroundColor = [UIColor lightGrayColor];
     }
+ */
     [self.photograph addTarget:self action:@selector(photograph:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:self.shareView];
@@ -179,6 +179,11 @@
     
 
     
+}
+
+- (IBAction)returnToGame:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+
 }
 
 

@@ -14,9 +14,9 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,210,200};
-double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,255,282};
-double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.2,0.2};
+double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,107.2,200};
+double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,282.3,282};
+double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -30,15 +30,15 @@ NSMutableArray  *arrayM;
     for (int i=0; i<levelTop-1; i++) {
         haveFixed[i]= YES;
     }
-    
+    NSLog(@"levelTop:%d,fixed:%d",levelTop,haveFixed[levelTop-1]);
 
     self.picture.layer.borderWidth = 1.0;
     
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,猪,狗";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,pig,dog";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog";
     wordsEN = [words2 componentsSeparatedByString:@","];
     
     self.empty = [[UIButton alloc] init];
@@ -50,7 +50,9 @@ NSMutableArray  *arrayM;
 }
 
 - (void)viewDidAppear:(BOOL)animated
+
 {
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:self.backgroundImg];
     
     for (int i =0; i<3; i++) {
@@ -70,7 +72,14 @@ NSMutableArray  *arrayM;
     }else
     {
         [self.nextButton setEnabled:YES];
-        
+        //当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
+        if (levelTop == MAXlevel+1) {
+            
+            [self.shareBtn setHidden:NO];
+            
+        }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
+            [self.shareBtn setHidden:NO];
+        }
     }
     
 
@@ -79,7 +88,8 @@ NSMutableArray  *arrayM;
 
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
-    
+    levelTop = levelTop<level?level:levelTop;
+
     
     NSString *pic = [NSString stringWithFormat:@"pic%d",level];
     
@@ -109,6 +119,8 @@ NSMutableArray  *arrayM;
     
     
     [self.shareBtn setHidden:YES];
+    
+
     if (!haveFixed[level-1]) {
         
         [self.nextButton setEnabled:NO];
@@ -116,7 +128,13 @@ NSMutableArray  *arrayM;
     }else
     {
         [self.nextButton setEnabled:YES];
-        if (level %10 ==0) {
+        //当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
+        if (levelTop == MAXlevel+1
+            ) {
+            
+            [self.shareBtn setHidden:NO];
+            
+        }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
             [self.shareBtn setHidden:NO];
         }
         
@@ -212,6 +230,9 @@ NSMutableArray  *arrayM;
     [self.empty setHidden:NO];
     haveFixed[level-1] = YES;
     [self.nextButton setEnabled:YES];
+    levelTop++;
+    NSLog(@"%d",haveFixed[level-1]);
+    NSLog(@"%d",levelTop);
     
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -224,6 +245,7 @@ NSMutableArray  *arrayM;
 }
 
 -(void)correctAnswer{
+    
     
     [self.nextButton setEnabled:NO];
     

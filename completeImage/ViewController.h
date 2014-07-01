@@ -13,7 +13,7 @@
 
 
 
-const int bigLevel = 6;
+
 
 @interface ViewController : UIViewController
 

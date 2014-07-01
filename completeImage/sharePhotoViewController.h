@@ -23,5 +23,6 @@
 
 - (IBAction)saveImage:(id)sender;
 - (IBAction)photograph:(id)sender;
+- (IBAction)returnToGame:(UIButton *)sender;
 
 @end
