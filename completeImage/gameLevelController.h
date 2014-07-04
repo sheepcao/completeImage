@@ -12,7 +12,7 @@
 #import "sharePhotoViewController.h"
 #import "globalVar.h"
 
-static const int MAXlevel = 11;
+static const int MAXlevel = 12;
 static const int MAXanswer = 3;
 static const int bigLevel = 6;
 bool levelLock[bigLevel];
@@ -24,6 +24,8 @@ bool levelLock[bigLevel];
 }
 
 @property (strong, nonatomic) UIImage *backgroundImg;
+//@property (strong, nonatomic) NSString *backgroundNames;
+
 @property (weak, nonatomic) IBOutlet UIImageView *picture;
 @property (weak, nonatomic) IBOutlet UIButton *answer1;
 @property (weak, nonatomic) IBOutlet UIButton *answer2;

@@ -37,12 +37,14 @@ SystemSoundID soundEN;
     self = [super init];
 
     if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
-        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(50, 4, 100, 42)];
-        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(50, 54, 100, 42)];
-        [self.answerCN setTitle:chinese forState:UIControlStateNormal];
-        [self.answerEN setTitle:eng forState:UIControlStateNormal];
-        
+        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
+        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(20, 14, 120, 40)];
+        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(20, 64, 120, 40)];
+      //  [self.answerCN setTitle:chinese forState:UIControlStateNormal];
+      //  [self.answerEN setTitle:eng forState:UIControlStateNormal];
+        [self.answerCN setImage:[UIImage imageNamed:chinese] forState:UIControlStateNormal];
+        [self.answerEN setImage:[UIImage imageNamed:eng] forState:UIControlStateNormal];
+
         
         [self addSubview:self.answerEN];
         [self addSubview:self.answerCN];

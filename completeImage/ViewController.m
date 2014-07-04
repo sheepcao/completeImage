@@ -71,22 +71,28 @@ bool levelLock[bigLevel];
     }
 
     
-    for (int i=bigLevel-1; i>(levelTop/10); i--) {
-        
-        
-        levelLock[i] = YES;
-        
-        
+    for (int i=bigLevel-1; i>0; i--) {
         UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
         UIImageView *lockImg = [[UIImageView alloc] initWithFrame:CGRectMake(levelEntrance.frame.size.width-19, levelEntrance.frame.size.height-15, 17, 17)];
-        [lockImg setImage:[UIImage imageNamed:@"suozi"]];
-        [levelEntrance addSubview:lockImg];
-        [levelEntrance bringSubviewToFront:lockImg];
         
+        if (i>(levelTop-1)/10) {
+            
+            levelLock[i] = YES;
+            [lockImg setImage:[UIImage imageNamed:@"suozi"]];
+            [levelEntrance addSubview:lockImg];
+            [levelEntrance bringSubviewToFront:lockImg];
+        }else
+        {
+            levelLock[i] = NO;
+            
+            [lockImg setImage:nil];
+            
+        }
        
    
         
     }
+    
 }
 
 
@@ -144,7 +150,14 @@ bool levelLock[bigLevel];
 
 -(void)goToLevelNow
 {
-    level = levelTop;
+    if (levelTop>MAXlevel) {
+        level = MAXlevel;
+    }else{
+        level = levelTop;
+
+    }
+    
+
 
     [self.lockedAlert close];
     
@@ -179,6 +192,7 @@ bool levelLock[bigLevel];
         
     }else{
         level = 11;
+        self.game.backgroundImg = [UIImage imageNamed:@"animalBackground"];
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }
