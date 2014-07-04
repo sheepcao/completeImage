@@ -15,6 +15,7 @@
 static const int MAXlevel = 12;
 static const int MAXanswer = 3;
 static const int bigLevel = 6;
+
 bool levelLock[bigLevel];
 
 

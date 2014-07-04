@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @property (nonatomic ,strong)gameLevelController *game;
 @property (nonatomic ,strong) UIButton *lockedInAlert;
+@property (nonatomic ,strong) NSMutableArray *lockImg;
 @end
 
 @implementation ViewController
@@ -45,18 +47,22 @@ bool levelLock[bigLevel];
     }
     
     NSLog(@"%@",haveShared);
-
-
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];
+
+
     UIImageView *homeBackground = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     
     homeBackground.image = [UIImage imageNamed:@"level"];
     
-    for (int i = 0; i <bigLevel; i++) {
-        levelLock[i] = NO;
-    }
-    
 
+    self.lockImg = [[NSMutableArray alloc] init];
+    for (int i = 0; i <6; i++) {
+        levelLock[i] = NO;
+        UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
+        UIImageView *lockImage =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"suozi" ]];
+        [lockImage setFrame:CGRectMake(levelEntrance.frame.size.width-19, levelEntrance.frame.size.height-15, 17, 17)];
+        [self.lockImg insertObject:lockImage atIndex:i];
+    }
 
     
     [self.view addSubview:homeBackground];
@@ -71,21 +77,22 @@ bool levelLock[bigLevel];
     }
 
     
-    for (int i=bigLevel-1; i>0; i--) {
+    for (int i=(bigLevel-1); i>0; i--) {
+
         UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
-        UIImageView *lockImg = [[UIImageView alloc] initWithFrame:CGRectMake(levelEntrance.frame.size.width-19, levelEntrance.frame.size.height-15, 17, 17)];
+
         
         if (i>(levelTop-1)/10) {
             
             levelLock[i] = YES;
-            [lockImg setImage:[UIImage imageNamed:@"suozi"]];
-            [levelEntrance addSubview:lockImg];
-            [levelEntrance bringSubviewToFront:lockImg];
+
+            [levelEntrance addSubview:self.lockImg[i]];
+            [levelEntrance bringSubviewToFront:self.lockImg[i]];
         }else
         {
             levelLock[i] = NO;
             
-            [lockImg setImage:nil];
+            [self.lockImg[i] removeFromSuperview];
             
         }
        
