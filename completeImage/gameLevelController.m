@@ -14,9 +14,9 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,107.2,200,195};
-double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,282.3,282,286};
-double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2,0.2};
+double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,107.2,200,195,141.4};
+double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,282.3,282,286,274.7};
+double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2,0.2,0.25};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -37,9 +37,9 @@ NSMutableArray  *arrayM;
     self.picture.layer.borderWidth = 1.0;
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee";
     wordsEN = [words2 componentsSeparatedByString:@","];
     NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     backgroundName = [backgroundNames componentsSeparatedByString:@","];
@@ -49,13 +49,22 @@ NSMutableArray  *arrayM;
     [self.shareBtn setHidden:YES];
     
 
+    self.emptyGif = @"questionMark.gif";
+    NSArray *gifArray = [ self.emptyGif componentsSeparatedByString:@"."];
+    
+    // 读取gif图片数据
+    NSData *gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:[gifArray objectAtIndex:0] ofType:[gifArray objectAtIndex:1]]];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
+    self.webView.userInteractionEnabled = NO;//用户不可交互
+    [self.webView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    [self.empty addSubview:self.webView];
+    [self.webView setHidden:YES];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 
 {
-
     
     for (int i =0; i<3; i++) {
         [self setButton:(UIButton *)self.choices[i]];
@@ -92,7 +101,7 @@ NSMutableArray  *arrayM;
 {
     levelTop = levelTop<level?level:levelTop;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backgroundName[(level-1)/10] ]];
-
+    [self.levelCount setText:[NSString stringWithFormat:@"%d",level]];
 
     
     NSString *pic = [NSString stringWithFormat:@"pic%d",level];
@@ -161,6 +170,7 @@ NSMutableArray  *arrayM;
     
     [self.picture setImage:[UIImage imageNamed:guess]];
     [self.empty setImage:nil forState:UIControlStateNormal];
+    [self.webView setHidden:NO];
     
     
 }
@@ -180,6 +190,7 @@ NSMutableArray  *arrayM;
     if (sender.tag == 0) {
         if (self.empty.imageView.image) {
             [self.empty setImage:nil forState:UIControlStateNormal];
+            [self.webView setHidden:NO];
             
             for (int i = 0; i<3; i++) {
                 if ([((UIButton *) self.choices[i]) isHidden]) {
@@ -202,6 +213,8 @@ NSMutableArray  *arrayM;
         }
         
         [((UIButton *) self.choices[sender.tag-1]) setHidden:YES];
+        [self.webView setHidden:YES];
+
         [self.empty setImage:((UIButton *) self.choices[sender.tag-1]).imageView.image forState:UIControlStateNormal];
         self.empty.layer.borderWidth = 0;
         
@@ -306,6 +319,8 @@ NSMutableArray  *arrayM;
 {
     if (self.empty.imageView.image) {
         [self.empty setImage:nil forState:UIControlStateNormal];
+        [self.webView setHidden:NO];
+
         
         for (int i = 0; i<3; i++) {
             if ([((UIButton *) self.choices[i]) isHidden]) {
@@ -331,10 +346,13 @@ NSMutableArray  *arrayM;
      
      [ alert  show];
      */
-    self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(85, 78, 150, 90)];
-    [self.wrongLabel setText:@"错误"];
-    self.wrongLabel.backgroundColor = [UIColor grayColor];
+    self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 70, 160, 120)];
+  //  [self.wrongLabel setText:@"错误"];
+    self.wrongLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
     self.wrongLabel.textAlignment = NSTextAlignmentCenter;
+    UIImageView *cryFace = [[UIImageView alloc] initWithFrame:CGRectMake(45, 25, 70, 70)];
+    cryFace.image = [UIImage imageNamed:@"wrongImg"];
+    [self.wrongLabel addSubview:cryFace];
     [self.view addSubview:self.wrongLabel];
     
     //5秒后按钮自动退回

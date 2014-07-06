@@ -9,6 +9,7 @@
                 <outlet property="answer1" destination="Mmy-ei-4QT" id="BFs-2u-Lhd"/>
                 <outlet property="answer2" destination="z5r-Yd-VcV" id="Ocs-k0-I2J"/>
                 <outlet property="answer3" destination="9N4-Qj-IWs" id="iS9-Be-LtN"/>
+                <outlet property="levelCount" destination="jbD-O6-huF" id="qn4-QA-gFD"/>
                 <outlet property="nextButton" destination="WNi-8j-2YR" id="B2u-MI-NHY"/>
                 <outlet property="picture" destination="e6a-hj-4IY" id="vhY-Gr-EpI"/>
                 <outlet property="shareBtn" destination="dwA-YO-eL5" id="9Ng-Kh-onk"/>
@@ -43,30 +44,33 @@
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-QC-2vU">
-                    <rect key="frame" x="20" y="20" width="56" height="34"/>
+                    <rect key="frame" x="15" y="23" width="53" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="返回" image="returnToLevel.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="selected" image="returnTapped.png"/>
+                    <state key="highlighted" image="returnTapped.png"/>
                     <connections>
                         <action selector="backToLevel" destination="-1" eventType="touchUpInside" id="hhQ-Ok-HiU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwA-YO-eL5">
-                    <rect key="frame" x="244" y="20" width="56" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwA-YO-eL5">
+                    <rect key="frame" x="245" y="19" width="55" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="分享">
+                    <state key="normal" image="camera.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" image="camera2.png"/>
+                    <state key="highlighted" image="camera2.png"/>
                     <connections>
                         <action selector="share" destination="-1" eventType="touchUpInside" id="tPs-XH-s4m"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNi-8j-2YR">
-                    <rect key="frame" x="248" y="93" width="49" height="50"/>
+                    <rect key="frame" x="241" y="93" width="59" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="下" image="next.png">
@@ -77,7 +81,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-2c-cpw">
-                    <rect key="frame" x="24" y="93" width="49" height="50"/>
+                    <rect key="frame" x="20" y="93" width="59" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="上" image="prior.png">
@@ -87,8 +91,8 @@
                         <action selector="priorLevel" destination="-1" eventType="touchUpInside" id="HVJ-KE-gdS"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第几关" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbD-O6-huF">
-                    <rect key="frame" x="125" y="20" width="65" height="40"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbD-O6-huF" userLabel="levelCount">
+                    <rect key="frame" x="127" y="23" width="65" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -101,8 +105,10 @@
         </view>
     </objects>
     <resources>
-        <image name="next.png" width="217" height="196"/>
-        <image name="prior.png" width="208" height="196"/>
+        <image name="camera.png" width="98" height="69"/>
+        <image name="camera2.png" width="100" height="69"/>
+        <image name="next.png" width="211" height="135"/>
+        <image name="prior.png" width="211" height="135"/>
         <image name="returnTapped.png" width="143" height="100"/>
         <image name="returnToLevel.png" width="345" height="245"/>
     </resources>
