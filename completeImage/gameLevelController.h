@@ -12,7 +12,7 @@
 #import "sharePhotoViewController.h"
 #import "globalVar.h"
 
-static const int MAXlevel = 13;
+static const int MAXlevel = 14;
 static const int MAXanswer = 3;
 static const int bigLevel = 6;
 

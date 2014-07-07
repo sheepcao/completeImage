@@ -29,19 +29,19 @@
                     <rect key="frame" x="33" y="443" width="55" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5r-Yd-VcV">
                     <rect key="frame" x="131" y="443" width="55" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N4-Qj-IWs">
                     <rect key="frame" x="228" y="443" width="55" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-QC-2vU">
                     <rect key="frame" x="15" y="23" width="53" height="34"/>
@@ -107,6 +107,7 @@
     <resources>
         <image name="camera.png" width="98" height="69"/>
         <image name="camera2.png" width="100" height="69"/>
+        <image name="choiceBackground.png" width="225" height="225"/>
         <image name="next.png" width="211" height="135"/>
         <image name="prior.png" width="211" height="135"/>
         <image name="returnTapped.png" width="143" height="100"/>

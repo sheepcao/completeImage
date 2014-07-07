@@ -14,9 +14,9 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,107.2,200,195,141.4};
-double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,282.3,282,286,274.7};
-double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2,0.2,0.25};
+double posX[MAXlevel] = {136,213,103,227,70,220,200,88,129.92,107.2,200,195,141.4,136};
+double posY[MAXlevel] = {287,232,157,190,180,300,282,206,244.91,282.3,282,286,274.7,229.5};
+double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2,0.2,0.25,0.2};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -37,9 +37,9 @@ NSMutableArray  *arrayM;
     self.picture.layer.borderWidth = 1.0;
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂";
+    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂,鲨鱼";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee";
+    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee,shark";
     wordsEN = [words2 componentsSeparatedByString:@","];
     NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     backgroundName = [backgroundNames componentsSeparatedByString:@","];
@@ -59,6 +59,8 @@ NSMutableArray  *arrayM;
     [self.webView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     [self.empty addSubview:self.webView];
     [self.webView setHidden:YES];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"animalBackground"]];
     
 }
 
@@ -100,7 +102,7 @@ NSMutableArray  *arrayM;
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
     levelTop = levelTop<level?level:levelTop;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backgroundName[(level-1)/10] ]];
+   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backgroundName[(level-1)/10] ]];
     [self.levelCount setText:[NSString stringWithFormat:@"%d",level]];
 
     
