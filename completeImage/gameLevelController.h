@@ -12,7 +12,7 @@
 #import "sharePhotoViewController.h"
 #import "globalVar.h"
 
-static const int MAXlevel = 14;
+static const int MAXlevel = 18;
 static const int MAXanswer = 3;
 static const int bigLevel = 6;
 
@@ -32,6 +32,7 @@ bool levelLock[bigLevel];
 @property (weak, nonatomic) IBOutlet UIButton *answer2;
 @property (weak, nonatomic) IBOutlet UIButton *answer3;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *priorButton;
 @property (strong,nonatomic) NSMutableArray *choices;
 @property (strong, nonatomic) IBOutlet UIButton *empty;
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
@@ -41,6 +42,7 @@ bool levelLock[bigLevel];
 @property (strong,nonatomic) uncompleteImage *myImg;
 @property (strong,nonatomic) NSString *emptyGif;
 @property (strong,nonatomic) UIWebView *webView;
+@property (strong,nonatomic) UIImageView *questionMark;
 - (IBAction)priorLevel;
 - (IBAction)nextLevel;
 - (IBAction)backToLevel;

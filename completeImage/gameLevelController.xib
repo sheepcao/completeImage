@@ -12,6 +12,7 @@
                 <outlet property="levelCount" destination="jbD-O6-huF" id="qn4-QA-gFD"/>
                 <outlet property="nextButton" destination="WNi-8j-2YR" id="B2u-MI-NHY"/>
                 <outlet property="picture" destination="e6a-hj-4IY" id="vhY-Gr-EpI"/>
+                <outlet property="priorButton" destination="eer-2c-cpw" id="Y2f-FQ-iz0"/>
                 <outlet property="shareBtn" destination="dwA-YO-eL5" id="9Ng-Kh-onk"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
