@@ -14,9 +14,10 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {136,213,103,227,70,220,200,88,135.5,107.2,200,200.7,141.4,136,133.1,72.5,123.6,133.9};
-double posY[MAXlevel] = {287,232,157,190,180,300,282,206,240.2,282.3,282,286.4,274.7,229.5,258.1,238.6,227.3,214.6};
-double animationSpeed[MAXlevel] = {0,0,0,0.5,0.15,0,0.15,0,0.26,0.35,0.2,0.2,0.25,0.2,0.3,0.25,0.35,0.3};
+double posX[MAXlevel] = {198.8,113.1,68.4,227,70,220,200,88,135.5,107.2,/**/200,200.7,141.4,136,133.1,72.5,123.6,133.9};
+double posY[MAXlevel] = {232.7,282.3,347.5,190,180,300,282,206,240.2,282.3/**/,282,286.4,274.7,229.5,258.1,238.6,227.3,214.6};
+double animationSpeed[MAXlevel] = {0.2,0.3,0.3,0.5,0.15,0,0.15,0,0.26,0.35,/**/0.2,0.2,0.25,0.2,0.3,0.25,0.35,0.3};
+double repeatTime[MAXlevel] = {3,1,2,1,1,1,1,1,1,1,/**/1,1,1,1,1,1,1,1};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -39,9 +40,9 @@ NSMutableArray  *arrayGif;
     self.picture.layer.borderWidth = 0;
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"兔子,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂,鲨鱼,奶嘴,厕所,钟表,蜡烛";
+    NSString *words1 = @"考拉,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂,鲨鱼,奶嘴,厕所,钟表,蜡烛";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"rabbit,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee,shark,pacifier,toilet,clock,candle";
+    NSString *words2 = @"koala,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee,shark,pacifier,toilet,clock,candle";
     wordsEN = [words2 componentsSeparatedByString:@","];
    // NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     NSString *backgroundNames = @"animalBackground";
@@ -49,23 +50,24 @@ NSMutableArray  *arrayGif;
 
     self.empty = [[UIButton alloc] init];
     [self.empty setBackgroundColor:[UIColor clearColor]];
+    self.empty.layer.borderWidth = 0;
+
     [self.shareBtn setHidden:YES];
 
     self.questionMark = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
+    self.questionMark.layer.borderWidth = 0;
     // [self.questionMark setImage:[UIImage imageNamed:@"Q1"]];
     [self.empty addSubview:self.questionMark];
     
     arrayGif=[[NSMutableArray array] init];
     for (int i=1; i<5; i++) {
         UIImage *gif = [UIImage imageNamed:[NSString stringWithFormat:@"Q%d.png",i]];
-        if (gif) {
-            [arrayGif insertObject:gif atIndex:i-1];
-            
-        }
-        else
-        {
-            [arrayGif insertObject:[UIImage imageNamed:[NSString stringWithFormat:@"Q1.png"]] atIndex:0];
-        }
+        [arrayGif addObject:gif];
+
+    }
+    for (int i=1; i<4; i++) {
+        UIImage *gif = [UIImage imageNamed:[NSString stringWithFormat:@"Q%d.png",4-i]];
+        [arrayGif addObject:gif];
     }
 
     /*  使用webview播放gif，背景只能是白色。
@@ -120,9 +122,9 @@ NSMutableArray  *arrayGif;
         //设置动画数组
         [self.questionMark setAnimationImages:arrayGif];
         //设置动画播放次数
-        [self.questionMark setAnimationRepeatCount:10000];
+        [self.questionMark setAnimationRepeatCount:100000];
         //设置动画播放时间
-        [self.questionMark setAnimationDuration:0.8];
+        [self.questionMark setAnimationDuration:1.0];
         //开始动画
         [self.questionMark startAnimating];
         
@@ -157,6 +159,7 @@ NSMutableArray  *arrayGif;
     
     [self.empty setFrame:CGRectMake(px, py, 55, 55)];
     [self setButton:self.empty];
+    self.empty.layer.borderWidth = 0;
     
     self.empty.tag = 0;
     
@@ -330,6 +333,18 @@ NSMutableArray  *arrayGif;
         else if(i == 1)
         {
             [arrayM removeAllObjects];
+            break;
+        }
+        else
+        {
+            for (int j=i-1; j<arrayM.count; j++) {
+                [arrayM removeObjectAtIndex:j];
+            }
+            
+//            if (arrayM.count>i-1) {
+//                [arrayM removeObjectAtIndex:i-1];//make every level's animation with different image count.
+//
+//            }
         }
     }
     
@@ -337,7 +352,7 @@ NSMutableArray  *arrayGif;
         //设置动画数组
         [self.picture setAnimationImages:arrayM];
         //设置动画播放次数
-        [self.picture setAnimationRepeatCount:1];
+        [self.picture setAnimationRepeatCount:repeatTime[level-1]];
         //设置动画播放时间
         [self.picture setAnimationDuration:5*animationSpeed[level-1]];
         //开始动画
@@ -414,7 +429,8 @@ NSMutableArray  *arrayGif;
     //5秒后按钮自动退回
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(choiceBack) userInfo:nil repeats:NO];
     [self.empty addTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
-    self.empty.layer.borderWidth = 1.0f;
+   //cancel the border..
+    //self.empty.layer.borderWidth = 1.0f;
     
 }
 
