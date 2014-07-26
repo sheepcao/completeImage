@@ -62,19 +62,18 @@ NSMutableArray  *arrayGif;
     [self.empty addSubview:self.questionMark];
     
     arrayGif=[[NSMutableArray array] init];
-    for (int i=1; i<5; i++) {
-        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",i] ofType:@"png"]];
-        [arrayGif addObject:gif];
-        
-        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
+    UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"QuestionMark" ofType:@"png"]];
+    [arrayGif addObject:gif];
+    
+    [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
+    
+    
 
-    }
-
-    for (int i=1; i<4; i++) {
-        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",4-i] ofType:@"png"]];
-        [arrayGif addObject:gif];
-        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
-    }
+//    for (int i=1; i<4; i++) {
+//        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",4-i] ofType:@"png"]];
+//        [arrayGif addObject:gif];
+//        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
+//    }
 
     /*  使用webview播放gif，背景只能是白色。
     self.emptyGif = @"questionMark.gif";
@@ -132,7 +131,7 @@ NSMutableArray  *arrayGif;
         //设置动画播放次数
         [self.questionMark setAnimationRepeatCount:100000];
         //设置动画播放时间
-        [self.questionMark setAnimationDuration:8*1.0];
+        [self.questionMark setAnimationDuration:2*1.0];
         //开始动画
         [self.questionMark startAnimating];
         
@@ -148,7 +147,7 @@ NSMutableArray  *arrayGif;
 {
     levelTop = levelTop<level?level:levelTop;
     [self.levelCount setText:[NSString stringWithFormat:@"%d",level]];
-    self.levelCount.font = [UIFont fontWithName:@"FYTNT-" size:23];
+    self.levelCount.font = [UIFont fontWithName:@"SegoePrint" size:23];
     [self.levelCount setTextColor:[UIColor blackColor]];
     
     NSString *pic = [NSString stringWithFormat:@"pic%d",level];
@@ -504,6 +503,8 @@ NSMutableArray  *arrayGif;
 
 
 - (IBAction)nextLevel {
+    
+    [arrayM removeAllObjects];
     
     if (level%10==0 && [haveShared[level/11] isEqualToString:@"0"])
     {

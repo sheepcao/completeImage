@@ -30,7 +30,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>方圆甜妞体.ttf</string>
+		<string>segoe print.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

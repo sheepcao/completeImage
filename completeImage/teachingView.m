@@ -39,12 +39,12 @@ SystemSoundID soundEN;
     if (self) {
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
 
-        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 120, 40)];
-        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(5, 60, 120, 40)];
-//       self.answerCN .backgroundColor =[UIColor greenColor];
+        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(10, 13, 140, 45)];
+        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(10, 62, 140, 45)];
+ /*//       self.answerCN .backgroundColor =[UIColor greenColor];
         [self.answerCN setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.answerEN setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        
+       
         UIImageView *amplifierCN = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"amplifier"] highlightedImage:[UIImage imageNamed:@"amplifier2"]];
         
         UIImageView *amplifierEN = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"amplifier"] highlightedImage:[UIImage imageNamed:@"amplifier2"]];
@@ -56,11 +56,12 @@ SystemSoundID soundEN;
 
         [self.answerCN setTitle:chinese forState:UIControlStateNormal];
         [self.answerEN setTitle:eng forState:UIControlStateNormal];
-        self.answerCN.titleLabel.font = [UIFont fontWithName:@"FYTNT-" size:20];
-        self.answerEN.titleLabel.font = [UIFont fontWithName:@"FYTNT-" size:20];
+        self.answerCN.titleLabel.font = [UIFont fontWithName:@"SegoePrint" size:20];
+        self.answerEN.titleLabel.font = [UIFont fontWithName:@"SegoePrint" size:20];
         [self bringSubviewToFront:self.answerCN];
-     //   [self.answerCN setImage:[UIImage imageNamed:chinese] forState:UIControlStateNormal];
-      //  [self.answerEN setImage:[UIImage imageNamed:eng] forState:UIControlStateNormal];
+ */
+        [self.answerCN setImage:[UIImage imageNamed:chinese] forState:UIControlStateNormal];
+        [self.answerEN setImage:[UIImage imageNamed:eng] forState:UIControlStateNormal];
 
         
         [self addSubview:self.answerEN];
@@ -91,8 +92,11 @@ SystemSoundID soundEN;
 
 -(void)setWordsAndSound:(NSString *)chinese english:(NSString *)eng soundCN:(NSString *)sndCN soundEN:(NSString *)sndEN
 {
-    [self.answerCN setTitle:chinese forState:UIControlStateNormal];
-    [self.answerEN setTitle:eng forState:UIControlStateNormal];
+//    [self.answerCN setTitle:chinese forState:UIControlStateNormal];
+//    [self.answerEN setTitle:eng forState:UIControlStateNormal];
+//    
+    [self.answerCN setImage:[UIImage imageNamed:chinese] forState:UIControlStateNormal];
+    [self.answerEN setImage:[UIImage imageNamed:eng] forState:UIControlStateNormal];
     
     CFBundleRef CNbundle=CFBundleGetMainBundle();
     
