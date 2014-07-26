@@ -14,10 +14,12 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {198.8,113.1,68.4,227,70,220,200,88,135.5,107.2,/**/200,200.7,141.4,136,133.1,72.5,123.6,133.9};
-double posY[MAXlevel] = {232.7,282.3,347.5,190,180,300,282,206,240.2,282.3/**/,282,286.4,274.7,229.5,258.1,238.6,227.3,214.6};
-double animationSpeed[MAXlevel] = {0.2,0.3,0.3,0.5,0.15,0,0.15,0,0.26,0.35,/**/0.2,0.2,0.25,0.2,0.3,0.25,0.35,0.3};
-double repeatTime[MAXlevel] = {3,1,2,1,1,1,1,1,1,1,/**/1,1,1,1,1,1,1,1};
+double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/200,200.7,141.4,136,133.1,/**/72.5,123.6,133.9,130.7,41.1/**/};
+double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/**/274.7,324.5
+    ,229.5,227.6,232.7/**/,282,286.4,274.7,229.5,258.1,/**/238.6,227.3,214.6,283.8,259.1/**/};
+double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.2,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/};
+double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/1,1,1,1,1,/**/1,1,1,1,1/**/};
+double largeEmpty[bigLevel] = {122.22,0,0,0,0,0};
 bool haveFixed[MAXlevel] = {NO};
 
 NSArray *wordsCN;
@@ -40,9 +42,9 @@ NSMutableArray  *arrayGif;
     self.picture.layer.borderWidth = 0;
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"考拉,猫,鳄鱼,猪,羽毛球,橘子,狗,鸡,荷花,兔子,狗,柳树,蜜蜂,鲨鱼,奶嘴,厕所,钟表,蜡烛";
+    NSString *words1 = @"猪,猫,兔子,鸡,青蛙,蜜蜂,狗,鲨鱼,蜗牛,考拉,狗,柳树,蜜蜂,鲨鱼,奶嘴,厕所,钟表,蜡烛,向日葵,牵牛花";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"koala,cat,aligator,pig,badminton,orange,dog,chicken,lotus,rabbit,dog,willow,bee,shark,pacifier,toilet,clock,candle";
+    NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,dog,willow,bee,shark,pacifier,toilet,clock,candle,sunflower,glory";
     wordsEN = [words2 componentsSeparatedByString:@","];
    // NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     NSString *backgroundNames = @"animalBackground";
@@ -56,18 +58,22 @@ NSMutableArray  *arrayGif;
 
     self.questionMark = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
     self.questionMark.layer.borderWidth = 0;
-    // [self.questionMark setImage:[UIImage imageNamed:@"Q1"]];
+    self.questionMark.alpha = 0.8;
     [self.empty addSubview:self.questionMark];
     
     arrayGif=[[NSMutableArray array] init];
     for (int i=1; i<5; i++) {
-        UIImage *gif = [UIImage imageNamed:[NSString stringWithFormat:@"Q%d.png",i]];
+        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",i] ofType:@"png"]];
         [arrayGif addObject:gif];
+        
+        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
 
     }
+
     for (int i=1; i<4; i++) {
-        UIImage *gif = [UIImage imageNamed:[NSString stringWithFormat:@"Q%d.png",4-i]];
+        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",4-i] ofType:@"png"]];
         [arrayGif addObject:gif];
+        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
     }
 
     /*  使用webview播放gif，背景只能是白色。
@@ -83,13 +89,14 @@ NSMutableArray  *arrayGif;
     [self.empty addSubview:self.webView];
     [self.webView setHidden:YES];
     */
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"animalBackground"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"animalBackground" ofType:@"png"]]];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 
 {
+    [self.animationBegin setHidden:YES];
     
     for (int i =0; i<3; i++) {
         [self setButton:(UIButton *)self.choices[i]];
@@ -98,6 +105,7 @@ NSMutableArray  *arrayGif;
     
     self.myImg = [[uncompleteImage alloc] initWithEmptyX:posX[level-1] Y:posY[level-1]];
     [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
+
     
     self.teachView = [[teachingView alloc] initWithWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
     
@@ -124,7 +132,7 @@ NSMutableArray  *arrayGif;
         //设置动画播放次数
         [self.questionMark setAnimationRepeatCount:100000];
         //设置动画播放时间
-        [self.questionMark setAnimationDuration:1.0];
+        [self.questionMark setAnimationDuration:8*1.0];
         //开始动画
         [self.questionMark startAnimating];
         
@@ -139,10 +147,9 @@ NSMutableArray  *arrayGif;
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
     levelTop = levelTop<level?level:levelTop;
-   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:backgroundName[(level-1)/10] ]];
     [self.levelCount setText:[NSString stringWithFormat:@"%d",level]];
     self.levelCount.font = [UIFont fontWithName:@"FYTNT-" size:23];
-    [self.levelCount setTextColor:[UIColor whiteColor]];
+    [self.levelCount setTextColor:[UIColor blackColor]];
     
     NSString *pic = [NSString stringWithFormat:@"pic%d",level];
     
@@ -156,8 +163,18 @@ NSMutableArray  *arrayGif;
     
     [self setImages:an1:an2 :an3 :pic];
     
-    
-    [self.empty setFrame:CGRectMake(px, py, 55, 55)];
+    if (level%10 == 9) {
+        [self.empty setFrame:CGRectMake(px, py, largeEmpty[(level-1)/10], largeEmpty[(level-1)/10])];
+        
+        [self.questionMark setFrame:CGRectMake(0, 0, largeEmpty[(level-1)/10], largeEmpty[(level-1)/10])];
+
+    }else
+    {
+   
+        [self.empty setFrame:CGRectMake(px, py, 55, 55)];
+        
+        [self.questionMark setFrame:CGRectMake(0, 0, 55, 55)];
+    }
     [self setButton:self.empty];
     self.empty.layer.borderWidth = 0;
     
@@ -201,15 +218,19 @@ NSMutableArray  *arrayGif;
     
     int correctAns = randomNumber%MAXanswer;
     UIButton *rightBtn = self.choices[correctAns];
-    [rightBtn setImage:[UIImage imageNamed:rightAns] forState:UIControlStateNormal];
+    
+    [rightBtn setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:rightAns ofType:@"png"]] forState:UIControlStateNormal];
     correct[level-1] = correctAns+1;
     
-    [self.choices[(correctAns+1)%3] setImage:[UIImage imageNamed:wrong1] forState:UIControlStateNormal];
-    [self.choices[(correctAns+2)%3] setImage:[UIImage imageNamed:wrong2] forState:UIControlStateNormal];
+    [self.choices[(correctAns+1)%3] setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", wrong1] ofType:@"png"]]forState:UIControlStateNormal];
+    [self.choices[(correctAns+2)%3] setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", wrong2] ofType:@"png"]]forState:UIControlStateNormal];
     
+    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", wrong1] ofType:@"png"]];
     
-    
-    [self.picture setImage:[UIImage imageNamed:guess]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@", guess] ofType:@"png"];
+    UIImage *myImage = [UIImage imageWithContentsOfFile:path];
+    [self.picture setImage:myImage];
+
     [self.empty setImage:nil forState:UIControlStateNormal];
     [self.questionMark setHidden:NO];
     
@@ -264,14 +285,14 @@ NSMutableArray  *arrayGif;
             
             
             
-            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:1.2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
             
             
         }
         else
         {
             
-            [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
             
             
         }
@@ -284,6 +305,8 @@ NSMutableArray  *arrayGif;
 
 -(void)animationOver
 {
+    [self.animationBegin setHidden:NO];
+
     [self.empty setHidden:NO];
     if (!haveFixed[level-1]) {
         levelTop++;
@@ -325,7 +348,8 @@ NSMutableArray  *arrayGif;
 
     arrayM=[[NSMutableArray array] init];
     for (int i=1; i<6; i++) {
-        UIImage *gif = [UIImage imageNamed:[NSString stringWithFormat:@"level%d-%d.png",level,i]];
+
+        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"level%d-%d",level,i] ofType:@"png"]];
         if (gif) {
             [arrayM insertObject:gif atIndex:i-1];
             
@@ -419,10 +443,12 @@ NSMutableArray  *arrayGif;
     
     self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 70, 160, 120)];
   //  [self.wrongLabel setText:@"错误"];
-    self.wrongLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
+
+
+    self.wrongLabel.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"board" ofType:@"png"]]];
     self.wrongLabel.textAlignment = NSTextAlignmentCenter;
     UIImageView *cryFace = [[UIImageView alloc] initWithFrame:CGRectMake(45, 25, 70, 70)];
-    cryFace.image = [UIImage imageNamed:@"wrongImg"];
+    cryFace.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"wrongImg" ofType:@"png"]];
     [self.wrongLabel addSubview:cryFace];
     [self.view addSubview:self.wrongLabel];
     
@@ -524,6 +550,27 @@ NSMutableArray  *arrayGif;
     myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:myShare animated:YES completion:Nil ];
 
+}
+
+- (IBAction)animationTapped:(id)sender {
+    [self.nextButton setEnabled:NO];
+    [self.priorButton setEnabled:NO];
+    [self.empty setHidden:YES];
+
+    
+    if (arrayM.count>0) {
+              //开始动画
+        [self.picture startAnimating];
+    }
+    
+    [self performSelector:@selector(animationOnly) withObject:nil afterDelay:self.picture.animationDuration * repeatTime[level-1]];
+
+}
+-(void)animationOnly
+{
+    [self.nextButton setEnabled:YES];
+    [self.priorButton setEnabled:YES];
+    [self.empty setHidden:NO];
 }
 
 -(void)chineseTap

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="gameLevelController">
             <connections>
+                <outlet property="animationBegin" destination="IaC-yr-cjx" id="djo-j4-ZiW"/>
                 <outlet property="answer1" destination="Mmy-ei-4QT" id="BFs-2u-Lhd"/>
                 <outlet property="answer2" destination="z5r-Yd-VcV" id="Ocs-k0-I2J"/>
                 <outlet property="answer3" destination="9N4-Qj-IWs" id="iS9-Be-LtN"/>
@@ -99,6 +100,16 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-yr-cjx">
+                    <rect key="frame" x="33" y="189" width="250" height="230"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="animationTapped:" destination="-1" eventType="touchUpInside" id="cxu-or-kGl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
