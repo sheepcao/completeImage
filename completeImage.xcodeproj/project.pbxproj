@@ -208,6 +208,11 @@
 		0B45F8B2196AEB2A0048BC16 /* choiceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B45F8B1196AEB2A0048BC16 /* choiceBackground.png */; };
 		0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */; };
 		0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CF195C4F9D0093A863 /* tagAlert.png */; };
+		0B5D8A4B198E2ED0000D05A9 /* AfterTakePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */; };
+		0B5D8A4C198E2ED0000D05A9 /* AfterTakePicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */; };
+		0B5D8A4F198E2FBA000D05A9 /* 动物4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A4E198E2FBA000D05A9 /* 动物4inch.png */; };
+		0B5D8A51198E397E000D05A9 /* 保存.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A50198E397E000D05A9 /* 保存.png */; };
+		0B5D8A53198E8685000D05A9 /* 咔嚓.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A52198E8685000D05A9 /* 咔嚓.png */; };
 		0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964ACD1940AF6E00D2CCCE /* AppIcon.png */; };
 		0BA79F691956839700ACA06B /* gameLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA79F671956839700ACA06B /* gameLevelController.m */; };
 		0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA79F681956839700ACA06B /* gameLevelController.xib */; };
@@ -483,6 +488,12 @@
 		0B4EF0CC195C4E1A0093A863 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		0B4EF0CF195C4F9D0093A863 /* tagAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tagAlert.png; sourceTree = "<group>"; };
+		0B5D8A48198E2ED0000D05A9 /* AfterTakePicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterTakePicViewController.h; sourceTree = "<group>"; };
+		0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterTakePicViewController.m; sourceTree = "<group>"; };
+		0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AfterTakePicViewController.xib; sourceTree = "<group>"; };
+		0B5D8A4E198E2FBA000D05A9 /* 动物4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动物4inch.png"; sourceTree = "<group>"; };
+		0B5D8A50198E397E000D05A9 /* 保存.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存.png"; sourceTree = "<group>"; };
+		0B5D8A52198E8685000D05A9 /* 咔嚓.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "咔嚓.png"; sourceTree = "<group>"; };
 		0B964ACD1940AF6E00D2CCCE /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		0BA79F661956839700ACA06B /* gameLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLevelController.h; sourceTree = "<group>"; };
 		0BA79F671956839700ACA06B /* gameLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameLevelController.m; sourceTree = "<group>"; };
@@ -667,6 +678,16 @@
 			path = CustomIOS7AlertView;
 			sourceTree = "<group>";
 		};
+		0B5D8A4D198E2FA7000D05A9 /* shareView */ = {
+			isa = PBXGroup;
+			children = (
+				0B5D8A50198E397E000D05A9 /* 保存.png */,
+				0B5D8A52198E8685000D05A9 /* 咔嚓.png */,
+				0B5D8A4E198E2FBA000D05A9 /* 动物4inch.png */,
+			);
+			name = shareView;
+			sourceTree = "<group>";
+		};
 		0BDBD802194EC86300643495 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +744,9 @@
 				0BA79F6E1957358100ACA06B /* sharePhotoViewController.h */,
 				0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */,
 				0BA79F701957358100ACA06B /* sharePhotoViewController.xib */,
+				0B5D8A48198E2ED0000D05A9 /* AfterTakePicViewController.h */,
+				0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */,
+				0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */,
 				0BE582CF193F25FB00EEAB26 /* Images.xcassets */,
 				0BE582BE193F25FB00EEAB26 /* Supporting Files */,
 			);
@@ -732,6 +756,7 @@
 		0BE582BE193F25FB00EEAB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B5D8A4D198E2FA7000D05A9 /* shareView */,
 				0B0CC0951983F29300C1D89C /* textImage */,
 				0B0CC0931983EF5E00C1D89C /* segoe print.ttf */,
 				0B0CC04C1983D2AB00C1D89C /* sounds */,
@@ -1057,6 +1082,7 @@
 				0B2015DC19602D1800184EF3 /* level11-5.png in Resources */,
 				0B0CC0681983D2BF00C1D89C /* rabbit.wav in Resources */,
 				0B45F8B2196AEB2A0048BC16 /* choiceBackground.png in Resources */,
+				0B5D8A53198E8685000D05A9 /* 咔嚓.png in Resources */,
 				0B106CE7195E6470003023C1 /* plant.png in Resources */,
 				0B386DBF197166120033352F /* level16-1.png in Resources */,
 				0B0CC0AC1983F2B700C1D89C /* frog.png in Resources */,
@@ -1105,6 +1131,7 @@
 				0B0CC0701983D2BF00C1D89C /* 兔子.wav in Resources */,
 				0B0CC0191983BD5B00C1D89C /* level4-4.png in Resources */,
 				0B0CC0B61983F2B700C1D89C /* 蜜蜂.png in Resources */,
+				0B5D8A4C198E2ED0000D05A9 /* AfterTakePicViewController.xib in Resources */,
 				0B106CE6195E6470003023C1 /* animal.png in Resources */,
 				0B0CBFB31983BD2100C1D89C /* an1-2.png in Resources */,
 				0B0CC0BB1983F2B700C1D89C /* 猪.png in Resources */,
@@ -1143,6 +1170,7 @@
 				0B0CC0B91983F2B700C1D89C /* 兔子.png in Resources */,
 				0B0CC0451983BD6F00C1D89C /* pic6.png in Resources */,
 				0BFE8366197EBB0E00499DC0 /* an2-23.png in Resources */,
+				0B5D8A51198E397E000D05A9 /* 保存.png in Resources */,
 				0B0CC0441983BD6F00C1D89C /* pic5.png in Resources */,
 				0B0CBFBA1983BD2100C1D89C /* an1-9.png in Resources */,
 				0B0CC02B1983BD5B00C1D89C /* level8-2.png in Resources */,
@@ -1228,6 +1256,7 @@
 				0B106CE5195E6470003023C1 /* sport.png in Resources */,
 				0B386DCE197167030033352F /* level17-4.png in Resources */,
 				0B386DD0197167030033352F /* level17-2.png in Resources */,
+				0B5D8A4F198E2FBA000D05A9 /* 动物4inch.png in Resources */,
 				0B0CBFCB1983BD3000C1D89C /* an2-6.png in Resources */,
 				0B0CC0341983BD5B00C1D89C /* level10-1.png in Resources */,
 				0B0CC0131983BD5B00C1D89C /* level2-5.png in Resources */,
@@ -1313,6 +1342,7 @@
 				0BE582F2193F285200EEAB26 /* answer.m in Sources */,
 				0BDBD805194EC8BB00643495 /* teachingView.m in Sources */,
 				0BA79F691956839700ACA06B /* gameLevelController.m in Sources */,
+				0B5D8A4B198E2ED0000D05A9 /* AfterTakePicViewController.m in Sources */,
 				0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */,
 				0BE582C4193F25FB00EEAB26 /* main.m in Sources */,
 			);

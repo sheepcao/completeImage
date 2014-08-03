@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "sharePhotoViewController.h"
 #import "globalVar.h"
+#import "AfterTakePicViewController.h"
 
 @interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -20,6 +21,7 @@
 @property (nonatomic ,strong) UIButton *photograph;
 @property (nonatomic ,strong) UIButton *share;
 @property (nonatomic ,strong) UILabel *welcome;
+@property (nonatomic ,strong) UIImagePickerController *picker;
 
 - (IBAction)saveImage:(id)sender;
 - (IBAction)photograph:(id)sender;

@@ -9,6 +9,8 @@
 #ifndef completeImage_globalVar_h
 #define completeImage_globalVar_h
 
+#define IPhoneHeight (([UIScreen mainScreen].bounds.size.height == 568.0)?568:480)
+
 int level ;
 NSNumber *levelSaved;
 int levelTop;

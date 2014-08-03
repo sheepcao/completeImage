@@ -54,7 +54,7 @@ NSMutableArray  *arrayGif;
     [self.empty setBackgroundColor:[UIColor clearColor]];
     self.empty.layer.borderWidth = 0;
 
-    [self.shareBtn setHidden:YES];
+//share change task.    [self.shareBtn setHidden:YES];
 
     self.questionMark = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
     self.questionMark.layer.borderWidth = 0;
@@ -115,7 +115,7 @@ NSMutableArray  *arrayGif;
     }else
     {
         [self.nextButton setEnabled:YES];
-        //当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
+        /*当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
         if (levelTop == MAXlevel+1) {
             
             [self.shareBtn setHidden:NO];
@@ -123,6 +123,8 @@ NSMutableArray  *arrayGif;
         }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
             [self.shareBtn setHidden:NO];
         }
+         share change task.
+         */
     }
     
     if (arrayGif.count>0) {
@@ -188,7 +190,7 @@ NSMutableArray  *arrayGif;
     [self.empty removeTarget:self action:@selector(buttonTap:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    [self.shareBtn setHidden:YES];
+//share change task.    [self.shareBtn setHidden:YES];
     
 
     if (!haveFixed[level-1]) {
@@ -198,14 +200,17 @@ NSMutableArray  *arrayGif;
     }else
     {
         [self.nextButton setEnabled:YES];
-        //当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
+        /*当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
         if (levelTop == MAXlevel+1) {
             
             [self.shareBtn setHidden:NO];
             
         }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
-            [self.shareBtn setHidden:NO];
+          [self.shareBtn setHidden:NO];
         }
+         
+         share change task.
+         */
         
     }
  
