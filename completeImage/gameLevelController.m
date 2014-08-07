@@ -551,7 +551,7 @@ NSMutableArray  *arrayGif;
     
     
     sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
-    myShare.frontImageName = @"flowerPhoto";
+    myShare.frontImageName = @"animalShare";
     
     myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:myShare animated:YES completion:Nil ];

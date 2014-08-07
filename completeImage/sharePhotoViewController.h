@@ -20,6 +20,9 @@
 //@property (nonatomic ,strong) UIButton *saveImage;
 @property (nonatomic ,strong) UIButton *photograph;
 @property (nonatomic ,strong) UIButton *share;
+@property (nonatomic ,strong) UIButton *retakePic;
+@property (nonatomic ,strong) UIButton *savePic;
+
 @property (nonatomic ,strong) UILabel *welcome;
 @property (nonatomic ,strong) UIImagePickerController *picker;
 
