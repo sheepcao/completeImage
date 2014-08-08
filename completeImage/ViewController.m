@@ -105,16 +105,18 @@ bool levelLock[bigLevel];
 
 - (IBAction)animalBtn:(UIButton *)sender {
     
-    NSArray *familyNames = [UIFont familyNames];
-    for( NSString *familyName in familyNames ){
-        printf( "Family: %s \n", [familyName UTF8String] );
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-        for( NSString *fontName in fontNames ){
-            printf( "\tFont: %s \n", [fontName UTF8String] );
-        }
-    }
+//    NSArray *familyNames = [UIFont familyNames];
+//    for( NSString *familyName in familyNames ){
+//        printf( "Family: %s \n", [familyName UTF8String] );
+//        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+//        for( NSString *fontName in fontNames ){
+//            printf( "\tFont: %s \n", [fontName UTF8String] );
+//        }
+//    }
+    
     
     level = 1;
+    [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
     
     if (levelLock[sender.tag-1]) {
 
@@ -208,6 +210,8 @@ bool levelLock[bigLevel];
         
     }else{
         level = 11;
+        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+
         self.game.backgroundImg = [UIImage imageNamed:@"animalBackground"];
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
@@ -227,6 +231,8 @@ bool levelLock[bigLevel];
         
     }else{
         level = 21;
+        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }
@@ -245,6 +251,8 @@ bool levelLock[bigLevel];
         
     }else{
          level = 31;
+        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+
         self.game.backgroundImg = [UIImage imageNamed:@"plantBackground"];
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
@@ -266,6 +274,8 @@ bool levelLock[bigLevel];
         
     }else{
         level = 41;
+        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }
@@ -284,6 +294,8 @@ bool levelLock[bigLevel];
         
     }else{
         level = 51;
+        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
     }

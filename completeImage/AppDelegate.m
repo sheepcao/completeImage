@@ -13,6 +13,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    scores = [[NSMutableArray alloc] initWithCapacity:bigLevel];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if ([ud objectForKey:@"scores"]) {
+        [scores setArray: [ud objectForKey:@"scores"]];
+    }else
+    {
+        for (int i = 0; i<bigLevel; i++) {
+            [scores insertObject:[NSNumber numberWithInt:0] atIndex:i];
+        }
+    }
     [application setStatusBarHidden:NO];
     [application setStatusBarStyle:UIStatusBarStyleDefault];
     return YES;
@@ -40,6 +51,7 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:levelSaved forKey:@"saveLevel"];
+    [ud setObject:scores forKey:@"scores"];
     [ud setObject:haveSharedString forKey:@"saveShareState"];
     
 }
@@ -73,7 +85,9 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:levelSaved forKey:@"saveLevel"];
+    [ud setObject:scores forKey:@"scores"];
     [ud setObject:haveSharedString forKey:@"saveShareState"];
+    scores = nil;
 
 }
 

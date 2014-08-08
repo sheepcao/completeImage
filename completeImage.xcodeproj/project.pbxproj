@@ -106,9 +106,9 @@
 		0B0CC0841983D7EF00C1D89C /* an3-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC07B1983D7EF00C1D89C /* an3-7.png */; };
 		0B0CC0851983D7EF00C1D89C /* an2-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC07C1983D7EF00C1D89C /* an2-7.png */; };
 		0B0CC0861983D7EF00C1D89C /* an1-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC07D1983D7EF00C1D89C /* an1-7.png */; };
-		0B0CC08D1983DE3D00C1D89C /* an3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0871983DE3D00C1D89C /* an3.png */; };
-		0B0CC08E1983DE3D00C1D89C /* an2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0881983DE3D00C1D89C /* an2.png */; };
-		0B0CC08F1983DE3D00C1D89C /* an1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0891983DE3D00C1D89C /* an1.png */; };
+		0B0CC08D1983DE3D00C1D89C /* an3-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0871983DE3D00C1D89C /* an3-3.png */; };
+		0B0CC08E1983DE3D00C1D89C /* an2-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0881983DE3D00C1D89C /* an2-3.png */; };
+		0B0CC08F1983DE3D00C1D89C /* an1-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0891983DE3D00C1D89C /* an1-3.png */; };
 		0B0CC0901983DE3D00C1D89C /* level3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC08A1983DE3D00C1D89C /* level3-2.png */; };
 		0B0CC0911983DE3D00C1D89C /* level3-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC08B1983DE3D00C1D89C /* level3-1.png */; };
 		0B0CC0921983DE3D00C1D89C /* pic3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC08C1983DE3D00C1D89C /* pic3.png */; };
@@ -214,8 +214,6 @@
 		0B45F8B2196AEB2A0048BC16 /* choiceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B45F8B1196AEB2A0048BC16 /* choiceBackground.png */; };
 		0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */; };
 		0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EF0CF195C4F9D0093A863 /* tagAlert.png */; };
-		0B5D8A4B198E2ED0000D05A9 /* AfterTakePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */; };
-		0B5D8A4C198E2ED0000D05A9 /* AfterTakePicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */; };
 		0B5D8A4F198E2FBA000D05A9 /* 动物4inch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A4E198E2FBA000D05A9 /* 动物4inch.png */; };
 		0B5D8A51198E397E000D05A9 /* 保存.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D8A50198E397E000D05A9 /* 保存.png */; };
 		0B964ACE1940AF6E00D2CCCE /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B964ACD1940AF6E00D2CCCE /* AppIcon.png */; };
@@ -265,6 +263,15 @@
 		0BE582EF193F280B00EEAB26 /* gameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582EE193F280B00EEAB26 /* gameLevel.m */; };
 		0BE582F2193F285200EEAB26 /* answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582F1193F285200EEAB26 /* answer.m */; };
 		0BE582F5193F287300EEAB26 /* uncompleteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE582F4193F287300EEAB26 /* uncompleteImage.m */; };
+		0BF58230199504220035CA4C /* rewardPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5822F199504220035CA4C /* rewardPage.png */; };
+		0BF582381995051A0035CA4C /* baby4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF582331995051A0035CA4C /* baby4.png */; };
+		0BF582391995051A0035CA4C /* baby3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF582341995051A0035CA4C /* baby3.png */; };
+		0BF5823A1995051A0035CA4C /* baby2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF582351995051A0035CA4C /* baby2.png */; };
+		0BF5823B1995051A0035CA4C /* baby1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF582361995051A0035CA4C /* baby1.png */; };
+		0BF5823C1995051A0035CA4C /* baby0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF582371995051A0035CA4C /* baby0.png */; };
+		0BF58240199506720035CA4C /* rewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF5823E199506720035CA4C /* rewardViewController.m */; };
+		0BF58241199506720035CA4C /* rewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5823F199506720035CA4C /* rewardViewController.xib */; };
+		0BF58243199508630035CA4C /* goPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BF58242199508630035CA4C /* goPhoto.png */; };
 		0BFA448219698C7A00EEE50C /* wrongImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFA448119698C7A00EEE50C /* wrongImg.png */; };
 		0BFA448619698DB300EEE50C /* animalBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFA448519698DB300EEE50C /* animalBackground.png */; };
 		0BFA448819698EF600EEE50C /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFA448719698EF600EEE50C /* camera.png */; };
@@ -390,9 +397,9 @@
 		0B0CC07B1983D7EF00C1D89C /* an3-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-7.png"; sourceTree = "<group>"; };
 		0B0CC07C1983D7EF00C1D89C /* an2-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-7.png"; sourceTree = "<group>"; };
 		0B0CC07D1983D7EF00C1D89C /* an1-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-7.png"; sourceTree = "<group>"; };
-		0B0CC0871983DE3D00C1D89C /* an3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = an3.png; sourceTree = "<group>"; };
-		0B0CC0881983DE3D00C1D89C /* an2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = an2.png; sourceTree = "<group>"; };
-		0B0CC0891983DE3D00C1D89C /* an1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = an1.png; sourceTree = "<group>"; };
+		0B0CC0871983DE3D00C1D89C /* an3-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-3.png"; sourceTree = "<group>"; };
+		0B0CC0881983DE3D00C1D89C /* an2-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-3.png"; sourceTree = "<group>"; };
+		0B0CC0891983DE3D00C1D89C /* an1-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-3.png"; sourceTree = "<group>"; };
 		0B0CC08A1983DE3D00C1D89C /* level3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level3-2.png"; sourceTree = "<group>"; };
 		0B0CC08B1983DE3D00C1D89C /* level3-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level3-1.png"; sourceTree = "<group>"; };
 		0B0CC08C1983DE3D00C1D89C /* pic3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic3.png; sourceTree = "<group>"; };
@@ -499,9 +506,6 @@
 		0B4EF0CC195C4E1A0093A863 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		0B4EF0CD195C4E1A0093A863 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		0B4EF0CF195C4F9D0093A863 /* tagAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tagAlert.png; sourceTree = "<group>"; };
-		0B5D8A48198E2ED0000D05A9 /* AfterTakePicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterTakePicViewController.h; sourceTree = "<group>"; };
-		0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterTakePicViewController.m; sourceTree = "<group>"; };
-		0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AfterTakePicViewController.xib; sourceTree = "<group>"; };
 		0B5D8A4E198E2FBA000D05A9 /* 动物4inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动物4inch.png"; sourceTree = "<group>"; };
 		0B5D8A50198E397E000D05A9 /* 保存.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存.png"; sourceTree = "<group>"; };
 		0B964ACD1940AF6E00D2CCCE /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
@@ -563,6 +567,16 @@
 		0BE582F1193F285200EEAB26 /* answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = answer.m; sourceTree = "<group>"; };
 		0BE582F3193F287300EEAB26 /* uncompleteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uncompleteImage.h; sourceTree = "<group>"; };
 		0BE582F4193F287300EEAB26 /* uncompleteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uncompleteImage.m; sourceTree = "<group>"; };
+		0BF5822F199504220035CA4C /* rewardPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewardPage.png; sourceTree = "<group>"; };
+		0BF582331995051A0035CA4C /* baby4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby4.png; sourceTree = "<group>"; };
+		0BF582341995051A0035CA4C /* baby3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby3.png; sourceTree = "<group>"; };
+		0BF582351995051A0035CA4C /* baby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby2.png; sourceTree = "<group>"; };
+		0BF582361995051A0035CA4C /* baby1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby1.png; sourceTree = "<group>"; };
+		0BF582371995051A0035CA4C /* baby0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby0.png; sourceTree = "<group>"; };
+		0BF5823D199506720035CA4C /* rewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rewardViewController.h; sourceTree = "<group>"; };
+		0BF5823E199506720035CA4C /* rewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rewardViewController.m; sourceTree = "<group>"; };
+		0BF5823F199506720035CA4C /* rewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = rewardViewController.xib; sourceTree = "<group>"; };
+		0BF58242199508630035CA4C /* goPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goPhoto.png; sourceTree = "<group>"; };
 		0BFA448119698C7A00EEE50C /* wrongImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrongImg.png; sourceTree = "<group>"; };
 		0BFA448519698DB300EEE50C /* animalBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animalBackground.png; sourceTree = "<group>"; };
 		0BFA448719698EF600EEE50C /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -692,6 +706,13 @@
 			isa = PBXGroup;
 			children = (
 				0B31FF14198FC9FF002EB700 /* animalShare.png */,
+				0BF582331995051A0035CA4C /* baby4.png */,
+				0BF582341995051A0035CA4C /* baby3.png */,
+				0BF582351995051A0035CA4C /* baby2.png */,
+				0BF582361995051A0035CA4C /* baby1.png */,
+				0BF582371995051A0035CA4C /* baby0.png */,
+				0BF58242199508630035CA4C /* goPhoto.png */,
+				0BF5822F199504220035CA4C /* rewardPage.png */,
 				0B41B84A1993C58C00D9FC39 /* shutter.png */,
 				0B41B8481993BC2100D9FC39 /* notFinish.png */,
 				0B31FF0E198FC13A002EB700 /* 分享.png */,
@@ -759,9 +780,9 @@
 				0BA79F6E1957358100ACA06B /* sharePhotoViewController.h */,
 				0BA79F6F1957358100ACA06B /* sharePhotoViewController.m */,
 				0BA79F701957358100ACA06B /* sharePhotoViewController.xib */,
-				0B5D8A48198E2ED0000D05A9 /* AfterTakePicViewController.h */,
-				0B5D8A49198E2ED0000D05A9 /* AfterTakePicViewController.m */,
-				0B5D8A4A198E2ED0000D05A9 /* AfterTakePicViewController.xib */,
+				0BF5823D199506720035CA4C /* rewardViewController.h */,
+				0BF5823E199506720035CA4C /* rewardViewController.m */,
+				0BF5823F199506720035CA4C /* rewardViewController.xib */,
 				0BE582CF193F25FB00EEAB26 /* Images.xcassets */,
 				0BE582BE193F25FB00EEAB26 /* Supporting Files */,
 			);
@@ -800,9 +821,9 @@
 				0B0CC07B1983D7EF00C1D89C /* an3-7.png */,
 				0B0CC07C1983D7EF00C1D89C /* an2-7.png */,
 				0B0CC07D1983D7EF00C1D89C /* an1-7.png */,
-				0B0CC0871983DE3D00C1D89C /* an3.png */,
-				0B0CC0881983DE3D00C1D89C /* an2.png */,
-				0B0CC0891983DE3D00C1D89C /* an1.png */,
+				0B0CC0871983DE3D00C1D89C /* an3-3.png */,
+				0B0CC0881983DE3D00C1D89C /* an2-3.png */,
+				0B0CC0891983DE3D00C1D89C /* an1-3.png */,
 				0B0CC08A1983DE3D00C1D89C /* level3-2.png */,
 				0B0CC08B1983DE3D00C1D89C /* level3-1.png */,
 				0B0CC08C1983DE3D00C1D89C /* pic3.png */,
@@ -1049,7 +1070,7 @@
 		0BE582AC193F25FB00EEAB26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "张力";
 				TargetAttributes = {
 					0BE582B3193F25FB00EEAB26 = {
@@ -1099,6 +1120,7 @@
 				0B45F8B2196AEB2A0048BC16 /* choiceBackground.png in Resources */,
 				0B106CE7195E6470003023C1 /* plant.png in Resources */,
 				0B386DBF197166120033352F /* level16-1.png in Resources */,
+				0BF582381995051A0035CA4C /* baby4.png in Resources */,
 				0B0CC0AC1983F2B700C1D89C /* frog.png in Resources */,
 				0B0CC0BC1983F2B700C1D89C /* bee.png in Resources */,
 				0B0CC0AB1983F2B700C1D89C /* dog.png in Resources */,
@@ -1148,7 +1170,6 @@
 				0B0CC0701983D2BF00C1D89C /* 兔子.wav in Resources */,
 				0B0CC0191983BD5B00C1D89C /* level4-4.png in Resources */,
 				0B0CC0B61983F2B700C1D89C /* 蜜蜂.png in Resources */,
-				0B5D8A4C198E2ED0000D05A9 /* AfterTakePicViewController.xib in Resources */,
 				0B106CE6195E6470003023C1 /* animal.png in Resources */,
 				0B0CBFB31983BD2100C1D89C /* an1-2.png in Resources */,
 				0B0CC0BB1983F2B700C1D89C /* 猪.png in Resources */,
@@ -1157,15 +1178,18 @@
 				0B386DB9197166120033352F /* an2-16.png in Resources */,
 				0BFA448619698DB300EEE50C /* animalBackground.png in Resources */,
 				0B0CC06B1983D2BF00C1D89C /* 考拉.wav in Resources */,
+				0BF58243199508630035CA4C /* goPhoto.png in Resources */,
 				0B0CC0181983BD5B00C1D89C /* level4-3.png in Resources */,
 				0B4EF0D0195C4F9D0093A863 /* tagAlert.png in Resources */,
 				0B386D8119715F360033352F /* an3-15.png in Resources */,
+				0BF582391995051A0035CA4C /* baby3.png in Resources */,
 				0B0CC0AD1983F2B700C1D89C /* koala.png in Resources */,
 				0B0CC01A1983BD5B00C1D89C /* level4-5.png in Resources */,
 				0B386DAB1971651C0033352F /* an1-12.png in Resources */,
 				0B0CBFCF1983BD3000C1D89C /* an2-10.png in Resources */,
 				0B2015DD19602D1800184EF3 /* an1-11.png in Resources */,
 				0B0CC0AF1983F2B700C1D89C /* rabbit.png in Resources */,
+				0BF5823A1995051A0035CA4C /* baby2.png in Resources */,
 				0BFE836C197EBB0E00499DC0 /* level23-3.png in Resources */,
 				0B386DBE197166120033352F /* level16-2.png in Resources */,
 				0B0CC04B1983C21C00C1D89C /* an1-1.png in Resources */,
@@ -1209,10 +1233,11 @@
 				0B31FF15198FC9FF002EB700 /* animalShare.png in Resources */,
 				0BDAD722198007680028CC42 /* level20-5.png in Resources */,
 				0B106CDB195E63D3003023C1 /* level.png in Resources */,
+				0BF5823C1995051A0035CA4C /* baby0.png in Resources */,
 				0B09B4C2195261C200C2E529 /* an1-26.png in Resources */,
 				0B0CC0241983BD5B00C1D89C /* level6-5.png in Resources */,
 				0BDAD70E198000190028CC42 /* level19-4.png in Resources */,
-				0B0CC08E1983DE3D00C1D89C /* an2.png in Resources */,
+				0B0CC08E1983DE3D00C1D89C /* an2-3.png in Resources */,
 				0BDAD710198000190028CC42 /* level19-2.png in Resources */,
 				0B0CC0911983DE3D00C1D89C /* level3-1.png in Resources */,
 				0B0CC0121983BD5B00C1D89C /* level2-4.png in Resources */,
@@ -1221,6 +1246,7 @@
 				0B0CC0471983BD6F00C1D89C /* pic8.png in Resources */,
 				0B0CC0331983BD5B00C1D89C /* level9-5.png in Resources */,
 				0B386DDC197167910033352F /* an3-18.png in Resources */,
+				0BF58230199504220035CA4C /* rewardPage.png in Resources */,
 				0B386DCA197167030033352F /* an3-17.png in Resources */,
 				0BFA448C19698FB300EEE50C /* prior.png in Resources */,
 				0B0CC01E1983BD5B00C1D89C /* level5-4.png in Resources */,
@@ -1276,6 +1302,7 @@
 				0B106CE5195E6470003023C1 /* sport.png in Resources */,
 				0B386DCE197167030033352F /* level17-4.png in Resources */,
 				0B386DD0197167030033352F /* level17-2.png in Resources */,
+				0BF58241199506720035CA4C /* rewardViewController.xib in Resources */,
 				0B5D8A4F198E2FBA000D05A9 /* 动物4inch.png in Resources */,
 				0B0CBFCB1983BD3000C1D89C /* an2-6.png in Resources */,
 				0B0CC0341983BD5B00C1D89C /* level10-1.png in Resources */,
@@ -1307,7 +1334,7 @@
 				0B0CBFDD1983BD3E00C1D89C /* an3-4.png in Resources */,
 				0BFE8368197EBB0E00499DC0 /* an3-23.png in Resources */,
 				0BFA448B19698FB300EEE50C /* next.png in Resources */,
-				0B0CC08F1983DE3D00C1D89C /* an1.png in Resources */,
+				0B0CC08F1983DE3D00C1D89C /* an1-3.png in Resources */,
 				0BE582CB193F25FB00EEAB26 /* Main.storyboard in Resources */,
 				0B386DC9197167030033352F /* pic17.png in Resources */,
 				0B386DA91971651C0033352F /* level12-5.png in Resources */,
@@ -1323,11 +1350,12 @@
 				0B0CC0B71983F2B700C1D89C /* 青蛙.png in Resources */,
 				0B386D971971625B0033352F /* level29-2.png in Resources */,
 				0BDAD712198000190028CC42 /* an3-19.png in Resources */,
-				0B0CC08D1983DE3D00C1D89C /* an3.png in Resources */,
+				0B0CC08D1983DE3D00C1D89C /* an3-3.png in Resources */,
 				0BE3CFD31966FF8A00C8235F /* board.png in Resources */,
 				0B0CC0711983D2BF00C1D89C /* 蜗牛.wav in Resources */,
 				0B386D8919715F360033352F /* pic15.png in Resources */,
 				0B0CC0651983D2BF00C1D89C /* dog.wav in Resources */,
+				0BF5823B1995051A0035CA4C /* baby1.png in Resources */,
 				0B09B4C4195261C200C2E529 /* an2-26.png in Resources */,
 				0B0CC0B21983F2B700C1D89C /* 狗.png in Resources */,
 				0B0CC0B11983F2B700C1D89C /* snail.png in Resources */,
@@ -1362,7 +1390,7 @@
 				0BE582F2193F285200EEAB26 /* answer.m in Sources */,
 				0BDBD805194EC8BB00643495 /* teachingView.m in Sources */,
 				0BA79F691956839700ACA06B /* gameLevelController.m in Sources */,
-				0B5D8A4B198E2ED0000D05A9 /* AfterTakePicViewController.m in Sources */,
+				0BF58240199506720035CA4C /* rewardViewController.m in Sources */,
 				0B4EF0CE195C4E1A0093A863 /* CustomIOS7AlertView.m in Sources */,
 				0BE582C4193F25FB00EEAB26 /* main.m in Sources */,
 			);
@@ -1418,7 +1446,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1457,7 +1484,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1521,7 +1547,6 @@
 		0BE582EA193F25FB00EEAB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/completeImage.app/completeImage";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1544,7 +1569,6 @@
 		0BE582EB193F25FB00EEAB26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/completeImage.app/completeImage";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

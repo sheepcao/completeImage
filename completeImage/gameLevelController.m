@@ -21,6 +21,9 @@ double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.2
 double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/1,1,1,1,1,/**/1,1,1,1,1/**/};
 double largeEmpty[bigLevel] = {122.22,0,0,0,0,0};
 bool haveFixed[MAXlevel] = {NO};
+bool notJumpOver = NO;
+
+
 
 NSArray *wordsCN;
 NSArray *wordsEN;
@@ -67,28 +70,7 @@ NSMutableArray  *arrayGif;
     
     [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
     
-    
-
-//    for (int i=1; i<4; i++) {
-//        UIImage *gif = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Q%d",4-i] ofType:@"png"]];
-//        [arrayGif addObject:gif];
-//        [arrayGif addObject:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"透明" ofType:@"png"]]];
-//    }
-
-    /*  使用webview播放gif，背景只能是白色。
-    self.emptyGif = @"questionMark.gif";
-    NSArray *gifArray = [ self.emptyGif componentsSeparatedByString:@"."];
-    
-    // 读取gif图片数据
-    NSData *gif = [NSData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:[gifArray objectAtIndex:0] ofType:[gifArray objectAtIndex:1]]];
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
-    self.webView.backgroundColor = [UIColor clearColor];
-    self.webView.userInteractionEnabled = NO;//用户不可交互
-    [self.webView loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    [self.empty addSubview:self.webView];
-    [self.webView setHidden:YES];
-    */
-    self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"animalBackground" ofType:@"png"]]];
+     self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"animalBackground" ofType:@"png"]]];
     
 }
 
@@ -337,6 +319,7 @@ NSMutableArray  *arrayGif;
 -(void)correctAnswer{
     
     
+    notJumpOver = YES;
     [self.nextButton setEnabled:NO];
     [self.priorButton setEnabled:NO];
     
@@ -431,24 +414,18 @@ NSMutableArray  *arrayGif;
 }
 
 -(void)wrongAnswer{
-    /*
-     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"sorry！"
-     message:@"是这样么？再想想！"
-     delegate:nil
-     cancelButtonTitle:@"再看看"
-     otherButtonTitles:nil];
-     
-     [ alert  show];
-     */
+    
+    int scoreTemp = [[scores objectAtIndex:((level-1)/10)] intValue];
+    
+    [scores setObject:[NSNumber numberWithInt:(scoreTemp +1)] atIndexedSubscript:((level-1)/10)];
+    
+    
     if([self.teachView superview])
     {
         [self.teachView removeFromSuperview];
     }
     
     self.wrongLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 70, 160, 120)];
-  //  [self.wrongLabel setText:@"错误"];
-
-
     self.wrongLabel.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"board" ofType:@"png"]]];
     self.wrongLabel.textAlignment = NSTextAlignmentCenter;
     UIImageView *cryFace = [[UIImageView alloc] initWithFrame:CGRectMake(45, 25, 70, 70)];
@@ -510,24 +487,42 @@ NSMutableArray  *arrayGif;
 - (IBAction)nextLevel {
     
     [arrayM removeAllObjects];
+    if (!notJumpOver) {
+        int scoreTemp = [[scores objectAtIndex:((level-1)/10)] intValue];
+        
+        [scores setObject:[NSNumber numberWithInt:(scoreTemp +2)] atIndexedSubscript:((level-1)/10)];
+    }
     
-    if (level%10==0 && [haveShared[level/11] isEqualToString:@"0"])
+    
+    if (level%10==0
+/*&& [haveShared[level/11] isEqualToString:@"0"]*/)
     {
+//        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
+        rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
+        myReward.frontImageName = @"flowerPhoto";
+        myReward.levelReward = [[NSNumber alloc] initWithInt:((level-1)/10)];
+        myReward.afterShutter = NO;
+        myReward.backImage.image = nil;
+
         
-        sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
-        myShare.frontImageName = @"flowerPhoto";
-        
-        myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:myShare animated:YES completion:Nil ];
+        myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:myReward animated:YES completion:Nil ];
+
         
     }
 
+    [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.35f];
+    
+    }
+-(void)changeImgs
+{
     
     if (haveFixed[level-1]) {
         
         if (level<MAXlevel) {
             level++;
-            
+            notJumpOver = NO;
+
             [self.myImg setEmptyX:posX[level-1] Y:posY[level-1]];
             [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
             [self.teachView setWordsAndSound:wordsCN[level-1] english:wordsEN[level-1] soundCN:wordsCN[level-1] soundEN:wordsEN[level-1]];
@@ -539,7 +534,18 @@ NSMutableArray  *arrayGif;
             
         }
     }
+
 }
+
+//-(void)switchToReward
+//{
+//    
+//    rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
+//    myReward.frontImageName = @"flowerPhoto";
+//    
+//    myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self presentViewController:myReward animated:YES completion:Nil ];
+//}
 
 - (IBAction)backToLevel {
     
@@ -552,6 +558,8 @@ NSMutableArray  *arrayGif;
     
     sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
     myShare.frontImageName = @"animalShare";
+    myShare.afterShutter = NO;
+    myShare.backImage.image = nil;
     
     myShare.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:myShare animated:YES completion:Nil ];

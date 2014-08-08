@@ -1,17 +1,22 @@
 //
-//  sharePhotoViewController.h
+//  rewardViewController.h
 //  completeImage
 //
-//  Created by 张力 on 14-6-23.
+//  Created by 张力 on 14-8-8.
 //  Copyright (c) 2014年 张力. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-//#import "sharePhotoViewController.h"
 #import "globalVar.h"
-//#import "AfterTakePicViewController.h"
 
-@interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface rewardViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *goCamera;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImg;
+@property (weak, nonatomic) IBOutlet UIImageView *babyRewordImg;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+@property (weak, nonatomic) IBOutlet UIView *topBar;
+@property (strong, nonatomic) NSNumber *levelReward;
+
 
 @property (strong, nonatomic)  UIImageView *frontImage;
 @property (strong, nonatomic)  UIImageView *backImage;
@@ -27,8 +32,11 @@
 @property (nonatomic ,strong) UIImagePickerController *picker;
 @property BOOL afterShutter;
 
+
 - (IBAction)saveImage:(id)sender;
-- (IBAction)photograph:(id)sender;
-- (IBAction)returnToGame:(UIButton *)sender;
+
+
+- (IBAction)goPhotograph;
+- (IBAction)backButton;
 
 @end

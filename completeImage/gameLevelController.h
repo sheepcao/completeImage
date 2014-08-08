@@ -10,11 +10,12 @@
 #import "uncompleteImage.h"
 #import "teachingView.h"
 #import "sharePhotoViewController.h"
+#import "rewardViewController.h"
 #import "globalVar.h"
 
 static const int MAXlevel = 20;
 static const int MAXanswer = 3;
-static const int bigLevel = 6;
+//static const int bigLevel = 6;
 
 bool levelLock[bigLevel];
 
