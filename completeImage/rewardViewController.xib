@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="rewardViewController">
             <connections>
                 <outlet property="babyRewordImg" destination="6Xc-6f-uvN" id="MBI-Iw-Pag"/>
+                <outlet property="babyTextImg" destination="ziD-RK-zxB" id="y3o-nk-V0x"/>
                 <outlet property="backBtn" destination="Ewz-aF-4TD" id="ZFC-xg-JC4"/>
                 <outlet property="backgroundImg" destination="Yhw-PP-Ggf" id="u5X-Q5-Db2"/>
                 <outlet property="goCamera" destination="xa0-Ww-iKe" id="NaM-gC-ncn"/>
@@ -23,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-Ww-iKe">
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-Ww-iKe">
                     <rect key="frame" x="92" y="382" width="139" height="96"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="goPhoto.png">
@@ -34,11 +35,11 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Xc-6f-uvN">
-                    <rect key="frame" x="75" y="62" width="170" height="170"/>
+                    <rect key="frame" x="75" y="568" width="170" height="170"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-Cc-GQk">
-                    <rect key="frame" x="0.0" y="-1" width="320" height="58"/>
+                    <rect key="frame" x="0.0" y="-1" width="320" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-aF-4TD">
@@ -55,6 +56,10 @@
                     </subviews>
                     <color key="backgroundColor" red="0.95686274509803915" green="0.74117647058823533" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ziD-RK-zxB">
+                    <rect key="frame" x="40" y="209" width="240" height="134"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

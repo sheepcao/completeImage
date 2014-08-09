@@ -182,19 +182,12 @@ NSMutableArray  *arrayGif;
     }else
     {
         [self.nextButton setEnabled:YES];
-        /*当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
-        if (levelTop == MAXlevel+1) {
-            
-            [self.shareBtn setHidden:NO];
-            
-        }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
-          [self.shareBtn setHidden:NO];
-        }
-         
-         share change task.
-         */
+  
         
     }
+    
+    [self.animationBegin setHidden:YES];//每关开始不可点击。
+
  
 }
 
@@ -271,14 +264,14 @@ NSMutableArray  *arrayGif;
             
             
             
-            [NSTimer scheduledTimerWithTimeInterval:1.2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
             
             
         }
         else
         {
             
-            [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
             
             
         }
@@ -499,7 +492,7 @@ NSMutableArray  *arrayGif;
     {
 //        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
         rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
-        myReward.frontImageName = @"flowerPhoto";
+        myReward.frontImageName = @"animalShare";
         myReward.levelReward = [[NSNumber alloc] initWithInt:((level-1)/10)];
         myReward.afterShutter = NO;
         myReward.backImage.image = nil;

@@ -59,6 +59,8 @@
     
     self.frontImage = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 0, 320, self.shareView.frame.size.height)];
     self.backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, -IPhoneHeight*60/568, 320, 426)];
+    self.rewardImage = [[UIImageView alloc] initWithFrame:CGRectMake(-300,-300,300 ,300)];//frame for animation.
+    
     [self.frontImage setClipsToBounds:YES];
     [self.backImage setClipsToBounds:YES];
     
@@ -69,6 +71,8 @@
     [self.shareView addSubview:self.backImage];
     [self.shareView sendSubviewToBack:self.backImage];
     [self.shareView addSubview:self.frontImage];
+    [self.shareView addSubview:self.rewardImage];
+    [self.shareView bringSubviewToFront:self.rewardImage];
     
     
     
@@ -83,16 +87,11 @@
     [self.savePic setImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
     [self.savePic addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
     
-
-    
     [self.view addSubview:self.shareView];
     [self.view sendSubviewToBack:self.shareView];
     
-
-    
     [self.view addSubview:self.share];
     [self.share setHidden:YES];
-    
     [self.view addSubview:self.retakeButton];
     [self.view addSubview:self.savePic];
     
@@ -103,18 +102,138 @@
     [self.view bringSubviewToFront: self.topBar];
     [self.view bringSubviewToFront: self.babyRewordImg];
     [self.view bringSubviewToFront: self.goCamera];
-    _afterShutter = NO;
+    [self.view bringSubviewToFront:self.babyTextImg];
+    
+//    [self performSelector:@selector(animationStart) onThread:[[NSThread alloc] init] withObject:nil waitUntilDone:NO];
+    
+    
+        _afterShutter = NO;
 
 }
+
+-(void)animationStart
+{
+    NSLog(@"hhhhhaa");
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(goBigSmall) object:nil];
+    
+    [thread start];
+
+    
+
+}
+-(void)goBigSmall
+{
+    self.babyRewordImg.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"bigsmall"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:2.5];
+    self.babyRewordImg.frame=CGRectMake(-10 , 160, 340, 340);
+    [UIView setAnimationDidStopSelector:@selector(gosmall)];
+    [UIView commitAnimations];
+}
+-(void)gosmall
+{
+    
+    self.babyRewordImg.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"small"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:0.3];
+    self.babyRewordImg.frame=CGRectMake(75 , 62, 170, 170);
+    [UIView setAnimationDidStopSelector:@selector(fadeIn)];
+    [UIView commitAnimations];
+    
+}
+
+-(void)fadeIn
+{
+    self.babyTextImg.transform = CGAffineTransformIdentity;
+    self.goCamera.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"fadeIn"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:1.5];
+    self.goCamera.alpha = 1.0;
+    self.babyTextImg.alpha = 1.0;
+    [UIView commitAnimations];
+
+    
+}
+
+//- (UIImageView *)rotate360DegreeWithImageView:(UIImageView *)imageView {
+//    CABasicAnimation *animation = [ CABasicAnimation
+//                                   animationWithKeyPath: @"transform" ];
+//    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+//    //围绕Z轴旋转，垂直与屏幕
+//    animation.toValue = [ NSValue valueWithCATransform3D:
+//                         CATransform3DMakeRotation(M_PI/2, 0.0, 0.0, 1.0) ];
+//    animation.duration = 0.4;
+//    //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
+//    animation.cumulative = YES;
+//    animation.repeatCount = 16;
+////    animation.removedOnCompletion = YES;
+//    CGRect imageRrect = CGRectMake(0, 0,imageView.frame.size.width, imageView.frame.size.height);
+//    UIGraphicsBeginImageContext(imageRrect.size);
+//    [imageView.image drawInRect:imageRrect];
+//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    [imageView.layer addAnimation:animation forKey:nil ];
+//    return imageView;
+//}
+//
+//- (UIImageView *)bigWithImageView:(UIImageView *)imageView {
+//    CABasicAnimation *animation = [ CABasicAnimation
+//                                   animationWithKeyPath: @"transform" ];
+//    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+//    //围绕Z轴旋转，垂直与屏幕
+//    animation.toValue = [ NSValue valueWithCATransform3D:CATransform3DMakeScale(1.5, 1.5,1.5 )
+//                         ];
+//
+//    animation.duration = 0.5;
+//    //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
+//    animation.cumulative = YES;
+//    animation.repeatCount = 2;
+////    animation.removedOnCompletion = YES;
+//    CGRect imageRrect = CGRectMake(0, 0,imageView.frame.size.width, imageView.frame.size.height);
+//    UIGraphicsBeginImageContext(imageRrect.size);
+//    [imageView.image drawInRect:imageRrect];
+//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    [imageView.layer addAnimation:animation forKey:nil ];
+//    return imageView;
+//}
+//
+//- (UIImageView *)smallWithImageView:(UIImageView *)imageView {
+//    CABasicAnimation *animation = [ CABasicAnimation
+//                                   animationWithKeyPath: @"transform" ];
+//    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+//    animation.toValue = [ NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5,0.5 )
+//                         ];
+//    animation.duration = 0.4;
+//    //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
+//    animation.cumulative = YES;
+//    animation.repeatCount = 1;
+////    animation.removedOnCompletion = YES;
+//    CGRect imageRrect = CGRectMake(0, 0,imageView.frame.size.width, imageView.frame.size.height);
+//    UIGraphicsBeginImageContext(imageRrect.size);
+//    [imageView.image drawInRect:imageRrect];
+//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    [imageView.layer addAnimation:animation forKey:nil ];
+//    return imageView;
+//}
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
+    [self.rewardImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
+    [self.babyTextImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"babyText%d",[self countBabyLevel]]]];
+
+
     
     if (_afterShutter){
         [self.goCamera setHidden:YES];
         [self.backgroundImg setHidden:YES];
         [self.babyRewordImg setHidden:YES];
+        [self.babyTextImg setHidden:YES];
         [self.share setHidden:NO];
         [self.retakeButton setHidden:NO];
         [self.savePic setHidden:NO];
@@ -133,13 +252,21 @@
         [self.goCamera setHidden:NO];
         [self.backgroundImg setHidden:NO];
         [self.babyRewordImg setHidden:NO];
+        [self performSelector:@selector(animationStart) withObject:nil afterDelay:0.15f];
+        
         //   [self.saveImage setHidden:YES];
         
     }
 
     
 }
-
+//
+//-(void)start
+//{
+//    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(animationStart) object:nil];
+//
+//    [thread start];
+//}
 
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -287,8 +414,28 @@
     
     
     self.backImage.image = image;
+    [self performSelector:@selector(goAttachThread) withObject:nil afterDelay:0.5f];
+    
+
     
     
+}
+
+-(void)goAttachThread
+{
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(goAttach) object:nil];
+    
+    [thread start];
+}
+
+-(void)goAttach
+{
+    self.rewardImage.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"goAttach"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:1.0];
+    self.rewardImage.frame=CGRectMake(self.shareView.frame.size.width-170, self.shareView.frame.size.height-140,170 ,170);
+    [UIView commitAnimations];
 }
 
 - (IBAction)backButton {

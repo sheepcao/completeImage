@@ -15,11 +15,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *babyRewordImg;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
+@property (weak, nonatomic) IBOutlet UIImageView *babyTextImg;
 @property (strong, nonatomic) NSNumber *levelReward;
 
 
 @property (strong, nonatomic)  UIImageView *frontImage;
 @property (strong, nonatomic)  UIImageView *backImage;
+@property (strong, nonatomic)  UIImageView *rewardImage;
+
 @property (weak, nonatomic)  NSString *frontImageName;
 @property (nonatomic ,strong)UIView *SharePhotoView;
 //@property (nonatomic ,strong) UIButton *saveImage;
