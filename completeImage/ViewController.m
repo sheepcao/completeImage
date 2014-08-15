@@ -23,6 +23,14 @@ bool levelLock[bigLevel];
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+    }else
+    {
+        [self.view setFrame:CGRectMake(0, 0, 320, 568)];
+
+    }
+
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
     levelTop = [[ud objectForKey:@"saveLevel"] intValue];

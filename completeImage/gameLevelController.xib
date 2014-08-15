@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="gameLevelController">
             <connections>
-                <outlet property="animationBegin" destination="IaC-yr-cjx" id="djo-j4-ZiW"/>
-                <outlet property="answer1" destination="Mmy-ei-4QT" id="BFs-2u-Lhd"/>
-                <outlet property="answer2" destination="z5r-Yd-VcV" id="Ocs-k0-I2J"/>
-                <outlet property="answer3" destination="9N4-Qj-IWs" id="iS9-Be-LtN"/>
                 <outlet property="levelCount" destination="jbD-O6-huF" id="qn4-QA-gFD"/>
                 <outlet property="nextButton" destination="WNi-8j-2YR" id="B2u-MI-NHY"/>
-                <outlet property="picture" destination="e6a-hj-4IY" id="vhY-Gr-EpI"/>
                 <outlet property="priorButton" destination="eer-2c-cpw" id="Y2f-FQ-iz0"/>
                 <outlet property="shareBtn" destination="dwA-YO-eL5" id="9Ng-Kh-onk"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -23,28 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6a-hj-4IY">
-                    <rect key="frame" x="33" y="189" width="250" height="230"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-ei-4QT">
-                    <rect key="frame" x="33" y="443" width="55" height="55"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
-                </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5r-Yd-VcV">
-                    <rect key="frame" x="131" y="443" width="55" height="55"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
-                </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N4-Qj-IWs">
-                    <rect key="frame" x="228" y="443" width="55" height="55"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Button" backgroundImage="choiceBackground.png"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-QC-2vU">
                     <rect key="frame" x="15" y="23" width="53" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,16 +74,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaC-yr-cjx">
-                    <rect key="frame" x="33" y="189" width="250" height="230"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="animationTapped:" destination="-1" eventType="touchUpInside" id="cxu-or-kGl"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -119,7 +83,6 @@
     <resources>
         <image name="camera.png" width="98" height="69"/>
         <image name="camera2.png" width="100" height="69"/>
-        <image name="choiceBackground.png" width="225" height="225"/>
         <image name="next.png" width="211" height="135"/>
         <image name="prior.png" width="211" height="135"/>
         <image name="returnTapped.png" width="143" height="100"/>

@@ -13,6 +13,7 @@
 #import "rewardViewController.h"
 #import "globalVar.h"
 
+
 static const int MAXlevel = 20;
 static const int MAXanswer = 3;
 //static const int bigLevel = 6;
@@ -20,7 +21,7 @@ static const int MAXanswer = 3;
 bool levelLock[bigLevel];
 
 
-@interface gameLevelController : UIViewController
+@interface gameLevelController : UIViewController<ADBannerViewDelegate,GADBannerViewDelegate>
 {
     int correct[MAXlevel];
 }
@@ -28,11 +29,11 @@ bool levelLock[bigLevel];
 @property (strong, nonatomic) UIImage *backgroundImg;
 //@property (strong, nonatomic) NSString *backgroundNames;
 
-@property (weak, nonatomic) IBOutlet UIButton *animationBegin;
-@property (weak, nonatomic) IBOutlet UIImageView *picture;
-@property (weak, nonatomic) IBOutlet UIButton *answer1;
-@property (weak, nonatomic) IBOutlet UIButton *answer2;
-@property (weak, nonatomic) IBOutlet UIButton *answer3;
+@property (strong, nonatomic)  UIButton *animationBegin;
+@property (strong, nonatomic)  UIImageView *picture;
+@property (strong, nonatomic)  UIButton *answer1;
+@property (strong, nonatomic)  UIButton *answer2;
+@property (strong, nonatomic)  UIButton *answer3;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *priorButton;
 @property (strong,nonatomic) NSMutableArray *choices;
@@ -40,11 +41,17 @@ bool levelLock[bigLevel];
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UILabel *levelCount;
 @property (strong, nonatomic) teachingView *teachView;
-@property (strong, nonatomic) UILabel *wrongLabel;
+@property (strong, nonatomic) UIImageView *wrongLabel;
 @property (strong,nonatomic) uncompleteImage *myImg;
 @property (strong,nonatomic) NSString *emptyGif;
 @property (strong,nonatomic) UIWebView *webView;
 @property (strong,nonatomic) UIImageView *questionMark;
+
+@property (strong, nonatomic) ADBannerView *iAdBannerView;
+@property (strong, nonatomic) GADBannerView *gAdBannerView;
+//@property (strong, nonatomic) NSNumber *failLoadiAD;
+@property (nonatomic, assign) BOOL bannerIsVisible;
+
 - (IBAction)priorLevel;
 - (IBAction)nextLevel;
 - (IBAction)backToLevel;

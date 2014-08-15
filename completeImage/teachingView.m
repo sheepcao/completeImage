@@ -37,10 +37,29 @@ SystemSoundID soundEN;
     self = [super init];
 
     if (self) {
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
+        
+        if ([[UIScreen mainScreen] bounds].size.height == 480) {
+            
+            self.frame = CGRectMake(80, 60, 160, 100);
+            self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(20, 15, 110, 35)];
+            self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(20, 55, 110, 35)];
+            
+        }else
+        {
+            self.frame = CGRectMake(80, 70, 160, 120);
+            
+            self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(10, 13, 140, 45)];
+            self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(10, 62, 140, 45)];
+            
+        }
+        
+        UIImageView *backImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        [backImg setImage:[UIImage imageNamed:@"board" ]];
+        [backImg setContentMode:UIViewContentModeScaleToFill];
+        [self addSubview:backImg];
+//        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
+        
 
-        self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(10, 13, 140, 45)];
-        self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(10, 62, 140, 45)];
  /*//       self.answerCN .backgroundColor =[UIColor greenColor];
         [self.answerCN setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.answerEN setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
