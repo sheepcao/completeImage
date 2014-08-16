@@ -9,12 +9,12 @@
 #ifndef completeImage_globalVar_h
 #define completeImage_globalVar_h
 
-#define IPhoneHeight (([UIScreen mainScreen].bounds.size.height == 568.0)?568:480)
-#define bigLevel 6
+#define IPhoneHeight (([UIScreen mainScreen].bounds.size.height == 568.0)?568:460)
+#define bigLevel 5
 #import <iAd/iAd.h>
 #import "GADBannerView.h"
 #define ADMOB_ID @"ca-app-pub-3074684817942615/4079653086"
-
+#import <ShareSDK/ShareSDK.h>
 
 
 int level ;

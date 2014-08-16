@@ -197,7 +197,8 @@ CGFloat buttonSpacerHeight = 0;
     [dialogContainer.layer insertSublayer:gradient atIndex:0];
 
     dialogContainer.layer.cornerRadius = cornerRadius;
-    dialogContainer.layer.borderColor = [[UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f] CGColor];
+//    dialogContainer.layer.borderColor = [[UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f] CGColor];
+    dialogContainer.layer.borderColor = [UIColor clearColor].CGColor;
     dialogContainer.layer.borderWidth = 1;
     dialogContainer.layer.shadowRadius = cornerRadius + 5;
     dialogContainer.layer.shadowOpacity = 0.1f;
@@ -207,7 +208,8 @@ CGFloat buttonSpacerHeight = 0;
 
     // There is a line above the button
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, dialogContainer.bounds.size.height - buttonHeight - buttonSpacerHeight, dialogContainer.bounds.size.width, buttonSpacerHeight)];
-    lineView.backgroundColor = [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
+//    lineView.backgroundColor = [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
+    lineView.backgroundColor = [UIColor clearColor];
     [dialogContainer addSubview:lineView];
     // ^^^
 

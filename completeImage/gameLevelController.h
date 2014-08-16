@@ -14,7 +14,7 @@
 #import "globalVar.h"
 
 
-static const int MAXlevel = 20;
+static const int MAXlevel = 50;
 static const int MAXanswer = 3;
 //static const int bigLevel = 6;
 

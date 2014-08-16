@@ -18,13 +18,23 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) CustomIOS7AlertView *lockedAlert;
-- (IBAction)animalBtn:(UIButton *)sender;
 
+@property (strong, nonatomic) UIButton *animal;
+@property (strong, nonatomic) UIButton *plant;
+@property (strong, nonatomic) UIButton *food ;
+@property (strong, nonatomic) UIButton *sport;
+@property (strong, nonatomic) UIButton *livingGood;
+@property (strong, nonatomic) UIButton *moreFun;
+@property (strong, nonatomic) UIButton *aboutUs;
+@property (strong, nonatomic) UIButton *shareApp;
+
+
+
+- (IBAction)animalBtn:(UIButton *)sender;
 - (IBAction)sportBtn:(UIButton *)sender;
 - (IBAction)livingGoodBtn:(UIButton *)sender;
 - (IBAction)plantBtn:(UIButton *)sender;
 - (IBAction)foodBtn:(UIButton *)sender;
-- (IBAction)moreBtn:(UIButton *)sender;
 
 
 @end

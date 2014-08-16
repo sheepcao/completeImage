@@ -7,11 +7,41 @@
 //
 
 #import "AppDelegate.h"
+#import "WeiboSDK.h"
+#import "WXApi.h"
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [ShareSDK registerApp:@"2a5d674d9a31"];
+    [ShareSDK connectWeChatWithAppId:@"wx4e1ffebe5397b9ef" wechatCls:[WXApi class]];
+//    [ShareSDK  connectSinaWeiboWithAppKey:@"2794760105"
+//                                appSecret:@"31dbf958ccc3fa37f6e99cf0ec643c5e"
+//                              redirectUri:@"https://www.weibo.com/"
+//                              weiboSDKCls:[WeiboSDK class]];
+    [ShareSDK connectSinaWeiboWithAppKey:@"2794760105"
+                               appSecret:@"31dbf958ccc3fa37f6e99cf0ec643c5e"
+                             redirectUri:@"https://www.weibo.com/"];
+
+    
+
+    
+    [ShareSDK connectQQWithAppId:@"1102040569" qqApiCls:[QQApi class]];
+    [ShareSDK connectQZoneWithAppKey:@"1102040569"
+                           appSecret:@"Mwz2RaYqfPrB2wit"
+                   qqApiInterfaceCls:[QQApiInterface class]
+                     tencentOAuthCls:[TencentOAuth class]];
+    
+    
+    [ShareSDK connectFacebookWithAppKey:@"746495262075375"
+                              appSecret:@"7f7416a1a6d46dee6999dca7d242e566"];
+    
+    
+    
     // Override point for customization after application launch.
     scores = [[NSMutableArray alloc] initWithCapacity:bigLevel];
     

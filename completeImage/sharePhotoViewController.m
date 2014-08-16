@@ -41,6 +41,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+     
+        
+    }else
+    {
+        [self.view setFrame:CGRectMake(0, 0, 320, 568)];
+    }
+    
     self.shareView = [[UIView alloc] initWithFrame:CGRectMake(0, IPhoneHeight*60/568, 320, IPhoneHeight - IPhoneHeight*73/568 - IPhoneHeight*60/568)];
     self.shareView.backgroundColor = [UIColor clearColor];
     
@@ -122,7 +131,15 @@
         [self.share setHidden:NO];
         [self.retakeButton setHidden:NO];
         [self.savePic setHidden:NO];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
+        
+        if ([[UIScreen mainScreen] bounds].size.height == 480) {
+            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]]];
+        }else
+        {
+            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
+        }
+
+//        self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
         [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
        // [self.saveImage setHidden:NO];
 
@@ -185,7 +202,15 @@
     
   //  [UIApplication sharedApplication].statusBarHidden = YES;
     self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight)];
-    [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+    
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+
+        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
+    }else
+    {
+        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+    }
+
     UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight*60/568)];
 //    topBar.backgroundColor = [UIColor colorWithRed:255/255.0f green:167/255.0f blue:22/255.0f alpha:1.0f];
     topBar.backgroundColor = [UIColor clearColor];
@@ -215,7 +240,16 @@
     
 
     UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, topBar.frame.size.height, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
-    [backImage setImage:[UIImage imageNamed:@"animalShare"]];
+    
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        [backImage setImage:[UIImage imageNamed:@"animalShare480"]];
+        
+    }else
+    {
+        [backImage setImage:[UIImage imageNamed:@"animalShare"]];
+        
+    }
+//    [backImage setImage:[UIImage imageNamed:@"animalShare"]];
     
     
 //    self.aBtn = [[UIButton alloc] init] ;

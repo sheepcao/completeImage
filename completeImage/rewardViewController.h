@@ -10,12 +10,12 @@
 #import "globalVar.h"
 
 @interface rewardViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *goCamera;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImg;
+@property (strong, nonatomic) IBOutlet UIButton *goCamera;
+@property (strong, nonatomic)  UIImageView *backgroundImg;
 @property (weak, nonatomic) IBOutlet UIImageView *babyRewordImg;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIView *topBar;
-@property (weak, nonatomic) IBOutlet UIImageView *babyTextImg;
+@property (strong, nonatomic) IBOutlet UIImageView *babyTextImg;
 @property (strong, nonatomic) NSNumber *levelReward;
 
 
