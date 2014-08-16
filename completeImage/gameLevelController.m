@@ -44,11 +44,11 @@ NSMutableArray  *arrayGif;
     }
     NSLog(@"levelTop:%d,fixed:%d",levelTop,haveFixed[levelTop-1]);
     
-    self.answer1 = [[UIButton alloc] initWithFrame:CGRectMake(33, 470, 55, 55)];
+    self.answer1 = [[UIButton alloc] initWithFrame:CGRectMake(33, 450, 55, 55)];
     self.answer1.tag = 1;
-    self.answer2 = [[UIButton alloc] initWithFrame:CGRectMake(131, 470, 55, 55)];
+    self.answer2 = [[UIButton alloc] initWithFrame:CGRectMake(131, 450, 55, 55)];
     self.answer2.tag = 2;
-    self.answer3 = [[UIButton alloc] initWithFrame:CGRectMake(228, 470, 55, 55)];
+    self.answer3 = [[UIButton alloc] initWithFrame:CGRectMake(228, 450, 55, 55)];
     self.answer3.tag = 3;
 
     [self.answer1 setBackgroundImage:[UIImage imageNamed:@"choiceBackground"] forState:UIControlStateNormal];
@@ -63,7 +63,7 @@ NSMutableArray  *arrayGif;
         
         self.picture = [[UIImageView alloc] initWithFrame: CGRectMake(33, 157, 250, 230)];
         self.animationBegin = [[UIButton alloc] initWithFrame:CGRectMake(33, 157, 250, 230)];
-        posY[level-1] -=32;
+        posY[level-1] -=31;
 
         [self.answer1 setFrame:CGRectMake(33, 400, 55, 55)];
         [self.answer2 setFrame:CGRectMake(131, 400, 55, 55)];
@@ -73,7 +73,7 @@ NSMutableArray  *arrayGif;
     {
         self.picture = [[UIImageView alloc] initWithFrame:CGRectMake(33, 190, 250, 230)];
         self.animationBegin = [[UIButton alloc] initWithFrame:CGRectMake(33, 190, 250, 230)];
-        
+        posY[level-1] +=1;
     }
     [self.view addSubview:self.answer1];
     [self.view addSubview:self.answer2];
@@ -115,33 +115,34 @@ NSMutableArray  *arrayGif;
     
     
   //set ad......iad and admob
-    
-    self.iAdBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
-    
-    [self.iAdBannerView setDelegate:self];
-    self.iAdBannerView.backgroundColor = [UIColor clearColor];
-    
-    [self.view addSubview:self.iAdBannerView];
-    self.bannerIsVisible = YES;
-    
-    self.gAdBannerView = [[GADBannerView alloc]
-                          initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
-    
-    self.gAdBannerView.adUnitID = ADMOB_ID;//调用id
-    
-    self.gAdBannerView.delegate = self;
-    self.gAdBannerView.rootViewController = self;
-    self.gAdBannerView.backgroundColor = [UIColor clearColor];
-    [self.gAdBannerView loadRequest:[GADRequest request]];
-    
-
-    
+    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+        self.iAdBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
+        
+        [self.iAdBannerView setDelegate:self];
+        self.iAdBannerView.backgroundColor = [UIColor clearColor];
+        
+        [self.view addSubview:self.iAdBannerView];
+        self.bannerIsVisible = YES;
+        
+        self.gAdBannerView = [[GADBannerView alloc]
+                              initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
+        
+        self.gAdBannerView.adUnitID = ADMOB_ID;//调用id
+        
+        self.gAdBannerView.delegate = self;
+        self.gAdBannerView.rootViewController = self;
+        self.gAdBannerView.backgroundColor = [UIColor clearColor];
+        [self.gAdBannerView loadRequest:[GADRequest request]];
+        
+        
+    }    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 
 {
     
+
 
     [self.animationBegin setHidden:YES];
     
@@ -163,16 +164,7 @@ NSMutableArray  *arrayGif;
     }else
     {
         [self.nextButton setEnabled:YES];
-        /*当前关卡所在主题为解锁状态并且当前进度和最高进度不在同一个主题，说明当前关卡应支持分享。
-        if (levelTop == MAXlevel+1) {
-            
-            [self.shareBtn setHidden:NO];
-            
-        }else if ((!levelLock[(level-1)/10]) && ((levelTop-1)/10!=(level-1)/10)) {
-            [self.shareBtn setHidden:NO];
-        }
-         share change task.
-         */
+
     }
     
     if (arrayGif.count>0) {

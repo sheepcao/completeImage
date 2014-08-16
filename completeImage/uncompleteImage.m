@@ -34,6 +34,13 @@ const int EMPTY_AREA_EDGE = 55;
 -(void)setEmptyX:(NSInteger)pos_x Y:(NSInteger)pos_y
 {
     if (self) {
+        if ([[UIScreen mainScreen] bounds].size.height == 480) {
+            pos_y -=31;
+            
+        }else
+        {
+            pos_y +=1;
+        }
         self.positionX = pos_x;
         self.positionY = pos_y;
         //self.correct = correct_num;
