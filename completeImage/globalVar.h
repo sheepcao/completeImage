@@ -15,7 +15,7 @@
 #import "GADBannerView.h"
 #define ADMOB_ID @"ca-app-pub-3074684817942615/4079653086"
 #import <ShareSDK/ShareSDK.h>
-
+#import "CommonUtility.h"
 
 int level ;
 NSNumber *levelSaved;
@@ -23,5 +23,10 @@ int levelTop;
 NSMutableArray *haveShared;
 NSMutableArray *scores;
 NSString *haveSharedString;
+
+@protocol  backToLevelDelegate<NSObject>
+
+-(BOOL) isFromReward :(BOOL)check;
+@end
 
 #endif

@@ -143,6 +143,8 @@
     [self.retakeButton setHidden:YES];
     [self.savePic setHidden:YES];
     
+
+    
     [self.view bringSubviewToFront: self.backgroundImg];
     [self.view bringSubviewToFront: self.topBar];
     [self.view bringSubviewToFront: self.babyRewordImg];
@@ -158,7 +160,6 @@
 
 -(void)animationStart
 {
-    NSLog(@"hhhhhaa");
     NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(goBigSmall) object:nil];
     
     [thread start];
@@ -275,6 +276,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+//    self.isBackFromReward = NO;
+
+    
     [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
     [self.rewardImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
     [self.babyTextImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"babyText%d",[self countBabyLevel]]]];
@@ -323,6 +327,10 @@
         [self.goCamera setHidden:NO];
         [self.backgroundImg setHidden:NO];
         [self.babyRewordImg setHidden:NO];
+        
+        self.goCamera.alpha = 0.0f;
+        self.babyTextImg.alpha = 0.0f;
+        
         [self performSelector:@selector(animationStart) withObject:nil afterDelay:0.15f];
         
         //   [self.saveImage setHidden:YES];
@@ -379,21 +387,27 @@
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
     [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
+        self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 10, 45, 32)];
+        self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 10, 40, 32)];
     }else
     {
-    [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+        [self.SharePhotoView setFrame:CGRectMake(0, 0, 320, 568)];
+        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+        self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
+        self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
+        
     }
     
 
     UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight*60/568)];
     //    topBar.backgroundColor = [UIColor colorWithRed:255/255.0f green:167/255.0f blue:22/255.0f alpha:1.0f];
     topBar.backgroundColor = [UIColor clearColor];
-    self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 20, 53, 38)];
+
     [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
     [self.cancelCamera setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
     [self.cancelCamera addTarget:self action:@selector(returnToShare) forControlEvents:UIControlEventTouchUpInside];
     
-    self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
+//    self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
     [self.cameraDevice setImage:[UIImage imageNamed:@"前后摄像头"] forState:UIControlStateNormal];
     [self.cameraDevice addTarget:self action:@selector(exchangeDevice) forControlEvents:UIControlEventTouchUpInside];
     [topBar addSubview:self.cameraDevice];
@@ -405,21 +419,31 @@
     
     self.bottomBar.backgroundColor = [UIColor clearColor];
     
-    self.shutter = [[UIButton alloc] initWithFrame:CGRectMake(130, 5, 70, 50)];
-    [self.shutter setImage:[UIImage imageNamed:@"shutter"] forState:UIControlStateNormal];
+    self.shutter = [[UIButton alloc] initWithFrame:CGRectMake(130, 15, 70, 50)];
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [self.shutter setImage:[UIImage imageNamed:@"shutter"] forState:UIControlStateNormal];
+
+    }else
+    {
+        [self.shutter setImage:[UIImage imageNamed:@"shutterEN"] forState:UIControlStateNormal];
+    }
     [self.shutter addTarget:self action:@selector(takeMyPic) forControlEvents:UIControlEventTouchUpInside];
     
     //    NSLog(@"action:%@",[self.shutter actionsForTarget:self forControlEvent:UIControlEventTouchUpInside]);
     
     [self.bottomBar addSubview:self.shutter];
-    
-    
-    UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, topBar.frame.size.height+8, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
+    UIImageView *backImage = [[UIImageView alloc] init];
+
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        
+        [backImage setFrame:CGRectMake(0, topBar.frame.size.height+8, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
         [backImage setImage:[UIImage imageNamed:@"animalShare480"]];
 
     }else
     {
+        [backImage setFrame:CGRectMake(0, topBar.frame.size.height, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
         [backImage setImage:[UIImage imageNamed:@"animalShare"]];
    
     }
@@ -527,7 +551,15 @@
 }
 
 - (IBAction)backButton {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+//    self.isBackFromReward = YES;
+    
+    [self.delegate isFromReward:YES];
+
+    [self dismissViewControllerAnimated:NO completion:nil];
+
+
+
 }
 
 

@@ -73,20 +73,39 @@
     [self.saveImage addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
 */
     
-    self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 490, 80, 80)];
-    [self.share setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 395, 70, 70)];
+        self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 395, 70, 70)];
+        self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 408, 50, 50)];
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 290, 120, 60)];
+//        self.photograph.layer.borderWidth = 1.0;
+//        self.photograph.layer.borderColor = [UIColor blackColor].CGColor;
+        
+    }else
+    {
+        self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 490, 80, 80)];
+        self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 490, 80, 80)];
+        self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 498, 60, 60)];
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 390, 120, 60)];
+        
+        
+    }
     
-    self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 490, 80, 80)];
+//    self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 490, 80, 80)];
+    [self.share setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
+    [self.share addTarget:self action:@selector(shareFunc) forControlEvents:UIControlEventTouchUpInside];
+
+//    self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 490, 80, 80)];
     [self.retakeButton setImage:[UIImage imageNamed:@"重拍"] forState:UIControlStateNormal];
     [self.retakeButton addTarget:self action:@selector(photograph:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 498, 60, 60)];
+//    self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 498, 60, 60)];
     [self.savePic setImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
     [self.savePic addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
     
     
 
-    self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 390, 120, 55)];
+//    self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 390, 120, 55)];
 //    [self.photograph setTitle:@"我也要拍" forState:UIControlStateNormal];
 //    self.photograph.backgroundColor = [UIColor lightGrayColor];
 //    self.photograph.alpha = 0.6f;
@@ -134,19 +153,40 @@
         
         if ([[UIScreen mainScreen] bounds].size.height == 480) {
             self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]]];
+            
+            UIImageView *bottombar = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-IPhoneHeight*73/568-20, 320, IPhoneHeight*73/568)];
+            [bottombar setImage:[UIImage imageNamed:@"bottomImage"]];
+            [self.view addSubview:bottombar];
+            
+            [self.view bringSubviewToFront:self.share];
+            [self.view bringSubviewToFront:self.savePic];
+            [self.view bringSubviewToFront:self.retakeButton];
+            
+            [self.frontImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@480",self.frontImageName]]];
+
+
         }else
         {
             self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
+            [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
+
         }
 
 //        self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
-        [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
        // [self.saveImage setHidden:NO];
 
         
     }else//未拍摄时的界面
     {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
+        if ([[UIScreen mainScreen] bounds].size.height == 480) {
+            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]]];
+
+            
+        }else
+        {
+            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
+
+        }
         [self.frontImage setImage:nil];
         [self.photograph setHidden:NO];
         [self.share setHidden:YES];
@@ -206,21 +246,26 @@
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
 
         [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
+        self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 45, 32)];
+        self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 10, 40, 32)];
     }else
     {
         [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+        self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
+        self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
+
     }
 
     UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight*60/568)];
 //    topBar.backgroundColor = [UIColor colorWithRed:255/255.0f green:167/255.0f blue:22/255.0f alpha:1.0f];
     topBar.backgroundColor = [UIColor clearColor];
-    self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 20, 53, 38)];
+//    self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
     [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
     [self.cancelCamera setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
     [self.cancelCamera addTarget:self action:@selector(returnToShare) forControlEvents:UIControlEventTouchUpInside];
     
-    self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
-    [self.cameraDevice setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
+//    self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
+    [self.cameraDevice setImage:[UIImage imageNamed:@"前后摄像头"] forState:UIControlStateNormal];
     [self.cameraDevice addTarget:self action:@selector(exchangeDevice) forControlEvents:UIControlEventTouchUpInside];
     [topBar addSubview:self.cameraDevice];
     [topBar addSubview:self.cancelCamera];
@@ -436,9 +481,61 @@
 
     
 }
--(void)wait
+
+
+-(void)shareFunc
 {
-    return;
+    [self.shareView sendSubviewToBack:self.backImage];
+    UIGraphicsBeginImageContext(self.shareView.frame.size);
+    //获取图像
+    [self.shareView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *imageShare = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(imageShare, nil, nil,nil);
+    
+    //    [ShareSDK pngImageWithImage:imageShare];
+    
+    
+    //    [self saveToPath:imageShare];
+    //
+    //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"smartbabyImg%ld",(ImgIndex-1)]  ofType:@"png"];
+    
+    
+    
+    //
+    //
+    //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
+    //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
+    
+    //构造分享内容
+    id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby"
+                                       defaultContent:@"默认分享内容，没内容时显示"
+                                                image:[ShareSDK pngImageWithImage:imageShare]
+                                                title:@"ShareSDK"
+                                                  url:@"http://www.sharesdk.cn"
+                                          description:@"这是一条测试信息"
+                                            mediaType:SSPublishContentMediaTypeImage];
+    
+    [ShareSDK showShareActionSheet:nil
+                         shareList:nil
+                           content:publishContent
+                     statusBarTips:YES
+                       authOptions:nil
+                      shareOptions: nil
+                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+                                if (state == SSResponseStateSuccess)
+                                {
+                                    NSLog(@"分享成功");
+                                }
+                                else if (state == SSResponseStateFail)
+                                {
+                                    NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+                                }
+                            }];
 }
+
+
+
 
 @end

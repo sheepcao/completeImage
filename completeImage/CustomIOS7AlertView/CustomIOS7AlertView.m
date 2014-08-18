@@ -186,10 +186,13 @@ CGFloat buttonSpacerHeight = 0;
     // First, we style the dialog to match the iOS7 UIAlertView >>>
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = dialogContainer.bounds;
+    
+    //eric:change 渐变 to clear color
     gradient.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
-                       (id)[[UIColor colorWithRed:233.0/255.0 green:233.0/255.0 blue:233.0/255.0 alpha:1.0f] CGColor],
-                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
+//                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
+                       (id)[UIColor clearColor].CGColor,
+//                       (id)[[UIColor colorWithRed:233.0/255.0 green:233.0/255.0 blue:233.0/255.0 alpha:1.0f] CGColor],
+//                       (id)[[UIColor colorWithRed:218.0/255.0 green:218.0/255.0 blue:218.0/255.0 alpha:1.0f] CGColor],
                        nil];
 
     CGFloat cornerRadius = kCustomIOS7AlertViewCornerRadius;
@@ -203,7 +206,9 @@ CGFloat buttonSpacerHeight = 0;
     dialogContainer.layer.shadowRadius = cornerRadius + 5;
     dialogContainer.layer.shadowOpacity = 0.1f;
     dialogContainer.layer.shadowOffset = CGSizeMake(0 - (cornerRadius+5)/2, 0 - (cornerRadius+5)/2);
-    dialogContainer.layer.shadowColor = [UIColor blackColor].CGColor;
+    //eric:delete shadow
+    dialogContainer.layer.shadowColor = [UIColor clearColor].CGColor;
+//    dialogContainer.layer.shadowColor = [UIColor blackColor].CGColor;
     dialogContainer.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:dialogContainer.bounds cornerRadius:dialogContainer.layer.cornerRadius].CGPath;
 
     // There is a line above the button

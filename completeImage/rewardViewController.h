@@ -34,6 +34,11 @@
 @property (nonatomic ,strong) UILabel *welcome;
 @property (nonatomic ,strong) UIImagePickerController *picker;
 @property BOOL afterShutter;
+//@property BOOL isBackFromReward;
+
+//@property (weak,nonatomic) id <backToLevelDelegate> *delegate;
+
+@property (weak, nonatomic) NSObject <backToLevelDelegate> *delegate;
 
 
 - (IBAction)saveImage:(id)sender;

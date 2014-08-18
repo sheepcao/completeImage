@@ -14,14 +14,14 @@
 #import "globalVar.h"
 
 
-static const int MAXlevel = 50;
+static const int MAXlevel = 10;
 static const int MAXanswer = 3;
 //static const int bigLevel = 6;
 
 bool levelLock[bigLevel];
 
 
-@interface gameLevelController : UIViewController<ADBannerViewDelegate,GADBannerViewDelegate>
+@interface gameLevelController : UIViewController<ADBannerViewDelegate,GADBannerViewDelegate,backToLevelDelegate>
 {
     int correct[MAXlevel];
 }
@@ -46,6 +46,7 @@ bool levelLock[bigLevel];
 @property (strong,nonatomic) NSString *emptyGif;
 @property (strong,nonatomic) UIWebView *webView;
 @property (strong,nonatomic) UIImageView *questionMark;
+@property (nonatomic, assign) BOOL isFormRewordFlag;
 
 @property (strong, nonatomic) ADBannerView *iAdBannerView;
 @property (strong, nonatomic) GADBannerView *gAdBannerView;

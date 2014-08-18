@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "gameLevelController.h"
+#import "AboutUsViewController.h"
+#import "moreInfoViewController.h"
 #import "sharePhotoViewController.h"
 #import "CustomIOS7AlertView.h"
 

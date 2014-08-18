@@ -71,6 +71,9 @@ bool levelLock[bigLevel];
     [self.sport addTarget:self action:@selector(sportBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.livingGood addTarget:self action:@selector(livingGoodBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.shareApp addTarget:self action:@selector(shareFunc) forControlEvents:UIControlEventTouchUpInside];
+    [self.aboutUs addTarget:self action:@selector(aboutUsTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.moreFun addTarget:self action:@selector(moreInfo) forControlEvents:UIControlEventTouchUpInside];
+
     
     [self.view addSubview: self.animal];
     [self.view addSubview: self.plant];
@@ -142,6 +145,9 @@ bool levelLock[bigLevel];
     [self.view sendSubviewToBack:homeBackground];
 
 }
+
+
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -236,19 +242,22 @@ bool levelLock[bigLevel];
 -(void)setupAlert
 {
     
-    UIView *tmpCustomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 , 300, 211)];
-    
-    UIImageView *imageInTag = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300 , 211)];
-    imageInTag.image = [UIImage imageNamed:@"tagAlert.png"];
+    UIView *tmpCustomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 , 300, 208)];
+    tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tagAlert" ofType:@"png"]]];
 
-    [tmpCustomView addSubview:imageInTag];
-    [tmpCustomView sendSubviewToBack:imageInTag];
-    tmpCustomView.backgroundColor = [UIColor whiteColor];
+    
+//    UIImageView *imageInTag = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300 , 211)];
+//    imageInTag.image = [UIImage imageNamed:@"tagAlert.png"];
+//
+//    [tmpCustomView addSubview:imageInTag];
+//    [tmpCustomView sendSubviewToBack:imageInTag];
+//    tmpCustomView.backgroundColor = [UIColor clearColor];
     
     
-    self.lockedInAlert = [[UIButton alloc] initWithFrame:CGRectMake(40, 125, 90, 47)];
+    
+    self.lockedInAlert = [[UIButton alloc] initWithFrame:CGRectMake(40, 145, 90, 47)];
     [self.lockedInAlert setImage:[UIImage imageNamed:@"okButton"] forState:UIControlStateNormal];
-    self.cancelInAlert = [[UIButton alloc] initWithFrame:CGRectMake(170, 125, 90, 47)];
+    self.cancelInAlert = [[UIButton alloc] initWithFrame:CGRectMake(170, 145, 90, 47)];
     [self.cancelInAlert setImage:[UIImage imageNamed:@"cancelButton"] forState:UIControlStateNormal];
     
 //    [self.lockedInAlert setTitle:@"前往当前进度" forState:UIControlStateNormal];
@@ -383,26 +392,26 @@ bool levelLock[bigLevel];
 
 }
 
-- (IBAction)moreBtn:(UIButton *)sender {
-    
-    
-    
-    if (levelLock[sender.tag-1]) {
-        
-        [self setupAlert];
-        
-        
-    }else{
-        level = 51;
-        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
-
-        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:self.game animated:YES completion:Nil ];
-    }
-    
-
-}
-
+//- (IBAction)moreBtn:(UIButton *)sender {
+//    
+//    
+//    
+//    if (levelLock[sender.tag-1]) {
+//        
+//        [self setupAlert];
+//        
+//        
+//    }else{
+//        level = 51;
+//        [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
+//
+//        self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//        [self presentViewController:self.game animated:YES completion:Nil ];
+//    }
+//    
+//
+//}
+//
 
 
 -(void)shareFunc
@@ -435,5 +444,18 @@ bool levelLock[bigLevel];
                             }];
 }
 
+-(void)aboutUsTapped
+{
+    AboutUsViewController *teamInfo = [[AboutUsViewController alloc] init];
+    teamInfo.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:teamInfo animated:YES completion:Nil ];
+    
+}
 
+-(void)moreInfo
+{
+    moreInfoViewController *more = [[moreInfoViewController alloc] init];
+    more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:more animated:YES completion:Nil ];
+}
 @end

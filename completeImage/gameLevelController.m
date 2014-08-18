@@ -39,6 +39,9 @@ NSMutableArray  *arrayGif;
 {
     [super viewDidLoad];
     
+    self.isFormRewordFlag = NO;
+
+    
     for (int i=0; i<levelTop-1; i++) {
         haveFixed[i]= YES;
     }
@@ -141,8 +144,10 @@ NSMutableArray  *arrayGif;
 - (void)viewDidAppear:(BOOL)animated
 
 {
-    
-
+    if (self.isFormRewordFlag == YES) {
+        self.isFormRewordFlag = NO;
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 
     [self.animationBegin setHidden:YES];
     
@@ -171,7 +176,7 @@ NSMutableArray  *arrayGif;
         //设置动画数组
         [self.questionMark setAnimationImages:arrayGif];
         //设置动画播放次数
-        [self.questionMark setAnimationRepeatCount:100000];
+        [self.questionMark setAnimationRepeatCount:0];
         //设置动画播放时间
         [self.questionMark setAnimationDuration:2*1.0];
         //开始动画
@@ -188,9 +193,18 @@ NSMutableArray  *arrayGif;
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
     levelTop = levelTop<level?level:levelTop;
+    
+    
     [self.levelCount setText:[NSString stringWithFormat:@"%d",level]];
     self.levelCount.font = [UIFont fontWithName:@"SegoePrint" size:23];
     [self.levelCount setTextColor:[UIColor blackColor]];
+    
+    if (self.wrongLabel.superview) {
+        [self.wrongLabel removeFromSuperview];
+
+    }
+
+    
     
     NSString *pic = [NSString stringWithFormat:@"pic%d",level];
     
@@ -242,6 +256,15 @@ NSMutableArray  *arrayGif;
         [self.nextButton setEnabled:YES];
   
         
+    }
+    
+    //每个主题的第一关不允许点击上一关
+    if (level%10 == 1) {
+        [self.priorButton setEnabled:NO];
+    }else
+    {
+        [self.priorButton setEnabled:YES];
+
     }
     
     [self.animationBegin setHidden:YES];//每关开始不可点击。
@@ -351,9 +374,15 @@ NSMutableArray  *arrayGif;
         haveFixed[level-1] = YES;
 
     }
-    [self.nextButton setEnabled:YES];
-    [self.priorButton setEnabled:YES];
-
+    //每个主题的第一关不允许点击上一关
+    if (level%10 == 1) {
+        [self.priorButton setEnabled:NO];
+        [self.nextButton setEnabled:YES];
+        
+    }else{
+        [self.nextButton setEnabled:YES];
+        [self.priorButton setEnabled:YES];
+    }
     NSLog(@"%d",haveFixed[level-1]);
     NSLog(@"%d",levelTop);
     
@@ -569,6 +598,7 @@ NSMutableArray  *arrayGif;
     {
 //        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
         rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
+        myReward.delegate = self;
         myReward.frontImageName = @"animalShare";
         myReward.levelReward = [[NSNumber alloc] initWithInt:((level-1)/10)];
         myReward.afterShutter = NO;
@@ -607,15 +637,7 @@ NSMutableArray  *arrayGif;
 
 }
 
-//-(void)switchToReward
-//{
-//    
-//    rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
-//    myReward.frontImageName = @"flowerPhoto";
-//    
-//    myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//    [self presentViewController:myReward animated:YES completion:Nil ];
-//}
+
 
 - (IBAction)backToLevel {
     
@@ -652,8 +674,14 @@ NSMutableArray  *arrayGif;
 }
 -(void)animationOnly
 {
-    [self.nextButton setEnabled:YES];
-    [self.priorButton setEnabled:YES];
+    if (level%10 == 1) {
+        [self.priorButton setEnabled:NO];
+        [self.nextButton setEnabled:YES];
+        
+    }else{
+        [self.nextButton setEnabled:YES];
+        [self.priorButton setEnabled:YES];
+    }
     [self.empty setHidden:NO];
 }
 
@@ -714,6 +742,20 @@ NSMutableArray  *arrayGif;
 -(void)bannerViewActionDidFinish:(ADBannerView *)banner{
     NSLog(@"iAd did finish");
     
+}
+
+
+#pragma backToLevelDelegate
+
+-(BOOL) isFromReward :(BOOL)check
+{
+    self.isFormRewordFlag = YES;
+    return check;
+}
+
+-(void)dismissHere
+{
+
 }
 
 

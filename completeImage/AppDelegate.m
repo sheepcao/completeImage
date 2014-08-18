@@ -75,7 +75,7 @@
     haveSharedString = [NSString stringWithFormat:@"%d",[haveShared[0] intValue]];
    
     //增减大关卡时，修改循环次数
-    for (int i = 1; i<6; i++) {
+    for (int i = 1; i<bigLevel; i++) {
        haveSharedString = [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%d",[haveShared[i] intValue]]];
     }
     
@@ -109,7 +109,7 @@
     levelSaved =[NSNumber numberWithInt:levelTop];
     haveSharedString = [NSString stringWithFormat:@"%d",[haveShared[0] intValue]];
     //增减大关卡时，修改循环次数
-    for (int i = 1; i<6; i++) {
+    for (int i = 1; i<bigLevel; i++) {
         haveSharedString = [haveSharedString stringByAppendingString:[NSString stringWithFormat:@",%d",[haveShared[i] intValue]]];
     }
     
