@@ -118,6 +118,7 @@ bool levelLock[bigLevel];
     NSLog(@"%@",haveShared);
     self.game = [[gameLevelController alloc] initWithNibName:@"gameLevelController" bundle:nil];
 
+    self.game.stopDelegate = self;
 
     UIImageView *homeBackground = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
@@ -235,7 +236,13 @@ bool levelLock[bigLevel];
 
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:self.game animated:YES completion:Nil ];
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countSecond:) userInfo:nil repeats:YES];
+        
+        seconds = 0;
     }
+    
+    
  
 }
 
@@ -458,4 +465,22 @@ bool levelLock[bigLevel];
     more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:more animated:YES completion:Nil ];
 }
+
+
+- (void)countSecond:(NSTimer*)timer1
+{
+	seconds = seconds + 1;
+	
+}
+
+#pragma stopTimerDelegate method
+-(void) stopTimer
+{
+    if (timer != nil)
+	{
+		[timer invalidate];
+		timer = nil;
+	}
+}
+
 @end

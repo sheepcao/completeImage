@@ -25,6 +25,10 @@
 
 -(int)countBabyLevel
 {
+    int timeUsed = seconds;
+    
+    [self.willStopDelegate willStopTimer];
+    
     int scoreTemp = [[scores objectAtIndex:[self.levelReward intValue]] intValue];
     
     if (scoreTemp > 9) {
@@ -32,12 +36,16 @@
     }else
     {
         if (scoreTemp == 0) {
+            if (timeUsed  < 70) {
+                return 9;
+            }else
+            {
             return 0;
+            }
         }else
             return (1+(scoreTemp-1)/3);
     }
     
-    return 0;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -614,7 +622,6 @@
                                 }
                             }];
 }
-
 
 
 

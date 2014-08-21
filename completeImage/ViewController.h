@@ -17,7 +17,10 @@
 
 
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<killTimerDelegate>
+{
+	NSTimer *timer;
+}
 
 @property (strong, nonatomic) CustomIOS7AlertView *lockedAlert;
 

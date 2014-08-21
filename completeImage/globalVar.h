@@ -23,10 +23,14 @@ int levelTop;
 NSMutableArray *haveShared;
 NSMutableArray *scores;
 NSString *haveSharedString;
+int seconds;
+
 
 @protocol  backToLevelDelegate<NSObject>
 
 -(BOOL) isFromReward :(BOOL)check;
 @end
+
+
 
 #endif

@@ -14,17 +14,24 @@
 #import "globalVar.h"
 
 
-static const int MAXlevel = 10;
+@protocol  killTimerDelegate<NSObject>
+
+-(void) stopTimer;
+@end
+
+
+static const int MAXlevel = 50;
 static const int MAXanswer = 3;
 //static const int bigLevel = 6;
 
 bool levelLock[bigLevel];
 
 
-@interface gameLevelController : UIViewController<ADBannerViewDelegate,GADBannerViewDelegate,backToLevelDelegate>
+@interface gameLevelController : UIViewController<willStopTimerDelegate,ADBannerViewDelegate,GADBannerViewDelegate,backToLevelDelegate>
 {
     int correct[MAXlevel];
 }
+@property (weak,nonatomic) NSObject<killTimerDelegate> *stopDelegate;
 
 @property (strong, nonatomic) UIImage *backgroundImg;
 //@property (strong, nonatomic) NSString *backgroundNames;

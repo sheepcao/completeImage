@@ -14,12 +14,13 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/200,200.7,141.4,136,133.1,/**/72.5,123.6,133.9,130.7,41.1/**/};
+double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,41.1/**/};
 double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/**/274.7,324.5
-    ,229.5,227.6,232.7/**/,282,286.4,274.7,229.5,258.1,/**/238.6,227.3,214.6,283.8,259.1/**/};
-double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.2,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/};
-double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/1,1,1,1,1,/**/1,1,1,1,1/**/};
-double largeEmpty[bigLevel] = {122.22,0,0,0,0,};
+    ,229.5,227.6,232.7/**/,230.5,314.24,194.6,330.36,333.8,/**/286.7
+    ,247,278.8,193.4,259.1/**/};
+double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/};
+double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/};
+double largeEmpty[bigLevel] = {122.22,200,0,0,0,};
 bool haveFixed[MAXlevel] = {NO};
 bool notJumpOver = NO;
 
@@ -144,6 +145,9 @@ NSMutableArray  *arrayGif;
 - (void)viewDidAppear:(BOOL)animated
 
 {
+    
+    
+    
     if (self.isFormRewordFlag == YES) {
         self.isFormRewordFlag = NO;
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -603,6 +607,7 @@ NSMutableArray  *arrayGif;
         myReward.levelReward = [[NSNumber alloc] initWithInt:((level-1)/10)];
         myReward.afterShutter = NO;
         myReward.backImage.image = nil;
+        myReward.willStopDelegate = self;
 
         
         myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -753,9 +758,11 @@ NSMutableArray  *arrayGif;
     return check;
 }
 
--(void)dismissHere
-{
 
+
+-(void)willStopTimer
+{
+    [self.stopDelegate stopTimer];
 }
 
 

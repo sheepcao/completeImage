@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "globalVar.h"
+//#import "gameLevelController.h"
+
+
+@protocol willStopTimerDelegate <NSObject>
+
+-(void) willStopTimer;
+@end
+
+
 
 @interface rewardViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *goCamera;
@@ -39,6 +48,7 @@
 //@property (weak,nonatomic) id <backToLevelDelegate> *delegate;
 
 @property (weak, nonatomic) NSObject <backToLevelDelegate> *delegate;
+@property (weak, nonatomic) NSObject <willStopTimerDelegate> *willStopDelegate;
 
 
 - (IBAction)saveImage:(id)sender;
