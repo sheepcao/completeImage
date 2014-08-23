@@ -14,13 +14,13 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,83/**/,194.4,186.8,192.7,191.7,193.4,/**/78.7,174.8,138.9,168,110.6,/**/};
+double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,83/**/,194.4,186.8,192.7,191.7,193.4,/**/78.7,174.8,138.9,168,110.6,/**/155.8,95,68.4,48.4,133.1,/**/72.5,123.6,131.9,140.4,107.5,/**/130.1,200.7,129.7,135.5,108.2,/**/215.9,137,178.8,102.1,42.1};
 double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/**/274.7,324.5
     ,229.5,227.6,232.7/**/,230.5,314.24,194.6,330.36,333.8,/**/286.7
-    ,247,278.8,193.4,319.1/**/,339.6,208,339.6,223.7,211.95,/**/339.1,319.6,280.1,311.6,284,/**/};
-double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/,0.3,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.2,0.2,0.2,/**/};
-double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/,1,1,1,1,1/**/,1,1,1,1,1};
-double largeEmpty[bigLevel] = {122.22,200,0,0,0};
+    ,247,278.8,193.4,319.1/**/,339.6,208,339.6,223.7,211.95,/**/339.1,319.6,280.1,311.6,284,/**/307.9,292.8,347.5,206.8,258.1,/**/238.6,227.3,214.6,250,212.4,/**/283.8,286.4,279.1,240.2,189+169.9,/**/216.6,256.8,241.7,271.8,259.1};
+double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/,0.3,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.2,0.2,0.2,/**/0.2,0.2,0.2,0.35,0.2,/**/0.2,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.25,0.35,0.35,/**/0.35,0.35,0.35,0.35,0.35};
+double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/,1,1,1,1,1/**/,1,1,1,1,1,/**/1,1,1,1,1,/**/1,1,1,1,1,/**/1,3,1,1,1,/**/1,1,1,1,1};
+double largeEmpty[bigLevel] = {122.22,200,55,55,55};
 bool haveFixed[MAXlevel] = {NO};
 bool notJumpOver = NO;
 
@@ -90,9 +90,9 @@ NSMutableArray  *arrayGif;
     [self.animationBegin addTarget:self action:@selector(animationTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"猪,猫,兔子,鸡,青蛙,蜜蜂,狗,鲨鱼,蜗牛,考拉,羽毛球,足球,乒乓球,高尔夫,保龄球,射箭,滑雪,篮球,帆船,举重,牛奶,土豆,月饼,栗子,米饭,披萨饼,西瓜,花生,橙子,黄瓜";
+    NSString *words1 = @"猪,猫,兔子,鸡,青蛙,蜜蜂,狗,鲨鱼,蜗牛,考拉,羽毛球,足球,乒乓球,高尔夫,保龄球,射箭,滑雪,篮球,帆船,举重,牛奶,土豆,月饼,栗子,米饭,披萨饼,西瓜,花生,橙子,黄瓜,眼镜,牙刷,钢笔,红绿灯,奶嘴,卫生间,钟表,蜡烛,放大镜,洗衣液,向日葵,柳树,玫瑰,荷花,竹子,松树,仙人掌,银杏树,菊花,牵牛花";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,badminton,football,table tennis,golf,bowling,archery,skiing,basketball,sailing,weighting,milk,potato,mooncake,chestnut,rice,pizza,watermelon,peanut,orange,cucumber";
+    NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,badminton,football,table tennis,golf,bowling,archery,skiing,basketball,sailing,weighting,milk,potato,mooncake,chestnut,rice,pizza,watermelon,peanut,orange,cucumber,glasses,toothbrush,pen,traffic light,pacifier,toilet,clock,candle,magnifier,landry,sunflower,willow,rose,lotus,bamboo,pine,cactus,gingko,chrysanthemum,morning glory";
     wordsEN = [words2 componentsSeparatedByString:@","];
    // NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     NSString *backgroundNames = @"animalBackground";
@@ -145,7 +145,8 @@ NSMutableArray  *arrayGif;
 - (void)viewDidAppear:(BOOL)animated
 
 {
-    
+    [MobClick beginLogPageView:@"gamePage"];
+
     
     
     if (self.isFormRewordFlag == YES) {
@@ -192,7 +193,11 @@ NSMutableArray  *arrayGif;
    
 
 }
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"gamePage"];
+}
 
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
 {
@@ -459,7 +464,7 @@ NSMutableArray  *arrayGif;
         //设置动画播放次数
         [self.picture setAnimationRepeatCount:repeatTime[level-1]];
         //设置动画播放时间
-        [self.picture setAnimationDuration:5*animationSpeed[level-1]];
+        [self.picture setAnimationDuration:arrayM.count*animationSpeed[level-1]];
         //开始动画
         [self.picture startAnimating];
         
@@ -569,7 +574,7 @@ NSMutableArray  *arrayGif;
 
 - (IBAction)priorLevel {
     
-    
+    [MobClick event:@"2"];
     
     if (level>1) {
         level--;
@@ -588,6 +593,8 @@ NSMutableArray  *arrayGif;
 
 
 - (IBAction)nextLevel {
+    
+    [MobClick event:@"1"];
     
     [arrayM removeAllObjects];
     if (!notJumpOver) {
@@ -651,6 +658,7 @@ NSMutableArray  *arrayGif;
 
 - (IBAction)share {
     
+  
     
     sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
     myShare.frontImageName = @"animalShare";
@@ -690,13 +698,14 @@ NSMutableArray  *arrayGif;
 }
 
 -(void)chineseTap
-{
+{  [MobClick event:@"5"];
     AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
 
 }
 
 -(void)englishTap
 {
+      [MobClick event:@"6"];
     AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
 
 }

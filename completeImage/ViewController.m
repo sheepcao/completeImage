@@ -152,39 +152,9 @@ bool levelLock[bigLevel];
 
 - (void)viewDidAppear:(BOOL)animated
 {
-//    if ([[UIScreen mainScreen] bounds].size.height == 480) {
-//        
-//        // redraw every button.
-//        
-//        for (int i = 1; i<7; i++) {
-//            
-//            UIButton *animal = (UIButton *)[self.view viewWithTag:i];
-//            CGRect frame = animal.frame;
-//            frame.origin.y-=40;
-//            frame.origin.x+=17;
-//            [animal setFrame:frame];
-//            
-//        }
-//        
-//        
-//        UIButton *animal = (UIButton *)[self.view viewWithTag:7];
-//        CGRect frame = animal.frame;
-//        frame.origin.y-=32;
-//        frame.origin.x+=26;
-//        [animal setFrame:frame];
-//        
-//        UIButton *shareApp = (UIButton *)[self.view viewWithTag:8];
-//        CGRect frame1 = shareApp.frame;
-////        frame1.origin.y=;
-//        frame1.origin.x-=16;
-//        [shareApp setFrame:frame1];
-//        
-//        
-//
-//
-//        
-//    }
-    
+
+    [MobClick beginLogPageView:@"selectLevelPage"];
+
     
     if ( levelTop < level) {
         levelTop = level;
@@ -216,8 +186,11 @@ bool levelLock[bigLevel];
     
 }
 
-
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"selectLevelPage"];
+}
 - (IBAction)animalBtn:(UIButton *)sender {
 
     

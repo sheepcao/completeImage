@@ -77,6 +77,17 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"morePage"];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"morePage"];
+}
+
 
 //- (IBAction)selectForAlbumButtonClick:(UIButton *)sender
 //{

@@ -16,6 +16,7 @@
 #define ADMOB_ID @"ca-app-pub-3074684817942615/4079653086"
 #import <ShareSDK/ShareSDK.h>
 #import "CommonUtility.h"
+#import "MobClick.h"
 
 int level ;
 NSNumber *levelSaved;

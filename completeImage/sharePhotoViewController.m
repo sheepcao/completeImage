@@ -142,6 +142,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [MobClick beginLogPageView:@"shareOnlyPage"];
 
     //拍摄完后的界面
 //    if (self.backImage.image) {
@@ -196,12 +197,12 @@
 
     }
 }
-
--(void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-//    self.backImage.image = nil;
-//    afterShutter = NO;
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"shareOnlyPage"];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -485,6 +486,8 @@
 
 -(void)shareFunc
 {
+      [MobClick event:@"3"];
+    
     [self.shareView sendSubviewToBack:self.backImage];
     UIGraphicsBeginImageContext(self.shareView.frame.size);
     //获取图像

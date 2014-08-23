@@ -64,6 +64,17 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"aboutPage"];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"aboutPage"];
+}
+
 -(void)backTapped
 {
     [self dismissViewControllerAnimated:YES completion:nil];

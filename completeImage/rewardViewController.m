@@ -284,7 +284,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-//    self.isBackFromReward = NO;
+
+    [MobClick beginLogPageView:@"rewardPage"];
 
     
     [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
@@ -347,13 +348,12 @@
 
     
 }
-//
-//-(void)start
-//{
-//    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(animationStart) object:nil];
-//
-//    [thread start];
-//}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"rewardPage"];
+}
 
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -573,6 +573,8 @@
 
 -(void)shareFunc
 {
+      [MobClick event:@"4"];
+    
     [self.shareView sendSubviewToBack:self.backImage];
     UIGraphicsBeginImageContext(self.shareView.frame.size);
     //获取图像

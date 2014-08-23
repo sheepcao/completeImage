@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "globalVar.h"
 @interface moreInfoViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 
