@@ -48,14 +48,16 @@ SystemSoundID soundEN;
         {
             self.frame = CGRectMake(80, 70, 160, 120);
             
-            self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(10, 13, 140, 45)];
-            self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(10, 62, 140, 45)];
+            self.answerCN = [[UIButton alloc] initWithFrame:CGRectMake(15, 13, 140, 45)];
+            self.answerEN = [[UIButton alloc] initWithFrame:CGRectMake(15, 62, 140, 45)];
             
         }
         
         UIImageView *backImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         [backImg setImage:[UIImage imageNamed:@"board" ]];
         [backImg setContentMode:UIViewContentModeScaleToFill];
+        [self.answerCN setContentMode:UIViewContentModeScaleToFill];
+        [self.answerEN setContentMode:UIViewContentModeScaleToFill];
         [self addSubview:backImg];
 //        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"board" ]];
         

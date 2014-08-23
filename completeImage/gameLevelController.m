@@ -14,13 +14,13 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,41.1/**/};
+double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,83/**/,194.4,186.8,192.7,191.7,193.4,/**/78.7,174.8,138.9,168,110.6,/**/};
 double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/**/274.7,324.5
     ,229.5,227.6,232.7/**/,230.5,314.24,194.6,330.36,333.8,/**/286.7
-    ,247,278.8,193.4,259.1/**/};
-double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/};
-double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/};
-double largeEmpty[bigLevel] = {122.22,200,0,0,0,};
+    ,247,278.8,193.4,319.1/**/,339.6,208,339.6,223.7,211.95,/**/339.1,319.6,280.1,311.6,284,/**/};
+double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/,0.3,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.2,0.2,0.2,/**/};
+double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/,1,1,1,1,1/**/,1,1,1,1,1};
+double largeEmpty[bigLevel] = {122.22,200,0,0,0};
 bool haveFixed[MAXlevel] = {NO};
 bool notJumpOver = NO;
 
@@ -90,9 +90,9 @@ NSMutableArray  *arrayGif;
     [self.animationBegin addTarget:self action:@selector(animationTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     self.choices = [[NSMutableArray alloc] initWithObjects:self.answer1,self.answer2,self.answer3, nil];
-    NSString *words1 = @"猪,猫,兔子,鸡,青蛙,蜜蜂,狗,鲨鱼,蜗牛,考拉,狗,柳树,蜜蜂,鲨鱼,奶嘴,厕所,钟表,蜡烛,向日葵,牵牛花";
+    NSString *words1 = @"猪,猫,兔子,鸡,青蛙,蜜蜂,狗,鲨鱼,蜗牛,考拉,羽毛球,足球,乒乓球,高尔夫,保龄球,射箭,滑雪,篮球,帆船,举重,牛奶,土豆,月饼,栗子,米饭,披萨饼,西瓜,花生,橙子,黄瓜";
     wordsCN = [words1 componentsSeparatedByString:@","];
-    NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,dog,willow,bee,shark,pacifier,toilet,clock,candle,sunflower,glory";
+    NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,badminton,football,table tennis,golf,bowling,archery,skiing,basketball,sailing,weighting,milk,potato,mooncake,chestnut,rice,pizza,watermelon,peanut,orange,cucumber";
     wordsEN = [words2 componentsSeparatedByString:@","];
    // NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
     NSString *backgroundNames = @"animalBackground";
@@ -597,8 +597,7 @@ NSMutableArray  *arrayGif;
     }
     
     
-    if (level%10==0
-/*&& [haveShared[level/11] isEqualToString:@"0"]*/)
+    if (level%10==0)
     {
 //        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
         rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
