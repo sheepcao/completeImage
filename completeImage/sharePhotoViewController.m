@@ -288,12 +288,11 @@
     UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, topBar.frame.size.height, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        [backImage setImage:[UIImage imageNamed:@"animalShare480"]];
+        [backImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@480",self.frontImageName]]];
         
     }else
     {
-        [backImage setImage:[UIImage imageNamed:@"animalShare"]];
-        
+        [backImage setImage:[UIImage imageNamed:self.frontImageName]];
     }
 //    [backImage setImage:[UIImage imageNamed:@"animalShare"]];
     

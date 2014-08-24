@@ -36,7 +36,7 @@
     }else
     {
         if (scoreTemp == 0) {
-            if (timeUsed  < 70) {
+            if (timeUsed  < TIME_PARENT) {
                 return 9;
             }else
             {
@@ -439,7 +439,6 @@
     }
     [self.shutter addTarget:self action:@selector(takeMyPic) forControlEvents:UIControlEventTouchUpInside];
     
-    //    NSLog(@"action:%@",[self.shutter actionsForTarget:self forControlEvent:UIControlEventTouchUpInside]);
     
     [self.bottomBar addSubview:self.shutter];
     UIImageView *backImage = [[UIImageView alloc] init];
@@ -447,12 +446,12 @@
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
         
         [backImage setFrame:CGRectMake(0, topBar.frame.size.height+8, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
-        [backImage setImage:[UIImage imageNamed:@"animalShare480"]];
+        [backImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@480",self.frontImageName]]];
 
     }else
     {
         [backImage setFrame:CGRectMake(0, topBar.frame.size.height, 320, (IPhoneHeight - topBar.frame.size.height - self.bottomBar.frame.size.height))];
-        [backImage setImage:[UIImage imageNamed:@"animalShare"]];
+        [backImage setImage:[UIImage imageNamed:self.frontImageName]];
    
     }
 

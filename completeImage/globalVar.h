@@ -10,6 +10,8 @@
 #define completeImage_globalVar_h
 
 #define IPhoneHeight (([UIScreen mainScreen].bounds.size.height == 568.0)?568:460)
+#define TIME_PARENT 120
+
 #define bigLevel 5
 #import <iAd/iAd.h>
 #import "GADBannerView.h"
@@ -25,6 +27,9 @@ NSMutableArray *haveShared;
 NSMutableArray *scores;
 NSString *haveSharedString;
 int seconds;
+
+NSArray *sharePic;
+NSArray *sharePic480;
 
 
 @protocol  backToLevelDelegate<NSObject>

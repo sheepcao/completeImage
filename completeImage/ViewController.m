@@ -26,6 +26,9 @@ bool levelLock[bigLevel];
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    sharePic = [[NSArray alloc] initWithObjects:@"animalShare",@"sportShare",@"foodShare",@"livingGoodShare",@"plantShare", nil];
+    sharePic480 = [[NSArray alloc] initWithObjects:@"animalShare480",@"sportShare480",@"foodShare480",@"livingGoodShare480",@"plantShare480", nil];
+    
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
         [self.view setFrame:CGRectMake(0, 0, 320, 480)];
         self.animal = [[UIButton alloc] initWithFrame:CGRectMake(66+17, 92.5-40, 87, 123)];
@@ -422,6 +425,79 @@ bool levelLock[bigLevel];
                                     NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
                                 }
                             }];
+    
+//    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
+//                                                         allowCallback:YES
+//                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
+//                                                          viewDelegate:nil
+//                                               authManagerViewDelegate:nil];
+//    
+//    //在授权页面中添加关注官方微博
+////    [authOptions setFollowAccounts:[NSDictionary dictionaryWithObjectsAndKeys:
+////                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"ShareSDK"],
+////                                    SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
+////                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"ShareSDK"],
+////                                    SHARE_TYPE_NUMBER(ShareTypeTencentWeibo),
+////                                    nil]];
+//    
+//    BOOL needAuth = NO;
+//    
+////    ShareType shareType = (ShareType)[[selectedClients objectAtIndex:0] integerValue];
+//    if (![ShareSDK hasAuthorizedWithType:ShareTypeSinaWeibo])
+//    {
+//        needAuth = YES;
+//        [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo
+//                          authOptions:authOptions
+//                               result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+//                                   
+//                                   if (result)
+//                                   {
+//                                       //分享内容
+//                                       [ShareSDK oneKeyShareContent:publishContent
+//                                                          shareList:nil
+//                                                        authOptions:authOptions
+//                                                      statusBarTips:YES
+//                                                             result:nil];
+//                                       
+//                                       [self dismissViewControllerAnimated:YES completion:nil];
+//                                   }
+//                                   else
+//                                   {
+//                                       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"TEXT_TIPS", @"提示")
+//                                                                                           message:[NSString stringWithFormat:NSLocalizedString(@"TEXT_SEND_FAI", @"发送失败!%@"), [error errorDescription]]
+//                                                                                          delegate:nil
+//                                                                                 cancelButtonTitle:NSLocalizedString(@"TEXT_KNOW", @"知道了")
+//                                                                                 otherButtonTitles:nil];
+//                                       [alertView show];
+//                                   }
+//                               }];
+//    }
+//    
+//    
+//    if (!needAuth)
+//    {
+//        //分享内容
+//        [ShareSDK showShareActionSheet:nil
+//                             shareList:nil
+//                               content:publishContent
+//                         statusBarTips:YES
+//                           authOptions:nil
+//                          shareOptions: nil
+//                                result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+//                                    if (state == SSResponseStateSuccess)
+//                                    {
+//                                        NSLog(@"分享成功");
+//                                    }
+//                                    else if (state == SSResponseStateFail)
+//                                    {
+//                                        NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
+//                                    }
+//                                }];
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }
+//
+//    
 }
 
 -(void)aboutUsTapped

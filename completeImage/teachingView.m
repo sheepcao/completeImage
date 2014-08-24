@@ -95,10 +95,10 @@ SystemSoundID soundEN;
         //创建system sound 对象
         AudioServicesCreateSystemSoundID(soundfileurlCN, &soundCN);
         
-        CFBundleRef ENbundle=CFBundleGetMainBundle();
+      //  CFBundleRef ENbundle=CFBundleGetMainBundle();
         
         //获得声音文件URL
-        CFURLRef soundfileurlEN=CFBundleCopyResourceURL(ENbundle,(__bridge CFStringRef)sndEN,CFSTR("wav"),NULL);
+        CFURLRef soundfileurlEN=CFBundleCopyResourceURL(CNbundle,(__bridge CFStringRef)sndEN,CFSTR("wav"),NULL);
         //创建system sound 对象
         AudioServicesCreateSystemSoundID(soundfileurlEN, &soundEN);
         
@@ -126,10 +126,10 @@ SystemSoundID soundEN;
     //创建system sound 对象
     AudioServicesCreateSystemSoundID(soundfileurlCN, &soundCN);
     
-    CFBundleRef ENbundle=CFBundleGetMainBundle();
+//    CFBundleRef ENbundle=CFBundleGetMainBundle();
     
     //获得声音文件URL
-    CFURLRef soundfileurlEN=CFBundleCopyResourceURL(ENbundle,(__bridge CFStringRef)sndEN,CFSTR("wav"),NULL);
+    CFURLRef soundfileurlEN=CFBundleCopyResourceURL(CNbundle,(__bridge CFStringRef)sndEN,CFSTR("wav"),NULL);
     //创建system sound 对象
     AudioServicesCreateSystemSoundID(soundfileurlEN, &soundEN);
     

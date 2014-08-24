@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0BE582B3193F25FB00EEAB26"
-               BuildableName = "completeImage.app"
+               BuildableName = "babyJoint.app"
                BlueprintName = "babyJoint"
                ReferencedContainer = "container:babyJoint.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE582B3193F25FB00EEAB26"
-            BuildableName = "completeImage.app"
+            BuildableName = "babyJoint.app"
             BlueprintName = "babyJoint"
             ReferencedContainer = "container:babyJoint.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE582B3193F25FB00EEAB26"
-            BuildableName = "completeImage.app"
+            BuildableName = "babyJoint.app"
             BlueprintName = "babyJoint"
             ReferencedContainer = "container:babyJoint.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BE582B3193F25FB00EEAB26"
-            BuildableName = "completeImage.app"
+            BuildableName = "babyJoint.app"
             BlueprintName = "babyJoint"
             ReferencedContainer = "container:babyJoint.xcodeproj">
          </BuildableReference>

@@ -14,12 +14,12 @@
 
 @implementation gameLevelController
 
-double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/**/141.4,48.9,136,116,198.8,/**/166.8,142.4,168.99,117.31,130.9,/**/74.7,87.9,140.7,37.4,83/**/,194.4,186.8,192.7,191.7,193.4,/**/78.7,174.8,138.9,168,110.6,/**/155.8,95,68.4,48.4,133.1,/**/72.5,123.6,131.9,140.4,107.5,/**/130.1,200.7,129.7,135.5,108.2,/**/215.9,137,178.8,102.1,42.1};
-double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/**/274.7,324.5
-    ,229.5,227.6,232.7/**/,230.5,314.24,194.6,330.36,333.8,/**/286.7
-    ,247,278.8,193.4,319.1/**/,339.6,208,339.6,223.7,211.95,/**/339.1,319.6,280.1,311.6,284,/**/307.9,292.8,347.5,206.8,258.1,/**/238.6,227.3,214.6,250,212.4,/**/283.8,286.4,279.1,240.2,189+169.9,/**/216.6,256.8,241.7,271.8,259.1};
-double animationSpeed[MAXlevel] = {0.15,0.18,0.15,0.2,0.22,/**/0.19,0.22,0.2,0.22,0.17,/**/0.2,0.2,0.25,0.12,0.3,/**/0.25,0.35,0.3,0.25,0.3/**/,0.3,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.2,0.2,0.2,/**/0.2,0.2,0.2,0.35,0.2,/**/0.2,0.2,0.2,0.2,0.2,/**/0.3,0.2,0.25,0.35,0.35,/**/0.35,0.35,0.35,0.35,0.35};
-double repeatTime[MAXlevel] = {3,1,3,1,1,/**/2,2,1,1,3,/**/2,1,1,1,1,/**/1,1,1,1,1/**/,1,1,1,1,1/**/,1,1,1,1,1,/**/1,1,1,1,1,/**/1,1,1,1,1,/**/1,3,1,1,1,/**/1,1,1,1,1};
+double posX[MAXlevel] = {216.6,113.1,107.4,118.5,90.6,/*5*/141.4,48.9,136,116,198.8,/*10*/166.8,142.4,168.99,117.31,130.9,/*15*/27.7,56.9,235.7,37.4,83/*20*/,194.4,186.8,192.7,191.7,193.4,/*25*/78.7,174.8,138.9,168,110.6,/*30*/155.8,95,68.4,48.4,133.1,/*35*/72.5,123.6,131.9,140.4,107.5,/*40*/130.1,200.7,129.7,135.5,108.2,/*45*/215.9,137,178.8,102.1,42.1};
+double posY[MAXlevel] = {277.1,284.3,282.5,195.1,340.1,/*5*/274.7,324.5
+    ,229.5,227.6,232.7/*10*/,230.5,314.24,194.6,330.36,333.8,/*15*/237
+    ,244,331.8,193.4,319.1/*20*/,339.6,208,339.6,223.7,211.95,/*25*/339.1,319.6,280.1,311.6,284,/*30*/307.9,292.8,347.5,206.8,258.1,/*35*/238.6,227.3,214.6,250,212.4,/*40*/283.8,286.4,279.1,240.2,189+169.9,/*45*/216.6,256.8,241.7,271.8,259.1};
+double animationSpeed[MAXlevel] = {0.35,0.31,0.27,0.34,0.33,/*5*/0.24,0.24,0.18,0.22,0.40,/*10*/0.23,0.2,0.18,0.17,0.24,/*15*/0.2,0.28,0.23,0.22,0.37/*20*/,0.36,1.0,0.3,0.7,0.8,/*25*/0.5,0.45,0.4,0.36,0.45,/*30*/0.45,0.33,0.3,0.35,0.26,/*35*/0.25,0.46,0.43,0.37,0.15,/*40*/0.6,0.2,0.29,0.38,0.39,/*45*/0.4,0.5,0.4,0.45,0.3};
+double repeatTime[MAXlevel] = {3,1,3,1,1,/*5*/2,2,2,2,3,/*10*/2,2,2,2,2,/*15*/2,2,2,2,1/*20*/,1,1,1,1,1/*25*/,1,1,3,1,1,/*30*/1,2,2,1,2,/*35*/2,1,1,2,3,/*40*/1,3,1,1,1,/*45*/1,1,1,1,2};
 double largeEmpty[bigLevel] = {122.22,200,55,55,55};
 bool haveFixed[MAXlevel] = {NO};
 bool notJumpOver = NO;
@@ -94,7 +94,7 @@ NSMutableArray  *arrayGif;
     wordsCN = [words1 componentsSeparatedByString:@","];
     NSString *words2 = @"pig,cat,rabbit,chicken,frog,bee,dog,shark,snail,koala,badminton,football,table tennis,golf,bowling,archery,skiing,basketball,sailing,weighting,milk,potato,mooncake,chestnut,rice,pizza,watermelon,peanut,orange,cucumber,glasses,toothbrush,pen,traffic light,pacifier,toilet,clock,candle,magnifier,landry,sunflower,willow,rose,lotus,bamboo,pine,cactus,gingko,chrysanthemum,morning glory";
     wordsEN = [words2 componentsSeparatedByString:@","];
-   // NSString *backgroundNames = @"animalBackground,sportBackground,livingGoodBackground,plantBackground,foodBackground,moreBackground";
+
     NSString *backgroundNames = @"animalBackground";
     backgroundName = [backgroundNames componentsSeparatedByString:@","];
 
@@ -162,6 +162,7 @@ NSMutableArray  *arrayGif;
     
     
     self.myImg = [[uncompleteImage alloc] initWithEmptyX:posX[level-1] Y:posY[level-1]];
+
     [self setupWithEmptyPosition:self.myImg.positionX :self.myImg.positionY];
 
     
@@ -226,6 +227,7 @@ NSMutableArray  *arrayGif;
     
     
     [self setImages:an1:an2 :an3 :pic];
+
     
     if (level%10 == 9) {
         [self.empty setFrame:CGRectMake(px, py, largeEmpty[(level-1)/10], largeEmpty[(level-1)/10])];
@@ -238,6 +240,17 @@ NSMutableArray  *arrayGif;
         [self.empty setFrame:CGRectMake(px, py, 55, 55)];
         
         [self.questionMark setFrame:CGRectMake(0, 0, 55, 55)];
+    }
+    if(level ==16)
+    {
+        [self.empty setFrame:CGRectMake(px, py, 150,150)];
+        [self.questionMark setFrame:CGRectMake(0, 0, 150,150)];
+
+    }
+    if(level ==17)
+    {
+        [self.empty setFrame:CGRectMake(px, py, 100,100)];
+        [self.questionMark setFrame:CGRectMake(0, 0, 100,100)];
     }
     [self setButton:self.empty];
     self.empty.layer.borderWidth = 0;
@@ -609,7 +622,7 @@ NSMutableArray  *arrayGif;
 //        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
         rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
         myReward.delegate = self;
-        myReward.frontImageName = @"animalShare";
+        myReward.frontImageName = sharePic[(level-1)/10];
         myReward.levelReward = [[NSNumber alloc] initWithInt:((level-1)/10)];
         myReward.afterShutter = NO;
         myReward.backImage.image = nil;
@@ -622,7 +635,7 @@ NSMutableArray  *arrayGif;
         
     }
 
-    [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.35f];
+    [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.05f];
     
     }
 -(void)changeImgs
@@ -661,7 +674,7 @@ NSMutableArray  *arrayGif;
   
     
     sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
-    myShare.frontImageName = @"animalShare";
+    myShare.frontImageName = sharePic[(level-1)/10];
     myShare.afterShutter = NO;
     myShare.backImage.image = nil;
     

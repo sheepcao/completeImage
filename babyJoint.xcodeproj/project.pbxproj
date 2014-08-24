@@ -97,26 +97,6 @@
 		0B0CC0481983BD6F00C1D89C /* pic9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC03E1983BD6F00C1D89C /* pic9.png */; };
 		0B0CC0491983BD6F00C1D89C /* pic10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC03F1983BD6F00C1D89C /* pic10.png */; };
 		0B0CC04B1983C21C00C1D89C /* an1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC04A1983C21C00C1D89C /* an1-1.png */; };
-		0B0CC0611983D2BF00C1D89C /* pig.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC04D1983D2BF00C1D89C /* pig.wav */; };
-		0B0CC0621983D2BF00C1D89C /* shark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC04E1983D2BF00C1D89C /* shark.wav */; };
-		0B0CC0631983D2BF00C1D89C /* bee.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC04F1983D2BF00C1D89C /* bee.wav */; };
-		0B0CC0641983D2BF00C1D89C /* 狗.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0501983D2BF00C1D89C /* 狗.wav */; };
-		0B0CC0651983D2BF00C1D89C /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0511983D2BF00C1D89C /* dog.wav */; };
-		0B0CC0661983D2BF00C1D89C /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0521983D2BF00C1D89C /* chicken.wav */; };
-		0B0CC0671983D2BF00C1D89C /* frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0531983D2BF00C1D89C /* frog.wav */; };
-		0B0CC0681983D2BF00C1D89C /* rabbit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0541983D2BF00C1D89C /* rabbit.wav */; };
-		0B0CC0691983D2BF00C1D89C /* snail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0551983D2BF00C1D89C /* snail.wav */; };
-		0B0CC06A1983D2BF00C1D89C /* 鸡.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0561983D2BF00C1D89C /* 鸡.wav */; };
-		0B0CC06B1983D2BF00C1D89C /* 考拉.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0571983D2BF00C1D89C /* 考拉.wav */; };
-		0B0CC06C1983D2BF00C1D89C /* 猫.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0581983D2BF00C1D89C /* 猫.wav */; };
-		0B0CC06D1983D2BF00C1D89C /* 蜜蜂.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0591983D2BF00C1D89C /* 蜜蜂.wav */; };
-		0B0CC06E1983D2BF00C1D89C /* 青蛙.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05A1983D2BF00C1D89C /* 青蛙.wav */; };
-		0B0CC06F1983D2BF00C1D89C /* 鲨鱼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05B1983D2BF00C1D89C /* 鲨鱼.wav */; };
-		0B0CC0701983D2BF00C1D89C /* 兔子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05C1983D2BF00C1D89C /* 兔子.wav */; };
-		0B0CC0711983D2BF00C1D89C /* 蜗牛.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05D1983D2BF00C1D89C /* 蜗牛.wav */; };
-		0B0CC0721983D2BF00C1D89C /* 猪.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05E1983D2BF00C1D89C /* 猪.wav */; };
-		0B0CC0731983D2BF00C1D89C /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC05F1983D2BF00C1D89C /* cat.wav */; };
-		0B0CC0741983D2BF00C1D89C /* koala.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0601983D2BF00C1D89C /* koala.wav */; };
 		0B0CC07E1983D7EF00C1D89C /* level7-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0751983D7EF00C1D89C /* level7-3.png */; };
 		0B0CC07F1983D7EF00C1D89C /* level7-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0761983D7EF00C1D89C /* level7-4.png */; };
 		0B0CC0801983D7EF00C1D89C /* level7-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0771983D7EF00C1D89C /* level7-5.png */; };
@@ -154,6 +134,112 @@
 		0B0CC0BC1983F2B700C1D89C /* bee.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0A81983F2B700C1D89C /* bee.png */; };
 		0B0CC0BD1983F2B700C1D89C /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0A91983F2B700C1D89C /* cat.png */; };
 		0B0CC0C31983FC1700C1D89C /* QuestionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0CC0C21983FC1700C1D89C /* QuestionMark.png */; };
+		0B0E2E9019A9C8F600D23AD9 /* bee.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2819A9C8F600D23AD9 /* bee.wav */; };
+		0B0E2E9119A9C8F600D23AD9 /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2919A9C8F600D23AD9 /* cat.wav */; };
+		0B0E2E9219A9C8F600D23AD9 /* chicken.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2A19A9C8F600D23AD9 /* chicken.wav */; };
+		0B0E2E9319A9C8F600D23AD9 /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2B19A9C8F600D23AD9 /* dog.wav */; };
+		0B0E2E9419A9C8F600D23AD9 /* frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2C19A9C8F600D23AD9 /* frog.wav */; };
+		0B0E2E9519A9C8F600D23AD9 /* koala.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2D19A9C8F600D23AD9 /* koala.wav */; };
+		0B0E2E9619A9C8F600D23AD9 /* pig.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2E19A9C8F600D23AD9 /* pig.wav */; };
+		0B0E2E9719A9C8F600D23AD9 /* rabbit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E2F19A9C8F600D23AD9 /* rabbit.wav */; };
+		0B0E2E9819A9C8F600D23AD9 /* shark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3019A9C8F600D23AD9 /* shark.wav */; };
+		0B0E2E9919A9C8F600D23AD9 /* snail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3119A9C8F600D23AD9 /* snail.wav */; };
+		0B0E2E9A19A9C8F600D23AD9 /* 兔子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3219A9C8F600D23AD9 /* 兔子.wav */; };
+		0B0E2E9B19A9C8F600D23AD9 /* 狗.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3319A9C8F600D23AD9 /* 狗.wav */; };
+		0B0E2E9C19A9C8F600D23AD9 /* 猪.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3419A9C8F600D23AD9 /* 猪.wav */; };
+		0B0E2E9D19A9C8F600D23AD9 /* 猫.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3519A9C8F600D23AD9 /* 猫.wav */; };
+		0B0E2E9E19A9C8F600D23AD9 /* 考拉.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3619A9C8F600D23AD9 /* 考拉.wav */; };
+		0B0E2E9F19A9C8F600D23AD9 /* 蜗牛.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3719A9C8F600D23AD9 /* 蜗牛.wav */; };
+		0B0E2EA019A9C8F600D23AD9 /* 蜜蜂.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3819A9C8F600D23AD9 /* 蜜蜂.wav */; };
+		0B0E2EA119A9C8F600D23AD9 /* 青蛙.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3919A9C8F600D23AD9 /* 青蛙.wav */; };
+		0B0E2EA219A9C8F600D23AD9 /* 鲨鱼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3A19A9C8F600D23AD9 /* 鲨鱼.wav */; };
+		0B0E2EA319A9C8F600D23AD9 /* 鸡.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3B19A9C8F600D23AD9 /* 鸡.wav */; };
+		0B0E2EA419A9C8F600D23AD9 /* chestnut.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3D19A9C8F600D23AD9 /* chestnut.wav */; };
+		0B0E2EA519A9C8F600D23AD9 /* cucumber.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3E19A9C8F600D23AD9 /* cucumber.wav */; };
+		0B0E2EA619A9C8F600D23AD9 /* milk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E3F19A9C8F600D23AD9 /* milk.wav */; };
+		0B0E2EA719A9C8F600D23AD9 /* mooncake.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4019A9C8F600D23AD9 /* mooncake.wav */; };
+		0B0E2EA819A9C8F600D23AD9 /* orange.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4119A9C8F600D23AD9 /* orange.wav */; };
+		0B0E2EA919A9C8F600D23AD9 /* peanut.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4219A9C8F600D23AD9 /* peanut.wav */; };
+		0B0E2EAA19A9C8F600D23AD9 /* pizza.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4319A9C8F600D23AD9 /* pizza.wav */; };
+		0B0E2EAB19A9C8F600D23AD9 /* rice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4419A9C8F600D23AD9 /* rice.wav */; };
+		0B0E2EAD19A9C8F600D23AD9 /* watermelon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4619A9C8F600D23AD9 /* watermelon.wav */; };
+		0B0E2EAE19A9C8F600D23AD9 /* 土豆.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4719A9C8F600D23AD9 /* 土豆.wav */; };
+		0B0E2EAF19A9C8F600D23AD9 /* 披萨饼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4819A9C8F600D23AD9 /* 披萨饼.wav */; };
+		0B0E2EB019A9C8F600D23AD9 /* 月饼.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4919A9C8F600D23AD9 /* 月饼.wav */; };
+		0B0E2EB119A9C8F600D23AD9 /* 栗子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4A19A9C8F600D23AD9 /* 栗子.wav */; };
+		0B0E2EB219A9C8F600D23AD9 /* 橙子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4B19A9C8F600D23AD9 /* 橙子.wav */; };
+		0B0E2EB319A9C8F600D23AD9 /* 牛奶.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4C19A9C8F600D23AD9 /* 牛奶.wav */; };
+		0B0E2EB419A9C8F600D23AD9 /* 米饭.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4D19A9C8F600D23AD9 /* 米饭.wav */; };
+		0B0E2EB519A9C8F600D23AD9 /* 花生.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4E19A9C8F600D23AD9 /* 花生.wav */; };
+		0B0E2EB619A9C8F600D23AD9 /* 西瓜.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E4F19A9C8F600D23AD9 /* 西瓜.wav */; };
+		0B0E2EB719A9C8F600D23AD9 /* 黄瓜.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5019A9C8F600D23AD9 /* 黄瓜.wav */; };
+		0B0E2EB819A9C8F600D23AD9 /* candle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5219A9C8F600D23AD9 /* candle.wav */; };
+		0B0E2EB919A9C8F600D23AD9 /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5319A9C8F600D23AD9 /* clock.wav */; };
+		0B0E2EBA19A9C8F600D23AD9 /* glasses.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5419A9C8F600D23AD9 /* glasses.wav */; };
+		0B0E2EBB19A9C8F600D23AD9 /* landry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5519A9C8F600D23AD9 /* landry.wav */; };
+		0B0E2EBC19A9C8F600D23AD9 /* magnifier.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5619A9C8F600D23AD9 /* magnifier.wav */; };
+		0B0E2EBD19A9C8F600D23AD9 /* pacifier.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5719A9C8F600D23AD9 /* pacifier.wav */; };
+		0B0E2EBE19A9C8F600D23AD9 /* pen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5819A9C8F600D23AD9 /* pen.wav */; };
+		0B0E2EBF19A9C8F600D23AD9 /* toilet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5919A9C8F600D23AD9 /* toilet.wav */; };
+		0B0E2EC019A9C8F600D23AD9 /* toothbrush.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5A19A9C8F600D23AD9 /* toothbrush.wav */; };
+		0B0E2EC119A9C8F600D23AD9 /* traffic light.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5B19A9C8F600D23AD9 /* traffic light.wav */; };
+		0B0E2EC219A9C8F600D23AD9 /* 卫生间.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5C19A9C8F600D23AD9 /* 卫生间.wav */; };
+		0B0E2EC319A9C8F600D23AD9 /* 奶嘴.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5D19A9C8F600D23AD9 /* 奶嘴.wav */; };
+		0B0E2EC419A9C8F600D23AD9 /* 放大镜.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5E19A9C8F600D23AD9 /* 放大镜.wav */; };
+		0B0E2EC519A9C8F600D23AD9 /* 洗衣液.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E5F19A9C8F600D23AD9 /* 洗衣液.wav */; };
+		0B0E2EC619A9C8F600D23AD9 /* 牙刷.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6019A9C8F600D23AD9 /* 牙刷.wav */; };
+		0B0E2EC719A9C8F600D23AD9 /* 眼镜.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6119A9C8F600D23AD9 /* 眼镜.wav */; };
+		0B0E2EC819A9C8F600D23AD9 /* 红绿灯.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6219A9C8F600D23AD9 /* 红绿灯.wav */; };
+		0B0E2EC919A9C8F600D23AD9 /* 蜡烛.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6319A9C8F600D23AD9 /* 蜡烛.wav */; };
+		0B0E2ECA19A9C8F600D23AD9 /* 钟表.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6419A9C8F600D23AD9 /* 钟表.wav */; };
+		0B0E2ECB19A9C8F600D23AD9 /* 钢笔.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6519A9C8F600D23AD9 /* 钢笔.wav */; };
+		0B0E2ECC19A9C8F600D23AD9 /* archery.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6719A9C8F600D23AD9 /* archery.wav */; };
+		0B0E2ECE19A9C8F600D23AD9 /* basketball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6919A9C8F600D23AD9 /* basketball.wav */; };
+		0B0E2ECF19A9C8F600D23AD9 /* bowling.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6A19A9C8F600D23AD9 /* bowling.wav */; };
+		0B0E2ED019A9C8F600D23AD9 /* football.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6B19A9C8F600D23AD9 /* football.wav */; };
+		0B0E2ED119A9C8F600D23AD9 /* golf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6C19A9C8F600D23AD9 /* golf.wav */; };
+		0B0E2ED219A9C8F600D23AD9 /* sailing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6D19A9C8F600D23AD9 /* sailing.wav */; };
+		0B0E2ED319A9C8F600D23AD9 /* skiing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6E19A9C8F600D23AD9 /* skiing.wav */; };
+		0B0E2ED419A9C8F600D23AD9 /* table tennis.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E6F19A9C8F600D23AD9 /* table tennis.wav */; };
+		0B0E2ED519A9C8F600D23AD9 /* weighting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7019A9C8F600D23AD9 /* weighting.wav */; };
+		0B0E2ED619A9C8F600D23AD9 /* 举重.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7119A9C8F600D23AD9 /* 举重.wav */; };
+		0B0E2ED719A9C8F600D23AD9 /* 乒乓球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7219A9C8F600D23AD9 /* 乒乓球.wav */; };
+		0B0E2ED819A9C8F600D23AD9 /* 保龄球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7319A9C8F600D23AD9 /* 保龄球.wav */; };
+		0B0E2ED919A9C8F600D23AD9 /* 射箭.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7419A9C8F600D23AD9 /* 射箭.wav */; };
+		0B0E2EDA19A9C8F600D23AD9 /* 帆船.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7519A9C8F600D23AD9 /* 帆船.wav */; };
+		0B0E2EDB19A9C8F600D23AD9 /* 滑雪.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7619A9C8F600D23AD9 /* 滑雪.wav */; };
+		0B0E2EDC19A9C8F600D23AD9 /* 篮球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7719A9C8F600D23AD9 /* 篮球.wav */; };
+		0B0E2EDD19A9C8F600D23AD9 /* 羽毛球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7819A9C8F600D23AD9 /* 羽毛球.wav */; };
+		0B0E2EDE19A9C8F600D23AD9 /* 足球.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7919A9C8F600D23AD9 /* 足球.wav */; };
+		0B0E2EDF19A9C8F600D23AD9 /* 高尔夫.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7A19A9C8F600D23AD9 /* 高尔夫.wav */; };
+		0B0E2EE019A9C8F600D23AD9 /* bamboo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7C19A9C8F600D23AD9 /* bamboo.wav */; };
+		0B0E2EE119A9C8F600D23AD9 /* cactus.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7D19A9C8F600D23AD9 /* cactus.wav */; };
+		0B0E2EE219A9C8F600D23AD9 /* chrysanthemum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7E19A9C8F600D23AD9 /* chrysanthemum.wav */; };
+		0B0E2EE319A9C8F600D23AD9 /* gingko.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E7F19A9C8F600D23AD9 /* gingko.wav */; };
+		0B0E2EE419A9C8F600D23AD9 /* lotus.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8019A9C8F600D23AD9 /* lotus.wav */; };
+		0B0E2EE519A9C8F600D23AD9 /* morning glory.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8119A9C8F600D23AD9 /* morning glory.wav */; };
+		0B0E2EE619A9C8F600D23AD9 /* pine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8219A9C8F600D23AD9 /* pine.wav */; };
+		0B0E2EE719A9C8F600D23AD9 /* rose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8319A9C8F600D23AD9 /* rose.wav */; };
+		0B0E2EE819A9C8F600D23AD9 /* sunflower.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8419A9C8F600D23AD9 /* sunflower.wav */; };
+		0B0E2EE919A9C8F600D23AD9 /* willow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8519A9C8F600D23AD9 /* willow.wav */; };
+		0B0E2EEA19A9C8F600D23AD9 /* 仙人掌.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8619A9C8F600D23AD9 /* 仙人掌.wav */; };
+		0B0E2EEB19A9C8F600D23AD9 /* 向日葵.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8719A9C8F600D23AD9 /* 向日葵.wav */; };
+		0B0E2EEC19A9C8F600D23AD9 /* 松树.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8819A9C8F600D23AD9 /* 松树.wav */; };
+		0B0E2EED19A9C8F600D23AD9 /* 柳树.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8919A9C8F600D23AD9 /* 柳树.wav */; };
+		0B0E2EEE19A9C8F600D23AD9 /* 牵牛花.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8A19A9C8F600D23AD9 /* 牵牛花.wav */; };
+		0B0E2EEF19A9C8F600D23AD9 /* 玫瑰.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8B19A9C8F600D23AD9 /* 玫瑰.wav */; };
+		0B0E2EF019A9C8F600D23AD9 /* 竹子.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8C19A9C8F600D23AD9 /* 竹子.wav */; };
+		0B0E2EF119A9C8F600D23AD9 /* 荷花.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8D19A9C8F600D23AD9 /* 荷花.wav */; };
+		0B0E2EF219A9C8F600D23AD9 /* 菊花.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8E19A9C8F600D23AD9 /* 菊花.wav */; };
+		0B0E2EF319A9C8F600D23AD9 /* 银杏树.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2E8F19A9C8F600D23AD9 /* 银杏树.wav */; };
+		0B0E2EF519A9CDAD00D23AD9 /* an1-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EF419A9CDAD00D23AD9 /* an1-19.png */; };
+		0B0E2EF719A9D1B100D23AD9 /* potato.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EF619A9D1B100D23AD9 /* potato.wav */; };
+		0B0E2EF919A9D1DA00D23AD9 /* badminton.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EF819A9D1DA00D23AD9 /* badminton.wav */; };
+		0B0E2EFE19A9D90D00D23AD9 /* plantShare480.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EFA19A9D90D00D23AD9 /* plantShare480.png */; };
+		0B0E2EFF19A9D90D00D23AD9 /* sportShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EFB19A9D90D00D23AD9 /* sportShare.png */; };
+		0B0E2F0019A9D90D00D23AD9 /* sportShare480.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EFC19A9D90D00D23AD9 /* sportShare480.png */; };
+		0B0E2F0119A9D90D00D23AD9 /* plantShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2EFD19A9D90D00D23AD9 /* plantShare.png */; };
+		0B0E2F0319A9E47B00D23AD9 /* an1-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0E2F0219A9E47B00D23AD9 /* an1-16.png */; };
 		0B106CEA195E6470003023C1 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B106CE4195E6470003023C1 /* more.png */; };
 		0B125E3119A0AE0400022F8C /* okButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B125E2F19A0AE0400022F8C /* okButton.png */; };
 		0B125E3619A0D08400022F8C /* tagAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B125E3519A0D08400022F8C /* tagAlert.png */; };
@@ -166,11 +252,10 @@
 		0B386D8119715F360033352F /* an3-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7819715F360033352F /* an3-35.png */; };
 		0B386D8219715F360033352F /* an2-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7919715F360033352F /* an2-35.png */; };
 		0B386D8319715F360033352F /* an1-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7A19715F360033352F /* an1-35.png */; };
-		0B386D8419715F360033352F /* level35-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7B19715F360033352F /* level35-2.png */; };
-		0B386D8519715F360033352F /* level35-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7C19715F360033352F /* level35-3.png */; };
-		0B386D8619715F360033352F /* level35-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7D19715F360033352F /* level35-4.png */; };
-		0B386D8719715F360033352F /* level35-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7E19715F360033352F /* level35-5.png */; };
-		0B386D8819715F360033352F /* level35-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7F19715F360033352F /* level35-1.png */; };
+		0B386D8419715F360033352F /* level35-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7B19715F360033352F /* level35-1.png */; };
+		0B386D8519715F360033352F /* level35-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7C19715F360033352F /* level35-2.png */; };
+		0B386D8619715F360033352F /* level35-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7D19715F360033352F /* level35-3.png */; };
+		0B386D8719715F360033352F /* level35-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D7E19715F360033352F /* level35-4.png */; };
 		0B386D8919715F360033352F /* pic35.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D8019715F360033352F /* pic35.png */; };
 		0B386D931971625B0033352F /* pic44.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D8A1971625B0033352F /* pic44.png */; };
 		0B386D941971625B0033352F /* level44-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B386D8B1971625B0033352F /* level44-5.png */; };
@@ -337,7 +422,6 @@
 		0B39845219A847B800EE3459 /* toilet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840019A847B800EE3459 /* toilet.png */; };
 		0B39845319A847B800EE3459 /* toothbrush.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840119A847B800EE3459 /* toothbrush.png */; };
 		0B39845419A847B800EE3459 /* traffic light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840219A847B800EE3459 /* traffic light.png */; };
-		0B39845519A847B800EE3459 /* 交通灯.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840319A847B800EE3459 /* 交通灯.png */; };
 		0B39845619A847B800EE3459 /* 卫生间.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840419A847B800EE3459 /* 卫生间.png */; };
 		0B39845719A847B800EE3459 /* 奶嘴.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840519A847B800EE3459 /* 奶嘴.png */; };
 		0B39845819A847B800EE3459 /* 放大镜.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39840619A847B800EE3459 /* 放大镜.png */; };
@@ -355,14 +439,12 @@
 		0B39846419A847B800EE3459 /* peanut.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841319A847B800EE3459 /* peanut.png */; };
 		0B39846519A847B800EE3459 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841419A847B800EE3459 /* pizza.png */; };
 		0B39846619A847B800EE3459 /* rice.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841519A847B800EE3459 /* rice.png */; };
-		0B39846719A847B800EE3459 /* tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841619A847B800EE3459 /* tomato.png */; };
 		0B39846819A847B800EE3459 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841719A847B800EE3459 /* watermelon.png */; };
 		0B39846919A847B800EE3459 /* 披萨饼.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841819A847B800EE3459 /* 披萨饼.png */; };
 		0B39846A19A847B800EE3459 /* 月饼.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841919A847B800EE3459 /* 月饼.png */; };
 		0B39846B19A847B800EE3459 /* 栗子.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841A19A847B800EE3459 /* 栗子.png */; };
 		0B39846C19A847B800EE3459 /* 橙子.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841B19A847B800EE3459 /* 橙子.png */; };
 		0B39846D19A847B800EE3459 /* 牛奶.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841C19A847B800EE3459 /* 牛奶.png */; };
-		0B39846E19A847B800EE3459 /* 番茄.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841D19A847B800EE3459 /* 番茄.png */; };
 		0B39846F19A847B800EE3459 /* 米饭.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841E19A847B800EE3459 /* 米饭.png */; };
 		0B39847019A847B800EE3459 /* 花生.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39841F19A847B800EE3459 /* 花生.png */; };
 		0B39847119A847B800EE3459 /* 西瓜.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39842019A847B800EE3459 /* 西瓜.png */; };
@@ -381,7 +463,7 @@
 		0B39847E19A847B800EE3459 /* 乒乓球.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39842E19A847B800EE3459 /* 乒乓球.png */; };
 		0B39847F19A847B800EE3459 /* 保龄球.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39842F19A847B800EE3459 /* 保龄球.png */; };
 		0B39848019A847B800EE3459 /* 射箭.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843019A847B800EE3459 /* 射箭.png */; };
-		0B39848119A847B800EE3459 /* 帆板.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843119A847B800EE3459 /* 帆板.png */; };
+		0B39848119A847B800EE3459 /* 帆船.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843119A847B800EE3459 /* 帆船.png */; };
 		0B39848219A847B800EE3459 /* 滑雪.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843219A847B800EE3459 /* 滑雪.png */; };
 		0B39848319A847B800EE3459 /* 篮球.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843319A847B800EE3459 /* 篮球.png */; };
 		0B39848419A847B800EE3459 /* 羽毛球.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B39843419A847B800EE3459 /* 羽毛球.png */; };
@@ -518,6 +600,13 @@
 		0BBEAA851968300D00D0B525 /* camera2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBEAA841968300D00D0B525 /* camera2.png */; };
 		0BCCE00A19A8A07E00BEA042 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCCE00819A8A07E00BEA042 /* libMobClickLibrary.a */; };
 		0BCCE00C19A8A0B200BEA042 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCCE00B19A8A0B200BEA042 /* libz.dylib */; };
+		0BCCE01019A8C15700BEA042 /* potato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE00F19A8C15700BEA042 /* potato.png */; };
+		0BCCE01219A8C16200BEA042 /* 土豆.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE01119A8C16200BEA042 /* 土豆.png */; };
+		0BCCE01419A8C17600BEA042 /* 红绿灯.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE01319A8C17600BEA042 /* 红绿灯.png */; };
+		0BCCE02119A8C33F00BEA042 /* foodShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE01D19A8C33F00BEA042 /* foodShare.png */; };
+		0BCCE02219A8C33F00BEA042 /* livingGoodShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE01E19A8C33F00BEA042 /* livingGoodShare.png */; };
+		0BCCE02319A8C33F00BEA042 /* livingGoodShare480.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE01F19A8C33F00BEA042 /* livingGoodShare480.png */; };
+		0BCCE02419A8C33F00BEA042 /* foodShare480.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCCE02019A8C33F00BEA042 /* foodShare480.png */; };
 		0BDAD703197FFCE90028CC42 /* 透明.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAD702197FFCE90028CC42 /* 透明.png */; };
 		0BDAD70D198000190028CC42 /* level41-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAD704198000190028CC42 /* level41-5.png */; };
 		0BDAD70E198000190028CC42 /* level41-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAD705198000190028CC42 /* level41-4.png */; };
@@ -678,7 +767,6 @@
 		0BFF4BF119A63C2B00BDD689 /* pic16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BE819A63C2B00BDD689 /* pic16.png */; };
 		0BFF4BF219A63C2B00BDD689 /* an3-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BE919A63C2B00BDD689 /* an3-16.png */; };
 		0BFF4BF319A63C2B00BDD689 /* an2-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BEA19A63C2B00BDD689 /* an2-16.png */; };
-		0BFF4BF419A63C2B00BDD689 /* an1-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BEB19A63C2B00BDD689 /* an1-16.png */; };
 		0BFF4BF519A63C2B00BDD689 /* level16-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BEC19A63C2B00BDD689 /* level16-5.png */; };
 		0BFF4BF619A63C2B00BDD689 /* level16-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BED19A63C2B00BDD689 /* level16-4.png */; };
 		0BFF4BF719A63C2B00BDD689 /* level16-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4BEE19A63C2B00BDD689 /* level16-2.png */; };
@@ -706,7 +794,6 @@
 		0BFF4C2119A63FBE00BDD689 /* level18-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C1619A63FBE00BDD689 /* level18-7.png */; };
 		0BFF4C2B19A6410F00BDD689 /* pic19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2219A6410F00BDD689 /* pic19.png */; };
 		0BFF4C2C19A6410F00BDD689 /* an3-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2319A6410F00BDD689 /* an3-19.png */; };
-		0BFF4C2D19A6410F00BDD689 /* an1-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2419A6410F00BDD689 /* an1-19.png */; };
 		0BFF4C2E19A6410F00BDD689 /* an2-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2519A6410F00BDD689 /* an2-19.png */; };
 		0BFF4C2F19A6410F00BDD689 /* level19-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2619A6410F00BDD689 /* level19-5.png */; };
 		0BFF4C3019A6410F00BDD689 /* level19-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BFF4C2719A6410F00BDD689 /* level19-4.png */; };
@@ -826,26 +913,6 @@
 		0B0CC03E1983BD6F00C1D89C /* pic9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic9.png; sourceTree = "<group>"; };
 		0B0CC03F1983BD6F00C1D89C /* pic10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic10.png; sourceTree = "<group>"; };
 		0B0CC04A1983C21C00C1D89C /* an1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-1.png"; sourceTree = "<group>"; };
-		0B0CC04D1983D2BF00C1D89C /* pig.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pig.wav; sourceTree = "<group>"; };
-		0B0CC04E1983D2BF00C1D89C /* shark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shark.wav; sourceTree = "<group>"; };
-		0B0CC04F1983D2BF00C1D89C /* bee.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bee.wav; sourceTree = "<group>"; };
-		0B0CC0501983D2BF00C1D89C /* 狗.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "狗.wav"; sourceTree = "<group>"; };
-		0B0CC0511983D2BF00C1D89C /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
-		0B0CC0521983D2BF00C1D89C /* chicken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chicken.wav; sourceTree = "<group>"; };
-		0B0CC0531983D2BF00C1D89C /* frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = frog.wav; sourceTree = "<group>"; };
-		0B0CC0541983D2BF00C1D89C /* rabbit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rabbit.wav; sourceTree = "<group>"; };
-		0B0CC0551983D2BF00C1D89C /* snail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snail.wav; sourceTree = "<group>"; };
-		0B0CC0561983D2BF00C1D89C /* 鸡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鸡.wav"; sourceTree = "<group>"; };
-		0B0CC0571983D2BF00C1D89C /* 考拉.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "考拉.wav"; sourceTree = "<group>"; };
-		0B0CC0581983D2BF00C1D89C /* 猫.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "猫.wav"; sourceTree = "<group>"; };
-		0B0CC0591983D2BF00C1D89C /* 蜜蜂.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "蜜蜂.wav"; sourceTree = "<group>"; };
-		0B0CC05A1983D2BF00C1D89C /* 青蛙.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "青蛙.wav"; sourceTree = "<group>"; };
-		0B0CC05B1983D2BF00C1D89C /* 鲨鱼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鲨鱼.wav"; sourceTree = "<group>"; };
-		0B0CC05C1983D2BF00C1D89C /* 兔子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "兔子.wav"; sourceTree = "<group>"; };
-		0B0CC05D1983D2BF00C1D89C /* 蜗牛.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "蜗牛.wav"; sourceTree = "<group>"; };
-		0B0CC05E1983D2BF00C1D89C /* 猪.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "猪.wav"; sourceTree = "<group>"; };
-		0B0CC05F1983D2BF00C1D89C /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
-		0B0CC0601983D2BF00C1D89C /* koala.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = koala.wav; sourceTree = "<group>"; };
 		0B0CC0751983D7EF00C1D89C /* level7-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-3.png"; sourceTree = "<group>"; };
 		0B0CC0761983D7EF00C1D89C /* level7-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-4.png"; sourceTree = "<group>"; };
 		0B0CC0771983D7EF00C1D89C /* level7-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level7-5.png"; sourceTree = "<group>"; };
@@ -883,6 +950,112 @@
 		0B0CC0A81983F2B700C1D89C /* bee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bee.png; sourceTree = "<group>"; };
 		0B0CC0A91983F2B700C1D89C /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		0B0CC0C21983FC1700C1D89C /* QuestionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuestionMark.png; sourceTree = "<group>"; };
+		0B0E2E2819A9C8F600D23AD9 /* bee.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bee.wav; sourceTree = "<group>"; };
+		0B0E2E2919A9C8F600D23AD9 /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		0B0E2E2A19A9C8F600D23AD9 /* chicken.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chicken.wav; sourceTree = "<group>"; };
+		0B0E2E2B19A9C8F600D23AD9 /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
+		0B0E2E2C19A9C8F600D23AD9 /* frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = frog.wav; sourceTree = "<group>"; };
+		0B0E2E2D19A9C8F600D23AD9 /* koala.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = koala.wav; sourceTree = "<group>"; };
+		0B0E2E2E19A9C8F600D23AD9 /* pig.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pig.wav; sourceTree = "<group>"; };
+		0B0E2E2F19A9C8F600D23AD9 /* rabbit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rabbit.wav; sourceTree = "<group>"; };
+		0B0E2E3019A9C8F600D23AD9 /* shark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shark.wav; sourceTree = "<group>"; };
+		0B0E2E3119A9C8F600D23AD9 /* snail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snail.wav; sourceTree = "<group>"; };
+		0B0E2E3219A9C8F600D23AD9 /* 兔子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "兔子.wav"; sourceTree = "<group>"; };
+		0B0E2E3319A9C8F600D23AD9 /* 狗.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "狗.wav"; sourceTree = "<group>"; };
+		0B0E2E3419A9C8F600D23AD9 /* 猪.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "猪.wav"; sourceTree = "<group>"; };
+		0B0E2E3519A9C8F600D23AD9 /* 猫.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "猫.wav"; sourceTree = "<group>"; };
+		0B0E2E3619A9C8F600D23AD9 /* 考拉.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "考拉.wav"; sourceTree = "<group>"; };
+		0B0E2E3719A9C8F600D23AD9 /* 蜗牛.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "蜗牛.wav"; sourceTree = "<group>"; };
+		0B0E2E3819A9C8F600D23AD9 /* 蜜蜂.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "蜜蜂.wav"; sourceTree = "<group>"; };
+		0B0E2E3919A9C8F600D23AD9 /* 青蛙.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "青蛙.wav"; sourceTree = "<group>"; };
+		0B0E2E3A19A9C8F600D23AD9 /* 鲨鱼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鲨鱼.wav"; sourceTree = "<group>"; };
+		0B0E2E3B19A9C8F600D23AD9 /* 鸡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "鸡.wav"; sourceTree = "<group>"; };
+		0B0E2E3D19A9C8F600D23AD9 /* chestnut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chestnut.wav; sourceTree = "<group>"; };
+		0B0E2E3E19A9C8F600D23AD9 /* cucumber.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cucumber.wav; sourceTree = "<group>"; };
+		0B0E2E3F19A9C8F600D23AD9 /* milk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = milk.wav; sourceTree = "<group>"; };
+		0B0E2E4019A9C8F600D23AD9 /* mooncake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mooncake.wav; sourceTree = "<group>"; };
+		0B0E2E4119A9C8F600D23AD9 /* orange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = orange.wav; sourceTree = "<group>"; };
+		0B0E2E4219A9C8F600D23AD9 /* peanut.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peanut.wav; sourceTree = "<group>"; };
+		0B0E2E4319A9C8F600D23AD9 /* pizza.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pizza.wav; sourceTree = "<group>"; };
+		0B0E2E4419A9C8F600D23AD9 /* rice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rice.wav; sourceTree = "<group>"; };
+		0B0E2E4619A9C8F600D23AD9 /* watermelon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = watermelon.wav; sourceTree = "<group>"; };
+		0B0E2E4719A9C8F600D23AD9 /* 土豆.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "土豆.wav"; sourceTree = "<group>"; };
+		0B0E2E4819A9C8F600D23AD9 /* 披萨饼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "披萨饼.wav"; sourceTree = "<group>"; };
+		0B0E2E4919A9C8F600D23AD9 /* 月饼.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "月饼.wav"; sourceTree = "<group>"; };
+		0B0E2E4A19A9C8F600D23AD9 /* 栗子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "栗子.wav"; sourceTree = "<group>"; };
+		0B0E2E4B19A9C8F600D23AD9 /* 橙子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "橙子.wav"; sourceTree = "<group>"; };
+		0B0E2E4C19A9C8F600D23AD9 /* 牛奶.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "牛奶.wav"; sourceTree = "<group>"; };
+		0B0E2E4D19A9C8F600D23AD9 /* 米饭.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "米饭.wav"; sourceTree = "<group>"; };
+		0B0E2E4E19A9C8F600D23AD9 /* 花生.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "花生.wav"; sourceTree = "<group>"; };
+		0B0E2E4F19A9C8F600D23AD9 /* 西瓜.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "西瓜.wav"; sourceTree = "<group>"; };
+		0B0E2E5019A9C8F600D23AD9 /* 黄瓜.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "黄瓜.wav"; sourceTree = "<group>"; };
+		0B0E2E5219A9C8F600D23AD9 /* candle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = candle.wav; sourceTree = "<group>"; };
+		0B0E2E5319A9C8F600D23AD9 /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
+		0B0E2E5419A9C8F600D23AD9 /* glasses.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = glasses.wav; sourceTree = "<group>"; };
+		0B0E2E5519A9C8F600D23AD9 /* landry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = landry.wav; sourceTree = "<group>"; };
+		0B0E2E5619A9C8F600D23AD9 /* magnifier.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = magnifier.wav; sourceTree = "<group>"; };
+		0B0E2E5719A9C8F600D23AD9 /* pacifier.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pacifier.wav; sourceTree = "<group>"; };
+		0B0E2E5819A9C8F600D23AD9 /* pen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pen.wav; sourceTree = "<group>"; };
+		0B0E2E5919A9C8F600D23AD9 /* toilet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = toilet.wav; sourceTree = "<group>"; };
+		0B0E2E5A19A9C8F600D23AD9 /* toothbrush.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = toothbrush.wav; sourceTree = "<group>"; };
+		0B0E2E5B19A9C8F600D23AD9 /* traffic light.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "traffic light.wav"; sourceTree = "<group>"; };
+		0B0E2E5C19A9C8F600D23AD9 /* 卫生间.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "卫生间.wav"; sourceTree = "<group>"; };
+		0B0E2E5D19A9C8F600D23AD9 /* 奶嘴.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "奶嘴.wav"; sourceTree = "<group>"; };
+		0B0E2E5E19A9C8F600D23AD9 /* 放大镜.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "放大镜.wav"; sourceTree = "<group>"; };
+		0B0E2E5F19A9C8F600D23AD9 /* 洗衣液.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "洗衣液.wav"; sourceTree = "<group>"; };
+		0B0E2E6019A9C8F600D23AD9 /* 牙刷.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "牙刷.wav"; sourceTree = "<group>"; };
+		0B0E2E6119A9C8F600D23AD9 /* 眼镜.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "眼镜.wav"; sourceTree = "<group>"; };
+		0B0E2E6219A9C8F600D23AD9 /* 红绿灯.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "红绿灯.wav"; sourceTree = "<group>"; };
+		0B0E2E6319A9C8F600D23AD9 /* 蜡烛.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "蜡烛.wav"; sourceTree = "<group>"; };
+		0B0E2E6419A9C8F600D23AD9 /* 钟表.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "钟表.wav"; sourceTree = "<group>"; };
+		0B0E2E6519A9C8F600D23AD9 /* 钢笔.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "钢笔.wav"; sourceTree = "<group>"; };
+		0B0E2E6719A9C8F600D23AD9 /* archery.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = archery.wav; sourceTree = "<group>"; };
+		0B0E2E6919A9C8F600D23AD9 /* basketball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = basketball.wav; sourceTree = "<group>"; };
+		0B0E2E6A19A9C8F600D23AD9 /* bowling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bowling.wav; sourceTree = "<group>"; };
+		0B0E2E6B19A9C8F600D23AD9 /* football.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = football.wav; sourceTree = "<group>"; };
+		0B0E2E6C19A9C8F600D23AD9 /* golf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = golf.wav; sourceTree = "<group>"; };
+		0B0E2E6D19A9C8F600D23AD9 /* sailing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sailing.wav; sourceTree = "<group>"; };
+		0B0E2E6E19A9C8F600D23AD9 /* skiing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skiing.wav; sourceTree = "<group>"; };
+		0B0E2E6F19A9C8F600D23AD9 /* table tennis.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "table tennis.wav"; sourceTree = "<group>"; };
+		0B0E2E7019A9C8F600D23AD9 /* weighting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = weighting.wav; sourceTree = "<group>"; };
+		0B0E2E7119A9C8F600D23AD9 /* 举重.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "举重.wav"; sourceTree = "<group>"; };
+		0B0E2E7219A9C8F600D23AD9 /* 乒乓球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "乒乓球.wav"; sourceTree = "<group>"; };
+		0B0E2E7319A9C8F600D23AD9 /* 保龄球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "保龄球.wav"; sourceTree = "<group>"; };
+		0B0E2E7419A9C8F600D23AD9 /* 射箭.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "射箭.wav"; sourceTree = "<group>"; };
+		0B0E2E7519A9C8F600D23AD9 /* 帆船.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "帆船.wav"; sourceTree = "<group>"; };
+		0B0E2E7619A9C8F600D23AD9 /* 滑雪.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "滑雪.wav"; sourceTree = "<group>"; };
+		0B0E2E7719A9C8F600D23AD9 /* 篮球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "篮球.wav"; sourceTree = "<group>"; };
+		0B0E2E7819A9C8F600D23AD9 /* 羽毛球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "羽毛球.wav"; sourceTree = "<group>"; };
+		0B0E2E7919A9C8F600D23AD9 /* 足球.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "足球.wav"; sourceTree = "<group>"; };
+		0B0E2E7A19A9C8F600D23AD9 /* 高尔夫.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "高尔夫.wav"; sourceTree = "<group>"; };
+		0B0E2E7C19A9C8F600D23AD9 /* bamboo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bamboo.wav; sourceTree = "<group>"; };
+		0B0E2E7D19A9C8F600D23AD9 /* cactus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cactus.wav; sourceTree = "<group>"; };
+		0B0E2E7E19A9C8F600D23AD9 /* chrysanthemum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chrysanthemum.wav; sourceTree = "<group>"; };
+		0B0E2E7F19A9C8F600D23AD9 /* gingko.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gingko.wav; sourceTree = "<group>"; };
+		0B0E2E8019A9C8F600D23AD9 /* lotus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lotus.wav; sourceTree = "<group>"; };
+		0B0E2E8119A9C8F600D23AD9 /* morning glory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "morning glory.wav"; sourceTree = "<group>"; };
+		0B0E2E8219A9C8F600D23AD9 /* pine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pine.wav; sourceTree = "<group>"; };
+		0B0E2E8319A9C8F600D23AD9 /* rose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rose.wav; sourceTree = "<group>"; };
+		0B0E2E8419A9C8F600D23AD9 /* sunflower.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sunflower.wav; sourceTree = "<group>"; };
+		0B0E2E8519A9C8F600D23AD9 /* willow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = willow.wav; sourceTree = "<group>"; };
+		0B0E2E8619A9C8F600D23AD9 /* 仙人掌.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "仙人掌.wav"; sourceTree = "<group>"; };
+		0B0E2E8719A9C8F600D23AD9 /* 向日葵.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "向日葵.wav"; sourceTree = "<group>"; };
+		0B0E2E8819A9C8F600D23AD9 /* 松树.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "松树.wav"; sourceTree = "<group>"; };
+		0B0E2E8919A9C8F600D23AD9 /* 柳树.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "柳树.wav"; sourceTree = "<group>"; };
+		0B0E2E8A19A9C8F600D23AD9 /* 牵牛花.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "牵牛花.wav"; sourceTree = "<group>"; };
+		0B0E2E8B19A9C8F600D23AD9 /* 玫瑰.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "玫瑰.wav"; sourceTree = "<group>"; };
+		0B0E2E8C19A9C8F600D23AD9 /* 竹子.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "竹子.wav"; sourceTree = "<group>"; };
+		0B0E2E8D19A9C8F600D23AD9 /* 荷花.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "荷花.wav"; sourceTree = "<group>"; };
+		0B0E2E8E19A9C8F600D23AD9 /* 菊花.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "菊花.wav"; sourceTree = "<group>"; };
+		0B0E2E8F19A9C8F600D23AD9 /* 银杏树.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "银杏树.wav"; sourceTree = "<group>"; };
+		0B0E2EF419A9CDAD00D23AD9 /* an1-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-19.png"; sourceTree = "<group>"; };
+		0B0E2EF619A9D1B100D23AD9 /* potato.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = potato.wav; sourceTree = "<group>"; };
+		0B0E2EF819A9D1DA00D23AD9 /* badminton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = badminton.wav; sourceTree = "<group>"; };
+		0B0E2EFA19A9D90D00D23AD9 /* plantShare480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plantShare480.png; sourceTree = "<group>"; };
+		0B0E2EFB19A9D90D00D23AD9 /* sportShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sportShare.png; sourceTree = "<group>"; };
+		0B0E2EFC19A9D90D00D23AD9 /* sportShare480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sportShare480.png; sourceTree = "<group>"; };
+		0B0E2EFD19A9D90D00D23AD9 /* plantShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plantShare.png; sourceTree = "<group>"; };
+		0B0E2F0219A9E47B00D23AD9 /* an1-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-16.png"; sourceTree = "<group>"; };
 		0B106CE4195E6470003023C1 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 		0B125E2F19A0AE0400022F8C /* okButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okButton.png; sourceTree = "<group>"; };
 		0B125E3519A0D08400022F8C /* tagAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tagAlert.png; sourceTree = "<group>"; };
@@ -897,11 +1070,10 @@
 		0B386D7819715F360033352F /* an3-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-35.png"; sourceTree = "<group>"; };
 		0B386D7919715F360033352F /* an2-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-35.png"; sourceTree = "<group>"; };
 		0B386D7A19715F360033352F /* an1-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-35.png"; sourceTree = "<group>"; };
-		0B386D7B19715F360033352F /* level35-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-2.png"; sourceTree = "<group>"; };
-		0B386D7C19715F360033352F /* level35-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-3.png"; sourceTree = "<group>"; };
-		0B386D7D19715F360033352F /* level35-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-4.png"; sourceTree = "<group>"; };
-		0B386D7E19715F360033352F /* level35-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-5.png"; sourceTree = "<group>"; };
-		0B386D7F19715F360033352F /* level35-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-1.png"; sourceTree = "<group>"; };
+		0B386D7B19715F360033352F /* level35-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-1.png"; sourceTree = "<group>"; };
+		0B386D7C19715F360033352F /* level35-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-2.png"; sourceTree = "<group>"; };
+		0B386D7D19715F360033352F /* level35-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-3.png"; sourceTree = "<group>"; };
+		0B386D7E19715F360033352F /* level35-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level35-4.png"; sourceTree = "<group>"; };
 		0B386D8019715F360033352F /* pic35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic35.png; sourceTree = "<group>"; };
 		0B386D8A1971625B0033352F /* pic44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic44.png; sourceTree = "<group>"; };
 		0B386D8B1971625B0033352F /* level44-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level44-5.png"; sourceTree = "<group>"; };
@@ -1068,7 +1240,6 @@
 		0B39840019A847B800EE3459 /* toilet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toilet.png; sourceTree = "<group>"; };
 		0B39840119A847B800EE3459 /* toothbrush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toothbrush.png; sourceTree = "<group>"; };
 		0B39840219A847B800EE3459 /* traffic light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic light.png"; sourceTree = "<group>"; };
-		0B39840319A847B800EE3459 /* 交通灯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "交通灯.png"; sourceTree = "<group>"; };
 		0B39840419A847B800EE3459 /* 卫生间.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卫生间.png"; sourceTree = "<group>"; };
 		0B39840519A847B800EE3459 /* 奶嘴.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "奶嘴.png"; sourceTree = "<group>"; };
 		0B39840619A847B800EE3459 /* 放大镜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "放大镜.png"; sourceTree = "<group>"; };
@@ -1086,14 +1257,12 @@
 		0B39841319A847B800EE3459 /* peanut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peanut.png; sourceTree = "<group>"; };
 		0B39841419A847B800EE3459 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
 		0B39841519A847B800EE3459 /* rice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rice.png; sourceTree = "<group>"; };
-		0B39841619A847B800EE3459 /* tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomato.png; sourceTree = "<group>"; };
 		0B39841719A847B800EE3459 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
 		0B39841819A847B800EE3459 /* 披萨饼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "披萨饼.png"; sourceTree = "<group>"; };
 		0B39841919A847B800EE3459 /* 月饼.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "月饼.png"; sourceTree = "<group>"; };
 		0B39841A19A847B800EE3459 /* 栗子.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "栗子.png"; sourceTree = "<group>"; };
 		0B39841B19A847B800EE3459 /* 橙子.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "橙子.png"; sourceTree = "<group>"; };
 		0B39841C19A847B800EE3459 /* 牛奶.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "牛奶.png"; sourceTree = "<group>"; };
-		0B39841D19A847B800EE3459 /* 番茄.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "番茄.png"; sourceTree = "<group>"; };
 		0B39841E19A847B800EE3459 /* 米饭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "米饭.png"; sourceTree = "<group>"; };
 		0B39841F19A847B800EE3459 /* 花生.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "花生.png"; sourceTree = "<group>"; };
 		0B39842019A847B800EE3459 /* 西瓜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "西瓜.png"; sourceTree = "<group>"; };
@@ -1112,7 +1281,7 @@
 		0B39842E19A847B800EE3459 /* 乒乓球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "乒乓球.png"; sourceTree = "<group>"; };
 		0B39842F19A847B800EE3459 /* 保龄球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保龄球.png"; sourceTree = "<group>"; };
 		0B39843019A847B800EE3459 /* 射箭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "射箭.png"; sourceTree = "<group>"; };
-		0B39843119A847B800EE3459 /* 帆板.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "帆板.png"; sourceTree = "<group>"; };
+		0B39843119A847B800EE3459 /* 帆船.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "帆船.png"; sourceTree = "<group>"; };
 		0B39843219A847B800EE3459 /* 滑雪.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滑雪.png"; sourceTree = "<group>"; };
 		0B39843319A847B800EE3459 /* 篮球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "篮球.png"; sourceTree = "<group>"; };
 		0B39843419A847B800EE3459 /* 羽毛球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "羽毛球.png"; sourceTree = "<group>"; };
@@ -1253,6 +1422,13 @@
 		0BCCE00819A8A07E00BEA042 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		0BCCE00919A8A07E00BEA042 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		0BCCE00B19A8A0B200BEA042 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0BCCE00F19A8C15700BEA042 /* potato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = potato.png; sourceTree = "<group>"; };
+		0BCCE01119A8C16200BEA042 /* 土豆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "土豆.png"; sourceTree = "<group>"; };
+		0BCCE01319A8C17600BEA042 /* 红绿灯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "红绿灯.png"; sourceTree = "<group>"; };
+		0BCCE01D19A8C33F00BEA042 /* foodShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodShare.png; sourceTree = "<group>"; };
+		0BCCE01E19A8C33F00BEA042 /* livingGoodShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = livingGoodShare.png; sourceTree = "<group>"; };
+		0BCCE01F19A8C33F00BEA042 /* livingGoodShare480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = livingGoodShare480.png; sourceTree = "<group>"; };
+		0BCCE02019A8C33F00BEA042 /* foodShare480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodShare480.png; sourceTree = "<group>"; };
 		0BDAD702197FFCE90028CC42 /* 透明.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "透明.png"; sourceTree = "<group>"; };
 		0BDAD704198000190028CC42 /* level41-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level41-5.png"; sourceTree = "<group>"; };
 		0BDAD705198000190028CC42 /* level41-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level41-4.png"; sourceTree = "<group>"; };
@@ -1278,7 +1454,7 @@
 		0BE3CFC21966E69000C8235F /* returnToLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = returnToLevel.png; sourceTree = "<group>"; };
 		0BE3CFC41966E88300C8235F /* returnTapped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = returnTapped.png; sourceTree = "<group>"; };
 		0BE3CFD21966FF8A00C8235F /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
-		0BE582B4193F25FB00EEAB26 /* completeImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = completeImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE582B4193F25FB00EEAB26 /* babyJoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babyJoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE582B7193F25FB00EEAB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0BE582BB193F25FB00EEAB26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1456,7 +1632,6 @@
 		0BFF4BE819A63C2B00BDD689 /* pic16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic16.png; sourceTree = "<group>"; };
 		0BFF4BE919A63C2B00BDD689 /* an3-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-16.png"; sourceTree = "<group>"; };
 		0BFF4BEA19A63C2B00BDD689 /* an2-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-16.png"; sourceTree = "<group>"; };
-		0BFF4BEB19A63C2B00BDD689 /* an1-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-16.png"; sourceTree = "<group>"; };
 		0BFF4BEC19A63C2B00BDD689 /* level16-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level16-5.png"; sourceTree = "<group>"; };
 		0BFF4BED19A63C2B00BDD689 /* level16-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level16-4.png"; sourceTree = "<group>"; };
 		0BFF4BEE19A63C2B00BDD689 /* level16-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level16-2.png"; sourceTree = "<group>"; };
@@ -1484,7 +1659,6 @@
 		0BFF4C1619A63FBE00BDD689 /* level18-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level18-7.png"; sourceTree = "<group>"; };
 		0BFF4C2219A6410F00BDD689 /* pic19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic19.png; sourceTree = "<group>"; };
 		0BFF4C2319A6410F00BDD689 /* an3-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an3-19.png"; sourceTree = "<group>"; };
-		0BFF4C2419A6410F00BDD689 /* an1-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an1-19.png"; sourceTree = "<group>"; };
 		0BFF4C2519A6410F00BDD689 /* an2-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "an2-19.png"; sourceTree = "<group>"; };
 		0BFF4C2619A6410F00BDD689 /* level19-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level19-5.png"; sourceTree = "<group>"; };
 		0BFF4C2719A6410F00BDD689 /* level19-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level19-4.png"; sourceTree = "<group>"; };
@@ -1618,7 +1792,7 @@
 				0BFF4BE819A63C2B00BDD689 /* pic16.png */,
 				0BFF4BE919A63C2B00BDD689 /* an3-16.png */,
 				0BFF4BEA19A63C2B00BDD689 /* an2-16.png */,
-				0BFF4BEB19A63C2B00BDD689 /* an1-16.png */,
+				0B0E2F0219A9E47B00D23AD9 /* an1-16.png */,
 				0BFF4BEC19A63C2B00BDD689 /* level16-5.png */,
 				0BFF4BED19A63C2B00BDD689 /* level16-4.png */,
 				0BFF4BEE19A63C2B00BDD689 /* level16-2.png */,
@@ -1646,8 +1820,8 @@
 				0BFF4C1619A63FBE00BDD689 /* level18-7.png */,
 				0BFF4C2219A6410F00BDD689 /* pic19.png */,
 				0BFF4C2319A6410F00BDD689 /* an3-19.png */,
-				0BFF4C2419A6410F00BDD689 /* an1-19.png */,
 				0BFF4C2519A6410F00BDD689 /* an2-19.png */,
+				0B0E2EF419A9CDAD00D23AD9 /* an1-19.png */,
 				0BFF4C2619A6410F00BDD689 /* level19-5.png */,
 				0BFF4C2719A6410F00BDD689 /* level19-4.png */,
 				0BFF4C2819A6410F00BDD689 /* level19-3.png */,
@@ -1670,26 +1844,11 @@
 		0B0CC04C1983D2AB00C1D89C /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				0B0CC04D1983D2BF00C1D89C /* pig.wav */,
-				0B0CC04E1983D2BF00C1D89C /* shark.wav */,
-				0B0CC04F1983D2BF00C1D89C /* bee.wav */,
-				0B0CC0501983D2BF00C1D89C /* 狗.wav */,
-				0B0CC0511983D2BF00C1D89C /* dog.wav */,
-				0B0CC0521983D2BF00C1D89C /* chicken.wav */,
-				0B0CC0531983D2BF00C1D89C /* frog.wav */,
-				0B0CC0541983D2BF00C1D89C /* rabbit.wav */,
-				0B0CC0551983D2BF00C1D89C /* snail.wav */,
-				0B0CC0561983D2BF00C1D89C /* 鸡.wav */,
-				0B0CC0571983D2BF00C1D89C /* 考拉.wav */,
-				0B0CC0581983D2BF00C1D89C /* 猫.wav */,
-				0B0CC0591983D2BF00C1D89C /* 蜜蜂.wav */,
-				0B0CC05A1983D2BF00C1D89C /* 青蛙.wav */,
-				0B0CC05B1983D2BF00C1D89C /* 鲨鱼.wav */,
-				0B0CC05C1983D2BF00C1D89C /* 兔子.wav */,
-				0B0CC05D1983D2BF00C1D89C /* 蜗牛.wav */,
-				0B0CC05E1983D2BF00C1D89C /* 猪.wav */,
-				0B0CC05F1983D2BF00C1D89C /* cat.wav */,
-				0B0CC0601983D2BF00C1D89C /* koala.wav */,
+				0B0E2E2719A9C8F600D23AD9 /* 动物 */,
+				0B0E2E3C19A9C8F600D23AD9 /* 食物 */,
+				0B0E2E5119A9C8F600D23AD9 /* 用品 */,
+				0B0E2E6619A9C8F600D23AD9 /* 运动 */,
+				0B0E2E7B19A9C8F600D23AD9 /* 植物 */,
 			);
 			name = sounds;
 			sourceTree = "<group>";
@@ -1704,6 +1863,141 @@
 				0B39833D19A846B100EE3459 /* 1 */,
 			);
 			name = textImage;
+			sourceTree = "<group>";
+		};
+		0B0E2E2719A9C8F600D23AD9 /* 动物 */ = {
+			isa = PBXGroup;
+			children = (
+				0B0E2E2819A9C8F600D23AD9 /* bee.wav */,
+				0B0E2E2919A9C8F600D23AD9 /* cat.wav */,
+				0B0E2E2A19A9C8F600D23AD9 /* chicken.wav */,
+				0B0E2E2B19A9C8F600D23AD9 /* dog.wav */,
+				0B0E2E2C19A9C8F600D23AD9 /* frog.wav */,
+				0B0E2E2D19A9C8F600D23AD9 /* koala.wav */,
+				0B0E2E2E19A9C8F600D23AD9 /* pig.wav */,
+				0B0E2E2F19A9C8F600D23AD9 /* rabbit.wav */,
+				0B0E2E3019A9C8F600D23AD9 /* shark.wav */,
+				0B0E2E3119A9C8F600D23AD9 /* snail.wav */,
+				0B0E2E3219A9C8F600D23AD9 /* 兔子.wav */,
+				0B0E2E3319A9C8F600D23AD9 /* 狗.wav */,
+				0B0E2E3419A9C8F600D23AD9 /* 猪.wav */,
+				0B0E2E3519A9C8F600D23AD9 /* 猫.wav */,
+				0B0E2E3619A9C8F600D23AD9 /* 考拉.wav */,
+				0B0E2E3719A9C8F600D23AD9 /* 蜗牛.wav */,
+				0B0E2E3819A9C8F600D23AD9 /* 蜜蜂.wav */,
+				0B0E2E3919A9C8F600D23AD9 /* 青蛙.wav */,
+				0B0E2E3A19A9C8F600D23AD9 /* 鲨鱼.wav */,
+				0B0E2E3B19A9C8F600D23AD9 /* 鸡.wav */,
+			);
+			path = "动物";
+			sourceTree = "<group>";
+		};
+		0B0E2E3C19A9C8F600D23AD9 /* 食物 */ = {
+			isa = PBXGroup;
+			children = (
+				0B0E2E3D19A9C8F600D23AD9 /* chestnut.wav */,
+				0B0E2E3E19A9C8F600D23AD9 /* cucumber.wav */,
+				0B0E2E3F19A9C8F600D23AD9 /* milk.wav */,
+				0B0E2E4019A9C8F600D23AD9 /* mooncake.wav */,
+				0B0E2E4119A9C8F600D23AD9 /* orange.wav */,
+				0B0E2E4219A9C8F600D23AD9 /* peanut.wav */,
+				0B0E2E4319A9C8F600D23AD9 /* pizza.wav */,
+				0B0E2E4419A9C8F600D23AD9 /* rice.wav */,
+				0B0E2E4619A9C8F600D23AD9 /* watermelon.wav */,
+				0B0E2E4719A9C8F600D23AD9 /* 土豆.wav */,
+				0B0E2EF619A9D1B100D23AD9 /* potato.wav */,
+				0B0E2E4819A9C8F600D23AD9 /* 披萨饼.wav */,
+				0B0E2E4919A9C8F600D23AD9 /* 月饼.wav */,
+				0B0E2E4A19A9C8F600D23AD9 /* 栗子.wav */,
+				0B0E2E4B19A9C8F600D23AD9 /* 橙子.wav */,
+				0B0E2E4C19A9C8F600D23AD9 /* 牛奶.wav */,
+				0B0E2E4D19A9C8F600D23AD9 /* 米饭.wav */,
+				0B0E2E4E19A9C8F600D23AD9 /* 花生.wav */,
+				0B0E2E4F19A9C8F600D23AD9 /* 西瓜.wav */,
+				0B0E2E5019A9C8F600D23AD9 /* 黄瓜.wav */,
+			);
+			path = "食物";
+			sourceTree = "<group>";
+		};
+		0B0E2E5119A9C8F600D23AD9 /* 用品 */ = {
+			isa = PBXGroup;
+			children = (
+				0B0E2E5219A9C8F600D23AD9 /* candle.wav */,
+				0B0E2E5319A9C8F600D23AD9 /* clock.wav */,
+				0B0E2E5419A9C8F600D23AD9 /* glasses.wav */,
+				0B0E2E5519A9C8F600D23AD9 /* landry.wav */,
+				0B0E2E5619A9C8F600D23AD9 /* magnifier.wav */,
+				0B0E2E5719A9C8F600D23AD9 /* pacifier.wav */,
+				0B0E2E5819A9C8F600D23AD9 /* pen.wav */,
+				0B0E2E5919A9C8F600D23AD9 /* toilet.wav */,
+				0B0E2E5A19A9C8F600D23AD9 /* toothbrush.wav */,
+				0B0E2E5B19A9C8F600D23AD9 /* traffic light.wav */,
+				0B0E2E5C19A9C8F600D23AD9 /* 卫生间.wav */,
+				0B0E2E5D19A9C8F600D23AD9 /* 奶嘴.wav */,
+				0B0E2E5E19A9C8F600D23AD9 /* 放大镜.wav */,
+				0B0E2E5F19A9C8F600D23AD9 /* 洗衣液.wav */,
+				0B0E2E6019A9C8F600D23AD9 /* 牙刷.wav */,
+				0B0E2E6119A9C8F600D23AD9 /* 眼镜.wav */,
+				0B0E2E6219A9C8F600D23AD9 /* 红绿灯.wav */,
+				0B0E2E6319A9C8F600D23AD9 /* 蜡烛.wav */,
+				0B0E2E6419A9C8F600D23AD9 /* 钟表.wav */,
+				0B0E2E6519A9C8F600D23AD9 /* 钢笔.wav */,
+			);
+			path = "用品";
+			sourceTree = "<group>";
+		};
+		0B0E2E6619A9C8F600D23AD9 /* 运动 */ = {
+			isa = PBXGroup;
+			children = (
+				0B0E2E6719A9C8F600D23AD9 /* archery.wav */,
+				0B0E2EF819A9D1DA00D23AD9 /* badminton.wav */,
+				0B0E2E6919A9C8F600D23AD9 /* basketball.wav */,
+				0B0E2E6A19A9C8F600D23AD9 /* bowling.wav */,
+				0B0E2E6B19A9C8F600D23AD9 /* football.wav */,
+				0B0E2E6C19A9C8F600D23AD9 /* golf.wav */,
+				0B0E2E6D19A9C8F600D23AD9 /* sailing.wav */,
+				0B0E2E6E19A9C8F600D23AD9 /* skiing.wav */,
+				0B0E2E6F19A9C8F600D23AD9 /* table tennis.wav */,
+				0B0E2E7019A9C8F600D23AD9 /* weighting.wav */,
+				0B0E2E7119A9C8F600D23AD9 /* 举重.wav */,
+				0B0E2E7219A9C8F600D23AD9 /* 乒乓球.wav */,
+				0B0E2E7319A9C8F600D23AD9 /* 保龄球.wav */,
+				0B0E2E7419A9C8F600D23AD9 /* 射箭.wav */,
+				0B0E2E7519A9C8F600D23AD9 /* 帆船.wav */,
+				0B0E2E7619A9C8F600D23AD9 /* 滑雪.wav */,
+				0B0E2E7719A9C8F600D23AD9 /* 篮球.wav */,
+				0B0E2E7819A9C8F600D23AD9 /* 羽毛球.wav */,
+				0B0E2E7919A9C8F600D23AD9 /* 足球.wav */,
+				0B0E2E7A19A9C8F600D23AD9 /* 高尔夫.wav */,
+			);
+			path = "运动";
+			sourceTree = "<group>";
+		};
+		0B0E2E7B19A9C8F600D23AD9 /* 植物 */ = {
+			isa = PBXGroup;
+			children = (
+				0B0E2E7C19A9C8F600D23AD9 /* bamboo.wav */,
+				0B0E2E7D19A9C8F600D23AD9 /* cactus.wav */,
+				0B0E2E7E19A9C8F600D23AD9 /* chrysanthemum.wav */,
+				0B0E2E7F19A9C8F600D23AD9 /* gingko.wav */,
+				0B0E2E8019A9C8F600D23AD9 /* lotus.wav */,
+				0B0E2E8119A9C8F600D23AD9 /* morning glory.wav */,
+				0B0E2E8219A9C8F600D23AD9 /* pine.wav */,
+				0B0E2E8319A9C8F600D23AD9 /* rose.wav */,
+				0B0E2E8419A9C8F600D23AD9 /* sunflower.wav */,
+				0B0E2E8519A9C8F600D23AD9 /* willow.wav */,
+				0B0E2E8619A9C8F600D23AD9 /* 仙人掌.wav */,
+				0B0E2E8719A9C8F600D23AD9 /* 向日葵.wav */,
+				0B0E2E8819A9C8F600D23AD9 /* 松树.wav */,
+				0B0E2E8919A9C8F600D23AD9 /* 柳树.wav */,
+				0B0E2E8A19A9C8F600D23AD9 /* 牵牛花.wav */,
+				0B0E2E8B19A9C8F600D23AD9 /* 玫瑰.wav */,
+				0B0E2E8C19A9C8F600D23AD9 /* 竹子.wav */,
+				0B0E2E8D19A9C8F600D23AD9 /* 荷花.wav */,
+				0B0E2E8E19A9C8F600D23AD9 /* 菊花.wav */,
+				0B0E2E8F19A9C8F600D23AD9 /* 银杏树.wav */,
+			);
+			path = "植物";
 			sourceTree = "<group>";
 		};
 		0B106CDE195E645A003023C1 /* selectLevel */ = {
@@ -1808,7 +2102,7 @@
 				0B39840019A847B800EE3459 /* toilet.png */,
 				0B39840119A847B800EE3459 /* toothbrush.png */,
 				0B39840219A847B800EE3459 /* traffic light.png */,
-				0B39840319A847B800EE3459 /* 交通灯.png */,
+				0BCCE01319A8C17600BEA042 /* 红绿灯.png */,
 				0B39840419A847B800EE3459 /* 卫生间.png */,
 				0B39840519A847B800EE3459 /* 奶嘴.png */,
 				0B39840619A847B800EE3459 /* 放大镜.png */,
@@ -1832,15 +2126,15 @@
 				0B39841219A847B800EE3459 /* orange.png */,
 				0B39841319A847B800EE3459 /* peanut.png */,
 				0B39841419A847B800EE3459 /* pizza.png */,
+				0BCCE00F19A8C15700BEA042 /* potato.png */,
 				0B39841519A847B800EE3459 /* rice.png */,
-				0B39841619A847B800EE3459 /* tomato.png */,
 				0B39841719A847B800EE3459 /* watermelon.png */,
 				0B39841819A847B800EE3459 /* 披萨饼.png */,
+				0BCCE01119A8C16200BEA042 /* 土豆.png */,
 				0B39841919A847B800EE3459 /* 月饼.png */,
 				0B39841A19A847B800EE3459 /* 栗子.png */,
 				0B39841B19A847B800EE3459 /* 橙子.png */,
 				0B39841C19A847B800EE3459 /* 牛奶.png */,
-				0B39841D19A847B800EE3459 /* 番茄.png */,
 				0B39841E19A847B800EE3459 /* 米饭.png */,
 				0B39841F19A847B800EE3459 /* 花生.png */,
 				0B39842019A847B800EE3459 /* 西瓜.png */,
@@ -1866,7 +2160,7 @@
 				0B39842E19A847B800EE3459 /* 乒乓球.png */,
 				0B39842F19A847B800EE3459 /* 保龄球.png */,
 				0B39843019A847B800EE3459 /* 射箭.png */,
-				0B39843119A847B800EE3459 /* 帆板.png */,
+				0B39843119A847B800EE3459 /* 帆船.png */,
 				0B39843219A847B800EE3459 /* 滑雪.png */,
 				0B39843319A847B800EE3459 /* 篮球.png */,
 				0B39843419A847B800EE3459 /* 羽毛球.png */,
@@ -2028,11 +2322,10 @@
 				0B386D7819715F360033352F /* an3-35.png */,
 				0B386D7919715F360033352F /* an2-35.png */,
 				0B386D7A19715F360033352F /* an1-35.png */,
-				0B386D7B19715F360033352F /* level35-2.png */,
-				0B386D7C19715F360033352F /* level35-3.png */,
-				0B386D7D19715F360033352F /* level35-4.png */,
-				0B386D7E19715F360033352F /* level35-5.png */,
-				0B386D7F19715F360033352F /* level35-1.png */,
+				0B386D7B19715F360033352F /* level35-1.png */,
+				0B386D7C19715F360033352F /* level35-2.png */,
+				0B386D7D19715F360033352F /* level35-3.png */,
+				0B386D7E19715F360033352F /* level35-4.png */,
 				0B386D8019715F360033352F /* pic35.png */,
 				0B386DAE197166120033352F /* pic36.png */,
 				0B386DAF197166120033352F /* an3-36.png */,
@@ -2115,6 +2408,14 @@
 		0B5D8A4D198E2FA7000D05A9 /* shareView */ = {
 			isa = PBXGroup;
 			children = (
+				0B0E2EFA19A9D90D00D23AD9 /* plantShare480.png */,
+				0B0E2EFB19A9D90D00D23AD9 /* sportShare.png */,
+				0B0E2EFC19A9D90D00D23AD9 /* sportShare480.png */,
+				0B0E2EFD19A9D90D00D23AD9 /* plantShare.png */,
+				0BCCE01D19A8C33F00BEA042 /* foodShare.png */,
+				0BCCE01E19A8C33F00BEA042 /* livingGoodShare.png */,
+				0BCCE01F19A8C33F00BEA042 /* livingGoodShare480.png */,
+				0BCCE02019A8C33F00BEA042 /* foodShare480.png */,
 				0B03055819A374750012AB23 /* animalShare.png */,
 				0BEC4917199F9A7300B57276 /* animalShare480.png */,
 				0B0844FB1996439100367DAC /* babyText2.png */,
@@ -2172,7 +2473,7 @@
 		0BE582B5193F25FB00EEAB26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BE582B4193F25FB00EEAB26 /* completeImage.app */,
+				0BE582B4193F25FB00EEAB26 /* babyJoint.app */,
 				0BE582D5193F25FB00EEAB26 /* completeImageTests.xctest */,
 			);
 			name = Products;
@@ -2646,7 +2947,7 @@
 			);
 			name = babyJoint;
 			productName = completeImage;
-			productReference = 0BE582B4193F25FB00EEAB26 /* completeImage.app */;
+			productReference = 0BE582B4193F25FB00EEAB26 /* babyJoint.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0BE582D4193F25FB00EEAB26 /* completeImageTests */ = {
@@ -2711,11 +3012,14 @@
 			files = (
 				0B39845D19A847B800EE3459 /* 钟表.png in Resources */,
 				0B39844119A847B800EE3459 /* 仙人掌.png in Resources */,
+				0B0E2E9E19A9C8F600D23AD9 /* 考拉.wav in Resources */,
 				0BFF4C0319A63D2300BDD689 /* pic17.png in Resources */,
 				0B39844619A847B800EE3459 /* 玫瑰.png in Resources */,
 				0BFF4C3F19A6434C00BDD689 /* an3-20.png in Resources */,
 				0B39847119A847B800EE3459 /* 西瓜.png in Resources */,
 				0B39849819A865DD00EE3459 /* level31-2.png in Resources */,
+				0B0E2EAD19A9C8F600D23AD9 /* watermelon.wav in Resources */,
+				0B0E2EEB19A9C8F600D23AD9 /* 向日葵.wav in Resources */,
 				0BFF4C3219A6410F00BDD689 /* level19-2.png in Resources */,
 				0BEC4911199F5C3700B57276 /* b5.png in Resources */,
 				0B0CBFE31983BD3E00C1D89C /* an3-10.png in Resources */,
@@ -2726,7 +3030,6 @@
 				0B386DE2197167910033352F /* level38-2.png in Resources */,
 				0B0CC02F1983BD5B00C1D89C /* level9-1.png in Resources */,
 				0BFEF00219971C3C0012B433 /* pic13.png in Resources */,
-				0B0CC0731983D2BF00C1D89C /* cat.wav in Resources */,
 				0B0CC0431983BD6F00C1D89C /* pic4.png in Resources */,
 				0B3982A019A8396D00EE3459 /* pic21.png in Resources */,
 				0B39850719A87A4800EE3459 /* level43-9.png in Resources */,
@@ -2736,20 +3039,24 @@
 				0B0CC01B1983BD5B00C1D89C /* level5-1.png in Resources */,
 				0B386DBC197166120033352F /* level36-4.png in Resources */,
 				0BF3C592199FC11100D6545A /* notFinish.png in Resources */,
+				0B0E2EBE19A9C8F600D23AD9 /* pen.wav in Resources */,
 				0B0CBFE11983BD3E00C1D89C /* an3-8.png in Resources */,
 				0BFF4BF619A63C2B00BDD689 /* level16-4.png in Resources */,
+				0B0E2ED619A9C8F600D23AD9 /* 举重.wav in Resources */,
 				0BFE836E197EBB0E00499DC0 /* pic33.png in Resources */,
 				0B39844219A847B800EE3459 /* 向日葵.png in Resources */,
 				0B386DBD197166120033352F /* level36-3.png in Resources */,
-				0B0CC0681983D2BF00C1D89C /* rabbit.wav in Resources */,
 				0B39829819A8396D00EE3459 /* level21-8.png in Resources */,
+				0B0E2ED119A9C8F600D23AD9 /* golf.wav in Resources */,
 				0B0845041996439100367DAC /* babyText1.png in Resources */,
 				0B45F8B2196AEB2A0048BC16 /* choiceBackground.png in Resources */,
 				0B39851D19A87AF200EE3459 /* an2-45.png in Resources */,
 				0B3984A619A8663700EE3459 /* an1-32.png in Resources */,
 				0BF7F11819A2332300E73AB2 /* aboutUs.png in Resources */,
+				0B0E2E9419A9C8F600D23AD9 /* frog.wav in Resources */,
 				0B39850519A87A4800EE3459 /* level43-7.png in Resources */,
 				0B3982D519A83B7400EE3459 /* an1-24.png in Resources */,
+				0B0E2EF019A9C8F600D23AD9 /* 竹子.wav in Resources */,
 				0B39851919A87AF200EE3459 /* level45-4.png in Resources */,
 				0B386DBF197166120033352F /* level36-1.png in Resources */,
 				0BF582381995051A0035CA4C /* baby4.png in Resources */,
@@ -2766,13 +3073,17 @@
 				0BDAD713198000190028CC42 /* an2-41.png in Resources */,
 				0B39845A19A847B800EE3459 /* 牙刷.png in Resources */,
 				0BFE836B197EBB0E00499DC0 /* level33-2.png in Resources */,
+				0B0E2EFF19A9D90D00D23AD9 /* sportShare.png in Resources */,
 				0B0CC0401983BD6F00C1D89C /* pic1.png in Resources */,
+				0B0E2EF219A9C8F600D23AD9 /* 菊花.wav in Resources */,
+				0BCCE02419A8C33F00BEA042 /* foodShare480.png in Resources */,
 				0B41B84B1993C58C00D9FC39 /* shutter.png in Resources */,
 				0B39829519A8396D00EE3459 /* an3-21.png in Resources */,
 				0BFF4BD319A6328E00BDD689 /* level14-3.png in Resources */,
+				0B0E2EC719A9C8F600D23AD9 /* 眼镜.wav in Resources */,
 				0B386DB7197166120033352F /* pic36.png in Resources */,
-				0B386D8819715F360033352F /* level35-1.png in Resources */,
 				0B0CBFC91983BD3000C1D89C /* an2-4.png in Resources */,
+				0B0E2EDC19A9C8F600D23AD9 /* 篮球.wav in Resources */,
 				0B39854219A87BD700EE3459 /* level47-4.png in Resources */,
 				0B39830519A8402A00EE3459 /* an1-27.png in Resources */,
 				0BFF4BE319A638DC00BDD689 /* level15-2.png in Resources */,
@@ -2783,17 +3094,20 @@
 				0B0CC0941983EF5E00C1D89C /* segoe print.ttf in Resources */,
 				0B3982E119A83D2300EE3459 /* an1-25.png in Resources */,
 				0BE582D0193F25FB00EEAB26 /* Images.xcassets in Resources */,
+				0B0E2EA819A9C8F600D23AD9 /* orange.wav in Resources */,
 				0B0845171996543600367DAC /* an3-11.png in Resources */,
 				0B39845919A847B800EE3459 /* 洗衣液.png in Resources */,
+				0B0E2EDA19A9C8F600D23AD9 /* 帆船.wav in Resources */,
 				0B39844A19A847B800EE3459 /* 银杏树.png in Resources */,
 				0BFF4C1D19A63FBE00BDD689 /* level18-3.png in Resources */,
-				0B0CC06C1983D2BF00C1D89C /* 猫.wav in Resources */,
 				0B3982BF19A83B0900EE3459 /* level23-2.png in Resources */,
+				0B0E2EBB19A9C8F600D23AD9 /* landry.wav in Resources */,
 				0B3982C419A83B0900EE3459 /* level23-6.png in Resources */,
 				0BFF4C4019A6434C00BDD689 /* an2-20.png in Resources */,
 				0B39854519A87BD700EE3459 /* level47-1.png in Resources */,
 				0B03055919A374750012AB23 /* animalShare.png in Resources */,
 				0B39846D19A847B800EE3459 /* 牛奶.png in Resources */,
+				0B0E2EA119A9C8F600D23AD9 /* 青蛙.wav in Resources */,
 				0B0845101996541200367DAC /* level11-2.png in Resources */,
 				0B39851A19A87AF200EE3459 /* level45-3.png in Resources */,
 				0B386DE1197167910033352F /* level38-3.png in Resources */,
@@ -2802,8 +3116,11 @@
 				0BA0625519A38BE60090ED38 /* baby9.png in Resources */,
 				0B39844E19A847B800EE3459 /* landry.png in Resources */,
 				0B39843C19A847B800EE3459 /* morning glory.png in Resources */,
+				0B0E2EB419A9C8F600D23AD9 /* 米饭.wav in Resources */,
+				0B0E2EC019A9C8F600D23AD9 /* toothbrush.wav in Resources */,
 				0BEC490D199F5C3700B57276 /* b1.png in Resources */,
 				0B0CC0301983BD5B00C1D89C /* level9-2.png in Resources */,
+				0B0E2EDE19A9C8F600D23AD9 /* 足球.wav in Resources */,
 				0B31FF18198FCB47002EB700 /* 重拍.png in Resources */,
 				0B39848419A847B800EE3459 /* 羽毛球.png in Resources */,
 				0BFF4C4619A6434C00BDD689 /* level20-5.png in Resources */,
@@ -2811,8 +3128,9 @@
 				0BEC48C5199F0D0300B57276 /* ShareSDKLocalizable.strings in Resources */,
 				0B0CC0321983BD5B00C1D89C /* level9-4.png in Resources */,
 				0B084526199655A900367DAC /* an1-12.png in Resources */,
-				0B0CC0661983D2BF00C1D89C /* chicken.wav in Resources */,
 				0B0CC07F1983D7EF00C1D89C /* level7-4.png in Resources */,
+				0B0E2EC319A9C8F600D23AD9 /* 奶嘴.wav in Resources */,
+				0BCCE01019A8C15700BEA042 /* potato.png in Resources */,
 				0B3982D719A83B7400EE3459 /* an3-24.png in Resources */,
 				0BFEEFFA19971C3C0012B433 /* level13-8.png in Resources */,
 				0BDAD70F198000190028CC42 /* level41-3.png in Resources */,
@@ -2828,22 +3146,25 @@
 				0BE3CFC31966E69000C8235F /* returnToLevel.png in Resources */,
 				0BFF4C0B19A63D2300BDD689 /* level17-3.png in Resources */,
 				0B39832119A8427400EE3459 /* an1-29.png in Resources */,
+				0B0E2EBF19A9C8F600D23AD9 /* toilet.wav in Resources */,
 				0BA79F6A1956839700ACA06B /* gameLevelController.xib in Resources */,
+				0B0E2EE919A9C8F600D23AD9 /* willow.wav in Resources */,
 				0B3982F019A83F0800EE3459 /* an3-26.png in Resources */,
+				0B0E2E9919A9C8F600D23AD9 /* snail.wav in Resources */,
 				0B3982BB19A83B0900EE3459 /* an1-23.png in Resources */,
 				0B386D9B1971625B0033352F /* an3-44.png in Resources */,
 				0B08452D199655A900367DAC /* pic12.png in Resources */,
+				0B0E2ED819A9C8F600D23AD9 /* 保龄球.wav in Resources */,
 				0B3984AC19A8663700EE3459 /* pic32.png in Resources */,
 				0BFF4C0A19A63D2300BDD689 /* level17-1.png in Resources */,
 				0B3984AA19A8663700EE3459 /* level32-2.png in Resources */,
 				0B39855119A87C2A00EE3459 /* level48-4.png in Resources */,
 				0BDAD714198000190028CC42 /* an1-41.png in Resources */,
+				0B0E2E9219A9C8F600D23AD9 /* chicken.wav in Resources */,
 				0B386D8319715F360033352F /* an1-35.png in Resources */,
+				0B0E2EE319A9C8F600D23AD9 /* gingko.wav in Resources */,
 				0B386D981971625B0033352F /* an2-44.png in Resources */,
-				0B0CC0611983D2BF00C1D89C /* pig.wav in Resources */,
 				0B0CC01D1983BD5B00C1D89C /* level5-3.png in Resources */,
-				0B0CC06E1983D2BF00C1D89C /* 青蛙.wav in Resources */,
-				0B0CC0621983D2BF00C1D89C /* shark.wav in Resources */,
 				0BFF4BD419A6328E00BDD689 /* level14-2.png in Resources */,
 				0B0CBFCD1983BD3000C1D89C /* an2-8.png in Resources */,
 				0BFEEFFC19971C3C0012B433 /* level13-6.png in Resources */,
@@ -2854,7 +3175,6 @@
 				0B0CC02E1983BD5B00C1D89C /* level8-5.png in Resources */,
 				0B0CBFC71983BD3000C1D89C /* an2-2.png in Resources */,
 				0B3984BF19A8674E00EE3459 /* an1-34.png in Resources */,
-				0B0CC0701983D2BF00C1D89C /* 兔子.wav in Resources */,
 				0B0CC0191983BD5B00C1D89C /* level4-4.png in Resources */,
 				0B39829919A8396D00EE3459 /* level21-7.png in Resources */,
 				0B3982BC19A83B0900EE3459 /* an2-23.png in Resources */,
@@ -2868,6 +3188,7 @@
 				0BF7F11C19A2332300E73AB2 /* goComment.png in Resources */,
 				0B0CC0BB1983F2B700C1D89C /* 猪.png in Resources */,
 				0B39846C19A847B800EE3459 /* 橙子.png in Resources */,
+				0B0E2E9D19A9C8F600D23AD9 /* 猫.wav in Resources */,
 				0B0CC0311983BD5B00C1D89C /* level9-3.png in Resources */,
 				0B0CC0851983D7EF00C1D89C /* an2-7.png in Resources */,
 				0B386DB9197166120033352F /* an2-36.png in Resources */,
@@ -2877,29 +3198,32 @@
 				0B3984ED19A8688F00EE3459 /* level40-3.png in Resources */,
 				0B39829F19A8396D00EE3459 /* level21-1.png in Resources */,
 				0B39830219A8402A00EE3459 /* pic27.png in Resources */,
-				0B0CC06B1983D2BF00C1D89C /* 考拉.wav in Resources */,
 				0B39846119A847B800EE3459 /* milk.png in Resources */,
 				0B39848619A847B800EE3459 /* 高尔夫.png in Resources */,
+				0B0E2EA919A9C8F600D23AD9 /* peanut.wav in Resources */,
 				0BF58243199508630035CA4C /* goPhoto.png in Resources */,
 				0B0CC0181983BD5B00C1D89C /* level4-3.png in Resources */,
 				0B386D8119715F360033352F /* an3-35.png in Resources */,
 				0BF582391995051A0035CA4C /* baby3.png in Resources */,
 				0B39845319A847B800EE3459 /* toothbrush.png in Resources */,
-				0B39845519A847B800EE3459 /* 交通灯.png in Resources */,
+				0B0E2E9F19A9C8F600D23AD9 /* 蜗牛.wav in Resources */,
 				0B0CC0AD1983F2B700C1D89C /* koala.png in Resources */,
 				0BEC4913199F5C3700B57276 /* b7.png in Resources */,
 				0B39844819A847B800EE3459 /* 荷花.png in Resources */,
 				0B0CC01A1983BD5B00C1D89C /* level4-5.png in Resources */,
 				0B39829719A8396D00EE3459 /* an1-21.png in Resources */,
+				0BCCE02119A8C33F00BEA042 /* foodShare.png in Resources */,
 				0B39833719A8431B00EE3459 /* an1-30.png in Resources */,
 				0B386DAB1971651C0033352F /* an1-42.png in Resources */,
 				0B39832819A8427400EE3459 /* level29-5.png in Resources */,
 				0B3982A719A839C300EE3459 /* an2-22.png in Resources */,
+				0BCCE02219A8C33F00BEA042 /* livingGoodShare.png in Resources */,
 				0B0CBFCF1983BD3000C1D89C /* an2-10.png in Resources */,
 				0B0CC0AF1983F2B700C1D89C /* rabbit.png in Resources */,
 				0B3984C819A8674E00EE3459 /* level34-6.png in Resources */,
 				0B39847519A847B800EE3459 /* basketball.png in Resources */,
 				0B3982C519A83B0900EE3459 /* level23-7.png in Resources */,
+				0B0E2EAA19A9C8F600D23AD9 /* pizza.wav in Resources */,
 				0BF5823A1995051A0035CA4C /* baby2.png in Resources */,
 				0B39854419A87BD700EE3459 /* level47-2.png in Resources */,
 				0BFF4BCF19A6328E00BDD689 /* an2-14.png in Resources */,
@@ -2907,7 +3231,11 @@
 				0BFF4C4719A6434C00BDD689 /* level20-4.png in Resources */,
 				0B39850D19A87A4800EE3459 /* an1-43.png in Resources */,
 				0B08452B199655A900367DAC /* level12-2.png in Resources */,
+				0B0E2EC919A9C8F600D23AD9 /* 蜡烛.wav in Resources */,
+				0B0E2ED419A9C8F600D23AD9 /* table tennis.wav in Resources */,
 				0B084529199655A900367DAC /* level12-4.png in Resources */,
+				0B0E2EA619A9C8F600D23AD9 /* milk.wav in Resources */,
+				0B0E2EE119A9C8F600D23AD9 /* cactus.wav in Resources */,
 				0B3984A419A8663700EE3459 /* an3-32.png in Resources */,
 				0B39845119A847B800EE3459 /* pen.png in Resources */,
 				0B39830619A8402A00EE3459 /* level27-5.png in Resources */,
@@ -2918,12 +3246,15 @@
 				0BFF4BE519A638DC00BDD689 /* level15-5.png in Resources */,
 				0BFE836C197EBB0E00499DC0 /* level33-3.png in Resources */,
 				0BFF4BF719A63C2B00BDD689 /* level16-2.png in Resources */,
+				0B0E2EEC19A9C8F600D23AD9 /* 松树.wav in Resources */,
 				0B3982BE19A83B0900EE3459 /* level23-1.png in Resources */,
 				0BEC490F199F5C3700B57276 /* b3.png in Resources */,
+				0B0E2EBD19A9C8F600D23AD9 /* pacifier.wav in Resources */,
 				0B39849219A865DD00EE3459 /* an3-31.png in Resources */,
 				0BEC491E199FB14100B57276 /* bottomImage.png in Resources */,
 				0B386DBE197166120033352F /* level36-2.png in Resources */,
 				0B0CC04B1983C21C00C1D89C /* an1-1.png in Resources */,
+				0B0E2EA419A9C8F600D23AD9 /* chestnut.wav in Resources */,
 				0B39850E19A87A4800EE3459 /* pic43.png in Resources */,
 				0BFF4C1E19A63FBE00BDD689 /* level18-4.png in Resources */,
 				0BFA448219698C7A00EEE50C /* wrongImg.png in Resources */,
@@ -2932,9 +3263,11 @@
 				0B3984CA19A8674E00EE3459 /* level34-4.png in Resources */,
 				0B39830319A8402A00EE3459 /* an3-27.png in Resources */,
 				0B3984CB19A8674E00EE3459 /* level34-3.png in Resources */,
-				0B39846719A847B800EE3459 /* tomato.png in Resources */,
 				0B39832219A8427400EE3459 /* an2-29.png in Resources */,
+				0B0E2EF719A9D1B100D23AD9 /* potato.wav in Resources */,
 				0B3984C319A8674E00EE3459 /* level34-11.png in Resources */,
+				0B0E2EEA19A9C8F600D23AD9 /* 仙人掌.wav in Resources */,
+				0B0E2E9019A9C8F600D23AD9 /* bee.wav in Resources */,
 				0B08450E1996541200367DAC /* level11-1.png in Resources */,
 				0BFF4C1B19A63FBE00BDD689 /* level18-1.png in Resources */,
 				0B08452C199655A900367DAC /* level12-1.png in Resources */,
@@ -2942,16 +3275,16 @@
 				0B386DAA1971651C0033352F /* level42-1.png in Resources */,
 				0B39845B19A847B800EE3459 /* 眼镜.png in Resources */,
 				0B39847B19A847B800EE3459 /* table tennis.png in Resources */,
+				0B0E2EFE19A9D90D00D23AD9 /* plantShare480.png in Resources */,
 				0BFE8367197EBB0E00499DC0 /* an1-33.png in Resources */,
-				0B386D8619715F360033352F /* level35-4.png in Resources */,
-				0B0CC06D1983D2BF00C1D89C /* 蜜蜂.wav in Resources */,
+				0B386D8619715F360033352F /* level35-3.png in Resources */,
 				0B386D961971625B0033352F /* level44-3.png in Resources */,
 				0B3984EB19A8688F00EE3459 /* level40-5.png in Resources */,
 				0B39844D19A847B800EE3459 /* glasses.png in Resources */,
 				0B39846219A847B800EE3459 /* mooncake.png in Resources */,
+				0B0E2EA019A9C8F600D23AD9 /* 蜜蜂.wav in Resources */,
 				0BFF4C0519A63D2300BDD689 /* an2-17.png in Resources */,
 				0B0CC0AE1983F2B700C1D89C /* pig.png in Resources */,
-				0B0CC0671983D2BF00C1D89C /* frog.wav in Resources */,
 				0B0CBFDF1983BD3E00C1D89C /* an3-6.png in Resources */,
 				0B39830819A8402A00EE3459 /* level27-3.png in Resources */,
 				0B39848319A847B800EE3459 /* 篮球.png in Resources */,
@@ -2959,10 +3292,14 @@
 				0B0CBFDB1983BD3E00C1D89C /* an3-2.png in Resources */,
 				0BEC4902199F48EF00B57276 /* suozi.png in Resources */,
 				0B125E3119A0AE0400022F8C /* okButton.png in Resources */,
+				0B0E2EAF19A9C8F600D23AD9 /* 披萨饼.wav in Resources */,
 				0B386D991971625B0033352F /* an1-44.png in Resources */,
 				0B3984EE19A8688F00EE3459 /* level40-2.png in Resources */,
 				0BFF4C2119A63FBE00BDD689 /* level18-7.png in Resources */,
 				0B31FF19198FCB47002EB700 /* 拍照底图.png in Resources */,
+				0B0E2E9A19A9C8F600D23AD9 /* 兔子.wav in Resources */,
+				0B0E2EC119A9C8F600D23AD9 /* traffic light.wav in Resources */,
+				0BCCE01219A8C16200BEA042 /* 土豆.png in Resources */,
 				0B0CC0B91983F2B700C1D89C /* 兔子.png in Resources */,
 				0B3982E319A83D2300EE3459 /* level25-2.png in Resources */,
 				0BFF4BCD19A6328E00BDD689 /* pic14.png in Resources */,
@@ -2973,25 +3310,33 @@
 				0BFF4C1819A63FBE00BDD689 /* an3-18.png in Resources */,
 				0B0CC0451983BD6F00C1D89C /* pic6.png in Resources */,
 				0BFE8366197EBB0E00499DC0 /* an2-33.png in Resources */,
+				0B0E2EB119A9C8F600D23AD9 /* 栗子.wav in Resources */,
 				0B5D8A51198E397E000D05A9 /* 保存.png in Resources */,
 				0BFF4C3119A6410F00BDD689 /* level19-3.png in Resources */,
+				0B0E2ECB19A9C8F600D23AD9 /* 钢笔.wav in Resources */,
 				0B0CC0441983BD6F00C1D89C /* pic5.png in Resources */,
 				0B0CBFBA1983BD2100C1D89C /* an1-9.png in Resources */,
+				0B0E2EE819A9C8F600D23AD9 /* sunflower.wav in Resources */,
 				0B0CC02B1983BD5B00C1D89C /* level8-2.png in Resources */,
 				0B39847019A847B800EE3459 /* 花生.png in Resources */,
 				0B0CBFB51983BD2100C1D89C /* an1-4.png in Resources */,
 				0B0CC0901983DE3D00C1D89C /* level3-2.png in Resources */,
 				0B39844019A847B800EE3459 /* willow.png in Resources */,
+				0B0E2ED919A9C8F600D23AD9 /* 射箭.wav in Resources */,
 				0B39844919A847B800EE3459 /* 菊花.png in Resources */,
 				0B39853219A87B5C00EE3459 /* level46-2.png in Resources */,
 				0B3984E919A8688F00EE3459 /* an2-40.png in Resources */,
+				0B0E2EB019A9C8F600D23AD9 /* 月饼.wav in Resources */,
 				0BDAD721198007680028CC42 /* level50-4.png in Resources */,
+				0B0E2ED319A9C8F600D23AD9 /* skiing.wav in Resources */,
 				0B3984E819A8688F00EE3459 /* an1-40.png in Resources */,
+				0B0E2EC619A9C8F600D23AD9 /* 牙刷.wav in Resources */,
 				0B386DBB197166120033352F /* level36-5.png in Resources */,
 				0B39850919A87A4800EE3459 /* level43-11.png in Resources */,
 				0B0CBFBB1983BD2100C1D89C /* an1-10.png in Resources */,
 				0B0CC00D1983BD5B00C1D89C /* level1-1.png in Resources */,
 				0B3982F719A83F0800EE3459 /* level26-1.png in Resources */,
+				0B0E2EA219A9C8F600D23AD9 /* 鲨鱼.wav in Resources */,
 				0B0CC02C1983BD5B00C1D89C /* level8-3.png in Resources */,
 				0BFF4BE619A638DC00BDD689 /* level15-4.png in Resources */,
 				0B39832919A8427400EE3459 /* pic29.png in Resources */,
@@ -3008,6 +3353,7 @@
 				0B39845E19A847B800EE3459 /* 钢笔.png in Resources */,
 				0BFF4C4219A6434C00BDD689 /* level20-6.png in Resources */,
 				0B39847F19A847B800EE3459 /* 保龄球.png in Resources */,
+				0B0E2EDB19A9C8F600D23AD9 /* 滑雪.wav in Resources */,
 				0B386DB8197166120033352F /* an3-36.png in Resources */,
 				0B39850219A87A4800EE3459 /* level43-4.png in Resources */,
 				0B0845021996439100367DAC /* babyText4.png in Resources */,
@@ -3021,23 +3367,28 @@
 				0BFF4C0619A63D2300BDD689 /* an1-17.png in Resources */,
 				0B3982D619A83B7400EE3459 /* an2-24.png in Resources */,
 				0BFF4BE019A638DC00BDD689 /* an2-15.png in Resources */,
-				0B0CC0691983D2BF00C1D89C /* snail.wav in Resources */,
 				0BFEF00119971C3C0012B433 /* level13-1.png in Resources */,
 				0B39850119A87A4800EE3459 /* level43-3.png in Resources */,
 				0B39845819A847B800EE3459 /* 放大镜.png in Resources */,
 				0BDAD722198007680028CC42 /* level50-5.png in Resources */,
+				0B0E2EED19A9C8F600D23AD9 /* 柳树.wav in Resources */,
 				0BF5823C1995051A0035CA4C /* baby0.png in Resources */,
 				0B39852F19A87B5C00EE3459 /* level46-5.png in Resources */,
 				0B125E3619A0D08400022F8C /* tagAlert.png in Resources */,
 				0B39856519A87C8700EE3459 /* level49-2.png in Resources */,
+				0B0E2EBA19A9C8F600D23AD9 /* glasses.wav in Resources */,
+				0B0E2EB919A9C8F600D23AD9 /* clock.wav in Resources */,
 				0B0CC0241983BD5B00C1D89C /* level6-5.png in Resources */,
+				0B0E2EC819A9C8F600D23AD9 /* 红绿灯.wav in Resources */,
 				0BDAD70E198000190028CC42 /* level41-4.png in Resources */,
 				0B0CC08E1983DE3D00C1D89C /* an2-3.png in Resources */,
+				0B0E2E9319A9C8F600D23AD9 /* dog.wav in Resources */,
 				0BFF4BE419A638DC00BDD689 /* level15-1.png in Resources */,
 				0BDAD710198000190028CC42 /* level41-2.png in Resources */,
 				0B0CC0911983DE3D00C1D89C /* level3-1.png in Resources */,
 				0B39832419A8427400EE3459 /* level29-1.png in Resources */,
 				0B0CC0121983BD5B00C1D89C /* level2-4.png in Resources */,
+				0B0E2EDD19A9C8F600D23AD9 /* 羽毛球.wav in Resources */,
 				0B386D8219715F360033352F /* an2-35.png in Resources */,
 				0B3984C619A8674E00EE3459 /* level34-8.png in Resources */,
 				0B3982E619A83D2300EE3459 /* pic25.png in Resources */,
@@ -3054,6 +3405,8 @@
 				0BF58230199504220035CA4C /* rewardPage.png in Resources */,
 				0B39856A19A87C8700EE3459 /* pic49.png in Resources */,
 				0B386DCA197167030033352F /* an3-37.png in Resources */,
+				0B0E2F0019A9D90D00D23AD9 /* sportShare480.png in Resources */,
+				0B0E2E9819A9C8F600D23AD9 /* shark.wav in Resources */,
 				0B39832619A8427400EE3459 /* level29-3.png in Resources */,
 				0BFA448C19698FB300EEE50C /* prior.png in Resources */,
 				0B39843F19A847B800EE3459 /* sunflower.png in Resources */,
@@ -3076,6 +3429,7 @@
 				0B39846B19A847B800EE3459 /* 栗子.png in Resources */,
 				0B0CC0111983BD5B00C1D89C /* level2-3.png in Resources */,
 				0B0CC0BD1983F2B700C1D89C /* cat.png in Resources */,
+				0B0E2EE019A9C8F600D23AD9 /* bamboo.wav in Resources */,
 				0B0CBFB61983BD2100C1D89C /* an1-5.png in Resources */,
 				0BEC490E199F5C3700B57276 /* b2.png in Resources */,
 				0B39849919A865DD00EE3459 /* level31-1.png in Resources */,
@@ -3085,27 +3439,29 @@
 				0B0CC0491983BD6F00C1D89C /* pic10.png in Resources */,
 				0B39829619A8396D00EE3459 /* an2-21.png in Resources */,
 				0B0CC0AA1983F2B700C1D89C /* chicken.png in Resources */,
-				0B39846E19A847B800EE3459 /* 番茄.png in Resources */,
 				0B3982C719A83B0900EE3459 /* level23-9.png in Resources */,
 				0B39830419A8402A00EE3459 /* an2-27.png in Resources */,
+				0BCCE01419A8C17600BEA042 /* 红绿灯.png in Resources */,
 				0B3982BD19A83B0900EE3459 /* an3-23.png in Resources */,
 				0B3982C819A83B0900EE3459 /* level23-10.png in Resources */,
 				0B3984EA19A8688F00EE3459 /* level40-6.png in Resources */,
-				0B0CC06F1983D2BF00C1D89C /* 鲨鱼.wav in Resources */,
 				0B0CBFC61983BD3000C1D89C /* an2-1.png in Resources */,
 				0B39849719A865DD00EE3459 /* level31-3.png in Resources */,
-				0BFF4C2D19A6410F00BDD689 /* an1-19.png in Resources */,
 				0B084525199655A900367DAC /* an3-12.png in Resources */,
 				0BFF4C1919A63FBE00BDD689 /* an2-18.png in Resources */,
 				0B39852019A87AF200EE3459 /* pic45.png in Resources */,
 				0B3982A919A839C300EE3459 /* an3-22.png in Resources */,
+				0B0E2EDF19A9C8F600D23AD9 /* 高尔夫.wav in Resources */,
 				0B386DA81971651C0033352F /* level42-4.png in Resources */,
 				0B3984EC19A8688F00EE3459 /* level40-4.png in Resources */,
+				0B0E2EB819A9C8F600D23AD9 /* candle.wav in Resources */,
 				0B3984DC19A8679E00EE3459 /* pic39.png in Resources */,
 				0B386DCC197167030033352F /* an1-37.png in Resources */,
+				0B0E2EA319A9C8F600D23AD9 /* 鸡.wav in Resources */,
 				0B0CC0921983DE3D00C1D89C /* pic3.png in Resources */,
 				0B3984C919A8674E00EE3459 /* level34-5.png in Resources */,
 				0B386DCB197167030033352F /* an2-37.png in Resources */,
+				0B0E2EB519A9C8F600D23AD9 /* 花生.wav in Resources */,
 				0BFF4BF319A63C2B00BDD689 /* an2-16.png in Resources */,
 				0BFF4C1A19A63FBE00BDD689 /* an1-18.png in Resources */,
 				0B39855319A87C2A00EE3459 /* level48-2.png in Resources */,
@@ -3116,25 +3472,31 @@
 				0B39830919A8402A00EE3459 /* level27-2.png in Resources */,
 				0B0CC0B51983F2B700C1D89C /* 猫.png in Resources */,
 				0B0CC0231983BD5B00C1D89C /* level6-4.png in Resources */,
+				0B0E2EE219A9C8F600D23AD9 /* chrysanthemum.wav in Resources */,
 				0BDAD715198000190028CC42 /* pic41.png in Resources */,
 				0B386DAC1971651C0033352F /* an2-42.png in Resources */,
 				0BDAD703197FFCE90028CC42 /* 透明.png in Resources */,
 				0B39830719A8402A00EE3459 /* level27-4.png in Resources */,
 				0B0CC0171983BD5B00C1D89C /* level4-2.png in Resources */,
+				0B0E2EA719A9C8F600D23AD9 /* mooncake.wav in Resources */,
 				0BFF4C2F19A6410F00BDD689 /* level19-5.png in Resources */,
 				0B39851C19A87AF200EE3459 /* level45-1.png in Resources */,
+				0B0E2EE419A9C8F600D23AD9 /* lotus.wav in Resources */,
 				0B0CC01F1983BD5B00C1D89C /* level5-5.png in Resources */,
+				0B0E2EB719A9C8F600D23AD9 /* 黄瓜.wav in Resources */,
 				0B39850019A87A4800EE3459 /* level43-2.png in Resources */,
 				0B0CC0801983D7EF00C1D89C /* level7-5.png in Resources */,
 				0BFF4BD519A6328E00BDD689 /* level14-1.png in Resources */,
 				0B39831419A840A100EE3459 /* an1-28.png in Resources */,
 				0B3984A719A8663700EE3459 /* level32-5.png in Resources */,
+				0B0E2ED519A9C8F600D23AD9 /* weighting.wav in Resources */,
 				0B3982F119A83F0800EE3459 /* an2-26.png in Resources */,
 				0B39833919A8431B00EE3459 /* level30-4.png in Resources */,
 				0B39856319A87C8700EE3459 /* level49-4.png in Resources */,
 				0BEC4918199F9A7300B57276 /* animalShare480.png in Resources */,
 				0BDAD726198007680028CC42 /* an2-50.png in Resources */,
 				0B3982AB19A839C300EE3459 /* level22-2.png in Resources */,
+				0B0E2EB319A9C8F600D23AD9 /* 牛奶.wav in Resources */,
 				0B39854619A87BD700EE3459 /* pic47.png in Resources */,
 				0B39853419A87B5C00EE3459 /* pic46.png in Resources */,
 				0B39843D19A847B800EE3459 /* pine.png in Resources */,
@@ -3142,21 +3504,24 @@
 				0BFEEFFF19971C3C0012B433 /* level13-3.png in Resources */,
 				0BDAD723198007680028CC42 /* level50-1.png in Resources */,
 				0BEC4904199F4CAA00B57276 /* level480.png in Resources */,
+				0BCCE02319A8C33F00BEA042 /* livingGoodShare480.png in Resources */,
+				0B0E2EF319A9C8F600D23AD9 /* 银杏树.wav in Resources */,
 				0B386D9A1971625B0033352F /* level44-1.png in Resources */,
 				0B3984A919A8663700EE3459 /* level32-3.png in Resources */,
 				0BF7F11719A2332300E73AB2 /* aboutUs460.png in Resources */,
 				0B39853F19A87BD700EE3459 /* an3-47.png in Resources */,
 				0B39829A19A8396D00EE3459 /* level21-6.png in Resources */,
 				0B3984DB19A8679E00EE3459 /* level39-1.png in Resources */,
-				0B0CC0631983D2BF00C1D89C /* bee.wav in Resources */,
 				0B0CC0B41983F2B700C1D89C /* 考拉.png in Resources */,
 				0B39856819A87C8700EE3459 /* an2-49.png in Resources */,
 				0B39848519A847B800EE3459 /* 足球.png in Resources */,
+				0B0E2EAE19A9C8F600D23AD9 /* 土豆.wav in Resources */,
 				0B39845719A847B800EE3459 /* 奶嘴.png in Resources */,
 				0B39853119A87B5C00EE3459 /* level46-3.png in Resources */,
 				0B39849519A865DD00EE3459 /* level31-5.png in Resources */,
+				0B0E2EAB19A9C8F600D23AD9 /* rice.wav in Resources */,
 				0B0CC00F1983BD5B00C1D89C /* level2-1.png in Resources */,
-				0B386D8419715F360033352F /* level35-2.png in Resources */,
+				0B386D8419715F360033352F /* level35-1.png in Resources */,
 				0B3982D819A83B7400EE3459 /* pic24.png in Resources */,
 				0B39844B19A847B800EE3459 /* candle.png in Resources */,
 				0BF3C58A199FBCFD00D6545A /* Default.png in Resources */,
@@ -3166,13 +3531,16 @@
 				0BFF4C4519A6434C00BDD689 /* level20-3.png in Resources */,
 				0B39854019A87BD700EE3459 /* an1-47.png in Resources */,
 				0B3982C219A83B0900EE3459 /* pic23.png in Resources */,
+				0B0E2EF919A9D1DA00D23AD9 /* badminton.wav in Resources */,
 				0BF7F11B19A2332300E73AB2 /* goSubmit.png in Resources */,
 				0B39829B19A8396D00EE3459 /* level21-5.png in Resources */,
 				0B0CC0861983D7EF00C1D89C /* an1-7.png in Resources */,
 				0B3982D319A83B7400EE3459 /* level24-2.png in Resources */,
+				0B0E2EBC19A9C8F600D23AD9 /* magnifier.wav in Resources */,
 				0BF3C58C199FBF3300D6545A /* rewardPage460.png in Resources */,
 				0BEC4916199F8C2300B57276 /* cancelButton.png in Resources */,
 				0B3984C719A8674E00EE3459 /* level34-7.png in Resources */,
+				0B0E2ED219A9C8F600D23AD9 /* sailing.wav in Resources */,
 				0BDAD711198000190028CC42 /* level41-1.png in Resources */,
 				0B386DE0197167910033352F /* level38-4.png in Resources */,
 				0B0CBFCA1983BD3000C1D89C /* an2-5.png in Resources */,
@@ -3194,6 +3562,7 @@
 				0BDAD725198007680028CC42 /* an3-50.png in Resources */,
 				0B3982F819A83F0800EE3459 /* pic26.png in Resources */,
 				0B3982D419A83B7400EE3459 /* level24-1.png in Resources */,
+				0B0E2EE519A9C8F600D23AD9 /* morning glory.wav in Resources */,
 				0B39845C19A847B800EE3459 /* 蜡烛.png in Resources */,
 				0B386DCE197167030033352F /* level37-4.png in Resources */,
 				0B39843B19A847B800EE3459 /* lotus.png in Resources */,
@@ -3210,6 +3579,7 @@
 				0BFF4BD019A6328E00BDD689 /* an1-14.png in Resources */,
 				0B39844519A847B800EE3459 /* 牵牛花.png in Resources */,
 				0BFEEFF619971C3C0012B433 /* an2-13.png in Resources */,
+				0B0E2F0119A9D90D00D23AD9 /* plantShare.png in Resources */,
 				0B3982C619A83B0900EE3459 /* level23-8.png in Resources */,
 				0BFF4BE719A638DC00BDD689 /* level15-3.png in Resources */,
 				0B0CC0131983BD5B00C1D89C /* level2-5.png in Resources */,
@@ -3227,6 +3597,7 @@
 				0BA79F721957358100ACA06B /* sharePhotoViewController.xib in Resources */,
 				0B0CBFE21983BD3E00C1D89C /* an3-9.png in Resources */,
 				0BF7F11A19A2332300E73AB2 /* morePage.png in Resources */,
+				0B0E2ECE19A9C8F600D23AD9 /* basketball.wav in Resources */,
 				0B39847919A847B800EE3459 /* sailing.png in Resources */,
 				0B386DCD197167030033352F /* level37-5.png in Resources */,
 				0B106CEA195E6470003023C1 /* more.png in Resources */,
@@ -3236,9 +3607,9 @@
 				0BFEEFF919971C3C0012B433 /* level13-9.png in Resources */,
 				0B0CBFDA1983BD3E00C1D89C /* an3-1.png in Resources */,
 				0B0CC00E1983BD5B00C1D89C /* level1-2.png in Resources */,
-				0B386D8519715F360033352F /* level35-3.png in Resources */,
+				0B386D8519715F360033352F /* level35-2.png in Resources */,
 				0B386D951971625B0033352F /* level44-4.png in Resources */,
-				0B386D8719715F360033352F /* level35-5.png in Resources */,
+				0B386D8719715F360033352F /* level35-4.png in Resources */,
 				0BFF4BD219A6328E00BDD689 /* level14-4.png in Resources */,
 				0B3982D119A83B7400EE3459 /* level24-4.png in Resources */,
 				0BFE836D197EBB0E00499DC0 /* level33-1.png in Resources */,
@@ -3246,27 +3617,36 @@
 				0B39829D19A8396D00EE3459 /* level21-3.png in Resources */,
 				0B0CC0101983BD5B00C1D89C /* level2-2.png in Resources */,
 				0B0845181996543600367DAC /* an2-11.png in Resources */,
+				0B0E2EC519A9C8F600D23AD9 /* 洗衣液.wav in Resources */,
 				0B39856719A87C8700EE3459 /* an3-49.png in Resources */,
+				0B0E2ECA19A9C8F600D23AD9 /* 钟表.wav in Resources */,
+				0B0E2ECC19A9C8F600D23AD9 /* archery.wav in Resources */,
 				0B0CC02A1983BD5B00C1D89C /* level8-1.png in Resources */,
-				0BFF4BF419A63C2B00BDD689 /* an1-16.png in Resources */,
-				0B39848119A847B800EE3459 /* 帆板.png in Resources */,
+				0B39848119A847B800EE3459 /* 帆船.png in Resources */,
+				0B0E2EC219A9C8F600D23AD9 /* 卫生间.wav in Resources */,
 				0B0CC0411983BD6F00C1D89C /* pic2.png in Resources */,
 				0BFF4BE219A638DC00BDD689 /* pic15.png in Resources */,
 				0B0CC0821983D7EF00C1D89C /* level7-2.png in Resources */,
 				0B39831219A840A100EE3459 /* an3-28.png in Resources */,
 				0B0CBFB71983BD2100C1D89C /* an1-6.png in Resources */,
+				0B0E2EB219A9C8F600D23AD9 /* 橙子.wav in Resources */,
 				0BFF4C1F19A63FBE00BDD689 /* level18-5.png in Resources */,
+				0B0E2EEF19A9C8F600D23AD9 /* 玫瑰.wav in Resources */,
 				0B39845019A847B800EE3459 /* pacifier.png in Resources */,
-				0B0CC06A1983D2BF00C1D89C /* 鸡.wav in Resources */,
 				0B39833B19A8431B00EE3459 /* level30-2.png in Resources */,
 				0B3984D719A8679E00EE3459 /* an2-39.png in Resources */,
+				0B0E2EF519A9CDAD00D23AD9 /* an1-19.png in Resources */,
 				0B0CBFDD1983BD3E00C1D89C /* an3-4.png in Resources */,
+				0B0E2EEE19A9C8F600D23AD9 /* 牵牛花.wav in Resources */,
 				0BF7F12119A2427900E73AB2 /* shutterEN.png in Resources */,
 				0B3984C019A8674E00EE3459 /* an2-34.png in Resources */,
 				0BFE8368197EBB0E00499DC0 /* an3-33.png in Resources */,
+				0B0E2ED719A9C8F600D23AD9 /* 乒乓球.wav in Resources */,
 				0B39856919A87C8700EE3459 /* an1-49.png in Resources */,
 				0BFA448B19698FB300EEE50C /* next.png in Resources */,
+				0B0E2E9619A9C8F600D23AD9 /* pig.wav in Resources */,
 				0BEC48C9199F0D0300B57276 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				0B0E2EC419A9C8F600D23AD9 /* 放大镜.wav in Resources */,
 				0BFEEFFD19971C3C0012B433 /* level13-5.png in Resources */,
 				0B0845011996439100367DAC /* babyText2.png in Resources */,
 				0B39844719A847B800EE3459 /* 竹子.png in Resources */,
@@ -3279,6 +3659,7 @@
 				0B39847719A847B800EE3459 /* football.png in Resources */,
 				0B386DA91971651C0033352F /* level42-5.png in Resources */,
 				0B39846319A847B800EE3459 /* orange.png in Resources */,
+				0B0E2EE719A9C8F600D23AD9 /* rose.wav in Resources */,
 				0BFF4BF119A63C2B00BDD689 /* pic16.png in Resources */,
 				0B0CBFDE1983BD3E00C1D89C /* an3-5.png in Resources */,
 				0B39846919A847B800EE3459 /* 披萨饼.png in Resources */,
@@ -3306,16 +3687,21 @@
 				0B39850C19A87A4800EE3459 /* an2-43.png in Resources */,
 				0B3984CC19A8674E00EE3459 /* level34-2.png in Resources */,
 				0BDAD720198007680028CC42 /* level50-3.png in Resources */,
-				0B0CC0641983D2BF00C1D89C /* 狗.wav in Resources */,
+				0B0E2E9519A9C8F600D23AD9 /* koala.wav in Resources */,
 				0B0CC0B71983F2B700C1D89C /* 青蛙.png in Resources */,
 				0BFEEFFE19971C3C0012B433 /* level13-4.png in Resources */,
+				0B0E2F0319A9E47B00D23AD9 /* an1-16.png in Resources */,
 				0B39847819A847B800EE3459 /* golf.png in Resources */,
 				0B39845619A847B800EE3459 /* 卫生间.png in Resources */,
 				0BF7F11919A2332300E73AB2 /* morePage460.png in Resources */,
 				0BFF4BD119A6328E00BDD689 /* level14-5.png in Resources */,
+				0B0E2EB619A9C8F600D23AD9 /* 西瓜.wav in Resources */,
 				0B386D971971625B0033352F /* level44-2.png in Resources */,
 				0BDAD712198000190028CC42 /* an3-41.png in Resources */,
+				0B0E2EE619A9C8F600D23AD9 /* pine.wav in Resources */,
 				0B39845419A847B800EE3459 /* traffic light.png in Resources */,
+				0B0E2E9719A9C8F600D23AD9 /* rabbit.wav in Resources */,
+				0B0E2ECF19A9C8F600D23AD9 /* bowling.wav in Resources */,
 				0B0CC08D1983DE3D00C1D89C /* an3-3.png in Resources */,
 				0B39844419A847B800EE3459 /* 柳树.png in Resources */,
 				0B3984C419A8674E00EE3459 /* level34-10.png in Resources */,
@@ -3323,7 +3709,6 @@
 				0BE3CFD31966FF8A00C8235F /* board.png in Resources */,
 				0B39843719A847B800EE3459 /* bamboo.png in Resources */,
 				0B0845051996439100367DAC /* babyText0.png in Resources */,
-				0B0CC0711983D2BF00C1D89C /* 蜗牛.wav in Resources */,
 				0B39849619A865DD00EE3459 /* level31-4.png in Resources */,
 				0B183BBE199E3E0C00E2874E /* Default-568h@2x.png in Resources */,
 				0BFEEFF819971C3C0012B433 /* an1-13.png in Resources */,
@@ -3332,8 +3717,8 @@
 				0B3982F519A83F0800EE3459 /* level26-3.png in Resources */,
 				0B3982AA19A839C300EE3459 /* pic22.png in Resources */,
 				0BEC4912199F5C3700B57276 /* b6.png in Resources */,
-				0B0CC0651983D2BF00C1D89C /* dog.wav in Resources */,
 				0BF5823B1995051A0035CA4C /* baby1.png in Resources */,
+				0B0E2E9119A9C8F600D23AD9 /* cat.wav in Resources */,
 				0BFF4BF519A63C2B00BDD689 /* level16-5.png in Resources */,
 				0B39831519A840A100EE3459 /* level28-2.png in Resources */,
 				0B39843919A847B800EE3459 /* chrysanthemum.png in Resources */,
@@ -3347,22 +3732,25 @@
 				0B0CC0B11983F2B700C1D89C /* snail.png in Resources */,
 				0B3982C319A83B0900EE3459 /* level23-5.png in Resources */,
 				0BF7F12919A2450300E73AB2 /* returnTappedEN.png in Resources */,
-				0B0CC0721983D2BF00C1D89C /* 猪.wav in Resources */,
 				0BEC48CB199F0D0300B57276 /* WeiboSDK.bundle in Resources */,
 				0B39846F19A847B800EE3459 /* 米饭.png in Resources */,
 				0B3984C219A8674E00EE3459 /* level34-12.png in Resources */,
-				0B0CC0741983D2BF00C1D89C /* koala.wav in Resources */,
 				0B39855419A87C2A00EE3459 /* an2-48.png in Resources */,
+				0B0E2EA519A9C8F600D23AD9 /* cucumber.wav in Resources */,
+				0B0E2E9C19A9C8F600D23AD9 /* 猪.wav in Resources */,
 				0BFEF00019971C3C0012B433 /* level13-2.png in Resources */,
 				0B39852B19A87B5C00EE3459 /* an3-46.png in Resources */,
 				0B39848019A847B800EE3459 /* 射箭.png in Resources */,
 				0BFF4BCE19A6328E00BDD689 /* an3-14.png in Resources */,
+				0B0E2E9B19A9C8F600D23AD9 /* 狗.wav in Resources */,
 				0B39849319A865DD00EE3459 /* an2-31.png in Resources */,
 				0B0CC0811983D7EF00C1D89C /* level7-1.png in Resources */,
 				0B0CBFB91983BD2100C1D89C /* an1-8.png in Resources */,
+				0B0E2EF119A9C8F600D23AD9 /* 荷花.wav in Resources */,
 				0B39847E19A847B800EE3459 /* 乒乓球.png in Resources */,
 				0B39843A19A847B800EE3459 /* gingko.png in Resources */,
 				0BFF4C3319A6410F00BDD689 /* level19-1.png in Resources */,
+				0B0E2ED019A9C8F600D23AD9 /* football.wav in Resources */,
 				0B39852E19A87B5C00EE3459 /* level46-6.png in Resources */,
 				0B0845191996543600367DAC /* an1-11.png in Resources */,
 				0B39846619A847B800EE3459 /* rice.png in Resources */,
@@ -3556,6 +3944,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "completeImage/completeImage-Prefix.pch";
 				INFOPLIST_FILE = "completeImage/completeImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/completeImage/Add-ons/GoogleAnalyticsServicesiOS_3.0/GoogleAnalytics/Library",
@@ -3569,6 +3958,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3591,6 +3981,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "completeImage/completeImage-Prefix.pch";
 				INFOPLIST_FILE = "completeImage/completeImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/completeImage/Add-ons/GoogleAnalyticsServicesiOS_3.0/GoogleAnalytics/Library",
@@ -3605,6 +3996,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
