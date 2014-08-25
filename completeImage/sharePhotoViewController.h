@@ -26,6 +26,7 @@
 @property (nonatomic ,strong) UILabel *welcome;
 @property (nonatomic ,strong) UIImagePickerController *picker;
 @property BOOL afterShutter;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 - (IBAction)saveImage:(id)sender;
 - (IBAction)photograph:(id)sender;

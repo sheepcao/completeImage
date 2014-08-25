@@ -41,7 +41,8 @@
     }else
     {
         [backBtn setImage:[UIImage imageNamed:@"returnToLevelEN"] forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];    }
+        [backBtn setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];
+    }
 
     [backBtn addTarget:self action:@selector(backTapped) forControlEvents:UIControlEventTouchUpInside];
 
@@ -50,12 +51,22 @@
     fullScreen.contentMode = UIViewContentModeScaleAspectFit;
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
+        
         [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"aboutUs460" ofType:@"png"]]];
 
     
     }else
     {
-        [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"aboutUs" ofType:@"png"]]];
+        if ([CommonUtility isSystemLangChinese]) {
+            
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"aboutUs" ofType:@"png"]]];
+
+        }else
+        {
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-aboutUs" ofType:@"png"]]];
+
+        }
+        
 
     }
     [self.view addSubview:fullScreen];

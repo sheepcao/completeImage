@@ -42,6 +42,7 @@
 
 @property (nonatomic ,strong) UILabel *welcome;
 @property (nonatomic ,strong) UIImagePickerController *picker;
+//@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property BOOL afterShutter;
 //@property BOOL isBackFromReward;
 

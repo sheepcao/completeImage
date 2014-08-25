@@ -53,6 +53,7 @@ bool levelLock[bigLevel];
 @property (strong,nonatomic) NSString *emptyGif;
 @property (strong,nonatomic) UIWebView *webView;
 @property (strong,nonatomic) UIImageView *questionMark;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (nonatomic, assign) BOOL isFormRewordFlag;
 
 @property (strong, nonatomic) ADBannerView *iAdBannerView;

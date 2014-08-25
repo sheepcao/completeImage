@@ -226,7 +226,7 @@ bool levelLock[bigLevel];
 {
     
     UIView *tmpCustomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 , 300, 208)];
-    tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tagAlert" ofType:@"png"]]];
+//    tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tagAlert" ofType:@"png"]]];
 
     
 //    UIImageView *imageInTag = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300 , 211)];
@@ -239,9 +239,25 @@ bool levelLock[bigLevel];
     
     
     self.lockedInAlert = [[UIButton alloc] initWithFrame:CGRectMake(40, 145, 90, 47)];
-    [self.lockedInAlert setImage:[UIImage imageNamed:@"okButton"] forState:UIControlStateNormal];
     self.cancelInAlert = [[UIButton alloc] initWithFrame:CGRectMake(170, 145, 90, 47)];
-    [self.cancelInAlert setImage:[UIImage imageNamed:@"cancelButton"] forState:UIControlStateNormal];
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tagAlert" ofType:@"png"]]];
+
+        
+        [self.lockedInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"okButton" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.cancelInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cancelButton" ofType:@"png"]] forState:UIControlStateNormal];
+
+
+    }else
+    {
+        tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-tagAlert" ofType:@"png"]]];
+
+        
+        [self.lockedInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-okButton" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.cancelInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-cancelButton" ofType:@"png"]] forState:UIControlStateNormal];
+    }
     
 //    [self.lockedInAlert setTitle:@"前往当前进度" forState:UIControlStateNormal];
 //    self.lockedInAlert.titleLabel.font = [UIFont systemFontOfSize:14.0];

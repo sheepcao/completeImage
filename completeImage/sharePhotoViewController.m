@@ -50,6 +50,16 @@
         [self.view setFrame:CGRectMake(0, 0, 320, 568)];
     }
     
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [self.backButton setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+        [self.backButton setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    }else
+    {
+        [self.backButton setImage:[UIImage imageNamed:@"returnToLevelEN"] forState:UIControlStateNormal];
+        [self.backButton setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];
+    }
+    
     self.shareView = [[UIView alloc] initWithFrame:CGRectMake(0, IPhoneHeight*60/568, 320, IPhoneHeight - IPhoneHeight*73/568 - IPhoneHeight*60/568)];
     self.shareView.backgroundColor = [UIColor clearColor];
     
@@ -92,15 +102,28 @@
     }
     
 //    self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 490, 80, 80)];
-    [self.share setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
+    if ([CommonUtility isSystemLangChinese]) {
+        
+       [self.share setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"分享" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.retakeButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"重拍" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.savePic setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"保存" ofType:@"png"]] forState:UIControlStateNormal];
+
+
+    }else
+    {
+        [self.share setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-分享" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.retakeButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-重拍" ofType:@"png"]] forState:UIControlStateNormal];
+        [self.savePic setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-保存" ofType:@"png"]] forState:UIControlStateNormal];
+    }
+//    [self.share setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
     [self.share addTarget:self action:@selector(shareFunc) forControlEvents:UIControlEventTouchUpInside];
 
 //    self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 490, 80, 80)];
-    [self.retakeButton setImage:[UIImage imageNamed:@"重拍"] forState:UIControlStateNormal];
+//    [self.retakeButton setImage:[UIImage imageNamed:@"重拍"] forState:UIControlStateNormal];
     [self.retakeButton addTarget:self action:@selector(photograph:) forControlEvents:UIControlEventTouchUpInside];
     
 //    self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 498, 60, 60)];
-    [self.savePic setImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
+//    [self.savePic setImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
     [self.savePic addTarget:self action:@selector(saveImage:) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -185,8 +208,13 @@
             
         }else
         {
-            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
-
+            if ([CommonUtility isSystemLangChinese]) {
+           
+                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
+            }else
+            {
+                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish" ofType:@"png"]]];
+            }
         }
         [self.frontImage setImage:nil];
         [self.photograph setHidden:NO];
@@ -261,8 +289,17 @@
 //    topBar.backgroundColor = [UIColor colorWithRed:255/255.0f green:167/255.0f blue:22/255.0f alpha:1.0f];
     topBar.backgroundColor = [UIColor clearColor];
 //    self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
-    [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
-    [self.cancelCamera setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+        [self.cancelCamera setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    }else
+    {
+        [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevelEN"] forState:UIControlStateNormal];
+        [self.cancelCamera setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];
+    }
+//    [self.cancelCamera setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+//    [self.cancelCamera setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
     [self.cancelCamera addTarget:self action:@selector(returnToShare) forControlEvents:UIControlEventTouchUpInside];
     
 //    self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
@@ -277,7 +314,15 @@
     self.bottomBar.backgroundColor = [UIColor clearColor];
 
     self.shutter = [[UIButton alloc] initWithFrame:CGRectMake(130, 5, 70, 50)];
-    [self.shutter setImage:[UIImage imageNamed:@"shutter"] forState:UIControlStateNormal];
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [self.shutter setImage:[UIImage imageNamed:@"shutter"] forState:UIControlStateNormal];
+        
+    }else
+    {
+        [self.shutter setImage:[UIImage imageNamed:@"shutterEN"] forState:UIControlStateNormal];
+    }
+//    [self.shutter setImage:[UIImage imageNamed:@"shutter"] forState:UIControlStateNormal];
     [self.shutter addTarget:self action:@selector(takeMyPic) forControlEvents:UIControlEventTouchUpInside];
     
 //    NSLog(@"action:%@",[self.shutter actionsForTarget:self forControlEvent:UIControlEventTouchUpInside]);

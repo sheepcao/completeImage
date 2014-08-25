@@ -40,6 +40,19 @@ NSMutableArray  *arrayGif;
 {
     [super viewDidLoad];
     
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [self.backButton setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+        [self.backButton setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    }else
+    {
+        [self.backButton setImage:[UIImage imageNamed:@"returnToLevelEN"] forState:UIControlStateNormal];
+        [self.backButton setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];
+    }
+
+    
+    
     self.isFormRewordFlag = NO;
 
     
@@ -628,9 +641,14 @@ NSMutableArray  *arrayGif;
         myReward.backImage.image = nil;
         myReward.willStopDelegate = self;
 
-        
+        @try
+        {
         myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:myReward animated:YES completion:Nil ];
+        }
+        @catch (NSException * e) {
+                NSLog(@"Exception: %@", e);
+        }
 
         
     }

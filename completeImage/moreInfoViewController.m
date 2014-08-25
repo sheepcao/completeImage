@@ -43,9 +43,17 @@
 
     }
     
-    
-    [backBtn setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
-    [backBtn setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [backBtn setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
+    }else
+    {
+        [backBtn setImage:[UIImage imageNamed:@"returnToLevelEN"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"returnTappedEN"] forState:UIControlStateHighlighted];
+    }
+//    [backBtn setImage:[UIImage imageNamed:@"returnToLevel"] forState:UIControlStateNormal];
+//    [backBtn setImage:[UIImage imageNamed:@"returnTapped"] forState:UIControlStateHighlighted];
     [backBtn addTarget:self action:@selector(backTapped) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -57,19 +65,39 @@
 
     }else
     {
-        [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"morePage" ofType:@"png"]]];
+        if ([CommonUtility isSystemLangChinese]) {
+            
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"morePage" ofType:@"png"]]];
+
+        }else
+        {
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-morePage" ofType:@"png"]]];
+
+        }
 
     }
     [self.view addSubview:fullScreen];
     [self.view addSubview:backBtn];
     [self.view bringSubviewToFront:backBtn];
     
-    [goAppstore setImage:[UIImage imageNamed:@"goComment"] forState:UIControlStateNormal];
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [goAppstore setImage:[UIImage imageNamed:@"goComment"] forState:UIControlStateNormal];
+        [submitEmail setImage:[UIImage imageNamed:@"goSubmit"] forState:UIControlStateNormal];
+
+
+    }else
+    {
+        
+        [goAppstore setImage:[UIImage imageNamed:@"en-goComment"] forState:UIControlStateNormal];
+        [submitEmail setImage:[UIImage imageNamed:@"en-goSubmit"] forState:UIControlStateNormal];
+        
+    }
+    
     [goAppstore addTarget:self action:@selector(gotoStore) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:goAppstore];
     [self.view bringSubviewToFront:goAppstore];
     
-    [submitEmail setImage:[UIImage imageNamed:@"goSubmit"] forState:UIControlStateNormal];
     [submitEmail addTarget:self action:@selector(emailMe) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:submitEmail];
     [self.view bringSubviewToFront:submitEmail];

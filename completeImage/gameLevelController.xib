@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="gameLevelController">
             <connections>
+                <outlet property="backButton" destination="JGH-QC-2vU" id="ZND-Va-mdX"/>
                 <outlet property="levelCount" destination="jbD-O6-huF" id="qn4-QA-gFD"/>
                 <outlet property="nextButton" destination="WNi-8j-2YR" id="B2u-MI-NHY"/>
                 <outlet property="priorButton" destination="eer-2c-cpw" id="Y2f-FQ-iz0"/>
