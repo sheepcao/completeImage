@@ -21,6 +21,19 @@
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
     
+    
+    
+    //ad...big
+    splashInterstitial_ = [[GADInterstitial alloc] init];
+    
+    splashInterstitial_.adUnitID = self.interstitialAdUnitID;
+    splashInterstitial_.delegate = self;
+    
+    [splashInterstitial_ loadRequest:[self createRequest]];
+
+    
+    
+    
     [ShareSDK registerApp:@"2a5d674d9a31"];
     [ShareSDK connectWeChatWithAppId:@"wx4e1ffebe5397b9ef" wechatCls:[WXApi class]];
 //    [ShareSDK  connectSinaWeiboWithAppKey:@"2794760105"
@@ -123,4 +136,20 @@
 
 }
 
+
+- (GADRequest *)createRequest {
+
+    GADRequest *request = [GADRequest request];
+    
+    // Make the request for a test ad. Put in an identifier for the simulator as
+    // well as any devices you want to receive test ads.
+    request.testDevices =
+    [NSArray arrayWithObjects:
+     // TODO: Add your device/simulator test identifiers here. They are
+     // printed to the console when the app is launched.
+     nil];
+    
+    [request setBirthdayWithMonth:8 day:26 year:2010];
+    return request;
+}
 @end

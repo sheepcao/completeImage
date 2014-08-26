@@ -12,14 +12,17 @@
 #import "moreInfoViewController.h"
 #import "sharePhotoViewController.h"
 #import "CustomIOS7AlertView.h"
+//ad...big
+#import "GADInterstitial.h"
+#import "GADInterstitialDelegate.h"
 
 
 
 
-
-@interface ViewController : UIViewController<killTimerDelegate>
+@interface ViewController : UIViewController<killTimerDelegate,GADInterstitialDelegate>
 {
 	NSTimer *timer;
+    NSTimer *ADTimer;
 }
 
 @property (strong, nonatomic) CustomIOS7AlertView *lockedAlert;
@@ -33,6 +36,7 @@
 @property (strong, nonatomic) UIButton *aboutUs;
 @property (strong, nonatomic) UIButton *shareApp;
 
+@property(nonatomic, retain) GADInterstitial *interstitial;
 
 
 - (IBAction)animalBtn:(UIButton *)sender;

@@ -7,6 +7,8 @@
 //
 
 #import "gameLevelController.h"
+//ad...big
+#import "AppDelegate.h"
 
 @interface gameLevelController ()
 
@@ -159,8 +161,12 @@ NSMutableArray  *arrayGif;
 
 {
     [MobClick beginLogPageView:@"gamePage"];
-
-    
+    //ad.....big
+    if (ADTimer ==nil) {
+        
+        ADTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+        
+    }
     
     if (self.isFormRewordFlag == YES) {
         self.isFormRewordFlag = NO;
@@ -203,14 +209,36 @@ NSMutableArray  *arrayGif;
         
         
     }
-    
-   
 
 }
+
+//ad...big
+-(void)bigAd
+{
+    self.interstitial = [[GADInterstitial alloc] init];
+    self.interstitial.delegate = self;
+    
+    // Note: Edit InterstitialExampleAppDelegate.m to update
+    // INTERSTITIAL_AD_UNIT_ID with your interstitial ad unit id.
+    AppDelegate *appDelegate =
+    (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.interstitial.adUnitID = ADMOB_ID_DaysInLine;
+    
+    [self.interstitial loadRequest: [appDelegate createRequest]];
+}
+
+
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"gamePage"];
+    //ad...big
+    if (ADTimer != nil)
+	{
+		[ADTimer invalidate];
+		ADTimer = nil;
+	}
 }
 
 -(void)setupWithEmptyPosition:(NSInteger )px :(NSInteger )py
@@ -805,4 +833,24 @@ NSMutableArray  *arrayGif;
 }
 
 
+#pragma bigAD delegate method
+- (void)interstitial:(GADInterstitial *)interstitial
+didFailToReceiveAdWithError:(GADRequestError *)error {
+    // Alert the error.
+    
+    NSLog(@"big ad error:%@",[error description]);
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
+    [interstitial presentFromRootViewController:self];
+
+}
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial
+{
+    [ADTimer invalidate];
+    ADTimer =nil;
+    ADTimer = [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+    
+    
+}
 @end

@@ -12,6 +12,9 @@
 #import "sharePhotoViewController.h"
 #import "rewardViewController.h"
 #import "globalVar.h"
+//ad...big
+#import "GADInterstitial.h"
+#import "GADInterstitialDelegate.h"
 
 
 @protocol  killTimerDelegate<NSObject>
@@ -27,9 +30,11 @@ static const int MAXanswer = 3;
 bool levelLock[bigLevel];
 
 
-@interface gameLevelController : UIViewController<willStopTimerDelegate,ADBannerViewDelegate,GADBannerViewDelegate,backToLevelDelegate>
+@interface gameLevelController : UIViewController<willStopTimerDelegate,ADBannerViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate,backToLevelDelegate>
 {
     int correct[MAXlevel];
+    NSTimer *ADTimer;
+
 }
 @property (weak,nonatomic) NSObject<killTimerDelegate> *stopDelegate;
 
@@ -60,6 +65,7 @@ bool levelLock[bigLevel];
 @property (strong, nonatomic) GADBannerView *gAdBannerView;
 //@property (strong, nonatomic) NSNumber *failLoadiAD;
 @property (nonatomic, assign) BOOL bannerIsVisible;
+@property(nonatomic, retain) GADInterstitial *interstitial;
 
 - (IBAction)priorLevel;
 - (IBAction)nextLevel;

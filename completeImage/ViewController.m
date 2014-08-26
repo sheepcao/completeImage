@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+//ad...big
+#import "AppDelegate.h"
 
 
 @interface ViewController ()
@@ -26,6 +28,18 @@ bool levelLock[bigLevel];
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        [MobClick event:@"9"];
+
+        
+    }else
+    {
+        [MobClick event:@"8"];
+
+    }
+    
     sharePic = [[NSArray alloc] initWithObjects:@"animalShare",@"sportShare",@"foodShare",@"livingGoodShare",@"plantShare", nil];
     sharePic480 = [[NSArray alloc] initWithObjects:@"animalShare480",@"sportShare480",@"foodShare480",@"livingGoodShare480",@"plantShare480", nil];
     
@@ -155,8 +169,18 @@ bool levelLock[bigLevel];
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
 
     [MobClick beginLogPageView:@"selectLevelPage"];
+    
+    
+    //ad.....big
+    if (ADTimer ==nil) {
+        
+        ADTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+
+    }
+    
 
     
     if ( levelTop < level) {
@@ -189,10 +213,31 @@ bool levelLock[bigLevel];
     
 }
 
+//ad...big
+-(void)bigAd
+{
+    self.interstitial = [[GADInterstitial alloc] init];
+    self.interstitial.delegate = self;
+    
+    // Note: Edit InterstitialExampleAppDelegate.m to update
+    // INTERSTITIAL_AD_UNIT_ID with your interstitial ad unit id.
+    AppDelegate *appDelegate =
+    (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.interstitial.adUnitID = ADMOB_ID_DaysInLine;
+    
+    [self.interstitial loadRequest: [appDelegate createRequest]];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"selectLevelPage"];
+    //ad...big
+    if (ADTimer != nil)
+	{
+		[ADTimer invalidate];
+		ADTimer = nil;
+	}
 }
 - (IBAction)animalBtn:(UIButton *)sender {
 
@@ -548,4 +593,25 @@ bool levelLock[bigLevel];
 	}
 }
 
+//ad...big
+#pragma bigAD delegate method
+- (void)interstitial:(GADInterstitial *)interstitial
+didFailToReceiveAdWithError:(GADRequestError *)error {
+    // Alert the error.
+
+    NSLog(@"big ad error:%@",[error description]);
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
+    [interstitial presentFromRootViewController:self];
+
+}
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial
+{
+    [ADTimer invalidate];
+    ADTimer =nil;
+    ADTimer = [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+
+
+}
 @end
