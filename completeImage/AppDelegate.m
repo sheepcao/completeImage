@@ -42,7 +42,7 @@
 //                              weiboSDKCls:[WeiboSDK class]];
     [ShareSDK connectSinaWeiboWithAppKey:@"2794760105"
                                appSecret:@"31dbf958ccc3fa37f6e99cf0ec643c5e"
-                             redirectUri:@"https://www.weibo.com/"];
+                             redirectUri:@"https://api.weibo.com/oauth2/default.html"];
 
     
 

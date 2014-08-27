@@ -10,12 +10,16 @@
 //ad...big
 #import "AppDelegate.h"
 
+#define levelBtnWidth 66
+#define levelBtnHeight 81
+
 
 @interface ViewController ()
 
 @property (nonatomic ,strong)gameLevelController *game;
 @property (nonatomic ,strong) UIButton *lockedInAlert;
 @property (nonatomic ,strong) UIButton *cancelInAlert;
+
 
 @property (nonatomic ,strong) NSMutableArray *lockImg;
 @end
@@ -45,33 +49,37 @@ bool levelLock[bigLevel];
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
         [self.view setFrame:CGRectMake(0, 0, 320, 480)];
-        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(66+17, 92.5-40, 87, 123)];
-        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(146+17, 167.5-40, 95, 121)];
-        self.food = [[UIButton alloc] initWithFrame:CGRectMake(57+17, 245-40, 94, 122)];
-        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(176+17,293-40, 95, 122)];
-        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(79+17, 369-40, 93, 124)];
-        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(216+17, 47-40, 76, 84)];
-        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(208+26, 418-32, 75, 88)];
-        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(25-16, 13, 72, 83)];
+        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(14+3, 75.5-10, levelBtnWidth, levelBtnHeight)];
+        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(167-1, 95-10, levelBtnWidth, levelBtnHeight)];
+        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31+3, 239-13, levelBtnWidth-3, levelBtnHeight-10)];
+        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(134+3,239-13, levelBtnWidth-7, levelBtnHeight-7)];
+        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75+3, 389-16, levelBtnWidth-2, levelBtnHeight-2)];
+        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(166+1, 385-16, levelBtnWidth-20, levelBtnHeight-25)];
+        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(248-4, 398-20, levelBtnWidth-30, levelBtnHeight-35)];
+        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 22, 60, 60)];
+        
+        self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10, 200, 41)];
         
     }else
     {
         [self.view setFrame:CGRectMake(0, 0, 320, 568)];
-        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(66, 92.5, 87, 123)];
-        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(146, 167.5, 95, 121)];
-        self.food = [[UIButton alloc] initWithFrame:CGRectMake(57, 245, 94, 122)];
-        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(176,293, 95, 122)];
-        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(79, 369, 93, 124)];
-        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(216, 47, 76, 84)];
-        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(208, 418, 75, 88)];
-        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(25, 13, 72, 83)];
+        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(14, 75.5, levelBtnWidth, levelBtnHeight)];
+        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(167, 95, levelBtnWidth, levelBtnHeight)];
+        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31, 239, levelBtnWidth-3, levelBtnHeight-10)];
+        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(134,239, levelBtnWidth-7, levelBtnHeight-7)];
+        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75, 389, levelBtnWidth, levelBtnHeight)];
+        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(166, 385, levelBtnWidth-20, levelBtnHeight-25)];
+        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(248, 398, levelBtnWidth-30, levelBtnHeight-35)];
+        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 30, 60, 60)];
+        
+        self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(20, 25, 200, 41)];
 
     }
     self.animal.tag = 1;
-    self.plant.tag = 2;
+    self.sport.tag = 2;
     self.food.tag = 3;
-    self.sport.tag = 4;
-    self.livingGood.tag = 5;
+    self.livingGood.tag = 4;
+    self.plant.tag = 5;
     
     [self.animal setImage:[UIImage imageNamed:@"b4"] forState:UIControlStateNormal];
     [self.plant setImage:[UIImage imageNamed:@"b7"] forState:UIControlStateNormal];
@@ -81,6 +89,17 @@ bool levelLock[bigLevel];
     [self.moreFun setImage:[UIImage imageNamed:@"b2"] forState:UIControlStateNormal];
     [self.aboutUs setImage:[UIImage imageNamed:@"b3"] forState:UIControlStateNormal];
     [self.shareApp setImage:[UIImage imageNamed:@"b1"] forState:UIControlStateNormal];
+    
+    [self.animal setImage:[UIImage imageNamed:@"b4h"] forState:UIControlStateHighlighted];
+    [self.plant setImage:[UIImage imageNamed:@"b7h"] forState:UIControlStateHighlighted];
+    [self.food setImage:[UIImage imageNamed:@"b5h"] forState:UIControlStateHighlighted];
+    [self.sport setImage:[UIImage imageNamed:@"b6h"] forState:UIControlStateHighlighted];
+    [self.livingGood setImage:[UIImage imageNamed:@"b8h"] forState:UIControlStateHighlighted];
+    [self.aboutUs setImage:[UIImage imageNamed:@"b3h"] forState:UIControlStateHighlighted];
+    [self.shareApp setImage:[UIImage imageNamed:@"b1h"] forState:UIControlStateHighlighted];
+    
+    [self.levelTitle setImage:[UIImage imageNamed:@"levelTitle"]];
+    
     
     [self.animal addTarget:self action:@selector(animalBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.plant addTarget:self action:@selector(plantBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -106,6 +125,8 @@ bool levelLock[bigLevel];
     [self.view addSubview: self.aboutUs];
 
     [self.view addSubview: self.shareApp];
+    
+    [self.view addSubview:self.levelTitle];
 
 
 
@@ -154,7 +175,7 @@ bool levelLock[bigLevel];
         levelLock[i] = NO;
         UIButton *levelEntrance = (UIButton *)[self.view viewWithTag:(i+1)];
         UIImageView *lockImage =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"suozi" ]];
-        [lockImage setFrame:CGRectMake(levelEntrance.frame.size.width/2-17, levelEntrance.frame.size.height-53, 28, 28)];
+        [lockImage setFrame:CGRectMake(levelEntrance.frame.size.width/2-22, levelEntrance.frame.size.height-60, 42, 42)];
         [self.lockImg insertObject:lockImage atIndex:i];
     }
 
@@ -362,7 +383,7 @@ bool levelLock[bigLevel];
         
         
     }else{
-        level = 31;
+        level = 11;
         [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
 
         self.game.backgroundImg = [UIImage imageNamed:@"animalBackground"];
@@ -383,7 +404,7 @@ bool levelLock[bigLevel];
         
         
     }else{
-        level = 41;
+        level = 31;
         [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
 
         self.game.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -403,7 +424,7 @@ bool levelLock[bigLevel];
         
         
     }else{
-         level = 11;
+         level = 41;
         [scores setObject:[NSNumber numberWithInt:0] atIndexedSubscript:(level-1)/10];
 
         self.game.backgroundImg = [UIImage imageNamed:@"plantBackground"];
@@ -460,6 +481,22 @@ bool levelLock[bigLevel];
 
 -(void)shareFunc
 {
+    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
+                                                         allowCallback:NO
+                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
+                                                          viewDelegate:nil
+                                               authManagerViewDelegate:nil];
+    
+    [authOptions setFollowAccounts:[NSDictionary dictionaryWithObjectsAndKeys:
+                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"阿土鳖"],
+                                    SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
+                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"ShareSDK"],
+                                    SHARE_TYPE_NUMBER(ShareTypeTencentWeibo),
+                                    nil]];
+
+
+    
+    
     UIImage *imageShare = [UIImage imageNamed:@"AppIcon"];
         //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby\n下载地址：http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
@@ -474,7 +511,7 @@ bool levelLock[bigLevel];
                          shareList:nil
                            content:publishContent
                      statusBarTips:YES
-                       authOptions:nil
+                       authOptions:authOptions
                       shareOptions: nil
                             result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
                                 if (state == SSResponseStateSuccess)

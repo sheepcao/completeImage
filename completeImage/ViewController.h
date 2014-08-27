@@ -35,6 +35,8 @@
 @property (strong, nonatomic) UIButton *moreFun;
 @property (strong, nonatomic) UIButton *aboutUs;
 @property (strong, nonatomic) UIButton *shareApp;
+@property (strong, nonatomic) UIImageView *levelTitle;
+
 
 @property(nonatomic, retain) GADInterstitial *interstitial;
 
