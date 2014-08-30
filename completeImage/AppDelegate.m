@@ -83,7 +83,6 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
- 
     levelTop = levelTop<level?level:levelTop;
     
     levelSaved =[NSNumber numberWithInt:levelTop];
@@ -111,7 +110,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    
+
     
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
@@ -136,6 +135,23 @@
 
 }
 
+
+- (BOOL)application:(UIApplication *)application  handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
 
 - (GADRequest *)createRequest {
 

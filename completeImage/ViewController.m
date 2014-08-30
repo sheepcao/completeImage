@@ -32,6 +32,8 @@ bool levelLock[bigLevel];
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(snailAnimation) name:UIApplicationWillEnterForegroundNotification object:nil];
     
     if ([CommonUtility isSystemLangChinese]) {
         
@@ -43,6 +45,9 @@ bool levelLock[bigLevel];
         [MobClick event:@"8"];
 
     }
+    
+    isAnimating =NO;
+
     
     sharePic = [[NSArray alloc] initWithObjects:@"animalShare",@"sportShare",@"foodShare",@"livingGoodShare",@"plantShare", nil];
     sharePic480 = [[NSArray alloc] initWithObjects:@"animalShare480",@"sportShare480",@"foodShare480",@"livingGoodShare480",@"plantShare480", nil];
@@ -59,6 +64,8 @@ bool levelLock[bigLevel];
         self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 22, 60, 60)];
         
         self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10, 200, 41)];
+        self.movingSnail = [[UIImageView alloc] initWithFrame:CGRectMake(1, 210-13, 40, 40)];
+
         
     }else
     {
@@ -73,6 +80,7 @@ bool levelLock[bigLevel];
         self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 30, 60, 60)];
         
         self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(20, 25, 200, 41)];
+        self.movingSnail = [[UIImageView alloc] initWithFrame:CGRectMake(1, 210, 40, 40)];
 
     }
     self.animal.tag = 1;
@@ -99,7 +107,8 @@ bool levelLock[bigLevel];
     [self.shareApp setImage:[UIImage imageNamed:@"b1h"] forState:UIControlStateHighlighted];
     
     [self.levelTitle setImage:[UIImage imageNamed:@"levelTitle"]];
-    
+    [self.movingSnail setImage:[UIImage imageNamed:@"movingSnail"]];
+
     
     [self.animal addTarget:self action:@selector(animalBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.plant addTarget:self action:@selector(plantBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -127,6 +136,7 @@ bool levelLock[bigLevel];
     [self.view addSubview: self.shareApp];
     
     [self.view addSubview:self.levelTitle];
+//    [self.view addSubview:self.movingSnail];
 
 
 
@@ -179,17 +189,53 @@ bool levelLock[bigLevel];
         [self.lockImg insertObject:lockImage atIndex:i];
     }
 
+//    [self moveToRight];
+//    [self snailAnimation];
     
     [self.view addSubview:homeBackground];
     [self.view sendSubviewToBack:homeBackground];
 
 }
 
+-(void)moveToRight
+{
+    CGRect aframe = self.movingSnail.frame;
+    aframe.origin.x=-30;
+    self.movingSnail.frame=aframe;
+    
+    self.movingSnail.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"toRight"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:18];
+    aframe.origin.x+=320;
+    self.movingSnail.frame=aframe;
+    [UIView setAnimationDidStopSelector:@selector(moveToLeft)];
+    [UIView commitAnimations];
+}
+-(void)moveToLeft
+{    CGRect aframe = self.movingSnail.frame;
+    aframe.origin.x=-30;
+    self.movingSnail.frame=aframe;
+
+    
+    self.movingSnail.transform = CGAffineTransformIdentity;
+    [UIView beginAnimations:@"toleft"context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:18];
+    aframe.origin.x+=320;
+    self.movingSnail.frame=aframe;
+    [UIView setAnimationDidStopSelector:@selector(moveToRight)];
+    [UIView commitAnimations];
+}
 
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
+    if (!isAnimating ) {
+        [self snailAnimation];
+    }
     
 
     [MobClick beginLogPageView:@"selectLevelPage"];
@@ -207,6 +253,8 @@ bool levelLock[bigLevel];
     if ( levelTop < level) {
         levelTop = level;
     }
+    
+
 
     
     for (int i=(bigLevel-1); i>0; i--) {
@@ -249,8 +297,11 @@ bool levelLock[bigLevel];
     [self.interstitial loadRequest: [appDelegate createRequest]];
 }
 
+
+
 - (void)viewWillDisappear:(BOOL)animated
 {
+
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"selectLevelPage"];
     //ad...big
@@ -651,4 +702,73 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 
 
 }
+
+
+- (void)snailAnimation {
+
+	
+	self.view.backgroundColor = [UIColor greenColor];
+    
+	UIBezierPath *trackPath = [UIBezierPath bezierPath];
+	
+    [trackPath moveToPoint:P(-30,self.movingSnail.frame.origin.y+15)];
+    
+    [trackPath addLineToPoint:P(30,self.movingSnail.frame.origin.y+2+15)];
+
+    [trackPath addLineToPoint:P(110,self.movingSnail.frame.origin.y-15+20)];
+    [trackPath addLineToPoint:P(200,self.movingSnail.frame.origin.y+1+17)];
+    [trackPath addLineToPoint:P(280,self.movingSnail.frame.origin.y+1+16)];
+    [trackPath addLineToPoint:P(350,self.movingSnail.frame.origin.y-5+16)];
+
+//	[trackPath addCurveToPoint:P(300, 120)
+//				 controlPoint1:P(320, 0)
+//				 controlPoint2:P(300, 80)];
+//	[trackPath addCurveToPoint:P(80, 380)
+//				 controlPoint1:P(300, 200)
+//				 controlPoint2:P(200, 480)];
+//	[trackPath addCurveToPoint:P(140, 300)
+//				 controlPoint1:P(0, 300)
+//				 controlPoint2:P(200, 220)];
+//	[trackPath addCurveToPoint:P(210, 200)
+//				 controlPoint1:P(30, 420)
+//				 controlPoint2:P(280, 300)];
+//	[trackPath addCurveToPoint:P(70, 110)
+//				 controlPoint1:P(110, 80)
+//				 controlPoint2:P(110, 80)];
+//	[trackPath addCurveToPoint:P(160, 25)
+//				 controlPoint1:P(0, 160)
+//				 controlPoint2:P(0, 40)];
+//	
+//	CAShapeLayer *racetrack = [CAShapeLayer layer];
+//	racetrack.path = trackPath.CGPath;
+//	racetrack.strokeColor = [UIColor blackColor].CGColor;
+//	racetrack.fillColor = [UIColor clearColor].CGColor;
+//	racetrack.lineWidth = 30.0;
+//	[self.view.layer addSublayer:racetrack];
+    
+//	CAShapeLayer *centerline = [CAShapeLayer layer];
+//	centerline.path = trackPath.CGPath;
+//	centerline.strokeColor = [UIColor whiteColor].CGColor;
+//	centerline.fillColor = [UIColor clearColor].CGColor;
+//	centerline.lineWidth = 2.0;
+//	centerline.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:6], [NSNumber numberWithInt:2], nil];
+//	[self.view.layer addSublayer:centerline];
+	
+	CALayer *car = [CALayer layer];
+	car.bounds = CGRectMake(0, 0, 40, 40);
+	car.position = P(-30,self.movingSnail.frame.origin.y);
+	car.contents = (id)([UIImage imageNamed:@"movingSnail"].CGImage);
+	[self.view.layer addSublayer:car];
+	
+	CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+	anim.path = trackPath.CGPath;
+	anim.rotationMode = kCAAnimationRotateAuto;
+	anim.repeatCount = 100000;
+	anim.duration = 25.0;
+	[car addAnimation:anim forKey:@"race"];
+    isAnimating =YES;
+}
+
+
+
 @end

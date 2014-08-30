@@ -17,6 +17,9 @@
 #import "GADInterstitialDelegate.h"
 
 
+#define P(x,y) CGPointMake(x, y)
+
+
 
 
 @interface ViewController : UIViewController<killTimerDelegate,GADInterstitialDelegate>
@@ -36,7 +39,10 @@
 @property (strong, nonatomic) UIButton *aboutUs;
 @property (strong, nonatomic) UIButton *shareApp;
 @property (strong, nonatomic) UIImageView *levelTitle;
+@property (strong, nonatomic) UIImageView *movingSnail;
 
+@property (strong, nonatomic) CALayer *car;
+@property (strong, nonatomic) UIBezierPath *trackPath;
 
 @property(nonatomic, retain) GADInterstitial *interstitial;
 

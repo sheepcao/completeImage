@@ -7,6 +7,8 @@
 //
 
 #import "gameLevelController.h"
+#import "moreInfoViewController.h"
+
 //ad...big
 #import "AppDelegate.h"
 
@@ -81,8 +83,8 @@ NSMutableArray  *arrayGif;
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
         
         self.picture = [[UIImageView alloc] initWithFrame: CGRectMake(33, 157, 250, 230)];
+     
         self.animationBegin = [[UIButton alloc] initWithFrame:CGRectMake(33, 157, 250, 230)];
-        posY[level-1] -=31;
 
         [self.answer1 setFrame:CGRectMake(33, 400, 55, 55)];
         [self.answer2 setFrame:CGRectMake(131, 400, 55, 55)];
@@ -214,6 +216,91 @@ NSMutableArray  *arrayGif;
         
         
     }
+    
+    //投稿alert.
+    if ((level-10)%10 == 1) {
+        
+   
+        [self setupAlert];
+        
+    }
+
+}
+
+
+
+-(void)setupAlert
+{
+    
+    UIView *tmpCustomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 , 300, 208)];
+    //    tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tagAlert" ofType:@"png"]]];
+    
+    
+    //    UIImageView *imageInTag = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300 , 211)];
+    //    imageInTag.image = [UIImage imageNamed:@"tagAlert.png"];
+    //
+    //    [tmpCustomView addSubview:imageInTag];
+    //    [tmpCustomView sendSubviewToBack:imageInTag];
+    //    tmpCustomView.backgroundColor = [UIColor clearColor];
+    
+    
+    
+    UIButton *goInAlert = [[UIButton alloc] initWithFrame:CGRectMake(40, 145, 90, 47)];
+    UIButton *cancelInAlert = [[UIButton alloc] initWithFrame:CGRectMake(170, 145, 90, 47)];
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        
+        tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"submitAlert" ofType:@"png"]]];
+        
+        
+        [goInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"okButton" ofType:@"png"]] forState:UIControlStateNormal];
+        [cancelInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cancelButton" ofType:@"png"]] forState:UIControlStateNormal];
+        
+        
+    }else
+    {
+        tmpCustomView.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-submitAlert" ofType:@"png"]]];
+        
+        
+        [goInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-okButton" ofType:@"png"]] forState:UIControlStateNormal];
+        [cancelInAlert setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-cancelButton" ofType:@"png"]] forState:UIControlStateNormal];
+    }
+    
+    //    [self.lockedInAlert setTitle:@"前往当前进度" forState:UIControlStateNormal];
+    //    self.lockedInAlert.titleLabel.font = [UIFont systemFontOfSize:14.0];
+    //    self.lockedInAlert.titleLabel.textColor = [UIColor redColor];
+    
+    
+    //    self.lockedInAlert.backgroundColor = [UIColor greenColor];
+    [goInAlert addTarget:self action:@selector(goToLevelNow) forControlEvents:UIControlEventTouchUpInside];
+    [cancelInAlert addTarget:self action:@selector(closeAlert) forControlEvents:UIControlEventTouchUpInside];
+    
+    [tmpCustomView addSubview:goInAlert];
+    [tmpCustomView addSubview:cancelInAlert];
+    
+    CustomIOS7AlertView *alert = [[CustomIOS7AlertView alloc] init];
+    [alert setButtonTitles:[NSMutableArray arrayWithObjects:nil]];
+    alert.backgroundColor = [UIColor whiteColor];
+    
+    self.submitAlert = alert;
+    
+    [alert setContainerView:tmpCustomView];
+    [alert show];
+    
+}
+
+-(void)goToLevelNow
+{
+    moreInfoViewController *more = [[moreInfoViewController alloc] init];
+    more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:more animated:YES completion:Nil ];
+    [self.submitAlert close];
+
+}
+
+-(void)closeAlert
+{
+    [self.submitAlert close];
 
 }
 
@@ -572,6 +659,16 @@ NSMutableArray  *arrayGif;
 }
 
 -(void)wrongAnswer{
+    
+    SystemSoundID soundSmile;
+    
+    CFBundleRef CNbundle=CFBundleGetMainBundle();
+    
+    CFURLRef soundfileurl=CFBundleCopyResourceURL(CNbundle,(__bridge CFStringRef)@"衰",CFSTR("wav"),NULL);
+    //创建system sound 对象
+    AudioServicesCreateSystemSoundID(soundfileurl, &soundSmile);
+    AudioServicesPlaySystemSound(soundSmile);
+
     
     int scoreTemp = [[scores objectAtIndex:((level-1)/10)] intValue];
     

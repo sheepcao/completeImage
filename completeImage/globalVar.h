@@ -28,6 +28,7 @@ NSMutableArray *haveShared;
 NSMutableArray *scores;
 NSString *haveSharedString;
 int seconds;
+BOOL isAnimating;
 
 NSArray *sharePic;
 NSArray *sharePic480;

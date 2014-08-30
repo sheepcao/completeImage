@@ -12,6 +12,8 @@
 #import "sharePhotoViewController.h"
 #import "rewardViewController.h"
 #import "globalVar.h"
+#import "CustomIOS7AlertView.h"
+
 //ad...big
 #import "GADInterstitial.h"
 #import "GADInterstitialDelegate.h"
@@ -36,6 +38,10 @@ bool levelLock[bigLevel];
     NSTimer *ADTimer;
 
 }
+
+@property (strong, nonatomic) CustomIOS7AlertView *submitAlert;
+
+
 @property (weak,nonatomic) NSObject<killTimerDelegate> *stopDelegate;
 
 @property (strong, nonatomic) UIImage *backgroundImg;

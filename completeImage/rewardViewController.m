@@ -320,18 +320,20 @@
 
     [MobClick beginLogPageView:@"rewardPage"];
 
-    
-    [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
-    [self.rewardImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
+
 
     if ([CommonUtility isSystemLangChinese]) {
         
   
         [self.babyTextImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"babyText%d",[self countBabyLevel]]]];
+        [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
+        [self.rewardImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"baby%d",[self countBabyLevel]]]];
     }else
     {
    
         [self.babyTextImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"en-babyText%d",[self countBabyLevel]]]];
+        [self.babyRewordImg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"en-baby%d",[self countBabyLevel]]]];
+        [self.rewardImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"en-baby%d",[self countBabyLevel]]]];
     }
 
 

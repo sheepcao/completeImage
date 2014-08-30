@@ -179,6 +179,7 @@
 {
     
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    [picker.view setFrame:CGRectMake(0,20 , 320, self.view.frame.size.height-20)];
     picker.mailComposeDelegate = self;
     
     [picker setSubject:@"投稿"];
