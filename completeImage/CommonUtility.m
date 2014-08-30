@@ -26,4 +26,17 @@
     }
 }
 
++(void)tapSound
+{
+    SystemSoundID soundTap;
+    
+    CFBundleRef CNbundle=CFBundleGetMainBundle();
+    
+    CFURLRef soundfileurl=CFBundleCopyResourceURL(CNbundle,(__bridge CFStringRef)@"tapSound",CFSTR("wav"),NULL);
+    //创建system sound 对象
+    AudioServicesCreateSystemSoundID(soundfileurl, &soundTap);
+    AudioServicesPlaySystemSound(soundTap);
+}
+
+
 @end

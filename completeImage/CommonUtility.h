@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @interface CommonUtility : NSObject
 
 
 + (BOOL)isSystemLangChinese;
-
++ (void)tapSound;
 @end

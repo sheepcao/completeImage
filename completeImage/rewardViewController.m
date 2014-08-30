@@ -135,13 +135,14 @@
     [self.view addSubview:self.backgroundImg];
     self.babyTextImg.alpha = 0;
     [self.view addSubview:self.babyTextImg];
-    [self.goCamera setImage:[UIImage imageNamed:@"goPhoto"] forState:UIControlStateNormal];
     self.goCamera.alpha = 0;
     [self.goCamera addTarget:self action:@selector(goPhotograph) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.goCamera];
 
     if ([CommonUtility isSystemLangChinese]) {
         
+        [self.goCamera setImage:[UIImage imageNamed:@"goPhoto"] forState:UIControlStateNormal];
+
         [self.share setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"分享" ofType:@"png"]] forState:UIControlStateNormal];
         [self.retakeButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"重拍" ofType:@"png"]] forState:UIControlStateNormal];
         [self.savePic setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"保存" ofType:@"png"]] forState:UIControlStateNormal];
@@ -149,6 +150,8 @@
         
     }else
     {
+        [self.goCamera setImage:[UIImage imageNamed:@"en-goPhoto"] forState:UIControlStateNormal];
+
         [self.share setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-分享" ofType:@"png"]] forState:UIControlStateNormal];
         [self.retakeButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-重拍" ofType:@"png"]] forState:UIControlStateNormal];
         [self.savePic setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-保存" ofType:@"png"]] forState:UIControlStateNormal];
@@ -414,7 +417,8 @@
 - (IBAction)saveImage:(id)sender {
     
     
-    
+    [CommonUtility tapSound];
+
     
     [self.shareView sendSubviewToBack:self.backImage];
     
@@ -434,7 +438,8 @@
 
 - (IBAction)goPhotograph {
     
-    
+    [CommonUtility tapSound];
+
     //  [UIApplication sharedApplication].statusBarHidden = YES;
     self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     
@@ -567,6 +572,8 @@
 
 -(void)returnToShare
 {
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:Nil];
     
 }
@@ -613,7 +620,8 @@
 - (IBAction)backButton {
     
 //    self.isBackFromReward = YES;
-    
+    [CommonUtility tapSound];
+
     [self.delegate isFromReward:YES];
 
     [self dismissViewControllerAnimated:NO completion:nil];
@@ -625,6 +633,8 @@
 
 -(void)shareFunc
 {
+    [CommonUtility tapSound];
+
       [MobClick event:@"4"];
     
     [self.shareView sendSubviewToBack:self.backImage];

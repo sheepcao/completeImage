@@ -238,18 +238,14 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - 保存图片至沙盒 和 系统相册
-- (void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName
-{
-    
-    
-    
-}
+
 
 
 - (IBAction)saveImage:(id)sender {
     
 
-    
+    [CommonUtility tapSound];
+
 
     [self.shareView sendSubviewToBack:self.backImage];
     
@@ -269,6 +265,8 @@
 
 - (IBAction)photograph:(id)sender {
     
+    [CommonUtility tapSound];
+
   //  [UIApplication sharedApplication].statusBarHidden = YES;
     self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight)];
     
@@ -377,6 +375,7 @@
 
 -(void)exchangeDevice
 {
+
     if (self.picker.cameraDevice ==UIImagePickerControllerCameraDeviceFront) {
         self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     }else
@@ -487,11 +486,15 @@
 
 
 - (IBAction)returnToGame:(UIButton *)sender {
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:Nil];
 
 }
 -(void)returnToShare
 {
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:Nil];
 
 }
@@ -530,6 +533,8 @@
 
 -(void)shareFunc
 {
+    [CommonUtility tapSound];
+
       [MobClick event:@"3"];
     
     [self.shareView sendSubviewToBack:self.backImage];

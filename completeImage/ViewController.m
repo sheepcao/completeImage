@@ -106,9 +106,16 @@ bool levelLock[bigLevel];
     [self.aboutUs setImage:[UIImage imageNamed:@"b3h"] forState:UIControlStateHighlighted];
     [self.shareApp setImage:[UIImage imageNamed:@"b1h"] forState:UIControlStateHighlighted];
     
-    [self.levelTitle setImage:[UIImage imageNamed:@"levelTitle"]];
     [self.movingSnail setImage:[UIImage imageNamed:@"movingSnail"]];
 
+    if ([CommonUtility isSystemLangChinese]) {
+        [self.levelTitle setImage:[UIImage imageNamed:@"levelTitle"]];
+
+    }else
+    {
+        [self.levelTitle setImage:[UIImage imageNamed:@"en-levelTitle"]];
+
+    }
     
     [self.animal addTarget:self action:@selector(animalBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.plant addTarget:self action:@selector(plantBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -312,6 +319,8 @@ bool levelLock[bigLevel];
 	}
 }
 - (IBAction)animalBtn:(UIButton *)sender {
+    
+    [CommonUtility tapSound];
 
     
     
@@ -403,11 +412,15 @@ bool levelLock[bigLevel];
 
 -(void)closeAlert
 {
+    [CommonUtility tapSound];
+
     [self.lockedAlert close];
 }
 
 -(void)goToLevelNow
 {
+    [CommonUtility tapSound];
+
     if (levelTop>MAXlevel) {
         level = MAXlevel;
     }else{
@@ -426,7 +439,8 @@ bool levelLock[bigLevel];
 
 - (IBAction)sportBtn:(UIButton *)sender {
     
-    
+    [CommonUtility tapSound];
+
     
     if (levelLock[sender.tag-1]) {
         
@@ -447,7 +461,8 @@ bool levelLock[bigLevel];
 
 - (IBAction)livingGoodBtn:(UIButton *)sender {
     
-    
+    [CommonUtility tapSound];
+
     
     if (levelLock[sender.tag-1]) {
         
@@ -467,7 +482,8 @@ bool levelLock[bigLevel];
 
 - (IBAction)plantBtn:(UIButton *)sender {
     
-   
+    [CommonUtility tapSound];
+
     
     if (levelLock[sender.tag-1]) {
         
@@ -490,7 +506,8 @@ bool levelLock[bigLevel];
 
 - (IBAction)foodBtn:(UIButton *)sender {
     
-    
+    [CommonUtility tapSound];
+
     
     if (levelLock[sender.tag-1]) {
         
@@ -532,6 +549,9 @@ bool levelLock[bigLevel];
 
 -(void)shareFunc
 {
+    [CommonUtility tapSound];
+
+    
     id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
                                                          allowCallback:NO
                                                          authViewStyle:SSAuthViewStyleFullScreenPopup
@@ -575,82 +595,13 @@ bool levelLock[bigLevel];
                                 }
                             }];
     
-//    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
-//                                                         allowCallback:YES
-//                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
-//                                                          viewDelegate:nil
-//                                               authManagerViewDelegate:nil];
-//    
-//    //在授权页面中添加关注官方微博
-////    [authOptions setFollowAccounts:[NSDictionary dictionaryWithObjectsAndKeys:
-////                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"ShareSDK"],
-////                                    SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
-////                                    [ShareSDK userFieldWithType:SSUserFieldTypeName value:@"ShareSDK"],
-////                                    SHARE_TYPE_NUMBER(ShareTypeTencentWeibo),
-////                                    nil]];
-//    
-//    BOOL needAuth = NO;
-//    
-////    ShareType shareType = (ShareType)[[selectedClients objectAtIndex:0] integerValue];
-//    if (![ShareSDK hasAuthorizedWithType:ShareTypeSinaWeibo])
-//    {
-//        needAuth = YES;
-//        [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo
-//                          authOptions:authOptions
-//                               result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-//                                   
-//                                   if (result)
-//                                   {
-//                                       //分享内容
-//                                       [ShareSDK oneKeyShareContent:publishContent
-//                                                          shareList:nil
-//                                                        authOptions:authOptions
-//                                                      statusBarTips:YES
-//                                                             result:nil];
-//                                       
-//                                       [self dismissViewControllerAnimated:YES completion:nil];
-//                                   }
-//                                   else
-//                                   {
-//                                       UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"TEXT_TIPS", @"提示")
-//                                                                                           message:[NSString stringWithFormat:NSLocalizedString(@"TEXT_SEND_FAI", @"发送失败!%@"), [error errorDescription]]
-//                                                                                          delegate:nil
-//                                                                                 cancelButtonTitle:NSLocalizedString(@"TEXT_KNOW", @"知道了")
-//                                                                                 otherButtonTitles:nil];
-//                                       [alertView show];
-//                                   }
-//                               }];
-//    }
-//    
-//    
-//    if (!needAuth)
-//    {
-//        //分享内容
-//        [ShareSDK showShareActionSheet:nil
-//                             shareList:nil
-//                               content:publishContent
-//                         statusBarTips:YES
-//                           authOptions:nil
-//                          shareOptions: nil
-//                                result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-//                                    if (state == SSResponseStateSuccess)
-//                                    {
-//                                        NSLog(@"分享成功");
-//                                    }
-//                                    else if (state == SSResponseStateFail)
-//                                    {
-//                                        NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
-//                                    }
-//                                }];
-//        
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//    }
-//
-//    
+  
 }
 
 -(void)aboutUsTapped
 {
+    [CommonUtility tapSound];
+
     AboutUsViewController *teamInfo = [[AboutUsViewController alloc] init];
     teamInfo.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:teamInfo animated:YES completion:Nil ];
@@ -659,6 +610,8 @@ bool levelLock[bigLevel];
 
 -(void)moreInfo
 {
+    [CommonUtility tapSound];
+
     moreInfoViewController *more = [[moreInfoViewController alloc] init];
     more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:more animated:YES completion:Nil ];
@@ -667,6 +620,7 @@ bool levelLock[bigLevel];
 
 - (void)countSecond:(NSTimer*)timer1
 {
+
 	seconds = seconds + 1;
 	
 }
@@ -768,7 +722,6 @@ bool levelLock[bigLevel];
 	[car addAnimation:anim forKey:@"race"];
     isAnimating =YES;
 }
-
 
 
 @end

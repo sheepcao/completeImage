@@ -291,6 +291,8 @@ NSMutableArray  *arrayGif;
 
 -(void)goToLevelNow
 {
+    [CommonUtility tapSound];
+
     moreInfoViewController *more = [[moreInfoViewController alloc] init];
     more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:more animated:YES completion:Nil ];
@@ -300,6 +302,8 @@ NSMutableArray  *arrayGif;
 
 -(void)closeAlert
 {
+    [CommonUtility tapSound];
+
     [self.submitAlert close];
 
 }
@@ -462,7 +466,6 @@ NSMutableArray  *arrayGif;
 
 -(void)buttonTap:(UIButton *)sender
 {
-    
     
     if (sender.tag == 0) {
         if (self.empty.imageView.image) {
@@ -729,6 +732,8 @@ NSMutableArray  *arrayGif;
 
 
 - (IBAction)priorLevel {
+    [CommonUtility tapSound];
+
     
     [MobClick event:@"2"];
     
@@ -750,6 +755,9 @@ NSMutableArray  *arrayGif;
 
 - (IBAction)nextLevel {
     
+    [CommonUtility tapSound];
+    
+    
     [MobClick event:@"1"];
     
     [arrayM removeAllObjects];
@@ -762,7 +770,7 @@ NSMutableArray  *arrayGif;
     
     if (level%10==0)
     {
-//        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
+        //        [self performSelector:@selector(switchToReward) withObject:nil afterDelay:0.35f];
         rewardViewController *myReward = [[rewardViewController alloc] initWithNibName:@"rewardViewController" bundle:nil];
         myReward.delegate = self;
         myReward.frontImageName = sharePic[(level-1)/10];
@@ -770,22 +778,24 @@ NSMutableArray  *arrayGif;
         myReward.afterShutter = NO;
         myReward.backImage.image = nil;
         myReward.willStopDelegate = self;
-
+        
         @try
         {
-        myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:myReward animated:YES completion:Nil ];
+            myReward.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self presentViewController:myReward animated:YES completion:Nil ];
         }
         @catch (NSException * e) {
-                NSLog(@"Exception: %@", e);
+            NSLog(@"Exception: %@", e);
         }
-
+        
+        
+    }else
+    {
+        [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.05f];
         
     }
-
-    [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.05f];
     
-    }
+}
 -(void)changeImgs
 {
     
@@ -813,13 +823,16 @@ NSMutableArray  *arrayGif;
 
 - (IBAction)backToLevel {
     
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:Nil];
     
 }
 
 - (IBAction)share {
     
-  
+    [CommonUtility tapSound];
+
     
     sharePhotoViewController *myShare = [[sharePhotoViewController alloc] initWithNibName:@"sharePhotoViewController" bundle:nil];
     myShare.frontImageName = sharePic[(level-1)/10];
@@ -832,6 +845,9 @@ NSMutableArray  *arrayGif;
 }
 
 - (IBAction)animationTapped:(id)sender {
+    
+    [CommonUtility tapSound];
+
     [self.nextButton setEnabled:NO];
     [self.priorButton setEnabled:NO];
     [self.empty setHidden:YES];
@@ -859,7 +875,9 @@ NSMutableArray  *arrayGif;
 }
 
 -(void)chineseTap
-{  [MobClick event:@"5"];
+
+{
+    [MobClick event:@"5"];
     AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
 
 }

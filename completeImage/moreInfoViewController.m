@@ -177,7 +177,8 @@
 
 -(void)emailMe
 {
-    
+    [CommonUtility tapSound];
+
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     [picker.view setFrame:CGRectMake(0,20 , 320, self.view.frame.size.height-20)];
     picker.mailComposeDelegate = self;
@@ -196,7 +197,7 @@
 //    [picker addAttachmentData:myData mimeType:@"image/png" fileName:@""];
     
     // Fill out the email body text
-    NSString *emailBody = (@"hi sheepcao,this is your own test!");
+    NSString *emailBody = @"亲爱的BabyMatch用户：\n感谢您下载和使用！请留下您宝贵的意见和建议，多谢鼓励，更欢迎批评！\n相信我们可以一起做的更好！";
     [picker setMessageBody:emailBody isHTML:NO];
     [self presentViewController:picker animated:YES completion:nil];
     
@@ -214,6 +215,8 @@
 
 -(void)gotoStore
 {
+    [CommonUtility tapSound];
+
     if([[self currentLanguage] compare:@"zh-Hans" options:NSCaseInsensitiveSearch]==NSOrderedSame || [[self currentLanguage] compare:@"zh-Hant" options:NSCaseInsensitiveSearch]==NSOrderedSame)
     {
         NSLog(@"current Language == Chinese");
@@ -231,6 +234,8 @@
 
 -(void)backTapped
 {
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning

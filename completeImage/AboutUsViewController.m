@@ -88,6 +88,8 @@
 
 -(void)backTapped
 {
+    [CommonUtility tapSound];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
