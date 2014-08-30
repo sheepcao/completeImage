@@ -13,8 +13,8 @@
 #import "sharePhotoViewController.h"
 #import "CustomIOS7AlertView.h"
 //ad...big
-#import "GADInterstitial.h"
-#import "GADInterstitialDelegate.h"
+//#import "GADInterstitial.h"
+//#import "GADInterstitialDelegate.h"
 
 
 #define P(x,y) CGPointMake(x, y)
@@ -22,7 +22,7 @@
 
 
 
-@interface ViewController : UIViewController<killTimerDelegate,GADInterstitialDelegate>
+@interface ViewController : UIViewController<killTimerDelegate/*GADInterstitialDelegate*/>
 {
 	NSTimer *timer;
     NSTimer *ADTimer;
@@ -44,7 +44,7 @@
 @property (strong, nonatomic) CALayer *car;
 @property (strong, nonatomic) UIBezierPath *trackPath;
 
-@property(nonatomic, retain) GADInterstitial *interstitial;
+//@property(nonatomic, retain) GADInterstitial *interstitial;
 
 
 - (IBAction)animalBtn:(UIButton *)sender;

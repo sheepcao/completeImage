@@ -141,27 +141,27 @@ NSMutableArray  *arrayGif;
     
     
   //set ad......iad and admob
-    if ([[UIScreen mainScreen] bounds].size.height == 568) {
-        self.iAdBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
-        
-        [self.iAdBannerView setDelegate:self];
-        self.iAdBannerView.backgroundColor = [UIColor clearColor];
-        
-        [self.view addSubview:self.iAdBannerView];
-        self.bannerIsVisible = YES;
-        
-        self.gAdBannerView = [[GADBannerView alloc]
-                              initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
-        
-        self.gAdBannerView.adUnitID = ADMOB_ID;//调用id
-        
-        self.gAdBannerView.delegate = self;
-        self.gAdBannerView.rootViewController = self;
-        self.gAdBannerView.backgroundColor = [UIColor clearColor];
-        [self.gAdBannerView loadRequest:[GADRequest request]];
-        
-        
-    }    
+//    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+//        self.iAdBannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
+//        
+//        [self.iAdBannerView setDelegate:self];
+//        self.iAdBannerView.backgroundColor = [UIColor clearColor];
+//        
+//        [self.view addSubview:self.iAdBannerView];
+//        self.bannerIsVisible = YES;
+//        
+//        self.gAdBannerView = [[GADBannerView alloc]
+//                              initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,GAD_SIZE_320x50.width,GAD_SIZE_320x50.height)];
+//        
+//        self.gAdBannerView.adUnitID = ADMOB_ID;//调用id
+//        
+//        self.gAdBannerView.delegate = self;
+//        self.gAdBannerView.rootViewController = self;
+//        self.gAdBannerView.backgroundColor = [UIColor clearColor];
+//        [self.gAdBannerView loadRequest:[GADRequest request]];
+//        
+//        
+//    }    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -169,11 +169,11 @@ NSMutableArray  *arrayGif;
 {
     [MobClick beginLogPageView:@"gamePage"];
     //ad.....big
-    if (ADTimer ==nil) {
-        
-        ADTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
-        
-    }
+//    if (ADTimer ==nil) {
+//        
+//        ADTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+//        
+//    }
     
     if (self.isFormRewordFlag == YES) {
         self.isFormRewordFlag = NO;
@@ -305,19 +305,19 @@ NSMutableArray  *arrayGif;
 }
 
 //ad...big
--(void)bigAd
-{
-    self.interstitial = [[GADInterstitial alloc] init];
-    self.interstitial.delegate = self;
-    
-    // Note: Edit InterstitialExampleAppDelegate.m to update
-    // INTERSTITIAL_AD_UNIT_ID with your interstitial ad unit id.
-    AppDelegate *appDelegate =
-    (AppDelegate *)[UIApplication sharedApplication].delegate;
-    self.interstitial.adUnitID = ADMOB_ID_DaysInLine;
-    
-    [self.interstitial loadRequest: [appDelegate createRequest]];
-}
+//-(void)bigAd
+//{
+//    self.interstitial = [[GADInterstitial alloc] init];
+//    self.interstitial.delegate = self;
+//    
+//    // Note: Edit InterstitialExampleAppDelegate.m to update
+//    // INTERSTITIAL_AD_UNIT_ID with your interstitial ad unit id.
+//    AppDelegate *appDelegate =
+//    (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    self.interstitial.adUnitID = ADMOB_ID_DaysInLine;
+//    
+//    [self.interstitial loadRequest: [appDelegate createRequest]];
+//}
 
 
 
@@ -935,24 +935,25 @@ NSMutableArray  *arrayGif;
 }
 
 
-#pragma bigAD delegate method
-- (void)interstitial:(GADInterstitial *)interstitial
-didFailToReceiveAdWithError:(GADRequestError *)error {
-    // Alert the error.
-    
-    NSLog(@"big ad error:%@",[error description]);
-}
-
-- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
-    [interstitial presentFromRootViewController:self];
-
-}
-- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial
-{
-    [ADTimer invalidate];
-    ADTimer =nil;
-    ADTimer = [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
-    
-    
-}
+//ad...big
+//#pragma bigAD delegate method
+//- (void)interstitial:(GADInterstitial *)interstitial
+//didFailToReceiveAdWithError:(GADRequestError *)error {
+//    // Alert the error.
+//    
+//    NSLog(@"big ad error:%@",[error description]);
+//}
+//
+//- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
+//    [interstitial presentFromRootViewController:self];
+//
+//}
+//- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial
+//{
+//    [ADTimer invalidate];
+//    ADTimer =nil;
+//    ADTimer = [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(bigAd) userInfo:nil repeats:NO];
+//    
+//    
+//}
 @end
