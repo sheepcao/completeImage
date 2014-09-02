@@ -52,19 +52,28 @@ bool levelLock[bigLevel];
     sharePic = [[NSArray alloc] initWithObjects:@"animalShare",@"sportShare",@"foodShare",@"livingGoodShare",@"plantShare", nil];
     sharePic480 = [[NSArray alloc] initWithObjects:@"animalShare480",@"sportShare480",@"foodShare480",@"livingGoodShare480",@"plantShare480", nil];
     
+    int y = 0;
+    
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        [self.view setFrame:CGRectMake(0, 0, 320, 480)];
-        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(14+3, 75.5-10, levelBtnWidth, levelBtnHeight)];
-        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(167-1, 95-10, levelBtnWidth, levelBtnHeight)];
-        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31+3, 239-13, levelBtnWidth-3, levelBtnHeight-10)];
-        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(134+3,239-13, levelBtnWidth-7, levelBtnHeight-7)];
-        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75+3, 389-16, levelBtnWidth-2, levelBtnHeight-2)];
-        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(166+1, 385-16, levelBtnWidth-20, levelBtnHeight-25)];
-        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(248-4, 398-20, levelBtnWidth-30, levelBtnHeight-35)];
-        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 22, 60, 60)];
+        if ([CommonUtility isSystemVersionLessThan7]) {
+            [self.view setFrame:CGRectMake(0, -20, 320, 480)];
+            y=-13;
+        }else
+        {
+            [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+            y = 7;
+        }
+        self.animal = [[UIButton alloc] initWithFrame:CGRectMake(14+3, 75.5-10+y, levelBtnWidth, levelBtnHeight)];
+        self.sport = [[UIButton alloc] initWithFrame:CGRectMake(167-1, 95-10+y, levelBtnWidth, levelBtnHeight)];
+        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31+4, 239-11+y+5, levelBtnWidth-6, levelBtnHeight-20)];
+        self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(134+3,239-13+y, levelBtnWidth-7, levelBtnHeight-7)];
+        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75+3, 389-16+y+7, levelBtnWidth-7, levelBtnHeight-7)];
+        self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(166+1, 385-16+y, levelBtnWidth-20, levelBtnHeight-25)];
+        self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(248-2, 398-20+y+5, levelBtnWidth-30, levelBtnHeight-35)];
+        self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 22+y, 60, 60)];
         
-        self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10, 200, 41)];
-        self.movingSnail = [[UIImageView alloc] initWithFrame:CGRectMake(1, 210-13, 40, 40)];
+        self.levelTitle = [[UIImageView alloc] initWithFrame:CGRectMake(16, 10+y, 200, 41)];
+        self.movingSnail = [[UIImageView alloc] initWithFrame:CGRectMake(1, 210-13+y, 40, 40)];
 
         
     }else
@@ -72,9 +81,9 @@ bool levelLock[bigLevel];
         [self.view setFrame:CGRectMake(0, 0, 320, 568)];
         self.animal = [[UIButton alloc] initWithFrame:CGRectMake(14, 75.5, levelBtnWidth, levelBtnHeight)];
         self.sport = [[UIButton alloc] initWithFrame:CGRectMake(167, 95, levelBtnWidth, levelBtnHeight)];
-        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31, 239, levelBtnWidth-3, levelBtnHeight-10)];
+        self.food = [[UIButton alloc] initWithFrame:CGRectMake(31, 239+8, levelBtnWidth-3, levelBtnHeight-20)];
         self.livingGood = [[UIButton alloc] initWithFrame:CGRectMake(134,239, levelBtnWidth-7, levelBtnHeight-7)];
-        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75, 389, levelBtnWidth, levelBtnHeight)];
+        self.plant = [[UIButton alloc] initWithFrame:CGRectMake(75, 389+4, levelBtnWidth-5, levelBtnHeight-5)];
         self.moreFun = [[UIButton alloc] initWithFrame:CGRectMake(166, 385, levelBtnWidth-20, levelBtnHeight-25)];
         self.aboutUs = [[UIButton alloc] initWithFrame:CGRectMake(248, 398, levelBtnWidth-30, levelBtnHeight-35)];
         self.shareApp = [[UIButton alloc] initWithFrame:CGRectMake(228, 30, 60, 60)];
@@ -320,7 +329,9 @@ bool levelLock[bigLevel];
 }
 - (IBAction)animalBtn:(UIButton *)sender {
     
-    [CommonUtility tapSound];
+//    [CommonUtility tapSound:@"selectLevel"];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
+
 
     
     
@@ -412,7 +423,7 @@ bool levelLock[bigLevel];
 
 -(void)closeAlert
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self.lockedAlert close];
 }
@@ -439,7 +450,7 @@ bool levelLock[bigLevel];
 
 - (IBAction)sportBtn:(UIButton *)sender {
     
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     
     if (levelLock[sender.tag-1]) {
@@ -461,7 +472,7 @@ bool levelLock[bigLevel];
 
 - (IBAction)livingGoodBtn:(UIButton *)sender {
     
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     
     if (levelLock[sender.tag-1]) {
@@ -482,7 +493,7 @@ bool levelLock[bigLevel];
 
 - (IBAction)plantBtn:(UIButton *)sender {
     
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     
     if (levelLock[sender.tag-1]) {
@@ -506,7 +517,7 @@ bool levelLock[bigLevel];
 
 - (IBAction)foodBtn:(UIButton *)sender {
     
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     
     if (levelLock[sender.tag-1]) {
@@ -549,7 +560,7 @@ bool levelLock[bigLevel];
 
 -(void)shareFunc
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     
     id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
@@ -571,11 +582,11 @@ bool levelLock[bigLevel];
     UIImage *imageShare = [UIImage imageNamed:@"AppIcon"];
         //构造分享内容
     id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby\n下载地址：http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
-                                       defaultContent:@"下载地址：http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
+                                       defaultContent:@"纯手绘风格的宝宝看图识物app！拼图闯关、风趣动画、双语识字、奖牌秀咖，还能参与关卡制作！来自星星的宝宝就是你！"
                                                 image:[ShareSDK pngImageWithImage:imageShare]
                                                 title:@"宝宝猜猜猜"
                                                   url:@"http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
-                                          description:@"下载地址：http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
+                                          description:@"纯手绘风格的宝宝看图识物app！拼图闯关、风趣动画、双语识字、奖牌秀咖，还能参与关卡制作！来自星星的宝宝就是你！"
                                             mediaType:SSPublishContentMediaTypeNews];
     
     [ShareSDK showShareActionSheet:nil
@@ -600,7 +611,7 @@ bool levelLock[bigLevel];
 
 -(void)aboutUsTapped
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     AboutUsViewController *teamInfo = [[AboutUsViewController alloc] init];
     teamInfo.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -610,7 +621,7 @@ bool levelLock[bigLevel];
 
 -(void)moreInfo
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"selectLevel" withType:@"mp3"];
 
     moreInfoViewController *more = [[moreInfoViewController alloc] init];
     more.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;

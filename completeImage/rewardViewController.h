@@ -19,6 +19,7 @@
 
 
 @interface rewardViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (nonatomic, strong) AVAudioPlayer *myAudioPlayer;
 @property (strong, nonatomic) IBOutlet UIButton *goCamera;
 @property (strong, nonatomic)  UIImageView *backgroundImg;
 @property (weak, nonatomic) IBOutlet UIImageView *babyRewordImg;

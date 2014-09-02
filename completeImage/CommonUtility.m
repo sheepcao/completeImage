@@ -9,7 +9,17 @@
 #import "CommonUtility.h"
 
 @implementation CommonUtility
+@synthesize myAudioPlayer;
 
++(CommonUtility *)sharedCommonUtility
+{
+    static CommonUtility *singleton;
+    static dispatch_once_t token;
+    dispatch_once(&token,^{
+        singleton = [[CommonUtility alloc]init];
+    });
+    return singleton;
+}
 
 + (BOOL)isSystemLangChinese
 {
@@ -38,5 +48,22 @@
     AudioServicesPlaySystemSound(soundTap);
 }
 
++(BOOL)isSystemVersionLessThan7{
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
++(void)tapSound:(NSString *)name withType:(NSString *)type
+{
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:name ofType:type];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    [CommonUtility sharedCommonUtility].myAudioPlayer= [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    //    self.myAudioPlayer.numberOfLoops = -1; //infinite loop
+    [[CommonUtility sharedCommonUtility].myAudioPlayer play];
+
+}
 @end

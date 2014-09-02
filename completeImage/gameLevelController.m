@@ -302,7 +302,7 @@ NSMutableArray  *arrayGif;
 
 -(void)closeAlert
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self.submitAlert close];
 
@@ -466,6 +466,14 @@ NSMutableArray  *arrayGif;
 
 -(void)buttonTap:(UIButton *)sender
 {
+//    
+//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"choiceSound" ofType: @"mp3"];
+//    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+//    self.myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+//    //    self.myAudioPlayer.numberOfLoops = -1; //infinite loop
+//    [self.myAudioPlayer play];
+
+    [CommonUtility tapSound:@"choiceSound" withType:@"mp3"];
     
     if (sender.tag == 0) {
         if (self.empty.imageView.image) {
@@ -549,8 +557,8 @@ NSMutableArray  *arrayGif;
 
 -(void)sayEnglish
 {
-    AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
-    
+//    AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
+    [CommonUtility tapSound:wordsEN[level-1] withType:@"wav"];
     
 }
 
@@ -576,7 +584,10 @@ NSMutableArray  *arrayGif;
     [self.teachView.answerEN addTarget:self action:@selector(englishTap) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.teachView];
     
-    AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
+//    AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
+
+    [CommonUtility tapSound:wordsCN[level-1] withType:@"wav"];
+
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
     
     [self.empty setHidden:YES];
@@ -732,7 +743,9 @@ NSMutableArray  *arrayGif;
 
 
 - (IBAction)priorLevel {
-    [CommonUtility tapSound];
+
+    
+    [CommonUtility tapSound:@"levelSound" withType:@"mp3"];
 
     
     [MobClick event:@"2"];
@@ -754,9 +767,9 @@ NSMutableArray  *arrayGif;
 
 
 - (IBAction)nextLevel {
+
     
-    [CommonUtility tapSound];
-    
+    [CommonUtility tapSound:@"levelSound" withType:@"mp3"];
     
     [MobClick event:@"1"];
     
@@ -791,7 +804,8 @@ NSMutableArray  *arrayGif;
         
     }else
     {
-        [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.05f];
+//        [self performSelector:@selector(changeImgs) withObject:nil afterDelay:0.05f];
+        [self changeImgs];
         
     }
     
@@ -823,7 +837,7 @@ NSMutableArray  *arrayGif;
 
 - (IBAction)backToLevel {
     
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:Nil];
     
@@ -878,14 +892,17 @@ NSMutableArray  *arrayGif;
 
 {
     [MobClick event:@"5"];
-    AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
+//    AudioServicesPlaySystemSound([self.teachView.soundCNObj intValue]);
+
+    [CommonUtility tapSound:wordsCN[level-1] withType:@"wav"];
 
 }
 
 -(void)englishTap
 {
       [MobClick event:@"6"];
-    AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
+//    AudioServicesPlaySystemSound([self.teachView.soundENObj intValue]);
+    [CommonUtility tapSound:wordsEN[level-1] withType:@"wav"];
 
 }
 -(void)emptyDisappear

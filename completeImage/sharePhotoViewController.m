@@ -42,7 +42,16 @@
     // Do any additional setup after loading the view from its nib.
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+
+        if ([CommonUtility isSystemVersionLessThan7]) {
+            [self.view setFrame:CGRectMake(0, -20, 320, 480)];
+            
+
+        }else
+        {
+            [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+
+        }
      
         
     }else
@@ -87,9 +96,15 @@
         self.share = [[UIButton alloc] initWithFrame:CGRectMake(125, 395, 70, 70)];
         self.retakeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 395, 70, 70)];
         self.savePic = [[UIButton alloc] initWithFrame:CGRectMake(243, 408, 50, 50)];
+        if ([CommonUtility isSystemVersionLessThan7]) {
         self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 290, 120, 60)];
-//        self.photograph.layer.borderWidth = 1.0;
-//        self.photograph.layer.borderColor = [UIColor blackColor].CGColor;
+            
+        }else
+        {
+        self.photograph = [[UIButton alloc] initWithFrame:CGRectMake(100, 310, 120, 60)];
+        }
+
+
         
     }else
     {
@@ -149,7 +164,8 @@
     [self.view addSubview:self.photograph];
     [self.photograph setHidden:NO];
 
-    [self.view addSubview:self.share];
+    //    new version
+//    [self.view addSubview:self.share];
     [self.share setHidden:YES];
     
     [self.view addSubview:self.retakeButton];
@@ -203,7 +219,14 @@
     }else//未拍摄时的界面
     {
         if ([[UIScreen mainScreen] bounds].size.height == 480) {
-            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]]];
+            if ([CommonUtility isSystemLangChinese]) {
+                
+                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]]];
+            }else
+            {
+                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish460" ofType:@"png"]]];
+            }
+
 
             
         }else
@@ -259,16 +282,27 @@
     
     UIImageWriteToSavedPhotosAlbum(imageShare, nil, nil,nil);
 
-
+    UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"成功保存" message:@"已将保存萌照至系统相册" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [successAlert show];
 
 }
+
+
 
 - (IBAction)photograph:(id)sender {
     
     [CommonUtility tapSound];
 
   //  [UIApplication sharedApplication].statusBarHidden = YES;
-    self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight)];
+    if([CommonUtility isSystemVersionLessThan7])
+    {
+        self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight)];
+
+    }else
+    {
+        self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight+20)];
+
+    }
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
 
@@ -486,14 +520,14 @@
 
 
 - (IBAction)returnToGame:(UIButton *)sender {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:Nil];
 
 }
 -(void)returnToShare
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:Nil];
 
@@ -561,12 +595,21 @@
     //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
     
     //构造分享内容
-    id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby"
-                                       defaultContent:@"默认分享内容，没内容时显示"
+    NSString *message;
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        message = @"宝贝,拼吧！";
+    }else
+    {
+        message = @"BabyMatch";
+    }
+    
+    id<ISSContent> publishContent = [ShareSDK content:message
+                                       defaultContent:@""
                                                 image:[ShareSDK pngImageWithImage:imageShare]
-                                                title:@"ShareSDK"
+                                                title:@"Share"
                                                   url:@"http://www.sharesdk.cn"
-                                          description:@"这是一条测试信息"
+                                          description:message
                                             mediaType:SSPublishContentMediaTypeImage];
     
     [ShareSDK showShareActionSheet:nil

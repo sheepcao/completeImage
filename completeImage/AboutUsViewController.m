@@ -88,7 +88,7 @@
 
 -(void)backTapped
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }

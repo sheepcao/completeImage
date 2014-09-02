@@ -16,6 +16,8 @@
 @property (nonatomic,strong) UIButton *answerEN;
 @property (nonatomic,strong) NSNumber *soundCNObj;
 @property (nonatomic,strong) NSNumber *soundENObj;
+@property (nonatomic,strong) NSString *soundEnName;
+@property (nonatomic,strong) NSString *soundCnName;
 
 
 -(id)initWithWordsAndSound:(NSString *)chinese english:(NSString *)eng soundCN:(NSString *)sndCN soundEN:(NSString *)sndEN;

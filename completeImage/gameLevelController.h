@@ -38,6 +38,7 @@ bool levelLock[bigLevel];
     NSTimer *ADTimer;
 
 }
+@property (nonatomic, strong) AVAudioPlayer *myAudioPlayer;
 
 @property (strong, nonatomic) CustomIOS7AlertView *submitAlert;
 

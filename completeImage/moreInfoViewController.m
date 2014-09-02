@@ -95,7 +95,8 @@
     }
     
     [goAppstore addTarget:self action:@selector(gotoStore) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:goAppstore];
+//    new version
+//    [self.view addSubview:goAppstore];
     [self.view bringSubviewToFront:goAppstore];
     
     [submitEmail addTarget:self action:@selector(emailMe) forControlEvents:UIControlEventTouchUpInside];
@@ -186,7 +187,7 @@
     [picker setSubject:@"投稿"];
     
     // Set up recipients
-    NSArray *toRecipients = [NSArray arrayWithObject:@"sheepcao1986@163.com"];
+    NSArray *toRecipients = [NSArray arrayWithObject:@"clcstudio@163.com"];
     
     
     [picker setToRecipients:toRecipients];
@@ -197,7 +198,11 @@
 //    [picker addAttachmentData:myData mimeType:@"image/png" fileName:@""];
     
     // Fill out the email body text
-    NSString *emailBody = @"亲爱的BabyMatch用户：\n感谢您下载和使用！请留下您宝贵的意见和建议，多谢鼓励，更欢迎批评！\n相信我们可以一起做的更好！";
+    NSString *emailBody= @"";
+    if ([CommonUtility isSystemLangChinese]) {
+        emailBody = @"亲爱的BabyMatch用户，\n只要拍下宝宝的绘画作品投稿，您宝宝的大作就有机会成为新的游戏关卡！只需三步哦！\n1、宝宝绘画——围绕着某一个特定主题宝宝进行绘画，可以画在纸上或者平板电脑上\n2、家长拍照——用像素较高的手机或相机拍下您宝宝的绘画作品，如果在平板上绘画直接截屏或保存图片\n3、签名发送——邮件标题或正文写清宝宝名字，宝宝年龄，以及绘画主题，我们会把这些信息清晰的附在图片之中。\n\n我们将会选出适合猜图、图片清晰的作品作为新游戏的素材！\n宝宝也可以是APP设计师！快快投稿吧！\n\n投稿标题示例：\n张小宝，5岁，小鸟在唱歌\n(注：手机用户直接双击邮件正文选择添加图片。)";
+    }
+    
     [picker setMessageBody:emailBody isHTML:NO];
     [self presentViewController:picker animated:YES completion:nil];
     
@@ -234,7 +239,7 @@
 
 -(void)backTapped
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -252,7 +257,7 @@
                                                     message:msg
 
                                                    delegate:nil
-                                          cancelButtonTitle:@"Sure"
+                                          cancelButtonTitle:@"OK"
 
                                           otherButtonTitles:nil];
 

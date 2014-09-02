@@ -71,8 +71,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        [self.view setFrame:CGRectMake(0, 0, 320, 480)];
-        
+        if ([CommonUtility isSystemVersionLessThan7]) {
+            [self.view setFrame:CGRectMake(0, -20, 320, 480)];
+            
+        }else
+        {
+            [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+            
+           
+        }
+
         
     }else
     {
@@ -168,7 +176,9 @@
     [self.view addSubview:self.shareView];
     [self.view sendSubviewToBack:self.shareView];
     
-    [self.view addSubview:self.share];
+    //    new version
+
+//    [self.view addSubview:self.share];
     [self.share setHidden:YES];
     [self.view addSubview:self.retakeButton];
     [self.view addSubview:self.savePic];
@@ -243,6 +253,13 @@
 
 -(void)fadeIn
 {
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"reward" ofType: @"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    self.myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+//    self.myAudioPlayer.numberOfLoops = -1; //infinite loop
+    [self.myAudioPlayer play];
+    
+    
     self.babyTextImg.transform = CGAffineTransformIdentity;
     self.goCamera.transform = CGAffineTransformIdentity;
     [UIView beginAnimations:@"fadeIn"context:nil];
@@ -322,7 +339,8 @@
 {
 
     [MobClick beginLogPageView:@"rewardPage"];
-
+    
+    [self.babyRewordImg setFrame:CGRectMake(75, 568, 170, 170)];
 
 
     if ([CommonUtility isSystemLangChinese]) {
@@ -432,7 +450,8 @@
     
     UIImageWriteToSavedPhotosAlbum(imageShare, nil, nil,nil);
     
-    
+    UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"成功保存" message:@"已将保存萌照至系统相册" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [successAlert show];
     
 }
 
@@ -441,7 +460,15 @@
     [CommonUtility tapSound];
 
     //  [UIApplication sharedApplication].statusBarHidden = YES;
-    self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    if([CommonUtility isSystemVersionLessThan7])
+    {
+        self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight)];
+        
+    }else
+    {
+        self.SharePhotoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, IPhoneHeight+20)];
+        
+    }
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
     [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
@@ -572,7 +599,7 @@
 
 -(void)returnToShare
 {
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self dismissViewControllerAnimated:YES completion:Nil];
     
@@ -614,13 +641,25 @@
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDuration:1.0];
     self.rewardImage.frame=CGRectMake(self.shareView.frame.size.width-170, self.shareView.frame.size.height-140,170 ,170);
+    
+    [UIView setAnimationDidStopSelector:@selector(soundStart)];
+
+    
     [UIView commitAnimations];
 }
 
+-(void)soundStart
+{
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"reward" ofType: @"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    self.myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    //    self.myAudioPlayer.numberOfLoops = -1; //infinite loop
+    [self.myAudioPlayer play];
+}
 - (IBAction)backButton {
     
 //    self.isBackFromReward = YES;
-    [CommonUtility tapSound];
+    [CommonUtility tapSound:@"backAndCancel" withType:@"mp3"];
 
     [self.delegate isFromReward:YES];
 
@@ -661,12 +700,21 @@
     //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK"  ofType:@"jpg"];
     
     //构造分享内容
-    id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby"
-                                       defaultContent:@"默认分享内容，没内容时显示"
+    
+    NSString *message;
+    
+    if ([CommonUtility isSystemLangChinese]) {
+        message = @"宝贝,拼吧！";
+    }else
+    {
+        message = @"BabyMatch";
+    }
+    id<ISSContent> publishContent = [ShareSDK content:message
+                                       defaultContent:@""
                                                 image:[ShareSDK pngImageWithImage:imageShare]
-                                                title:@"ShareSDK"
+                                                title:@"Share"
                                                   url:@"http://www.sharesdk.cn"
-                                          description:@"这是一条测试信息"
+                                          description:message
                                             mediaType:SSPublishContentMediaTypeImage];
     
     [ShareSDK showShareActionSheet:nil

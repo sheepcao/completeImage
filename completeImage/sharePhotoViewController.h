@@ -11,7 +11,7 @@
 #import "globalVar.h"
 //#import "AfterTakePicViewController.h"
 
-@interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface sharePhotoViewController : UIViewController< UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIAlertViewDelegate>
 
 @property (strong, nonatomic)  UIImageView *frontImage;
 @property (strong, nonatomic)  UIImageView *backImage;

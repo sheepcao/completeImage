@@ -104,6 +104,10 @@ SystemSoundID soundEN;
         
         self.soundCNObj = [NSNumber numberWithInt:soundCN];
         self.soundENObj = [NSNumber numberWithInt:soundEN];
+        
+    
+        
+        
     }
     
     return self;
