@@ -60,8 +60,16 @@
     UIImageView *fullScreen = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     fullScreen.contentMode = UIViewContentModeScaleAspectFit;
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-        
-        [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"morePage460" ofType:@"png"]]];
+
+        if ([CommonUtility isSystemLangChinese]) {
+            
+            
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"morePage460" ofType:@"png"]]];
+        }else
+        {
+            [fullScreen setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-morePage460" ofType:@"png"]]];
+            
+        }
 
     }else
     {
@@ -184,7 +192,7 @@
     [picker.view setFrame:CGRectMake(0,20 , 320, self.view.frame.size.height-20)];
     picker.mailComposeDelegate = self;
     
-    [picker setSubject:@"投稿"];
+    
     
     // Set up recipients
     NSArray *toRecipients = [NSArray arrayWithObject:@"clcstudio@163.com"];
@@ -200,7 +208,13 @@
     // Fill out the email body text
     NSString *emailBody= @"";
     if ([CommonUtility isSystemLangChinese]) {
+        [picker setSubject:@"投稿"];
         emailBody = @"亲爱的BabyMatch用户，\n只要拍下宝宝的绘画作品投稿，您宝宝的大作就有机会成为新的游戏关卡！只需三步哦！\n1、宝宝绘画——围绕着某一个特定主题宝宝进行绘画，可以画在纸上或者平板电脑上\n2、家长拍照——用像素较高的手机或相机拍下您宝宝的绘画作品，如果在平板上绘画直接截屏或保存图片\n3、签名发送——邮件标题或正文写清宝宝名字，宝宝年龄，以及绘画主题，我们会把这些信息清晰的附在图片之中。\n\n我们将会选出适合猜图、图片清晰的作品作为新游戏的素材！\n宝宝也可以是APP设计师！快快投稿吧！\n\n投稿标题示例：\n张小宝，5岁，小鸟在唱歌\n(注：手机用户直接双击邮件正文选择添加图片。)";
+    }else
+    {
+    
+        [picker setSubject:@"Subscription"];
+        emailBody = @"Dear user,\nJust take a photo of your baby’s painting, and your sweetheart’s masterpiece will likely become the material of our new game level.Only three steps are needed. Simple and easy!\nStep 1: baby draw – your baby can draw whatever he/she like on certain theme, either on a piece of paper or iPad.\nStep 2: parents shoot – please take a photo of your baby’s painting if it’s been drawn on a piece of paper, or just screenshot and save the painting on the iPad.\nStep 3: Sign & Send – please write your baby’s name, age and painting theme in the title of subscription email so that we can make a footnote on your baby’s work.\n\nThen we’ll carefully select suitable and clear paintings, and use them in our new materials of game levels.\nEvery baby is a genius in designing!\n\nExample for subscription email title:\nDaniel Cooper, 5 years old, a singing bird \n(PS: mobile users can add a picture directly by double-click the email message body.)";
     }
     
     [picker setMessageBody:emailBody isHTML:NO];

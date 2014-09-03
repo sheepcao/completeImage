@@ -511,14 +511,15 @@ NSMutableArray  *arrayGif;
             
             
             
-            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
-            
+//            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(correctAnswer) userInfo:nil repeats:NO];
+            [self correctAnswer];
             
         }
         else
         {
-            
-            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
+//            
+//            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(wrongAnswer) userInfo:nil repeats:NO];
+            [self wrongAnswer];
             
             
         }
@@ -588,7 +589,7 @@ NSMutableArray  *arrayGif;
 
     [CommonUtility tapSound:wordsCN[level-1] withType:@"wav"];
 
-    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.6 target:self selector:@selector(sayEnglish) userInfo:nil repeats:NO];
     
     [self.empty setHidden:YES];
 

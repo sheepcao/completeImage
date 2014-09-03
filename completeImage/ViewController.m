@@ -580,13 +580,25 @@ bool levelLock[bigLevel];
     
     
     UIImage *imageShare = [UIImage imageNamed:@"AppIcon"];
+    NSString *message;
+    NSString *testShare;
+    if ([CommonUtility isSystemLangChinese]) {
+        message = @"宝贝,拼吧！";
+        testShare = @"纯手绘风格的宝宝看图识物app！拼图闯关、风趣动画、双语识字、奖牌秀咖，还能参与关卡制作！来自星星的宝宝就是你！";
+        
+    }else
+    {
+        message = @"BabyMatch!";
+        testShare = @"Interesting jigsaw puzzle, funny animation, bilingual vocabulary and pronunciation, exciting awards-winning match, participation in drawing, and more…\nDownload “BabyMatch！”. You’re the “Baby from the Star!";
+    }
+    
         //构造分享内容
-    id<ISSContent> publishContent = [ShareSDK content:@"Smart Baby\n下载地址：http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
-                                       defaultContent:@"纯手绘风格的宝宝看图识物app！拼图闯关、风趣动画、双语识字、奖牌秀咖，还能参与关卡制作！来自星星的宝宝就是你！"
+    id<ISSContent> publishContent = [ShareSDK content:message
+                                       defaultContent:testShare
                                                 image:[ShareSDK pngImageWithImage:imageShare]
-                                                title:@"宝宝猜猜猜"
+                                                title:message
                                                   url:@"http://itunes.apple.com/cn/app/daysinline/id844914780?mt=8"
-                                          description:@"纯手绘风格的宝宝看图识物app！拼图闯关、风趣动画、双语识字、奖牌秀咖，还能参与关卡制作！来自星星的宝宝就是你！"
+                                          description:testShare
                                             mediaType:SSPublishContentMediaTypeNews];
     
     [ShareSDK showShareActionSheet:nil
