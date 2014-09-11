@@ -389,23 +389,41 @@
     
     
     //先设定sourceType为相机，然后判断相机是否可用（ipod）没相机，不可用将sourceType设定为相片库
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
-    if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    @try {
+        
+        UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+        if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        self.picker = [[UIImagePickerController alloc] init];
+        
+        self.picker.delegate = self;
+        self.picker.allowsEditing = YES;
+        self.picker.sourceType = sourceType;
+        self.picker.cameraOverlayView = self.SharePhotoView;
+        self.picker.showsCameraControls = NO;
+        UIDevice *currentDevice = [UIDevice currentDevice];
+        
+        while ([currentDevice isGeneratingDeviceOrientationNotifications])
+            [currentDevice endGeneratingDeviceOrientationNotifications];
+        
+        [self presentViewController:self.picker animated:YES completion:Nil];
+        
+        while ([currentDevice isGeneratingDeviceOrientationNotifications])
+            [currentDevice endGeneratingDeviceOrientationNotifications];
     }
-    self.picker = [[UIImagePickerController alloc] init];
-    self.picker.delegate = self;
-    self.picker.allowsEditing = YES;
-    self.picker.sourceType = sourceType;
-    self.picker.cameraOverlayView = self.SharePhotoView;
-    self.picker.showsCameraControls = NO;
-   // picker.view.frame = CGRectMake(0,20, 320, 348);
-    
-    [self presentViewController:self.picker animated:YES completion:Nil];
+    @catch (NSException *exception)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Camera" message:[NSString stringWithFormat: @"Camera is not available\n%@",exception]delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+
 //   [self performSelector:@selector(setupCamera:) withObject:self.picker.view afterDelay:0.35f];
 
     
 }
+
+
 
 -(void)exchangeDevice
 {
@@ -632,5 +650,20 @@
 
 
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 @end

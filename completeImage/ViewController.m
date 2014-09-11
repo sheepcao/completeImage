@@ -32,6 +32,16 @@ bool levelLock[bigLevel];
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSError *error;
+    //eric:sound test...
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    
+    [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker
+                                                       error:&error];
+    
+    [[AVAudioSession sharedInstance] setActive: YES error: nil];
+    
+
 
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(snailAnimation) name:UIApplicationWillEnterForegroundNotification object:nil];
     
@@ -697,40 +707,7 @@ bool levelLock[bigLevel];
     [trackPath addLineToPoint:P(280,self.movingSnail.frame.origin.y+1+16)];
     [trackPath addLineToPoint:P(350,self.movingSnail.frame.origin.y-5+16)];
 
-//	[trackPath addCurveToPoint:P(300, 120)
-//				 controlPoint1:P(320, 0)
-//				 controlPoint2:P(300, 80)];
-//	[trackPath addCurveToPoint:P(80, 380)
-//				 controlPoint1:P(300, 200)
-//				 controlPoint2:P(200, 480)];
-//	[trackPath addCurveToPoint:P(140, 300)
-//				 controlPoint1:P(0, 300)
-//				 controlPoint2:P(200, 220)];
-//	[trackPath addCurveToPoint:P(210, 200)
-//				 controlPoint1:P(30, 420)
-//				 controlPoint2:P(280, 300)];
-//	[trackPath addCurveToPoint:P(70, 110)
-//				 controlPoint1:P(110, 80)
-//				 controlPoint2:P(110, 80)];
-//	[trackPath addCurveToPoint:P(160, 25)
-//				 controlPoint1:P(0, 160)
-//				 controlPoint2:P(0, 40)];
-//	
-//	CAShapeLayer *racetrack = [CAShapeLayer layer];
-//	racetrack.path = trackPath.CGPath;
-//	racetrack.strokeColor = [UIColor blackColor].CGColor;
-//	racetrack.fillColor = [UIColor clearColor].CGColor;
-//	racetrack.lineWidth = 30.0;
-//	[self.view.layer addSublayer:racetrack];
-    
-//	CAShapeLayer *centerline = [CAShapeLayer layer];
-//	centerline.path = trackPath.CGPath;
-//	centerline.strokeColor = [UIColor whiteColor].CGColor;
-//	centerline.fillColor = [UIColor clearColor].CGColor;
-//	centerline.lineWidth = 2.0;
-//	centerline.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:6], [NSNumber numberWithInt:2], nil];
-//	[self.view.layer addSublayer:centerline];
-	
+
 	CALayer *car = [CALayer layer];
 	car.bounds = CGRectMake(0, 0, 40, 40);
 	car.position = P(-30,self.movingSnail.frame.origin.y);
@@ -740,10 +717,38 @@ bool levelLock[bigLevel];
 	CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
 	anim.path = trackPath.CGPath;
 	anim.rotationMode = kCAAnimationRotateAuto;
-	anim.repeatCount = 100000;
+	anim.repeatCount = HUGE_VALF;
 	anim.duration = 25.0;
 	[car addAnimation:anim forKey:@"race"];
     isAnimating =YES;
+}
+
+-(void)dealloc
+{
+    NSError *error;
+    //eric:sound test...
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    
+    [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideNone
+                                                       error:&error];
+    
+    [[AVAudioSession sharedInstance] setActive: NO error: nil];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 
