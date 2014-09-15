@@ -386,7 +386,12 @@
             [self.frontImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@480",self.frontImageName]]];
         }else
         {
-           self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
+            UIGraphicsBeginImageContext(self.view.frame.size);
+            [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]] drawInRect:self.view.bounds];
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+//           self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
             
             [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
         }
@@ -471,13 +476,24 @@
     }
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
-    [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.SharePhotoView.backgroundColor = [UIColor colorWithPatternImage:image];
+
+//    [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
         self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 10, 45, 32)];
         self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 10, 40, 32)];
     }else
     {
         [self.SharePhotoView setFrame:CGRectMake(0, 0, 320, 568)];
-        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.SharePhotoView.backgroundColor = [UIColor colorWithPatternImage:image];
+//        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
         self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
         self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
         

@@ -192,7 +192,12 @@
         [self.savePic setHidden:NO];
         
         if ([[UIScreen mainScreen] bounds].size.height == 480) {
-            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]]];
+            UIGraphicsBeginImageContext(self.view.frame.size);
+            [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]] drawInRect:self.view.bounds];
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+//            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]]];
             
             UIImageView *bottombar = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-IPhoneHeight*73/568-20, 320, IPhoneHeight*73/568)];
             [bottombar setImage:[UIImage imageNamed:@"bottomImage"]];
@@ -207,7 +212,12 @@
 
         }else
         {
-            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
+            UIGraphicsBeginImageContext(self.view.frame.size);
+            [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]] drawInRect:self.view.bounds];
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+//            self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]]];
             [self.frontImage setImage:[UIImage imageNamed:self.frontImageName]];
 
         }
@@ -221,10 +231,21 @@
         if ([[UIScreen mainScreen] bounds].size.height == 480) {
             if ([CommonUtility isSystemLangChinese]) {
                 
-                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]]];
+                UIGraphicsBeginImageContext(self.view.frame.size);
+                [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]] drawInRect:self.view.bounds];
+                UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+//                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish460" ofType:@"png"]]];
             }else
             {
-                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish460" ofType:@"png"]]];
+                UIGraphicsBeginImageContext(self.view.frame.size);
+                [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish460" ofType:@"png"]] drawInRect:self.view.bounds];
+                UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+//                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish460" ofType:@"png"]]];
             }
 
 
@@ -232,11 +253,23 @@
         }else
         {
             if ([CommonUtility isSystemLangChinese]) {
+                UIGraphicsBeginImageContext(self.view.frame.size);
+                [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]] drawInRect:self.view.bounds];
+                UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
            
-                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
+//                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"notFinish" ofType:@"png"]]];
             }else
             {
-                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish" ofType:@"png"]]];
+                UIGraphicsBeginImageContext(self.view.frame.size);
+                [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish" ofType:@"png"]] drawInRect:self.view.bounds];
+                UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+//                self.view.backgroundColor = [UIColor colorWithPatternImage:    [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"en-notFinish" ofType:@"png"]]];
             }
         }
         [self.frontImage setImage:nil];
@@ -306,12 +339,24 @@
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
 
-        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图480" ofType:@"png"]] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.SharePhotoView.backgroundColor = [UIColor colorWithPatternImage:image];
+
+//        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图480"]]];
         self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 45, 32)];
         self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 10, 40, 32)];
     }else
     {
-        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"拍照底图" ofType:@"png"]] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.SharePhotoView.backgroundColor = [UIColor colorWithPatternImage:image];
+
+//        [self.SharePhotoView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"拍照底图"]]];
         self.cancelCamera = [[UIButton alloc] initWithFrame:CGRectMake(5, 18, 50, 36)];
         self.cameraDevice = [[UIButton alloc] initWithFrame:CGRectMake(250, 20, 50, 36)];
 

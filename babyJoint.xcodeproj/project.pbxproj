@@ -1568,7 +1568,7 @@
 		0BDBD803194EC8BB00643495 /* teachingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = teachingView.h; sourceTree = "<group>"; };
 		0BDBD804194EC8BB00643495 /* teachingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = teachingView.m; sourceTree = "<group>"; };
 		0BE28974195B259000E412D5 /* globalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalVar.h; sourceTree = "<group>"; };
-		0BE582B4193F25FB00EEAB26 /* babyJoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babyJoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE582B4193F25FB00EEAB26 /* Baby Match!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Match!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE582B7193F25FB00EEAB26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BE582B9193F25FB00EEAB26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0BE582BB193F25FB00EEAB26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1777,6 +1777,7 @@
 		0BFF4C3B19A6434C00BDD689 /* level20-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level20-3.png"; sourceTree = "<group>"; };
 		0BFF4C3C19A6434C00BDD689 /* level20-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level20-5.png"; sourceTree = "<group>"; };
 		0BFF4C3D19A6434C00BDD689 /* level20-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "level20-4.png"; sourceTree = "<group>"; };
+		A40A790C19C6BFDF0050388F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2625,7 +2626,7 @@
 		0BE582B5193F25FB00EEAB26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BE582B4193F25FB00EEAB26 /* babyJoint.app */,
+				0BE582B4193F25FB00EEAB26 /* Baby Match!.app */,
 				0BE582D5193F25FB00EEAB26 /* completeImageTests.xctest */,
 			);
 			name = Products;
@@ -3100,7 +3101,7 @@
 			);
 			name = babyJoint;
 			productName = completeImage;
-			productReference = 0BE582B4193F25FB00EEAB26 /* babyJoint.app */;
+			productReference = 0BE582B4193F25FB00EEAB26 /* Baby Match!.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0BE582D4193F25FB00EEAB26 /* completeImageTests */ = {
@@ -4017,6 +4018,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0BE582C1193F25FB00EEAB26 /* en */,
+				A40A790C19C6BFDF0050388F /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -4160,7 +4162,7 @@
 					"$(PROJECT_DIR)",
 				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Baby Match!";
 				PROVISIONING_PROFILE = "88f35e63-9d51-4b2c-83f5-d6f06f230437";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -4198,7 +4200,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Baby Match!";
 				PROVISIONING_PROFILE = "2cbf51ed-e3b9-4429-b96a-dacba16fd3d9";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
